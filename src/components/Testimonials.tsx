@@ -19,7 +19,7 @@ interface TestimonialProps {
 }
 
 const Testimonial = ({ name, role, company, image, companyLogo, content }: TestimonialProps) => (
-  <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 bg-white h-full">
+  <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 bg-card h-full">
     <CardContent className="p-8 space-y-6">
       <div className="flex items-start gap-6">
         <div className="relative">
@@ -28,7 +28,7 @@ const Testimonial = ({ name, role, company, image, companyLogo, content }: Testi
             <AvatarFallback className="text-2xl">{name[0]}</AvatarFallback>
           </Avatar>
           {companyLogo && (
-            <div className="absolute -bottom-2 -right-2 w-12 h-12 rounded-full bg-white p-1 shadow-lg animate-fade-in">
+            <div className="absolute -bottom-2 -right-2 w-12 h-12 rounded-full bg-card p-1 shadow-lg animate-fade-in">
               <img src={companyLogo} alt={`${company} logo`} className="w-full h-full object-contain" />
             </div>
           )}
@@ -36,16 +36,16 @@ const Testimonial = ({ name, role, company, image, companyLogo, content }: Testi
         
         <div className="flex-1 space-y-2">
           <div className="space-y-1">
-            <h4 className="text-xl font-bold text-primary">{name}</h4>
-            <p className="text-sm text-text-light font-medium">{role}</p>
-            <p className="text-sm text-text-light">{company}</p>
+            <h4 className="text-xl font-bold text-foreground">{name}</h4>
+            <p className="text-sm text-muted-foreground font-medium">{role}</p>
+            <p className="text-sm text-muted-foreground">{company}</p>
           </div>
         </div>
       </div>
       
       <div className="relative">
         <div className="absolute left-0 top-0 w-1 h-full bg-accent/20 rounded-full" />
-        <blockquote className="pl-6 text-text leading-relaxed italic">
+        <blockquote className="pl-6 text-foreground leading-relaxed italic">
           {content}
         </blockquote>
       </div>
