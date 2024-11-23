@@ -85,7 +85,7 @@ Team collaboration: Improved in involving team members early in different initia
 
   return (
     <section className="py-16 px-4">
-      <div className="container max-w-4xl mx-auto">
+      <div className="container max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold text-primary mb-12 text-center relative">
           <span className="relative inline-block">
             Words of Reference
@@ -98,7 +98,7 @@ Team collaboration: Improved in involving team members early in different initia
             align: "start",
             loop: true,
             dragFree: true,
-            slidesToScroll: 2,
+            slidesToScroll: 3,
             startIndex: 0,
           }}
           plugins={[plugin]}
@@ -106,7 +106,7 @@ Team collaboration: Improved in involving team members early in different initia
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2">
+              <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3">
                 <div className="p-1">
                   <Testimonial {...testimonial} />
                 </div>
