@@ -34,6 +34,14 @@ export default {
         text: {
           DEFAULT: "#2d3748",
           light: "#4a5568",
+        },
+        card: {
+          DEFAULT: "#1A1D24",
+          lighter: "#22262F",
+        },
+        link: {
+          DEFAULT: "#3B82F6",
+          hover: "#60A5FA",
         }
       },
       animation: {
