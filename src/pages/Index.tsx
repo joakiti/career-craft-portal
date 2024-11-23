@@ -199,6 +199,7 @@ const Index = () => {
 
       {/* Experience Section */}
       <section id="professional-experience" className="py-16 bg-card-lighter px-4">
+        <div className="container max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Professional Experience</h2>
           <div className="space-y-8">
             <Card className="p-6 bg-card border-gray-700">
