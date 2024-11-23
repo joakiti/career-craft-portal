@@ -20,8 +20,17 @@ const Index = () => {
             </a>
           </div>
           <p className="text-text max-w-3xl mx-auto leading-relaxed">
-            I'm a highly motivated and performance-driven AI Tech Lead approaching a decade of experience in delivering software of all sorts. 
-            A jack-of-all-trades with a passion for competitive programming, advanced algorithms, optimization and machine learning.
+          I'm a highly motivated and performance-driven AI Tech Lead approaching \textit{a decade} of experience in delivering software of all sorts. I am a jack-of-all-trades (a generalist), with a passion for competitive programming, advanced algorithms, optimization and machine learning.
+          \\\\
+          I am very passionate about solving complex problems and working with technology all the way from the end-user
+          experience to the inner workings of algorithms. Additionally, I have a proven track record of delivering AI-related
+          projects and leading highly successful teams. My experience ranges from leading AI teams in international settings
+          to developing optimization solvers for health and elderly care, to developing projects on a freelance basis, and
+          mastering the general software craftsmanship.
+          \\\\
+          I describe myself as having an entrepreneurial mind. I love taking on challenging new projects but also enjoy
+          the outdoors, hiking, working out, and being active. In my downtime, I like to play strategy games or engage in
+          bouldering.
           </p>
         </div>
       </section>
