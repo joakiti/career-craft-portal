@@ -68,15 +68,31 @@ const Index = () => {
                     />
                   </div>
                   <div className="space-y-4">
-                    <ul className="list-disc list-inside text-gray-300 space-y-2">
-                      <li>Led a 4-man team in Norway for the biggest self-service accounting SaaS firm for 4 months.</li>
-                      <li>Planned and drove AI infrastructure and application development, mentoring junior engineers.</li>
-                      <li>Achieved 85% self-service rate with custom RAG setup featuring vector search, re-ranking and streaming support.</li>
-                      <li>Currently tech-lead in work-roster team and personnel manager for two developers.</li>
-                      <li>Primary responsible for consultancy projects, created six project offers and led one personally.</li>
-                    </ul>
+                    <div className="space-y-6">
+                      <div>
+                        <h4 className="text-lg font-semibold text-accent mb-3">Current Achievements</h4>
+                        <ul className="list-disc list-inside text-gray-300 space-y-2">
+                          <li>Led a 4-man team in Norway for the biggest self-service accounting SaaS firm.</li>
+                          <li>Developed custom RAG setup with vector search and re-ranking, achieving 85% self-service rate.</li>
+                          <li>Tech lead for work-roster team and personnel manager for two developers.</li>
+                          <li>Successfully led and delivered six consultancy project offers.</li>
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h4 className="text-lg font-semibold text-accent mb-3">Algorithm & Technical Excellence</h4>
+                        <ul className="list-disc list-inside text-gray-300 space-y-2">
+                          <li>Architected heuristic-based optimization solver for hospital work rosters, implementing complex algorithms for scheduling optimization.</li>
+                          <li>Developed 12 different MIP solvers using Google OR tools for rapid feasibility assessment.</li>
+                          <li>Implemented sophisticated scoring rankers and candidate selection algorithms.</li>
+                          <li>Achieved 40% accuracy improvement in single-person assignment algorithms.</li>
+                          <li>Designed and implemented serverless infrastructure using CloudFormation, Docker, S3, and Lambda.</li>
+                        </ul>
+                      </div>
+                    </div>
+                    
                     <div className="flex flex-wrap gap-2 mt-4">
-                      {["Java", "Python", "ML", "Azure", "AWS", "LLMs", "RAG"].map((tech) => (
+                      {["Java", "Python", "ML", "Azure", "AWS", "LLMs", "RAG", "Algorithms", "OR-Tools", "CloudFormation", "Docker"].map((tech) => (
                         <Badge key={tech} variant="secondary" className="bg-card text-gray-300">
                           {tech}
                         </Badge>
@@ -107,7 +123,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Keep existing sections */}
+      {/* Testimonials Section */}
       <Testimonials />
       
       {/* Education Section */}
