@@ -26,6 +26,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Testimonials Section - Moved here */}
+      <Testimonials />
+
       {/* Education Section */}
       <section className="py-16 bg-primary-light px-4 animate-slide-in">
         <div className="container max-w-4xl mx-auto">
@@ -94,9 +97,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Testimonials Section */}
-      <Testimonials />
 
       {/* Contact Section */}
       <footer className="py-8 bg-primary text-white text-center">
