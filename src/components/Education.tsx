@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const Education = () => {
   return (
@@ -17,15 +18,28 @@ const Education = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           <div className="space-y-8">
-            <Card className="p-6 bg-card/80 backdrop-blur border-gray-700 hover:bg-card/90 transition-colors">
-              <h3 className="text-xl font-bold text-white mb-2">IT-University of Copenhagen</h3>
-              <p className="text-gray-400 mb-2">MSc in Computer Science | Aug. 2019 - Aug 2021</p>
-              <p className="text-gray-300">Advanced algorithms and optimization. GPA (top 10%): 11.00 / 12.00</p>
+            <Card className="p-6 bg-card/80 backdrop-blur border-gray-700 hover:bg-card/90 transition-colors hover:shadow-xl hover:scale-[1.02] transform duration-200">
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-xl font-bold text-white">IT-University of Copenhagen</h3>
+                <Badge className="bg-accent text-card font-semibold">MSc</Badge>
+              </div>
+              <p className="text-gray-400 mb-2">Aug. 2019 - Aug 2021</p>
+              <div className="space-y-2">
+                <p className="text-gray-300">Advanced algorithms and optimization</p>
+                <p className="text-accent font-medium">GPA (top 10%): 11.00 / 12.00</p>
+              </div>
             </Card>
-            <Card className="p-6 bg-card/80 backdrop-blur border-gray-700 hover:bg-card/90 transition-colors">
-              <h3 className="text-xl font-bold text-white mb-2">IT-University of Copenhagen</h3>
-              <p className="text-gray-400 mb-2">BSc in Computer Science | Aug. 2016 - Aug 2019</p>
-              <p className="text-gray-300">General software engineering, with electives in Machine Learning and Security.</p>
+
+            <Card className="p-6 bg-card/80 backdrop-blur border-gray-700 hover:bg-card/90 transition-colors hover:shadow-xl hover:scale-[1.02] transform duration-200">
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-xl font-bold text-white">IT-University of Copenhagen</h3>
+                <Badge className="bg-primary-light text-primary font-semibold">BSc</Badge>
+              </div>
+              <p className="text-gray-400 mb-2">Aug. 2016 - Aug 2019</p>
+              <div className="space-y-2">
+                <p className="text-gray-300">General software engineering</p>
+                <p className="text-gray-300">Electives in Machine Learning and Security</p>
+              </div>
             </Card>
           </div>
           
