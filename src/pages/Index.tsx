@@ -48,14 +48,68 @@ const Index = () => {
                   As an accomplished AI Tech Lead with nearly a decade of experience, I specialize in delivering innovative software solutions across diverse domains. My expertise spans competitive programming, advanced algorithms, and machine learning, complemented by a proven track record of leading successful AI teams in international settings. I excel in solving complex technical challenges while maintaining a strong focus on end-user experience and practical implementation.
                 </p>
               </div>
+
+              {/* Current Roles Section */}
+              <div className="space-y-6">
+                <h2 className="text-2xl font-bold text-white">Current Roles</h2>
+                
+                {/* Tech Lead Role */}
+                <Card className="bg-card-lighter border-gray-700 p-8">
+                  <div className="flex items-start justify-between mb-6">
+                    <div>
+                      <h3 className="text-xl font-bold text-link mb-2">Tech Lead & AI Developer</h3>
+                      <p className="text-lg text-accent mb-1">VISMA</p>
+                      <p className="text-gray-400">Aug 2023 - Present</p>
+                    </div>
+                    <img 
+                      src="/company-logo-placeholder.png" 
+                      alt="VISMA Logo" 
+                      className="w-16 h-16 object-contain"
+                    />
+                  </div>
+                  <div className="space-y-4">
+                    <ul className="list-disc list-inside text-gray-300 space-y-2">
+                      <li>Led a 4-man team in Norway for the biggest self-service accounting SaaS firm for 4 months.</li>
+                      <li>Planned and drove AI infrastructure and application development, mentoring junior engineers.</li>
+                      <li>Achieved 85% self-service rate with custom RAG setup featuring vector search, re-ranking and streaming support.</li>
+                      <li>Currently tech-lead in work-roster team and personnel manager for two developers.</li>
+                      <li>Primary responsible for consultancy projects, created six project offers and led one personally.</li>
+                    </ul>
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      {["Java", "Python", "ML", "Azure", "AWS", "LLMs", "RAG"].map((tech) => (
+                        <Badge key={tech} variant="secondary" className="bg-card text-gray-300">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                </Card>
+
+                {/* Freelancer Role - Placeholder */}
+                <Card className="bg-card-lighter border-gray-700 p-8">
+                  <div className="flex items-start justify-between mb-6">
+                    <div>
+                      <h3 className="text-xl font-bold text-link mb-2">Freelance Developer</h3>
+                      <p className="text-lg text-accent mb-1">Independent</p>
+                      <p className="text-gray-400">2023 - Present</p>
+                    </div>
+                    <div className="w-16 h-16 bg-card-lighter rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <p className="text-gray-300">Independent software development and consulting services.</p>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Keep existing Testimonials section */}
+      {/* Keep existing sections */}
       <Testimonials />
-
+      
       {/* Education Section */}
       <section className="py-16 bg-card-lighter px-4 animate-slide-in">
         <div className="container max-w-4xl mx-auto">
