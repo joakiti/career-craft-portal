@@ -36,7 +36,7 @@ const Testimonial = ({ name, role, company, image, companyLogo, content }: Testi
         
         <div className="flex-1 space-y-2">
           <div className="space-y-1">
-            <h4 className="text-xl font-bold text-foreground">{name}</h4>
+            <h4 className="text-xl font-bold text-link">{name}</h4>
             <p className="text-sm text-muted-foreground font-medium">{role}</p>
             <p className="text-sm text-muted-foreground">{company}</p>
           </div>
@@ -86,7 +86,7 @@ Team collaboration: Improved in involving team members early in different initia
   return (
     <section className="py-16 px-4">
       <div className="container max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-primary mb-12 text-center relative">
+        <h2 className="text-3xl font-bold text-link mb-12 text-center relative">
           <span className="relative inline-block">
             Words of Reference
             <div className="absolute -bottom-2 left-0 w-full h-1 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
