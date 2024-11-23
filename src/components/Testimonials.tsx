@@ -11,27 +11,41 @@ interface TestimonialProps {
 }
 
 const Testimonial = ({ name, role, company, image, companyLogo, content }: TestimonialProps) => (
-  <Card className="p-6 hover:shadow-lg transition-shadow">
-    <CardContent className="p-0 space-y-4">
-      <div className="flex items-start gap-4">
-        <Avatar className="w-16 h-16">
-          <AvatarImage src={image} alt={name} />
-          <AvatarFallback>{name[0]}</AvatarFallback>
-        </Avatar>
-        <div className="flex-1">
-          <div className="flex items-center justify-between">
-            <div>
-              <h4 className="font-semibold text-lg">{name}</h4>
-              <p className="text-sm text-text-light">{role}</p>
-              <p className="text-sm text-text-light">{company}</p>
+  <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 bg-white">
+    {/* Diagonal decorative line */}
+    <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+      <div className="absolute top-0 left-0 w-[200%] h-2 bg-accent transform -rotate-45 translate-x-[-25%] translate-y-[-50%] group-hover:translate-y-0 transition-transform duration-300" />
+    </div>
+    
+    <CardContent className="p-8 space-y-6">
+      <div className="flex items-start gap-6">
+        <div className="relative">
+          <Avatar className="w-24 h-24 border-4 border-primary-light shadow-lg">
+            <AvatarImage src={image || "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"} alt={name} />
+            <AvatarFallback className="text-2xl">{name[0]}</AvatarFallback>
+          </Avatar>
+          {companyLogo && (
+            <div className="absolute -bottom-2 -right-2 w-12 h-12 rounded-full bg-white p-1 shadow-lg animate-fade-in">
+              <img src={companyLogo} alt={`${company} logo`} className="w-full h-full object-contain" />
             </div>
-            {companyLogo && (
-              <img src={companyLogo} alt={`${company} logo`} className="w-12 h-12 object-contain" />
-            )}
+          )}
+        </div>
+        
+        <div className="flex-1 space-y-2">
+          <div className="space-y-1">
+            <h4 className="text-xl font-bold text-primary">{name}</h4>
+            <p className="text-sm text-text-light font-medium">{role}</p>
+            <p className="text-sm text-text-light">{company}</p>
           </div>
         </div>
       </div>
-      <p className="text-text leading-relaxed">{content}</p>
+      
+      <div className="relative">
+        <div className="absolute left-0 top-0 w-1 h-full bg-accent/20 rounded-full" />
+        <blockquote className="pl-6 text-text leading-relaxed italic">
+          {content}
+        </blockquote>
+      </div>
     </CardContent>
   </Card>
 );
@@ -65,12 +79,24 @@ Team collaboration: Improved in involving team members early in different initia
   ];
 
   return (
-    <section className="py-16 px-4 bg-primary-light">
+    <section className="py-16 px-4">
       <div className="container max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-primary mb-8 text-center">Words of Reference</h2>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-1">
+        <h2 className="text-3xl font-bold text-primary mb-12 text-center relative">
+          <span className="relative inline-block">
+            Words of Reference
+            <div className="absolute -bottom-2 left-0 w-full h-1 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+          </span>
+        </h2>
+        <div className="grid gap-12">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 150}ms` }}>
+            <div 
+              key={index} 
+              className="animate-fade-in" 
+              style={{ 
+                animationDelay: `${index * 200}ms`,
+                transform: "perspective(1000px)",
+              }}
+            >
               <Testimonial {...testimonial} />
             </div>
           ))}
