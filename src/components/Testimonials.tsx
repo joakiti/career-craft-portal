@@ -1,5 +1,12 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 interface TestimonialProps {
   name: string;
@@ -11,12 +18,7 @@ interface TestimonialProps {
 }
 
 const Testimonial = ({ name, role, company, image, companyLogo, content }: TestimonialProps) => (
-  <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 bg-white">
-    {/* Diagonal decorative line */}
-    <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-      <div className="absolute top-0 left-0 w-[200%] h-2 bg-accent transform -rotate-45 translate-x-[-25%] translate-y-[-50%] group-hover:translate-y-0 transition-transform duration-300" />
-    </div>
-    
+  <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 bg-white h-full">
     <CardContent className="p-8 space-y-6">
       <div className="flex items-start gap-6">
         <div className="relative">
@@ -87,20 +89,28 @@ Team collaboration: Improved in involving team members early in different initia
             <div className="absolute -bottom-2 left-0 w-full h-1 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
           </span>
         </h2>
-        <div className="grid gap-12">
-          {testimonials.map((testimonial, index) => (
-            <div 
-              key={index} 
-              className="animate-fade-in" 
-              style={{ 
-                animationDelay: `${index * 200}ms`,
-                transform: "perspective(1000px)",
-              }}
-            >
-              <Testimonial {...testimonial} />
-            </div>
-          ))}
-        </div>
+        
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent>
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
+                <div className="p-1">
+                  <Testimonial {...testimonial} />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="flex justify-center gap-4 mt-8">
+            <CarouselPrevious />
+            <CarouselNext />
+          </div>
+        </Carousel>
       </div>
     </section>
   );
