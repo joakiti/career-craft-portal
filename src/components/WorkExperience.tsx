@@ -96,6 +96,146 @@ const WorkExperience = () => {
               </div>
             </div>
           </Card>
+
+          {/* Synergy Software Role */}
+          <Card className="p-8 bg-card border-gray-700">
+            <div className="flex justify-between items-start mb-4 flex-wrap gap-4">
+              <div>
+                <h3 className="text-xl font-bold text-white">SYNERGY SOFTWARE</h3>
+                <p className="text-accent text-lg">Software Engineer & Founder</p>
+                <p className="text-gray-400">May 2022 - Present</p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <li>Mainframe migration to AWS, requiring changes in most deployed codebases</li>
+                <li>Maintain a data-processing project with a T-SQL database and BI products using C#</li>
+                <li>Developed custom solution for GoDream (Danish gift-card provider):
+                  <ul className="list-disc list-inside ml-6 mt-2">
+                    <li>Built on .NET with EFCore ORM</li>
+                    <li>PostgreSQL database implementation</li>
+                    <li>AWS infrastructure deployment</li>
+                  </ul>
+                </li>
+              </ul>
+              <div className="flex flex-wrap gap-2 mt-4">
+                {[".NET", "C#", "AWS", "PostgreSQL", "EFCore", "T-SQL", "BI"].map((tech) => (
+                  <Badge key={tech} variant="secondary" className="bg-card-lighter text-gray-300">
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          </Card>
+
+          {/* IT-University Role */}
+          <Card className="p-8 bg-card border-gray-700">
+            <div className="flex justify-between items-start mb-4 flex-wrap gap-4">
+              <div>
+                <h3 className="text-xl font-bold text-white">IT-UNIVERSITY OF COPENHAGEN</h3>
+                <p className="text-accent text-lg">Teaching Assistant</p>
+                <p className="text-gray-400">Jan 2018 - Jan 2021</p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <p className="text-gray-300">Conducted workshops and lectures in courses including:</p>
+              <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <li>Operating Systems and C</li>
+                <li>Algorithm Design</li>
+                <li>Analysis, Design, and Software Architecture</li>
+                <li>Introduction to Database and Design</li>
+                <li>Prototyping of Interactive Technologies</li>
+                <li>StudyLab (Help for all courses)</li>
+              </ul>
+              <div className="flex flex-wrap gap-2 mt-4">
+                {["C", "Algorithms", "Architecture", "Databases", "Teaching"].map((tech) => (
+                  <Badge key={tech} variant="secondary" className="bg-card-lighter text-gray-300">
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          </Card>
+
+          {/* Netcompany Role */}
+          <Card className="p-8 bg-card border-gray-700">
+            <div className="flex justify-between items-start mb-4 flex-wrap gap-4">
+              <div>
+                <h3 className="text-xl font-bold text-white">NETCOMPANY</h3>
+                <p className="text-accent text-lg">Part-time Consultant</p>
+                <p className="text-gray-400">Aug 2019 - Oct 2020</p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <li>Consultant on state-critical systems: Boligstøtte and Social Pension Kommune</li>
+                <li>Developed systems handling multi-million annual payments</li>
+                <li>Tech stack:
+                  <ul className="list-disc list-inside ml-6 mt-2">
+                    <li>Java with Spring and Hibernate</li>
+                    <li>OracleDB with T-SQL syntax</li>
+                    <li>Frontend in React and Thymeleaf</li>
+                  </ul>
+                </li>
+              </ul>
+              <div className="flex flex-wrap gap-2 mt-4">
+                {["Java", "Spring", "Hibernate", "React", "OracleDB", "T-SQL"].map((tech) => (
+                  <Badge key={tech} variant="secondary" className="bg-card-lighter text-gray-300">
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          </Card>
+
+          {/* IT-Minds Role */}
+          <Card className="p-8 bg-card border-gray-700">
+            <div className="flex justify-between items-start mb-4 flex-wrap gap-4">
+              <div>
+                <h3 className="text-xl font-bold text-white">IT-MINDS</h3>
+                <p className="text-accent text-lg">Part-time Consultant</p>
+                <p className="text-gray-400">Feb 2019 - Aug 2019</p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <li>Developed features for DSV using Azure cloud services</li>
+                <li>Integrated and extended C-code for micro devices at HPNow</li>
+              </ul>
+              <div className="flex flex-wrap gap-2 mt-4">
+                {["C", "Azure", "Cloud Services"].map((tech) => (
+                  <Badge key={tech} variant="secondary" className="bg-card-lighter text-gray-300">
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          </Card>
+
+          {/* Keylane Role */}
+          <Card className="p-8 bg-card border-gray-700">
+            <div className="flex justify-between items-start mb-4 flex-wrap gap-4">
+              <div>
+                <h3 className="text-xl font-bold text-white">KEYLANE</h3>
+                <p className="text-accent text-lg">Part-time Developer</p>
+                <p className="text-gray-400">Jan 2018 - Feb 2019</p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <li>Developed in-house git server for visualizing branch status and DB statistics</li>
+                <li>Created comprehensive front-end testing project using Selenium</li>
+                <li>Maintained front-end and back-end systems using Java and MySQL</li>
+              </ul>
+              <div className="flex flex-wrap gap-2 mt-4">
+                {["Java", "MySQL", "Selenium", "Git"].map((tech) => (
+                  <Badge key={tech} variant="secondary" className="bg-card-lighter text-gray-300">
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          </Card>
         </div>
       </div>
     </section>
