@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import Testimonials from "@/components/Testimonials";
 
 const Index = () => {
   return (
@@ -95,19 +96,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 px-4">
-        <div className="container max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-primary mb-8 text-center">Words of Reference</h2>
-          <div className="space-y-8">
-            <Card className="p-6">
-              <p className="text-text italic mb-4">
-                "It has been very good to collaborate with Resolve, where their expertise and innovative approach to LLM/GPT technology have been crucial for Tripletex and our AI team in an early phase..."
-              </p>
-              <p className="text-text-light">- Jan Strandbakke, CTO at Tripletex</p>
-            </Card>
-          </div>
-        </div>
-      </section>
+      <Testimonials />
 
       {/* Contact Section */}
       <footer className="py-8 bg-primary text-white text-center">
