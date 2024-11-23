@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import Testimonials from "@/components/Testimonials";
 import FreelanceCard from "@/components/FreelanceCard";
 import Education from "@/components/Education";
+import WorkExperience from "@/components/WorkExperience";
 
 const Index = () => {
   const scrollToExperience = () => {
@@ -143,6 +144,9 @@ const Index = () => {
       
       {/* Education Section */}
       <Education />
+
+      {/* Work Experience Section */}
+      <WorkExperience />
       
       {/* Skills Section */}
       <section className="py-16 px-4 bg-card">
