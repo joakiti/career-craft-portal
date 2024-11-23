@@ -19,16 +19,16 @@ interface TestimonialProps {
 }
 
 const Testimonial = ({ name, role, company, image, companyLogo, content }: TestimonialProps) => (
-  <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 bg-card h-full">
+  <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 bg-card-lighter h-full border-border/5">
     <CardContent className="p-8 space-y-6">
       <div className="flex items-start gap-6">
         <div className="relative">
-          <Avatar className="w-24 h-24 border-4 border-primary-light shadow-lg">
+          <Avatar className="w-24 h-24 border-4 border-accent/20 shadow-lg">
             <AvatarImage src={image || "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"} alt={name} />
             <AvatarFallback className="text-2xl">{name[0]}</AvatarFallback>
           </Avatar>
           {companyLogo && (
-            <div className="absolute -bottom-2 -right-2 w-12 h-12 rounded-full bg-card p-1 shadow-lg animate-fade-in">
+            <div className="absolute -bottom-2 -right-2 w-12 h-12 rounded-full bg-card p-1 shadow-lg animate-fade-in border border-border/10">
               <img src={companyLogo} alt={`${company} logo`} className="w-full h-full object-contain" />
             </div>
           )}
@@ -45,7 +45,7 @@ const Testimonial = ({ name, role, company, image, companyLogo, content }: Testi
       
       <div className="relative">
         <div className="absolute left-0 top-0 w-1 h-full bg-accent/20 rounded-full" />
-        <blockquote className="pl-6 text-foreground leading-relaxed italic">
+        <blockquote className="pl-6 text-muted-foreground leading-relaxed italic">
           {content}
         </blockquote>
       </div>
