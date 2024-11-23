@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Testimonials from "@/components/Testimonials";
 import FreelanceCard from "@/components/FreelanceCard";
+import Education from "@/components/Education";
 
 const Index = () => {
   const scrollToExperience = () => {
@@ -141,24 +142,8 @@ const Index = () => {
       <Testimonials />
       
       {/* Education Section */}
-      <section className="py-16 bg-card-lighter px-4 animate-slide-in">
-        <div className="container max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Education</h2>
-          <div className="space-y-8">
-            <Card className="p-6 bg-card border-gray-700">
-              <h3 className="text-xl font-bold text-white mb-2">IT-University of Copenhagen</h3>
-              <p className="text-gray-400 mb-2">MSc in Computer Science | Aug. 2019 - Aug 2021</p>
-              <p className="text-gray-300">Advanced algorithms and optimization. GPA (top 10%): 11.00 / 12.00</p>
-            </Card>
-            <Card className="p-6 bg-card border-gray-700">
-              <h3 className="text-xl font-bold text-white mb-2">IT-University of Copenhagen</h3>
-              <p className="text-gray-400 mb-2">BSc in Computer Science | Aug. 2016 - Aug 2019</p>
-              <p className="text-gray-300">General software engineering, with electives in Machine Learning and Security.</p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
+      <Education />
+      
       {/* Skills Section */}
       <section className="py-16 px-4 bg-card">
         <div className="container max-w-4xl mx-auto">
