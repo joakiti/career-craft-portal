@@ -20,23 +20,23 @@ interface TestimonialProps {
 
 const Testimonial = ({ name, role, company, image, companyLogo, content }: TestimonialProps) => (
   <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 bg-card-lighter h-full border-border/5">
-    <CardContent className="p-8 space-y-6">
-      <div className="flex items-start gap-6">
-        <div className="relative">
-          <Avatar className="w-24 h-24 border-4 border-accent/20 shadow-lg">
+    <CardContent className="p-4 md:p-8 space-y-4 md:space-y-6">
+      <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-6">
+        <div className="relative mx-auto md:mx-0">
+          <Avatar className="w-20 h-20 md:w-24 md:h-24 border-4 border-accent/20 shadow-lg">
             <AvatarImage src={image || "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"} alt={name} />
             <AvatarFallback className="text-2xl">{name[0]}</AvatarFallback>
           </Avatar>
           {companyLogo && (
-            <div className="absolute -bottom-2 -right-2 w-12 h-12 rounded-full bg-card p-1 shadow-lg animate-fade-in border border-border/10">
+            <div className="absolute -bottom-2 -right-2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-card p-1 shadow-lg animate-fade-in border border-border/10">
               <img src={companyLogo} alt={`${company} logo`} className="w-full h-full object-contain" />
             </div>
           )}
         </div>
         
-        <div className="flex-1 space-y-2">
+        <div className="flex-1 space-y-2 text-center md:text-left">
           <div className="space-y-1">
-            <h4 className="text-xl font-bold text-link">{name}</h4>
+            <h4 className="text-lg md:text-xl font-bold text-link">{name}</h4>
             <p className="text-sm text-muted-foreground font-medium">{role}</p>
             <p className="text-sm text-muted-foreground">{company}</p>
           </div>
@@ -45,7 +45,7 @@ const Testimonial = ({ name, role, company, image, companyLogo, content }: Testi
       
       <div className="relative">
         <div className="absolute left-0 top-0 w-1 h-full bg-accent/20 rounded-full" />
-        <blockquote className="pl-6 text-muted-foreground leading-relaxed italic">
+        <blockquote className="pl-4 md:pl-6 text-sm md:text-base text-muted-foreground leading-relaxed italic">
           {content}
         </blockquote>
       </div>
@@ -84,9 +84,9 @@ Team collaboration: Improved in involving team members early in different initia
   const plugin = Autoplay({ delay: 5000, stopOnInteraction: false });
 
   return (
-    <section className="py-16 px-4">
+    <section className="py-8 md:py-16 px-4">
       <div className="container max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-link mb-12 text-center relative">
+        <h2 className="text-2xl md:text-3xl font-bold text-link mb-8 md:mb-12 text-center relative">
           <span className="relative inline-block">
             Words of Reference
             <div className="absolute -bottom-2 left-0 w-full h-1 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
@@ -98,24 +98,31 @@ Team collaboration: Improved in involving team members early in different initia
             align: "start",
             loop: true,
             dragFree: true,
-            slidesToScroll: 3,
-            startIndex: 0,
+            slidesToScroll: 1,
+            breakpoints: {
+              '(min-width: 768px)': {
+                slidesToScroll: 2,
+              },
+              '(min-width: 1024px)': {
+                slidesToScroll: 3,
+              },
+            },
           }}
           plugins={[plugin]}
           className="w-full"
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3">
+              <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
                   <Testimonial {...testimonial} />
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="flex justify-center gap-4 mt-8">
-            <CarouselPrevious />
-            <CarouselNext />
+          <div className="flex justify-center gap-4 mt-6 md:mt-8">
+            <CarouselPrevious className="relative md:absolute" />
+            <CarouselNext className="relative md:absolute" />
           </div>
         </Carousel>
       </div>
