@@ -3,13 +3,17 @@ import { Badge } from "@/components/ui/badge";
 import Testimonials from "@/components/Testimonials";
 
 const Index = () => {
+  const scrollToExperience = () => {
+    const element = document.getElementById('professional-experience');
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen bg-card text-white">
       {/* Hero Section */}
       <section className="py-12 px-4 animate-fade-in">
         <div className="container max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-            {/* Left Column - Image and Basic Info */}
             <div className="md:col-span-4 bg-card-lighter rounded-2xl p-8">
               <img 
                 src="/lovable-uploads/6c02bf6f-70b1-4852-999e-4ec283d50201.png" 
@@ -118,6 +122,29 @@ const Index = () => {
                   <p className="text-gray-300">Independent software development and consulting services.</p>
                 </Card>
               </div>
+
+              {/* See More Section */}
+              <div className="text-center mt-8">
+                <button 
+                  onClick={scrollToExperience}
+                  className="text-link hover:text-link-hover transition-colors cursor-pointer inline-flex items-center gap-2"
+                >
+                  Want to see more of my previous work?
+                  <svg 
+                    className="w-4 h-4" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={2} 
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -171,8 +198,7 @@ const Index = () => {
       </section>
 
       {/* Experience Section */}
-      <section className="py-16 bg-card-lighter px-4">
-        <div className="container max-w-4xl mx-auto">
+      <section id="professional-experience" className="py-16 bg-card-lighter px-4">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Professional Experience</h2>
           <div className="space-y-8">
             <Card className="p-6 bg-card border-gray-700">
