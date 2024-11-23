@@ -16,7 +16,7 @@ const Index = () => {
                 alt="Profile picture" 
                 className="rounded-2xl shadow-xl w-full h-auto object-cover mb-6"
               />
-              <h1 className="text-3xl font-bold mb-2">Mikkel Kaj Andersen 👋</h1>
+              <h1 className="text-3xl font-bold mb-2 text-white">Mikkel Kaj Andersen 👋</h1>
               <p className="text-gray-400 mb-6">AI Tech Lead | Software Engineer | Problem Solver</p>
               <div className="flex flex-wrap gap-4 mb-6">
                 <a href="mailto:mikkel_ander@hotmail.com" className="text-link hover:text-link-hover transition-colors">
@@ -43,7 +43,7 @@ const Index = () => {
             {/* Right Column - Bio and Experience */}
             <div className="md:col-span-8 space-y-6">
               <div className="bg-card-lighter rounded-2xl p-8">
-                <h2 className="text-2xl font-bold mb-4">About Me</h2>
+                <h2 className="text-2xl font-bold mb-4 text-white">About Me</h2>
                 <p className="text-gray-300 leading-relaxed">
                   As an accomplished AI Tech Lead with nearly a decade of experience, I specialize in delivering innovative software solutions across diverse domains. My expertise spans competitive programming, advanced algorithms, and machine learning, complemented by a proven track record of leading successful AI teams in international settings. I excel in solving complex technical challenges while maintaining a strong focus on end-user experience and practical implementation.
                 </p>
@@ -53,46 +53,46 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Keep existing sections */}
+      {/* Keep existing Testimonials section */}
       <Testimonials />
 
       {/* Education Section */}
-      <section className="py-16 bg-primary-light px-4 animate-slide-in">
+      <section className="py-16 bg-card-lighter px-4 animate-slide-in">
         <div className="container max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-primary mb-8 text-center">Education</h2>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Education</h2>
           <div className="space-y-8">
-            <Card className="p-6">
-              <h3 className="text-xl font-bold text-primary mb-2">IT-University of Copenhagen</h3>
-              <p className="text-text-light mb-2">MSc in Computer Science | Aug. 2019 - Aug 2021</p>
-              <p className="text-text">Advanced algorithms and optimization. GPA (top 10%): 11.00 / 12.00</p>
+            <Card className="p-6 bg-card border-gray-700">
+              <h3 className="text-xl font-bold text-white mb-2">IT-University of Copenhagen</h3>
+              <p className="text-gray-400 mb-2">MSc in Computer Science | Aug. 2019 - Aug 2021</p>
+              <p className="text-gray-300">Advanced algorithms and optimization. GPA (top 10%): 11.00 / 12.00</p>
             </Card>
-            <Card className="p-6">
-              <h3 className="text-xl font-bold text-primary mb-2">IT-University of Copenhagen</h3>
-              <p className="text-text-light mb-2">BSc in Computer Science | Aug. 2016 - Aug 2019</p>
-              <p className="text-text">General software engineering, with electives in Machine Learning and Security.</p>
+            <Card className="p-6 bg-card border-gray-700">
+              <h3 className="text-xl font-bold text-white mb-2">IT-University of Copenhagen</h3>
+              <p className="text-gray-400 mb-2">BSc in Computer Science | Aug. 2016 - Aug 2019</p>
+              <p className="text-gray-300">General software engineering, with electives in Machine Learning and Security.</p>
             </Card>
           </div>
         </div>
       </section>
 
       {/* Skills Section */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-card">
         <div className="container max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-primary mb-8 text-center">Skills</h2>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Skills</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-primary mb-4">Programming</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Programming</h3>
               <div className="flex flex-wrap gap-2">
                 {["Java", "C#", ".NET", "Python", "JavaScript", "SQL", "Flutter", "Dart", "iOS", "Android", "HTML", "React", "CSS", "Scala", "C++", "F#", "TypeScript", "Maven", "Git"].map((skill) => (
-                  <Badge key={skill} variant="secondary" className="text-sm">{skill}</Badge>
+                  <Badge key={skill} variant="secondary" className="text-sm bg-card-lighter text-gray-300">{skill}</Badge>
                 ))}
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-primary mb-4">Frameworks</h3>
+              <h3 className="text-xl font-bold text-white mb-4">Frameworks</h3>
               <div className="flex flex-wrap gap-2">
                 {["Spring", "Entity Framework", "Pandas", "PyTorch"].map((framework) => (
-                  <Badge key={framework} variant="secondary" className="text-sm">{framework}</Badge>
+                  <Badge key={framework} variant="secondary" className="text-sm bg-card-lighter text-gray-300">{framework}</Badge>
                 ))}
               </div>
             </div>
@@ -101,26 +101,25 @@ const Index = () => {
       </section>
 
       {/* Experience Section */}
-      <section className="py-16 bg-primary-light px-4">
+      <section className="py-16 bg-card-lighter px-4">
         <div className="container max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-primary mb-8 text-center">Professional Experience</h2>
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Professional Experience</h2>
           <div className="space-y-8">
-            <Card className="p-6">
+            <Card className="p-6 bg-card border-gray-700">
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h3 className="text-xl font-bold text-primary">VISMA</h3>
-                  <p className="text-text-light">AI Tech Lead / Team Lead</p>
+                  <h3 className="text-xl font-bold text-white">VISMA</h3>
+                  <p className="text-gray-400">AI Tech Lead / Team Lead</p>
                 </div>
-                <span className="text-text-light">Aug 2023 - Present</span>
+                <span className="text-gray-400">Aug 2023 - Present</span>
               </div>
-              <ul className="list-disc list-inside space-y-2 text-text">
+              <ul className="list-disc list-inside space-y-2 text-gray-300">
                 <li>Led a 4-man team in Norway for the biggest self-service accounting SaaS firm</li>
                 <li>Planned and drove AI infrastructure and application development</li>
                 <li>Achieved 85% self-service rate with custom RAG setup</li>
                 <li>Tech lead in work-roster team and personnel manager</li>
               </ul>
             </Card>
-            {/* Add more experience cards as needed */}
           </div>
         </div>
       </section>
