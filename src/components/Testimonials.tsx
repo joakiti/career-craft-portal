@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from 'embla-carousel-autoplay';
 
 interface TestimonialProps {
   name: string;
@@ -80,6 +81,8 @@ Team collaboration: Improved in involving team members early in different initia
     }
   ];
 
+  const plugin = Autoplay({ delay: 5000, stopOnInteraction: false });
+
   return (
     <section className="py-16 px-4">
       <div className="container max-w-4xl mx-auto">
@@ -97,9 +100,8 @@ Team collaboration: Improved in involving team members early in different initia
             dragFree: true,
             slidesToScroll: 2,
             startIndex: 0,
-            autoplay: true,
-            interval: 5000,
           }}
+          plugins={[plugin]}
           className="w-full"
         >
           <CarouselContent className="-ml-2 md:-ml-4">
