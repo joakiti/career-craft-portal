@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Testimonials from "@/components/Testimonials";
+import FreelanceCard from "@/components/FreelanceCard";
 
 const Index = () => {
   const scrollToExperience = () => {
@@ -105,22 +106,8 @@ const Index = () => {
                   </div>
                 </Card>
 
-                {/* Freelancer Role - Placeholder */}
-                <Card className="bg-card-lighter border-gray-700 p-8">
-                  <div className="flex items-start justify-between mb-6">
-                    <div>
-                      <h3 className="text-xl font-bold text-link mb-2">Freelance Developer</h3>
-                      <p className="text-lg text-accent mb-1">Independent</p>
-                      <p className="text-gray-400">2023 - Present</p>
-                    </div>
-                    <div className="w-16 h-16 bg-card-lighter rounded-full flex items-center justify-center">
-                      <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <p className="text-gray-300">Independent software development and consulting services.</p>
-                </Card>
+                {/* Freelancer Role */}
+                <FreelanceCard />
               </div>
 
               {/* See More Section */}
