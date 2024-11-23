@@ -94,12 +94,17 @@ Team collaboration: Improved in involving team members early in different initia
           opts={{
             align: "start",
             loop: true,
+            dragFree: true,
+            slidesToScroll: 2,
+            startIndex: 0,
+            autoplay: true,
+            interval: 5000,
           }}
           className="w-full"
         >
-          <CarouselContent>
+          <CarouselContent className="-ml-2 md:-ml-4">
             {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
+              <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2">
                 <div className="p-1">
                   <Testimonial {...testimonial} />
                 </div>
