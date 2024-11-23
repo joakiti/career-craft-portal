@@ -1,4 +1,6 @@
 import WorkExperienceItem from "./WorkExperienceItem";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const technologyDescription = `Optimization and machine learning form the basis of our products. These technologies transform complex workflows into streamlined processes and free up time for the users. Through optimization, processes are fine-tuned to operate at their most efficient level, eliminating unnecessary steps and minimising resource wastage. This ensures that tasks are executed effectively.
 
