@@ -7,9 +7,9 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="py-20 px-4 animate-fade-in">
-        <div className="container max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6">Mikkel Kaj Andersen</h1>
-          <p className="text-lg text-text-light mb-4">AI Tech Lead | Software Engineer | Problem Solver</p>
+        <div className="container max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6 text-center">Mikkel Kaj Andersen</h1>
+          <p className="text-lg text-text-light mb-4 text-center">AI Tech Lead | Software Engineer | Problem Solver</p>
           <div className="flex justify-center gap-4 mb-8">
             <a href="mailto:mikkel_ander@hotmail.com" className="text-primary hover:text-accent transition-colors">
               mikkel_ander@hotmail.com
@@ -19,9 +19,20 @@ const Index = () => {
               +45 21 53 73 95
             </a>
           </div>
-          <p className="text-text max-w-3xl mx-auto leading-relaxed">
-            As an accomplished AI Tech Lead with nearly a decade of experience, I specialize in delivering innovative software solutions across diverse domains. My expertise spans competitive programming, advanced algorithms, and machine learning, complemented by a proven track record of leading successful AI teams in international settings. I excel in solving complex technical challenges while maintaining a strong focus on end-user experience and practical implementation.
-          </p>
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            <div className="md:w-1/2">
+              <p className="text-text leading-relaxed">
+                As an accomplished AI Tech Lead with nearly a decade of experience, I specialize in delivering innovative software solutions across diverse domains. My expertise spans competitive programming, advanced algorithms, and machine learning, complemented by a proven track record of leading successful AI teams in international settings. I excel in solving complex technical challenges while maintaining a strong focus on end-user experience and practical implementation.
+              </p>
+            </div>
+            <div className="md:w-1/2">
+              <img 
+                src="/lovable-uploads/6c02bf6f-70b1-4852-999e-4ec283d50201.png" 
+                alt="Profile picture in nature" 
+                className="rounded-lg shadow-xl w-full h-auto object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
