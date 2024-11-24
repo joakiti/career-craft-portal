@@ -1,6 +1,7 @@
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger,} from "@/components/ui/accordion";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 interface WorkExperienceItemProps {
     company: string;
@@ -23,8 +24,10 @@ const WorkExperienceItem = ({
                                 logo,
                                 description
                             }: WorkExperienceItemProps) => {
+    const ref = useScrollAnimation();
+    
     return (
-        <Card className="p-8 bg-card border-gray-700">
+        <Card ref={ref} className="p-8 bg-card border-gray-700 opacity-0">
             <Accordion type="single" collapsible>
                 <AccordionItem value="item-1" className="border-none">
                     <div className="flex justify-between items-start mb-4 flex-wrap gap-4">
