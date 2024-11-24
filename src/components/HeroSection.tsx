@@ -7,6 +7,14 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
+    const technologies = [
+        "Java", "Python", "C#", "JavaScript",
+        "React", "Node.js", "Spring Boot",
+        "AWS", "Azure", "Docker",
+        "PostgreSQL", "MongoDB", "Redis",
+        ".NET", "Flutter", "TypeScript"
+    ];
+
     return (
         <section className="py-12 px-4 animate-fade-in">
             <div className="container max-w-7xl mx-auto">
@@ -38,6 +46,30 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                     <div className="md:col-span-8 space-y-6">
                         <AboutSection/>
                         <Testimonials/>
+
+                        {/* Technologies and Companies Section */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            {/* Technologies Section */}
+                            <div className="bg-card-lighter rounded-xl p-6">
+                                <h3 className="text-xl font-bold text-white mb-4">Technologies & Frameworks</h3>
+                                <div className="flex flex-wrap gap-2">
+                                    {technologies.map((tech) => (
+                                        <span
+                                            key={tech}
+                                            className="px-3 py-1 bg-card text-sm rounded-full text-gray-300"
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Companies Section */}
+                            <div className="bg-card-lighter rounded-xl p-6">
+                                <h3 className="text-xl font-bold text-white mb-4">Companies I've Worked With</h3>
+                                {/* Existing companies content */}
+                            </div>
+                        </div>
 
                         {/* See More Section */}
                         <div className="text-center mt-8">
