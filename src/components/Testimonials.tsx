@@ -41,25 +41,37 @@ const Testimonial = ({name, role, company, image, content}: TestimonialProps) =>
 const CompanyLogos = () => (
     <div className="mt-8 pt-8 border-t border-border/10">
         <h3 className="text-lg md:text-xl font-semibold text-link mb-6 text-center">Companies I've Worked With</h3>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 items-center justify-items-center">
-            <img src="/img/resolve_logo.png" alt="Resolve" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-            <img src="/img/itu_logo.png" alt="ITU" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
-            <div className="flex items-center justify-center h-12 px-4 bg-card-lighter rounded-lg">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
+            <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
+                <img src="/img/resolve_logo.png" alt="Resolve" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                <span className="text-sm font-medium text-muted-foreground">Resolve</span>
+            </div>
+            <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
+                <img src="/img/itu_logo.png" alt="ITU" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                <span className="text-sm font-medium text-muted-foreground">ITU</span>
+            </div>
+            <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
+                <img src="/img/tripletex_logo.png" alt="Tripletex" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                 <span className="text-sm font-medium text-muted-foreground">Tripletex</span>
             </div>
-            <div className="flex items-center justify-center h-12 px-4 bg-card-lighter rounded-lg">
+            <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
+                <img src="/img/godream_logo.png" alt="GoDream" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                 <span className="text-sm font-medium text-muted-foreground">GoDream</span>
             </div>
-            <div className="flex items-center justify-center h-12 px-4 bg-card-lighter rounded-lg">
+            <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
+                <img src="/img/mim_logo.png" alt="Make It Matter" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                 <span className="text-sm font-medium text-muted-foreground">Make It Matter</span>
             </div>
-            <div className="flex items-center justify-center h-12 px-4 bg-card-lighter rounded-lg">
+            <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
+                <img src="/img/keylane_logo.png" alt="Keylane" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                 <span className="text-sm font-medium text-muted-foreground">Keylane</span>
             </div>
-            <div className="flex items-center justify-center h-12 px-4 bg-card-lighter rounded-lg">
+            <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
+                <img src="/img/itminds_logo.png" alt="IT-minds" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                 <span className="text-sm font-medium text-muted-foreground">IT-minds</span>
             </div>
-            <div className="flex items-center justify-center h-12 px-4 bg-card-lighter rounded-lg">
+            <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
+                <img src="/img/netcompany_logo.png" alt="Netcompany" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                 <span className="text-sm font-medium text-muted-foreground">Netcompany</span>
             </div>
         </div>
