@@ -7,24 +7,6 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
-    const frequentTechnologies = [
-        { name: "Java", logo: "/img/tech/java.svg" },
-        { name: "Python", logo: "/img/tech/python.svg" },
-        { name: "C#", logo: "/img/tech/csharp.svg" },
-        { name: "AWS", logo: "/img/tech/aws.svg" },
-        { name: "React", logo: "/img/tech/react.svg" },
-        { name: "TypeScript", logo: "/img/tech/typescript.svg" },
-        { name: "PostgreSQL", logo: "/img/tech/postgresql.svg" },
-        { name: "Entity Framework", logo: "/img/tech/ef.svg" },
-        { name: "CI/CD", logo: "/img/tech/cicd.svg" }
-    ];
-
-    const occasionalTechnologies = [
-        "Node.js", "Spring Boot", "Azure", "Docker", 
-        "MongoDB", "Redis",
-        ".NET", "Flutter"
-    ];
-
     return (
         <section className="py-12 px-4 animate-fade-in">
             <div className="container max-w-7xl mx-auto">
@@ -49,44 +31,6 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                             </div>
                             <div className="flex gap-4">
                                 <SocialLinks/>
-                            </div>
-                        </div>
-
-                        {/* Technologies Section */}
-                        <div className="bg-card-lighter rounded-xl p-6">
-                            <h3 className="text-xl font-bold text-white mb-6">Technologies & Frameworks</h3>
-                            
-                            {/* Frequently Used Technologies */}
-                            <div className="mb-8">
-                                <h4 className="text-lg font-semibold text-white mb-4">What I've used A LOT</h4>
-                                <div className="grid grid-cols-3 gap-4">
-                                    {frequentTechnologies.map((tech) => (
-                                        <div key={tech.name} 
-                                             className="flex flex-col items-center p-3 bg-card rounded-lg hover:bg-card-lighter transition-colors">
-                                            <img 
-                                                src={tech.logo} 
-                                                alt={`${tech.name} logo`} 
-                                                className="w-8 h-8 mb-2"
-                                            />
-                                            <span className="text-sm text-gray-300">{tech.name}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                            
-                            {/* Occasionally Used Technologies */}
-                            <div>
-                                <h4 className="text-lg font-semibold text-white mb-4">What I've used on needs basis</h4>
-                                <div className="flex flex-wrap gap-2">
-                                    {occasionalTechnologies.map((tech) => (
-                                        <span
-                                            key={tech}
-                                            className="px-3 py-1 bg-card text-sm rounded-full text-gray-300"
-                                        >
-                                            {tech}
-                                        </span>
-                                    ))}
-                                </div>
                             </div>
                         </div>
                     </div>
