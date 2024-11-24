@@ -14,6 +14,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-card text-white">
       <HeroSection scrollToExperience={scrollToExperience} />
+      <div className="bg-card-lighter py-8">
+        <CurrentRoles />
+      </div>
       <Testimonials />
       <Education />
       <WorkExperience />

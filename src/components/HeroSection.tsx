@@ -1,6 +1,5 @@
 import SocialLinks from "./SocialLinks";
 import AboutSection from "./AboutSection";
-import CurrentRoles from "./CurrentRoles";
 
 interface HeroSectionProps {
     scrollToExperience: () => void;
@@ -37,7 +36,7 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                     {/* Right Column */}
                     <div className="md:col-span-8 space-y-6">
                         <AboutSection/>
-                        <CurrentRoles/>
+                        <Testimonials />
 
                         {/* See More Section */}
                         <div className="text-center mt-8">
@@ -68,4 +67,4 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
     );
 };
 
-export default HeroSection; 
+export default HeroSection;
