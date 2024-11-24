@@ -2,6 +2,7 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Card, CardContent} from "@/components/ui/card";
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import Autoplay from 'embla-carousel-autoplay';
+import ImageWithFallback from "./ui/image-with-fallback";
 
 interface TestimonialProps {
     name: string;
@@ -17,7 +18,7 @@ const Testimonial = ({name, role, company, image, content}: TestimonialProps) =>
         <CardContent className="p-6 md:p-8 space-y-4 md:space-y-6">
             <div className="flex items-start gap-4 md:gap-6">
                 <Avatar className="w-20 h-20 border-2 border-accent/20 shadow-lg">
-                    <AvatarImage src={image || "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"} alt={name}/>
+                    <ImageWithFallback src={image || "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"} alt={name} />
                     <AvatarFallback className="text-lg">{name[0]}</AvatarFallback>
                 </Avatar>
 
@@ -43,35 +44,35 @@ const CompanyLogos = () => (
         <h3 className="text-lg md:text-xl font-semibold text-link mb-6 text-center">Companies I've Worked With</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
             <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
-                <img src="/img/resolve_logo.png" alt="Resolve" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                <ImageWithFallback src="/img/resolve_logo.png" alt="Resolve" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                 <span className="text-sm font-medium text-muted-foreground">Resolve</span>
             </div>
             <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
-                <img src="/img/itu_logo.png" alt="ITU" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                <ImageWithFallback src="/img/itu_logo.png" alt="ITU" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                 <span className="text-sm font-medium text-muted-foreground">ITU</span>
             </div>
             <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
-                <img src="/img/tripletex_logo.png" alt="Tripletex" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                <ImageWithFallback src="/img/tripletex_logo.png" alt="Tripletex" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                 <span className="text-sm font-medium text-muted-foreground">Tripletex</span>
             </div>
             <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
-                <img src="/img/godream_logo.jpeg" alt="GoDream" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                <ImageWithFallback src="/img/godream_logo.jpeg" alt="GoDream" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                 <span className="text-sm font-medium text-muted-foreground">GoDream</span>
             </div>
             <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
-                <img src="/img/mim_logo.png" alt="Make It Matter" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                <ImageWithFallback src="/img/mim_logo.png" alt="Make It Matter" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                 <span className="text-sm font-medium text-muted-foreground">Make It Matter</span>
             </div>
             <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
-                <img src="/img/keylane_logo.png" alt="Keylane" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                <ImageWithFallback src="/img/keylane_logo.png" alt="Keylane" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                 <span className="text-sm font-medium text-muted-foreground">Keylane</span>
             </div>
             <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
-                <img src="/img/itminds_logo.jpg" alt="IT-minds" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                <ImageWithFallback src="/img/itminds_logo.jpg" alt="IT-minds" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                 <span className="text-sm font-medium text-muted-foreground">IT-minds</span>
             </div>
             <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
-                <img src="/img/netcompany_logo.png" alt="Netcompany" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                <ImageWithFallback src="/img/netcompany_logo.png" alt="Netcompany" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                 <span className="text-sm font-medium text-muted-foreground">Netcompany</span>
             </div>
         </div>
