@@ -1,5 +1,6 @@
 import SocialLinks from "./SocialLinks";
 import AboutSection from "./AboutSection";
+import Testimonials from "./Testimonials";
 
 interface HeroSectionProps {
     scrollToExperience: () => void;
