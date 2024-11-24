@@ -11,14 +11,14 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
         { name: "Java", logo: "/img/tech/java.svg" },
         { name: "Python", logo: "/img/tech/python.svg" },
         { name: "C#", logo: "/img/tech/csharp.svg" },
-        { name: "JavaScript", logo: "/img/tech/javascript.svg" },
+        { name: "AWS", logo: "/img/tech/aws.svg" },
         { name: "React", logo: "/img/tech/react.svg" },
         { name: "TypeScript", logo: "/img/tech/typescript.svg" }
     ];
 
     const occasionalTechnologies = [
-        "Node.js", "Spring Boot", "AWS", "Azure", 
-        "Docker", "PostgreSQL", "MongoDB", "Redis",
+        "Node.js", "Spring Boot", "Azure", "Docker", 
+        "PostgreSQL", "MongoDB", "Redis",
         ".NET", "Flutter"
     ];
 
