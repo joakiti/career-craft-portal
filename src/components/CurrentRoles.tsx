@@ -9,15 +9,15 @@ const CurrentRoles = () => {
     return (
         <div ref={ref} className="container max-w-7xl mx-auto px-4 opacity-0">
             <div className="space-y-6">
-                <h2 className="text-2xl font-bold text-white">Current Roles</h2>
+                <h2 className="text-3xl font-extrabold text-white">Current Roles</h2>
 
                 {/* Tech Lead Role */}
                 <Card className="bg-card-lighter border-gray-700 p-8">
                     <div className="flex items-start justify-between mb-6">
                         <div>
-                            <h3 className="text-xl font-bold text-link mb-2">Tech Lead & AI Developer</h3>
-                            <p className="text-lg text-accent mb-1">VISMA</p>
-                            <p className="text-gray-400">Aug 2023 - Present</p>
+                            <h3 className="text-2xl font-extrabold text-link mb-2">Tech Lead & AI Developer</h3>
+                            <p className="text-xl font-bold text-accent mb-1">VISMA</p>
+                            <p className="text-gray-200 font-medium">Aug 2023 - Present</p>
                         </div>
                         <img
                             src="/img/Visma_logo.png"
@@ -28,8 +28,8 @@ const CurrentRoles = () => {
                     <div className="space-y-4">
                         <div className="space-y-6">
                             <div>
-                                <h4 className="text-lg font-semibold text-accent mb-3">Current Achievements</h4>
-                                <ul className="list-disc list-inside text-gray-300 space-y-2">
+                                <h4 className="text-xl font-bold text-accent mb-3">Current Achievements</h4>
+                                <ul className="list-disc list-inside text-gray-100 space-y-2 font-medium">
                                     <li>Led a 4-man team in Norway for the biggest self-service accounting SaaS firm.</li>
                                     <li>Developed custom RAG setup with vector search and re-ranking, achieving 85%
                                         self-service rate.
@@ -40,8 +40,8 @@ const CurrentRoles = () => {
                             </div>
 
                             <div>
-                                <h4 className="text-lg font-semibold text-accent mb-3">Algorithm & Technical Excellence</h4>
-                                <ul className="list-disc list-inside text-gray-300 space-y-2">
+                                <h4 className="text-xl font-bold text-accent mb-3">Algorithm & Technical Excellence</h4>
+                                <ul className="list-disc list-inside text-gray-100 space-y-2 font-medium">
                                     <li>Architected heuristic-based optimization solver for hospital work rosters,
                                         implementing complex algorithms for scheduling optimization.
                                     </li>
@@ -59,7 +59,7 @@ const CurrentRoles = () => {
 
                         <div className="flex flex-wrap gap-2 mt-4">
                             {["Java", "Python", "ML", "Azure", "AWS", "LLMs", "RAG", "Algorithms", "OR-Tools", "CloudFormation", "Docker"].map((tech) => (
-                                <Badge key={tech} variant="secondary" className="bg-card text-gray-300">
+                                <Badge key={tech} variant="secondary" className="bg-card text-gray-100 font-medium">
                                     {tech}
                                 </Badge>
                             ))}
