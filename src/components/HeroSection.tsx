@@ -30,8 +30,8 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                                 alt="Profile picture"
                                 className="rounded-2xl shadow-xl w-full h-auto object-cover mb-6"
                             />
-                            <h1 className="text-3xl font-bold mb-2 text-white">Mikkel Kaj Andersen 🚀</h1>
-                            <p className="text-gray-400 mb-6">Innovation Leader | AI Architect | Tech Visionary</p>
+                            <h1 className="text-3xl font-bold mb-2 text-white">Mikkel Kaj Andersen</h1>
+                            <p className="text-gray-400 mb-6">Father | Tech Lead | Freelancer</p>
                             <div className="flex flex-wrap gap-4 mb-6">
                                 <a href="mailto:mikkel_ander@hotmail.com"
                                    className="text-link hover:text-link-hover transition-colors">
@@ -52,7 +52,6 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                             
                             {/* Frequently Used Technologies */}
                             <div className="mb-8">
-                                <h4 className="text-lg font-semibold text-white mb-4">What I've used A LOT</h4>
                                 <div className="grid grid-cols-3 gap-4">
                                     {frequentTechnologies.map((tech) => (
                                         <div key={tech.name} 

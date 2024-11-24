@@ -131,7 +131,6 @@ tryghed at vide, at vi kan regne med hans ekspertise, og vi ser frem til fortsat
                 <h2 className="text-xl md:text-2xl font-bold text-link mb-6 md:mb-8 text-center">
                     <span className="relative inline-block">
                         ... here's some honest feedback I've received
-                        <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"/>
                     </span>
                 </h2>
 

@@ -75,3 +75,9 @@
     @apply bg-background text-foreground font-mono;
   }
 }
+
+@layer components {
+  .font-roboto {
+    font-family: 'Roboto', sans-serif;
+  }
+}
