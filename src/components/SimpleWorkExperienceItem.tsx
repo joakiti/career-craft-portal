@@ -10,6 +10,7 @@ interface SimpleWorkExperienceItemProps {
     technologies: string[];
     logo?: string;
     description?: string;
+    defaultOpen?: boolean;
 }
 
 const SimpleWorkExperienceItem = ({
@@ -19,11 +20,12 @@ const SimpleWorkExperienceItem = ({
     responsibilities,
     technologies,
     logo,
-    description
+    description,
+    defaultOpen = false
 }: SimpleWorkExperienceItemProps) => {
     return (
         <Card className="p-8 bg-card border-gray-700">
-            <Accordion type="single" collapsible>
+            <Accordion type="single" collapsible defaultValue={defaultOpen ? "item-1" : undefined}>
                 <AccordionItem value="item-1" className="border-none">
                     <div className="flex justify-between items-start mb-4 flex-wrap gap-4">
                         <div>
