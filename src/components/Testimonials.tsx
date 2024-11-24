@@ -55,7 +55,7 @@ const CompanyLogos = () => (
                 <span className="text-sm font-medium text-muted-foreground">Tripletex</span>
             </div>
             <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
-                <img src="/img/godream_logo.png" alt="GoDream" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                <img src="/img/godream_logo.jpeg" alt="GoDream" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                 <span className="text-sm font-medium text-muted-foreground">GoDream</span>
             </div>
             <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
@@ -67,7 +67,7 @@ const CompanyLogos = () => (
                 <span className="text-sm font-medium text-muted-foreground">Keylane</span>
             </div>
             <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
-                <img src="/img/itminds_logo.png" alt="IT-minds" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+                <img src="/img/itminds_logo.jpg" alt="IT-minds" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
                 <span className="text-sm font-medium text-muted-foreground">IT-minds</span>
             </div>
             <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
