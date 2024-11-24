@@ -53,6 +53,15 @@ const CompanyLogos = () => (
             <div className="flex items-center justify-center h-12 px-4 bg-card-lighter rounded-lg">
                 <span className="text-sm font-medium text-muted-foreground">Make It Matter</span>
             </div>
+            <div className="flex items-center justify-center h-12 px-4 bg-card-lighter rounded-lg">
+                <span className="text-sm font-medium text-muted-foreground">Keylane</span>
+            </div>
+            <div className="flex items-center justify-center h-12 px-4 bg-card-lighter rounded-lg">
+                <span className="text-sm font-medium text-muted-foreground">IT-minds</span>
+            </div>
+            <div className="flex items-center justify-center h-12 px-4 bg-card-lighter rounded-lg">
+                <span className="text-sm font-medium text-muted-foreground">Netcompany</span>
+            </div>
         </div>
     </div>
 );
