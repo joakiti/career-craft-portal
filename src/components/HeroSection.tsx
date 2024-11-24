@@ -19,12 +19,6 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
         { name: "CI/CD", logo: "/img/tech/cicd.svg" }
     ];
 
-    const occasionalTechnologies = [
-        "Node.js", "Spring Boot", "Azure", "Docker", 
-        "MongoDB", "Redis",
-        ".NET", "Flutter"
-    ];
-
     return (
         <section className="py-12 px-4 animate-fade-in">
             <div className="container max-w-7xl mx-auto">
@@ -70,21 +64,6 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                                             />
                                             <span className="text-sm text-gray-300">{tech.name}</span>
                                         </div>
-                                    ))}
-                                </div>
-                            </div>
-                            
-                            {/* Occasionally Used Technologies */}
-                            <div>
-                                <h4 className="text-lg font-semibold text-white mb-4">What I've used on needs basis</h4>
-                                <div className="flex flex-wrap gap-2">
-                                    {occasionalTechnologies.map((tech) => (
-                                        <span
-                                            key={tech}
-                                            className="px-3 py-1 bg-card text-sm rounded-full text-gray-300"
-                                        >
-                                            {tech}
-                                        </span>
                                     ))}
                                 </div>
                             </div>
