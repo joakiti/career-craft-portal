@@ -1,9 +1,12 @@
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Education = () => {
+    const ref = useScrollAnimation();
+    
     return (
-        <section className="py-16 bg-card-lighter px-4 animate-slide-in relative overflow-hidden">
+        <section ref={ref} className="py-16 bg-card-lighter px-4 opacity-0 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 pointer-events-none"/>
 
             <div className="container max-w-4xl mx-auto relative z-10">

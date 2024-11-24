@@ -1,10 +1,13 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import FreelanceCard from "@/components/FreelanceCard";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const CurrentRoles = () => {
+    const ref = useScrollAnimation();
+    
     return (
-        <div className="container max-w-7xl mx-auto px-4">
+        <div ref={ref} className="container max-w-7xl mx-auto px-4 opacity-0">
             <div className="space-y-6">
                 <h2 className="text-2xl font-bold text-white">Current Roles</h2>
 

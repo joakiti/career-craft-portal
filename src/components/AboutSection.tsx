@@ -1,6 +1,10 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const AboutSection = () => {
+    const ref = useScrollAnimation();
+    
     return (
-        <div className="bg-card-lighter rounded-2xl p-8">
+        <div ref={ref} className="bg-card-lighter rounded-2xl p-8 opacity-0">
             <h2 className="text-2xl font-bold mb-4 text-white">Crafting Digital Excellence ✨</h2>
             <p className="text-gray-300 leading-relaxed">
                 As a visionary AI Tech Lead with a proven track record of innovation, I bring nearly a decade of expertise
