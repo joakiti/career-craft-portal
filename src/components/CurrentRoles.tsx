@@ -17,7 +17,7 @@ const CurrentRoles = () => {
                         <div>
                             <h3 className="text-2xl font-extrabold text-link mb-2">Tech Lead & AI Developer</h3>
                             <p className="text-xl font-bold text-accent mb-1">VISMA</p>
-                            <p className="text-gray-300">Aug 2023 - Present</p>
+                            <p className="text-gray-200 font-medium">Aug 2023 - Present</p>
                         </div>
                         <img
                             src="/img/Visma_logo.png"
@@ -29,7 +29,7 @@ const CurrentRoles = () => {
                         <div className="space-y-6">
                             <div>
                                 <h4 className="text-xl font-bold text-accent mb-3">Current Achievements</h4>
-                                <ul className="list-disc list-inside text-gray-300 space-y-2">
+                                <ul className="list-disc list-inside text-gray-100 space-y-2 font-medium">
                                     <li>Led a 4-man team in Norway for the biggest self-service accounting SaaS firm.</li>
                                     <li>Developed custom RAG setup with vector search and re-ranking, achieving 85%
                                         self-service rate.
@@ -41,7 +41,7 @@ const CurrentRoles = () => {
 
                             <div>
                                 <h4 className="text-xl font-bold text-accent mb-3">Algorithm & Technical Excellence</h4>
-                                <ul className="list-disc list-inside text-gray-300 space-y-2">
+                                <ul className="list-disc list-inside text-gray-100 space-y-2 font-medium">
                                     <li>Architected heuristic-based optimization solver for hospital work rosters,
                                         implementing complex algorithms for scheduling optimization.
                                     </li>
@@ -59,7 +59,7 @@ const CurrentRoles = () => {
 
                         <div className="flex flex-wrap gap-2 mt-4">
                             {["Java", "Python", "ML", "Azure", "AWS", "LLMs", "RAG", "Algorithms", "OR-Tools", "CloudFormation", "Docker"].map((tech) => (
-                                <Badge key={tech} variant="secondary" className="bg-card text-gray-300">
+                                <Badge key={tech} variant="secondary" className="bg-card text-gray-100 font-medium">
                                     {tech}
                                 </Badge>
                             ))}
