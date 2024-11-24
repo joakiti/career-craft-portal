@@ -19,26 +19,42 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
         <section className="py-12 px-4 animate-fade-in">
             <div className="container max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-                    {/* Profile Card */}
-                    <div className="md:col-span-4 bg-card-lighter rounded-2xl p-8">
-                        <img
-                            src="/img/profile_pic.png"
-                            alt="Profile picture"
-                            className="rounded-2xl shadow-xl w-full h-auto object-cover mb-6"
-                        />
-                        <h1 className="text-3xl font-bold mb-2 text-white">Mikkel Kaj Andersen 🚀</h1>
-                        <p className="text-gray-400 mb-6">Innovation Leader | AI Architect | Tech Visionary</p>
-                        <div className="flex flex-wrap gap-4 mb-6">
-                            <a href="mailto:mikkel_ander@hotmail.com"
-                               className="text-link hover:text-link-hover transition-colors">
-                                mikkel_ander@hotmail.com
-                            </a>
-                            <a href="tel:+4521537395" className="text-link hover:text-link-hover transition-colors">
-                                +45 21 53 73 95
-                            </a>
+                    <div className="md:col-span-4 space-y-6">
+                        <div className="bg-card-lighter rounded-2xl p-8">
+                            <img
+                                src="/img/profile_pic.png"
+                                alt="Profile picture"
+                                className="rounded-2xl shadow-xl w-full h-auto object-cover mb-6"
+                            />
+                            <h1 className="text-3xl font-bold mb-2 text-white">Mikkel Kaj Andersen 🚀</h1>
+                            <p className="text-gray-400 mb-6">Innovation Leader | AI Architect | Tech Visionary</p>
+                            <div className="flex flex-wrap gap-4 mb-6">
+                                <a href="mailto:mikkel_ander@hotmail.com"
+                                   className="text-link hover:text-link-hover transition-colors">
+                                    mikkel_ander@hotmail.com
+                                </a>
+                                <a href="tel:+4521537395" className="text-link hover:text-link-hover transition-colors">
+                                    +45 21 53 73 95
+                                </a>
+                            </div>
+                            <div className="flex gap-4">
+                                <SocialLinks/>
+                            </div>
                         </div>
-                        <div className="flex gap-4">
-                            <SocialLinks/>
+
+                        {/* Technologies Section */}
+                        <div className="bg-card-lighter rounded-xl p-6">
+                            <h3 className="text-xl font-bold text-white mb-4">Technologies & Frameworks</h3>
+                            <div className="flex flex-wrap gap-2">
+                                {technologies.map((tech) => (
+                                    <span
+                                        key={tech}
+                                        className="px-3 py-1 bg-card text-sm rounded-full text-gray-300"
+                                    >
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
                     </div>
 
@@ -46,30 +62,6 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                     <div className="md:col-span-8 space-y-6">
                         <AboutSection/>
                         <Testimonials/>
-
-                        {/* Technologies and Companies Section */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            {/* Technologies Section */}
-                            <div className="bg-card-lighter rounded-xl p-6">
-                                <h3 className="text-xl font-bold text-white mb-4">Technologies & Frameworks</h3>
-                                <div className="flex flex-wrap gap-2">
-                                    {technologies.map((tech) => (
-                                        <span
-                                            key={tech}
-                                            className="px-3 py-1 bg-card text-sm rounded-full text-gray-300"
-                                        >
-                                            {tech}
-                                        </span>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {/* Companies Section */}
-                            <div className="bg-card-lighter rounded-xl p-6">
-                                <h3 className="text-xl font-bold text-white mb-4">Companies I've Worked With</h3>
-                                {/* Existing companies content */}
-                            </div>
-                        </div>
 
                         {/* See More Section */}
                         <div className="text-center mt-8">
