@@ -30,6 +30,8 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                                 src="/img/profile_pic.png"
                                 alt="Profile picture"
                                 className="rounded-2xl shadow-xl w-full h-auto object-cover mb-6"
+                                fallbackSrc="https://images.unsplash.com/photo-1518770660439-4636190af475"
+                                fallbackClassName="w-full h-[300px] rounded-2xl"
                             />
                             <h1 className="text-3xl font-bold mb-2 text-white">Mikkel Kaj Andersen</h1>
                             <p className="text-gray-400 mb-6">Father | Tech Lead | Freelancer</p>

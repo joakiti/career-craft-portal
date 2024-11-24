@@ -3,15 +3,23 @@ import { cn } from "@/lib/utils";
 
 interface ImageWithFallbackProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   fallbackClassName?: string;
+  fallbackSrc?: string;
 }
 
 const ImageWithFallback = ({ 
   className, 
   fallbackClassName,
+  fallbackSrc,
   alt,
   ...props 
 }: ImageWithFallbackProps) => {
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  const handleError = () => {
+    setError(true);
+    setIsLoading(false);
+  };
 
   return (
     <div className="relative">
@@ -24,9 +32,14 @@ const ImageWithFallback = ({
         />
       )}
       <img
-        className={cn(isLoading ? "opacity-0" : "opacity-100 transition-opacity duration-300", className)}
+        className={cn(
+          isLoading ? "opacity-0" : "opacity-100 transition-opacity duration-300",
+          className
+        )}
+        src={error && fallbackSrc ? fallbackSrc : props.src}
         alt={alt}
         onLoad={() => setIsLoading(false)}
+        onError={handleError}
         {...props}
       />
     </div>
