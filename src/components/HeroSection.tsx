@@ -18,8 +18,8 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                             alt="Profile picture"
                             className="rounded-2xl shadow-xl w-full h-auto object-cover mb-6"
                         />
-                        <h1 className="text-3xl font-bold mb-2 text-white">Mikkel Kaj Andersen 👋</h1>
-                        <p className="text-gray-400 mb-6">AI Tech Lead | Software Engineer | Problem Solver</p>
+                        <h1 className="text-3xl font-bold mb-2 text-white">Mikkel Kaj Andersen 🚀</h1>
+                        <p className="text-gray-400 mb-6">Innovation Leader | AI Architect | Tech Visionary</p>
                         <div className="flex flex-wrap gap-4 mb-6">
                             <a href="mailto:mikkel_ander@hotmail.com"
                                className="text-link hover:text-link-hover transition-colors">
@@ -37,7 +37,7 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                     {/* Right Column */}
                     <div className="md:col-span-8 space-y-6">
                         <AboutSection/>
-                        <Testimonials />
+                        <Testimonials/>
 
                         {/* See More Section */}
                         <div className="text-center mt-8">
@@ -45,7 +45,7 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                                 onClick={scrollToExperience}
                                 className="text-link hover:text-link-hover transition-colors cursor-pointer inline-flex items-center gap-2"
                             >
-                                Want to see more of my previous work?
+                                Discover my journey and achievements
                                 <svg
                                     className="w-4 h-4"
                                     fill="none"

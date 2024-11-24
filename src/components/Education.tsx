@@ -13,7 +13,7 @@ const Education = () => {
                         alt="ITU Logo"
                         className="h-12 w-auto"
                     />
-                    <h2 className="text-3xl font-bold text-white">Education</h2>
+                    <h2 className="text-3xl font-bold text-white">Academic Excellence</h2>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8">
@@ -26,8 +26,8 @@ const Education = () => {
                             </div>
                             <p className="text-gray-400 mb-2">Aug. 2019 - Aug 2021</p>
                             <div className="space-y-2">
-                                <p className="text-gray-300">Advanced algorithms and optimization</p>
-                                <p className="text-accent font-medium">GPA (top 10%): 11.00 / 12.00</p>
+                                <p className="text-gray-300">Mastering Advanced Algorithms & Optimization</p>
+                                <p className="text-accent font-medium">Outstanding Achievement: Top 10% (11.00/12.00)</p>
                             </div>
                         </Card>
 
@@ -39,8 +39,8 @@ const Education = () => {
                             </div>
                             <p className="text-gray-400 mb-2">Aug. 2016 - Aug 2019</p>
                             <div className="space-y-2">
-                                <p className="text-gray-300">General software engineering</p>
-                                <p className="text-gray-300">Electives in Machine Learning and Security</p>
+                                <p className="text-gray-300">Advanced Software Engineering Foundations</p>
+                                <p className="text-gray-300">Specialized in Cutting-edge ML & Security</p>
                             </div>
                         </Card>
                     </div>

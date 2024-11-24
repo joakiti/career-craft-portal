@@ -1,6 +1,6 @@
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Card, CardContent} from "@/components/ui/card";
-import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious,} from "@/components/ui/carousel";
+import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import Autoplay from 'embla-carousel-autoplay';
 
 interface TestimonialProps {
@@ -12,42 +12,58 @@ interface TestimonialProps {
     content: string;
 }
 
-const Testimonial = ({name, role, company, image, companyLogo, content}: TestimonialProps) => (
-    <Card
-        className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 bg-card-lighter h-full border-border/5">
-        <CardContent className="p-4 md:p-8 space-y-4 md:space-y-6">
-            <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-6">
-                <div className="relative mx-auto md:mx-0">
-                    <Avatar className="w-20 h-20 md:w-24 md:h-24 border-4 border-accent/20 shadow-lg">
-                        <AvatarImage src={image || "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"}
-                                     alt={name}/>
-                        <AvatarFallback className="text-2xl">{name[0]}</AvatarFallback>
-                    </Avatar>
-                    {companyLogo && (
-                        <div
-                            className="absolute -bottom-2 -right-2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-card p-1 shadow-lg animate-fade-in border border-border/10">
-                            <img src={companyLogo} alt={`${company} logo`} className="w-full h-full object-contain"/>
-                        </div>
-                    )}
-                </div>
+const Testimonial = ({name, role, company, image, content}: TestimonialProps) => (
+    <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 bg-card-lighter h-full border-border/5">
+        <CardContent className="p-6 md:p-8 space-y-4 md:space-y-6">
+            <div className="flex items-start gap-4 md:gap-6">
+                <Avatar className="w-20 h-20 border-2 border-accent/20 shadow-lg">
+                    <AvatarImage src={image || "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"} alt={name}/>
+                    <AvatarFallback className="text-lg">{name[0]}</AvatarFallback>
+                </Avatar>
 
-                <div className="flex-1 space-y-2 text-center md:text-left">
-                    <div className="space-y-1">
-                        <h4 className="text-lg md:text-xl font-bold text-link">{name}</h4>
-                        <p className="text-sm text-muted-foreground font-medium">{role}</p>
-                        <p className="text-sm text-muted-foreground">{company}</p>
-                    </div>
+                <div className="flex-1 min-w-0">
+                    <h4 className="text-xl md:text-2xl font-bold text-link truncate">{name}</h4>
+                    <p className="text-sm md:text-base text-muted-foreground font-medium">{role}</p>
+                    <p className="text-sm md:text-base text-muted-foreground truncate">{company}</p>
                 </div>
             </div>
 
             <div className="relative">
-                <div className="absolute left-0 top-0 w-1 h-full bg-accent/20 rounded-full"/>
+                <div className="absolute left-0 top-0 w-0.5 h-full bg-accent/20 rounded-full"/>
                 <blockquote className="pl-4 md:pl-6 text-sm md:text-base text-muted-foreground leading-relaxed italic">
                     {content}
                 </blockquote>
             </div>
         </CardContent>
     </Card>
+);
+
+const CompanyLogos = () => (
+    <div className="mt-8 pt-8 border-t border-border/10">
+        <h3 className="text-lg md:text-xl font-semibold text-link mb-6 text-center">Companies I've Worked With</h3>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 items-center justify-items-center">
+            <img src="/img/resolve_logo.png" alt="Resolve" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+            <img src="/img/itu_logo.png" alt="ITU" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+            <div className="flex items-center justify-center h-12 px-4 bg-card-lighter rounded-lg">
+                <span className="text-sm font-medium text-muted-foreground">Tripletex</span>
+            </div>
+            <div className="flex items-center justify-center h-12 px-4 bg-card-lighter rounded-lg">
+                <span className="text-sm font-medium text-muted-foreground">GoDream</span>
+            </div>
+            <div className="flex items-center justify-center h-12 px-4 bg-card-lighter rounded-lg">
+                <span className="text-sm font-medium text-muted-foreground">Make It Matter</span>
+            </div>
+            <div className="flex items-center justify-center h-12 px-4 bg-card-lighter rounded-lg">
+                <span className="text-sm font-medium text-muted-foreground">Keylane</span>
+            </div>
+            <div className="flex items-center justify-center h-12 px-4 bg-card-lighter rounded-lg">
+                <span className="text-sm font-medium text-muted-foreground">IT-minds</span>
+            </div>
+            <div className="flex items-center justify-center h-12 px-4 bg-card-lighter rounded-lg">
+                <span className="text-sm font-medium text-muted-foreground">Netcompany</span>
+            </div>
+        </div>
+    </div>
 );
 
 const Testimonials = () => {
@@ -81,48 +97,39 @@ Team collaboration: Improved in involving team members early in different initia
     const plugin = Autoplay({delay: 5000, stopOnInteraction: false});
 
     return (
-        <section className="py-8 md:py-16 px-4">
-            <div className="container max-w-7xl mx-auto">
-                <h2 className="text-2xl md:text-3xl font-bold text-link mb-8 md:mb-12 text-center relative">
-          <span className="relative inline-block">
-            Words of Reference
-            <div
-                className="absolute -bottom-2 left-0 w-full h-1 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"/>
-          </span>
+        <section className="py-8 md:py-12 px-4 md:px-6">
+            <div className="container max-w-4xl mx-auto">
+                <h2 className="text-xl md:text-2xl font-bold text-link mb-6 md:mb-8 text-center">
+                    <span className="relative inline-block">
+                        Words of Reference
+                        <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"/>
+                    </span>
                 </h2>
 
                 <Carousel
                     opts={{
-                        align: "start",
+                        align: "center",
                         loop: true,
-                        dragFree: true,
-                        slidesToScroll: 1,
-                        breakpoints: {
-                            '(min-width: 768px)': {
-                                slidesToScroll: 2,
-                            },
-                            '(min-width: 1024px)': {
-                                slidesToScroll: 3,
-                            },
-                        },
                     }}
                     plugins={[plugin]}
                     className="w-full"
                 >
-                    <CarouselContent className="-ml-2 md:-ml-4">
+                    <CarouselContent>
                         {testimonials.map((testimonial, index) => (
-                            <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                            <CarouselItem key={index}>
                                 <div className="p-1">
                                     <Testimonial {...testimonial} />
                                 </div>
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <div className="flex justify-center gap-4 mt-6 md:mt-8">
-                        <CarouselPrevious className="relative md:absolute"/>
-                        <CarouselNext className="relative md:absolute"/>
+                    <div className="flex justify-center gap-4 mt-6">
+                        <CarouselPrevious />
+                        <CarouselNext />
                     </div>
                 </Carousel>
+
+                <CompanyLogos />
             </div>
         </section>
     );
