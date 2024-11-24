@@ -1,4 +1,3 @@
-import Testimonials from "@/components/Testimonials";
 import FreelanceCard from "@/components/FreelanceCard";
 import Education from "@/components/Education";
 import WorkExperience from "@/components/WorkExperience";
@@ -18,7 +17,6 @@ const Index = () => {
       <div className="bg-card-lighter py-8">
         <CurrentRoles />
       </div>
-      <Testimonials />
       <Education />
       <WorkExperience />
       <SkillsSection />
