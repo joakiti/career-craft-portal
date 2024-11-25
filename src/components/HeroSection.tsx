@@ -2,6 +2,7 @@ import SocialLinks from "./SocialLinks";
 import AboutSection from "./AboutSection";
 import Testimonials from "./Testimonials";
 import ImageWithFallback from "./ui/image-with-fallback";
+import ContactForm from "./ContactForm";
 import { Code, Brain, Cloud, Database } from "lucide-react";
 
 interface HeroSectionProps {
@@ -122,7 +123,7 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                         <AboutSection/>
                         <Testimonials/>
 
-                        <div className="text-center mt-8">
+                        <div className="text-center mt-8 space-y-4">
                             <button
                                 onClick={scrollToExperience}
                                 className="text-link hover:text-link-hover transition-colors cursor-pointer inline-flex items-center gap-2"
@@ -142,6 +143,9 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                                     />
                                 </svg>
                             </button>
+                            <div>
+                                <ContactForm />
+                            </div>
                         </div>
                     </div>
                 </div>
