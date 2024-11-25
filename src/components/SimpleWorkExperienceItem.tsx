@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 interface SimpleWorkExperienceItemProps {
     company: string;
@@ -23,15 +24,17 @@ const SimpleWorkExperienceItem = ({
     description,
     defaultOpen = false
 }: SimpleWorkExperienceItemProps) => {
+    const ref = useScrollAnimation();
+    
     return (
-        <Card className="p-8 bg-card border-gray-700">
+        <Card ref={ref} className="p-8 bg-card border-gray-700 opacity-0">
             <Accordion type="single" collapsible defaultValue={defaultOpen ? "item-1" : undefined}>
                 <AccordionItem value="item-1" className="border-none">
                     <div className="flex justify-between items-start mb-4 flex-wrap gap-4">
                         <div>
                             <div className="flex items-center gap-4">
                                 {logo && (
-                                    <img src={logo} alt={`${company} logo`} className="h-8 w-auto"/>
+                                    <img src={logo} alt={`${company} logo`} className="h-8 w-auto" />
                                 )}
                                 <div>
                                     <h3 className="text-xl font-bold text-white">{company}</h3>

@@ -1,9 +1,12 @@
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const FreelanceCard = () => {
+    const ref = useScrollAnimation();
+    
     return (
-        <Card className="bg-card-lighter border-gray-700 p-8">
+        <Card ref={ref} className="bg-card-lighter border-gray-700 p-8 opacity-0">
             <div className="flex items-start justify-between mb-6">
                 <div>
                     <h3 className="text-2xl font-extrabold text-link mb-2">SYNERGY SOFTWARE</h3>

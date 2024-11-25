@@ -1,6 +1,7 @@
 import SocialLinks from "./SocialLinks";
 import AboutSection from "./AboutSection";
 import Testimonials from "./Testimonials";
+import ImageWithFallback from "./ui/image-with-fallback";
 
 interface HeroSectionProps {
     scrollToExperience: () => void;
@@ -25,10 +26,12 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
                     <div className="md:col-span-4 space-y-6">
                         <div className="bg-card-lighter rounded-2xl p-8">
-                            <img
+                            <ImageWithFallback
                                 src="/img/profile_pic.png"
                                 alt="Profile picture"
                                 className="rounded-2xl shadow-xl w-full h-auto object-cover mb-6"
+                                fallbackSrc="https://images.unsplash.com/photo-1518770660439-4636190af475"
+                                fallbackClassName="w-full h-[300px] rounded-2xl"
                             />
                             <h1 className="text-3xl font-bold mb-2 text-white">Mikkel Kaj Andersen</h1>
                             <p className="text-gray-400 mb-6">Father | Tech Lead | Freelancer</p>
@@ -46,20 +49,19 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                             </div>
                         </div>
 
-                        {/* Technologies Section */}
                         <div className="bg-card-lighter rounded-xl p-6">
                             <h3 className="text-xl font-bold text-white mb-6">Technologies & Frameworks</h3>
                             
-                            {/* Frequently Used Technologies */}
                             <div className="mb-8">
                                 <div className="grid grid-cols-3 gap-4">
                                     {frequentTechnologies.map((tech) => (
                                         <div key={tech.name} 
                                              className="flex flex-col items-center p-3 bg-card rounded-lg hover:bg-card-lighter transition-colors">
-                                            <img 
+                                            <ImageWithFallback 
                                                 src={tech.logo} 
                                                 alt={`${tech.name} logo`} 
                                                 className="w-8 h-8 mb-2"
+                                                fallbackClassName="w-8 h-8 mb-2"
                                             />
                                             <span className="text-sm text-gray-300">{tech.name}</span>
                                         </div>
@@ -69,12 +71,10 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                         </div>
                     </div>
 
-                    {/* Right Column */}
                     <div className="md:col-span-8 space-y-6">
                         <AboutSection/>
                         <Testimonials/>
 
-                        {/* See More Section */}
                         <div className="text-center mt-8">
                             <button
                                 onClick={scrollToExperience}
