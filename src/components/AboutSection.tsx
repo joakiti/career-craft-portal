@@ -12,7 +12,7 @@ const AboutSection = () => {
                 <div ref={ref} className="bg-card-lighter rounded-2xl p-8 opacity-0">
                     <h2 className="text-3xl font-extrabold mb-4 text-white">Let's build together ✨</h2>
                     <p className="text-gray-100 leading-relaxed font-medium">
-                        I'm a coder who loves building stuff. I've been writing code for almost 10 years in different areas. I dig competitive programming, algorithms, optimization, and machine learning.
+                        I'm a coder who loves building stuff. I've been writing code for almost 10 years in different areas. I'm good at competitive programming, algorithms, optimization, and machine learning.
                     </p>
                     <p className="text-gray-100 leading-relaxed font-medium mt-4">
                         I enjoy solving tough problems and working across all parts of tech, from UI to algorithm design. I've built AI projects and led teams that shipped real products.
