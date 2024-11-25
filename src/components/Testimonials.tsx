@@ -13,11 +13,13 @@ interface TestimonialProps {
 }
 
 const Testimonial = ({name, role, company, image, content}: TestimonialProps) => (
-    <Card className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 bg-card-lighter h-full border-border/5">
+    <Card
+        className="relative overflow-hidden group hover:shadow-xl transition-all duration-300 bg-card-lighter h-full border-border/5">
         <CardContent className="p-6 md:p-8 space-y-4 md:space-y-6">
             <div className="flex items-start gap-4 md:gap-6">
                 <Avatar className="w-20 h-20 border-2 border-accent/20 shadow-lg">
-                    <AvatarImage src={image || "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"} alt={name}/>
+                    <AvatarImage src={image || "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"}
+                                 alt={name}/>
                     <AvatarFallback className="text-lg">{name[0]}</AvatarFallback>
                 </Avatar>
 
@@ -42,36 +44,52 @@ const CompanyLogos = () => (
     <div className="mt-8 pt-8 border-t border-border/10">
         <h3 className="text-lg md:text-xl font-semibold text-link mb-6 text-center">Companies I've Worked With</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
-            <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
-                <img src="/img/resolve_logo.png" alt="Resolve" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+            <div
+                className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
+                <img src="/img/resolve_logo.png" alt="Resolve"
+                     className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity"/>
                 <span className="text-sm font-medium text-muted-foreground">Resolve</span>
             </div>
-            <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
-                <img src="/img/itu_logo.png" alt="ITU" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+            <div
+                className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
+                <img src="/img/itu_logo.png" alt="ITU"
+                     className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity"/>
                 <span className="text-sm font-medium text-muted-foreground">ITU</span>
             </div>
-            <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
-                <img src="/img/tripletex_logo.png" alt="Tripletex" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+            <div
+                className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
+                <img src="/img/tripletex_logo.png" alt="Tripletex"
+                     className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity"/>
                 <span className="text-sm font-medium text-muted-foreground">Tripletex</span>
             </div>
-            <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
-                <img src="/img/godream_logo.jpeg" alt="GoDream" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+            <div
+                className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
+                <img src="/img/godream_logo.jpeg" alt="GoDream"
+                     className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity"/>
                 <span className="text-sm font-medium text-muted-foreground">GoDream</span>
             </div>
-            <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
-                <img src="/img/mim_logo.png" alt="Make It Matter" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+            <div
+                className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
+                <img src="/img/mim_logo.png" alt="Make It Matter"
+                     className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity"/>
                 <span className="text-sm font-medium text-muted-foreground">Make It Matter</span>
             </div>
-            <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
-                <img src="/img/keylane_logo.png" alt="Keylane" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+            <div
+                className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
+                <img src="/img/keylane_logo.png" alt="Keylane"
+                     className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity"/>
                 <span className="text-sm font-medium text-muted-foreground">Keylane</span>
             </div>
-            <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
-                <img src="/img/itminds_logo.jpg" alt="IT-minds" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+            <div
+                className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
+                <img src="/img/itminds_logo.jpg" alt="IT-minds"
+                     className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity"/>
                 <span className="text-sm font-medium text-muted-foreground">IT-minds</span>
             </div>
-            <div className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
-                <img src="/img/netcompany_logo.png" alt="Netcompany" className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity" />
+            <div
+                className="flex flex-col items-center space-y-2 p-4 bg-card-lighter rounded-lg hover:shadow-lg transition-all">
+                <img src="/img/netcompany_logo.png" alt="Netcompany"
+                     className="h-12 w-auto opacity-70 hover:opacity-100 transition-opacity"/>
                 <span className="text-sm font-medium text-muted-foreground">Netcompany</span>
             </div>
         </div>
@@ -84,9 +102,9 @@ const Testimonials = () => {
             name: "Martin Sommerseth",
             role: "Manager",
             company: "Resolve",
-            content: `In terms of technical leadership, Mikkel transitioned into a Tech Lead role due to his exceptional technical deliveries and leadership abilities. He played a key role in defining the responsibilities of this position alongside others at Resolve.
+            content: `Mikkel transitioned into a Tech Lead role due to his exceptional technical deliveries and leadership abilities.
             
-            Regarding project management, Mikkel showcased strong skills, particularly in leading the PN project to success by balancing technical implementation and aligning different parties.
+            Mikkel also showcased strong project management skills, particularly in leading the PostNord project to success by balancing technical implementation and aligning different parties.
             
             In tech strategy contribution, he actively participated in shaping the central tech strategy at Resolve, demonstrating initiative and foresight in the LLM strategy and its potential role in the AI API strategy.
             
@@ -96,7 +114,7 @@ const Testimonials = () => {
             name: "Stian Vale",
             role: "Manager",
             company: "Resolve",
-            content: `Mikkel's work on Automatic Rostering has received positive feedback from Postnord. Both Medvind and all stakeholders involved are extremely pleased with the deliveries, which were primarily led and implemented by Mikkel.
+            content: `Mikkel's work on Automatic Rostering received positive feedback from Postnord. All stakeholders involved are extremely pleased with the deliveries, which were primarily led and implemented by Mikkel.
             
             He significantly enhanced the Automatic Rostering product, preparing it for further growth. What was once an "unsure Resolve card" a year ago has now become one of our standout products, thanks to the technological advancements made.`
         },
@@ -152,12 +170,12 @@ tryghed at vide, at vi kan regne med hans ekspertise, og vi ser frem til fortsat
                         ))}
                     </CarouselContent>
                     <div className="flex justify-center gap-4 mt-6">
-                        <CarouselPrevious />
-                        <CarouselNext />
+                        <CarouselPrevious/>
+                        <CarouselNext/>
                     </div>
                 </Carousel>
 
-                <CompanyLogos />
+                <CompanyLogos/>
             </div>
         </section>
     );
