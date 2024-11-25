@@ -2,6 +2,7 @@ import SocialLinks from "./SocialLinks";
 import AboutSection from "./AboutSection";
 import Testimonials from "./Testimonials";
 import ImageWithFallback from "./ui/image-with-fallback";
+import { Code, Brain, Cloud, Database } from "lucide-react";
 
 interface HeroSectionProps {
     scrollToExperience: () => void;
@@ -11,17 +12,19 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
     const technologies = [
         {
             category: "Programming Languages",
+            icon: <Code className="w-5 h-5 text-accent mb-2" />,
             items: [
                 { name: "Python", logo: "/img/tech/python.svg" },
                 { name: "Java", logo: "/img/tech/java.svg" },
                 { name: "JavaScript", logo: "/img/tech/javascript.svg" },
                 { name: "TypeScript", logo: "/img/tech/typescript.svg" },
-                { name: "Go", logo: "/img/tech/go.svg" },
-                { name: "R", logo: "/img/tech/r.svg" }
+                { name: "C#", logo: "/img/tech/csharp.svg" },
+                { name: "React", logo: "/img/tech/react.svg" }
             ]
         },
         {
             category: "ML & AI",
+            icon: <Brain className="w-5 h-5 text-accent mb-2" />,
             items: [
                 { name: "PyTorch", logo: "/img/tech/pytorch.svg" },
                 { name: "TensorFlow", logo: "/img/tech/tensorflow.svg" },
@@ -33,6 +36,7 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
         },
         {
             category: "Cloud & DevOps",
+            icon: <Cloud className="w-5 h-5 text-accent mb-2" />,
             items: [
                 { name: "AWS", logo: "/img/tech/aws.svg" },
                 { name: "Azure", logo: "/img/tech/azure.svg" },
@@ -44,9 +48,10 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
         },
         {
             category: "Data Engineering",
+            icon: <Database className="w-5 h-5 text-accent mb-2" />,
             items: [
                 { name: "PostgreSQL", logo: "/img/tech/postgresql.svg" },
-                { name: "DynamoDB", logo: "/img/tech/dynamodb.svg" },
+                { name: "Entity Framework", logo: "/img/tech/ef.svg" },
                 { name: "Redis", logo: "/img/tech/redis.svg" },
                 { name: "Snowflake", logo: "/img/tech/snowflake.svg" },
                 { name: "dbt", logo: "/img/tech/dbt.svg" },
@@ -89,7 +94,10 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                             <div className="space-y-8">
                                 {technologies.map((category, index) => (
                                     <div key={index} className="space-y-4">
-                                        <h4 className="text-lg font-semibold text-accent">{category.category}</h4>
+                                        <div className="flex items-center gap-2">
+                                            {category.icon}
+                                            <h4 className="text-lg font-semibold text-accent">{category.category}</h4>
+                                        </div>
                                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                                             {category.items.map((tech) => (
                                                 <div key={tech.name}
