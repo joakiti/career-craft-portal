@@ -12,7 +12,7 @@ const Education = () => {
             <div className="container max-w-4xl mx-auto relative z-10">
                 <div className="flex items-center justify-center gap-4 mb-12">
                     <img
-                        src="/lovable-uploads/f86bcac0-68ca-45bb-b8e3-b2fba21107c3.png"
+                        src="/img/itu_logo.png"
                         alt="ITU Logo"
                         className="h-12 w-auto"
                     />
@@ -50,7 +50,7 @@ const Education = () => {
 
                     <div className="relative h-full min-h-[300px] rounded-2xl overflow-hidden shadow-2xl">
                         <img
-                            src="/lovable-uploads/7bd2e008-3b74-4b32-bb0f-e4175cb18e4f.png"
+                            src="/img/itu.png"
                             alt="IT University of Copenhagen Building"
                             className="absolute inset-0 w-full h-full object-cover"
                         />

@@ -20,7 +20,7 @@ const CurrentRoles = () => {
                             <p className="text-gray-200 font-medium">Aug 2023 - Present</p>
                         </div>
                         <img
-                            src="/img/Visma_logo.png"
+                            src="/img/visma_logo.jpg"
                             alt="VISMA Logo"
                             className="w-16 h-16 object-contain"
                         />

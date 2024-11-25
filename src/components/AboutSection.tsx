@@ -21,7 +21,7 @@ const AboutSection = () => {
                         I've led AI teams, built optimization solvers for healthcare, freelanced, and constantly try to get better at software craftsmanship.
                     </p>
                     <p className="text-gray-100 leading-relaxed font-medium mt-4">
-                        I love tackling hard projects. When I'm not coding, I'm probably hiking, bouldering, or playing strategy games.
+                        I love tackling hard projects. If I'm not coding, and not playing with my son, I might go hiking, bouldering, or play some strategy games.
                     </p>
                 </div>
                 </div>

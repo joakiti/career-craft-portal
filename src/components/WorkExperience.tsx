@@ -46,10 +46,11 @@ const WorkExperience = () => {
                         period="Oct 2020 - May 2022"
                         description="Full-stack development focusing on performance optimization and mobile application development, working with both frontend and backend technologies to deliver robust solutions."
                         responsibilities={[
+                            "T-SQL query optimization, API development, and business logic implementations in 5 enormous projects, primarily in C#",
                             "Reduced Visma HR central loading time from 10-30 seconds to 100-500ms",
                             "Led engineering transition from e-Boks to Mit.dk",
-                            "Developed MyVisma app for Android and iOS using Xamarin",
-                            "Presented engineering projects to C-level executives"
+                            "Developed MyVisma app for Android and iOS using Xamarin and RealmDB",
+                            "Implemented new features and bug fixes for Visma Enterprise",
                         ]}
                         technologies={["C#", "Angular", "Xamarin", "T-SQL", "DB2", "Realm DB"]}
                     />
