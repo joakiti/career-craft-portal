@@ -22,10 +22,7 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create mailto URL with form data
     const mailtoUrl = `mailto:mikkel_ander@hotmail.com?subject=Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(`From: ${name}\nEmail: ${email}\n\n${message}`)}`;
-    
-    // Open default email client
     window.location.href = mailtoUrl;
     
     toast({
@@ -37,30 +34,34 @@ const ContactForm = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" className="bg-card hover:bg-card-lighter text-white border-accent">
+        <Button 
+          variant="outline" 
+          className="bg-accent hover:bg-accent/90 text-primary border-primary px-8 py-6 text-lg font-semibold mx-auto block"
+        >
           Contact Me
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] bg-card border-accent">
         <DialogHeader>
-          <DialogTitle>Contact Me</DialogTitle>
-          <DialogDescription>
+          <DialogTitle className="text-2xl font-bold text-white">Contact Me</DialogTitle>
+          <DialogDescription className="text-gray-400">
             Send me a message and I'll get back to you as soon as possible.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="name">Name</Label>
+            <Label htmlFor="name" className="text-white">Name</Label>
             <Input
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Your name"
               required
+              className="bg-card-lighter border-accent/50 text-white placeholder:text-gray-500"
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email" className="text-white">Email</Label>
             <Input
               id="email"
               type="email"
@@ -68,19 +69,26 @@ const ContactForm = () => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email address"
               required
+              className="bg-card-lighter border-accent/50 text-white placeholder:text-gray-500"
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="message">Message</Label>
+            <Label htmlFor="message" className="text-white">Message</Label>
             <Textarea
               id="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Your message"
               required
+              className="bg-card-lighter border-accent/50 text-white placeholder:text-gray-500 min-h-[120px]"
             />
           </div>
-          <Button type="submit" className="w-full">Send Message</Button>
+          <Button 
+            type="submit" 
+            className="w-full bg-accent hover:bg-accent/90 text-primary font-semibold"
+          >
+            Send Message
+          </Button>
         </form>
       </DialogContent>
     </Dialog>

@@ -123,7 +123,7 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                         <AboutSection/>
                         <Testimonials/>
 
-                        <div className="text-center mt-8 space-y-4">
+                        <div className="text-center mt-12 space-y-8">
                             <button
                                 onClick={scrollToExperience}
                                 className="text-link hover:text-link-hover transition-colors cursor-pointer inline-flex items-center gap-2"
@@ -143,7 +143,7 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                                     />
                                 </svg>
                             </button>
-                            <div>
+                            <div className="flex justify-center">
                                 <ContactForm />
                             </div>
                         </div>
