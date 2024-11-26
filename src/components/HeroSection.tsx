@@ -3,7 +3,7 @@ import AboutSection from "./AboutSection";
 import Testimonials from "./Testimonials";
 import ImageWithFallback from "./ui/image-with-fallback";
 import ContactForm from "./ContactForm";
-import { Code, Brain, Cloud, Database } from "lucide-react";
+import { Code, Brain, Cloud, Database, Container, Server, Building } from "lucide-react";
 
 interface HeroSectionProps {
     scrollToExperience: () => void;
@@ -39,24 +39,24 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
             category: "Cloud & DevOps",
             icon: <Cloud className="w-5 h-5 text-accent mb-2" />,
             items: [
-                { name: "AWS", logo: "/img/tech/aws.svg" },
-                { name: "Azure", logo: "/img/tech/azure.svg" },
-                { name: "Docker", logo: "/img/tech/docker.svg" },
-                { name: "Kubernetes", logo: "/img/tech/kubernetes.svg" },
-                { name: "Terraform", logo: "/img/tech/terraform.svg" },
-                { name: "CI/CD", logo: "/img/tech/cicd.svg" }
+                { name: "AWS", logo: "/img/tech/aws.svg", icon: <Cloud className="w-4 h-4 text-accent" /> },
+                { name: "Azure", logo: "/img/tech/azure.svg", icon: <Cloud className="w-4 h-4 text-accent" /> },
+                { name: "Docker", logo: "/img/tech/docker.svg", icon: <Container className="w-4 h-4 text-accent" /> },
+                { name: "Kubernetes", logo: "/img/tech/kubernetes.svg", icon: <Server className="w-4 h-4 text-accent" /> },
+                { name: "Terraform", logo: "/img/tech/terraform.svg", icon: <Building className="w-4 h-4 text-accent" /> },
+                { name: "CI/CD", logo: "/img/tech/cicd.svg", icon: <Code className="w-4 h-4 text-accent" /> }
             ]
         },
         {
             category: "Data Engineering",
             icon: <Database className="w-5 h-5 text-accent mb-2" />,
             items: [
-                { name: "PostgreSQL", logo: "/img/tech/postgresql.svg" },
-                { name: "Entity Framework", logo: "/img/tech/ef.svg" },
-                { name: "Redis", logo: "/img/tech/redis.svg" },
-                { name: "Snowflake", logo: "/img/tech/snowflake.svg" },
-                { name: "dbt", logo: "/img/tech/dbt.svg" },
-                { name: "Django", logo: "/img/tech/django.svg" }
+                { name: "PostgreSQL", logo: "/img/tech/postgresql.svg", icon: <Database className="w-4 h-4 text-accent" /> },
+                { name: "Redis", logo: "/img/tech/redis.svg", icon: <Database className="w-4 h-4 text-accent" /> },
+                { name: "Snowflake", logo: "/img/tech/snowflake.svg", icon: <Cloud className="w-4 h-4 text-accent" /> },
+                { name: "dbt", logo: "/img/tech/dbt.svg", icon: <Database className="w-4 h-4 text-accent" /> },
+                { name: "Django", logo: "/img/tech/django.svg", icon: <Code className="w-4 h-4 text-accent" /> },
+                { name: "Entity Framework", logo: "/img/tech/ef.svg", icon: <Database className="w-4 h-4 text-accent" /> }
             ]
         }
     ];
@@ -103,12 +103,15 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                                             {category.items.map((tech) => (
                                                 <div key={tech.name}
                                                      className="flex flex-col items-center p-3 bg-card rounded-lg hover:bg-card-lighter transition-colors">
-                                                    <ImageWithFallback
-                                                        src={tech.logo}
-                                                        alt={`${tech.name} logo`}
-                                                        className="w-8 h-8 mb-2"
-                                                        fallbackClassName="w-8 h-8 mb-2"
-                                                    />
+                                                    <div className="flex items-center gap-2 mb-2">
+                                                        <ImageWithFallback
+                                                            src={tech.logo}
+                                                            alt={`${tech.name} logo`}
+                                                            className="w-8 h-8"
+                                                            fallbackClassName="w-8 h-8"
+                                                        />
+                                                        {tech.icon}
+                                                    </div>
                                                     <span className="text-sm text-gray-300 text-center">{tech.name}</span>
                                                 </div>
                                             ))}
