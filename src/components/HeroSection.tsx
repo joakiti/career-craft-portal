@@ -12,15 +12,25 @@ interface HeroSectionProps {
 const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
     const technologies = [
         {
-            category: "Programming Languages",
+            category: "Languages / Frameworks",
             icon: <Code className="w-5 h-5 text-accent mb-2" />,
             items: [
-                { name: "Python", logo: "/img/tech/python.svg" },
                 { name: "Java", logo: "/img/tech/java.svg" },
-                { name: "JavaScript", logo: "/img/tech/javascript.svg" },
-                { name: "TypeScript", logo: "/img/tech/typescript.svg" },
                 { name: "C#", logo: "/img/tech/csharp.svg" },
+                { name: "Python", logo: "/img/tech/python.svg" },
+                { name: "Flutter", logo: "/img/tech/flutter.svg" },
+                { name: "TypeScript", logo: "/img/tech/typescript.svg" },
                 { name: "React", logo: "/img/tech/react.svg" }
+            ]
+        },
+        {
+            category: "Cloud & DevOps",
+            icon: <Cloud className="w-5 h-5 text-accent mb-2" />,
+            items: [
+                { name: "AWS (certified)", logo: "/img/tech/aws.svg" },
+                { name: "Docker", logo: "/img/tech/docker.svg" },
+                { name: "CI/CD", logo: "/img/tech/cicd.svg" },
+                { name: "Azure (occasional)", logo: "/img/tech/azure.svg" }
             ]
         },
         {
@@ -36,24 +46,12 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
             ]
         },
         {
-            category: "Cloud & DevOps",
-            icon: <Cloud className="w-5 h-5 text-accent mb-2" />,
-            items: [
-                { name: "AWS", logo: "/img/tech/aws.svg" },
-                { name: "Azure", logo: "/img/tech/azure.svg" },
-                { name: "Docker", logo: "/img/tech/docker.svg" },
-                { name: "Kubernetes", logo: "/img/tech/kubernetes.svg" },
-                { name: "Terraform", logo: "/img/tech/terraform.svg" },
-                { name: "CI/CD", logo: "/img/tech/cicd.svg" }
-            ]
-        },
-        {
             category: "Data Engineering",
             icon: <Database className="w-5 h-5 text-accent mb-2" />,
             items: [
                 { name: "PostgreSQL", logo: "/img/tech/postgresql.svg" },
                 { name: "Entity Framework", logo: "/img/tech/ef.svg" },
-                { name: "Redis", logo: "/img/tech/redis.svg" },
+                { name: "Spring Boot", logo: "/img/tech/redis.svg" },
                 { name: "Snowflake", logo: "/img/tech/snowflake.svg" },
                 { name: "dbt", logo: "/img/tech/dbt.svg" },
                 { name: "Django", logo: "/img/tech/django.svg" }
