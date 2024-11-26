@@ -15,14 +15,13 @@ import { useToast } from "@/components/ui/use-toast";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    const mailtoUrl = `mailto:hello@mikkelkajandersen.dk?subject=Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(`From: ${name}\nEmail: ${email}\n\n${message}`)}`;
+    const mailtoUrl = `mailto:hello@mikkelkajandersen.dk?subject=Contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(`From: ${name}\n\n${message}`)}`;
     window.location.href = mailtoUrl;
     
     toast({
@@ -56,18 +55,6 @@ const ContactForm = () => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Your name"
-              required
-              className="bg-card-lighter border-accent/50 text-white placeholder:text-gray-500"
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="email" className="text-white">Email</Label>
-            <Input
-              id="email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Your email address"
               required
               className="bg-card-lighter border-accent/50 text-white placeholder:text-gray-500"
             />
