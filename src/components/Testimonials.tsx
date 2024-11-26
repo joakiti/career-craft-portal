@@ -39,6 +39,7 @@ const Testimonial = ({name, role, company, image, content}: TestimonialProps) =>
         </CardContent>
     </Card>
 );
+
 interface CompanyLogoProps {
     src: string;
     alt: string;
@@ -52,7 +53,7 @@ const CompanyLogoItem = ({ src, alt, name }: CompanyLogoProps) => (
             alt={alt}
             className="h-12 w-auto bg-white rounded-lg opacity-70 hover:opacity-100 transition-opacity"
         />
-        <span className="text-sm font-medium text-muted-foreground">{name}</span>
+        <span className="text-xs font-medium text-muted-foreground">{name}</span>
     </div>
 );
 
@@ -108,7 +109,7 @@ const Testimonials = () => {
             role: "CTO",
             company: "Tripletex",
             content: `It has been very good to collaborate with Resolve, where their expertise and innovative approach to LLM/GPT technology have been crucial for Tripletex
-and our AI team in an early phase. With Mikkel’s central role, not just as a skilled technical leader but also as an inspiring person, we have succeeded in
+and our AI team in an early phase. With Mikkel's central role, not just as a skilled technical leader but also as an inspiring person, we have succeeded in
 establishing a robust AI team that continuously drives us forward. Through our collaboration with Resolve, we have not only strengthened our internal
 competence but also positioned ourselves to lead in the further development of our AI assistant, which plays a critical role in our support of customers, and
 which in the future will become more and more central in the Tripletex solution. Having Resolve by our side has enriched our understanding and
