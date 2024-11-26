@@ -40,9 +40,7 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                 { name: "PyTorch", logo: "/img/tech/pytorch.svg" },
                 { name: "TensorFlow", logo: "/img/tech/tensorflow.svg" },
                 { name: "scikit-learn", logo: "/img/tech/sklearn.svg" },
-                { name: "LLMs", logo: "/img/tech/llm.svg" },
-                { name: "BERT", logo: "/img/tech/bert.svg" },
-                { name: "Llama", logo: "/img/tech/llama.svg" }
+                { name: "LLMs & RAG", logo: "/img/tech/llm.svg" },
             ]
         },
         {
@@ -52,9 +50,6 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                 { name: "PostgreSQL", logo: "/img/tech/postgresql.svg" },
                 { name: "Entity Framework", logo: "/img/tech/ef.svg" },
                 { name: "Spring Boot", logo: "/img/tech/redis.svg" },
-                { name: "Snowflake", logo: "/img/tech/snowflake.svg" },
-                { name: "dbt", logo: "/img/tech/dbt.svg" },
-                { name: "Django", logo: "/img/tech/django.svg" }
             ]
         }
     ];
