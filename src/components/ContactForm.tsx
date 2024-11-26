@@ -36,9 +36,9 @@ const ContactForm = () => {
       <DialogTrigger asChild>
         <Button 
           variant="outline" 
-          className="bg-accent hover:bg-accent/90 text-primary border-primary px-8 py-6 text-lg font-semibold mx-auto block"
+          className="bg-accent hover:bg-accent/90 text-primary border-primary px-8 py-6 text-lg font-semibold whitespace-nowrap animate-pulse"
         >
-          Contact Me
+          Let's Collaborate →
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] bg-card border-accent">

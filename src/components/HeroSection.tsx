@@ -140,18 +140,7 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                                         <br />
                                         <span className="text-accent">✓</span> Rapid deployment and scalable architecture
                                     </div>
-                                    <Button 
-                                        variant="outline"
-                                        className="bg-accent hover:bg-accent/90 text-primary border-primary px-8 py-6 text-lg font-semibold whitespace-nowrap animate-pulse"
-                                        onClick={() => {
-                                            const contactButton = document.querySelector('[aria-label="Contact Me"]');
-                                            if (contactButton instanceof HTMLElement) {
-                                                contactButton.click();
-                                            }
-                                        }}
-                                    >
-                                        Let's Collaborate →
-                                    </Button>
+                                    <ContactForm />
                                 </div>
                             </div>
                         </div>
@@ -176,9 +165,6 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                                     />
                                 </svg>
                             </button>
-                            <div className="flex justify-center">
-                                <ContactForm />
-                            </div>
                         </div>
                     </div>
                 </div>
