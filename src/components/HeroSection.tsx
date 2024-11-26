@@ -4,6 +4,7 @@ import Testimonials from "./Testimonials";
 import ImageWithFallback from "./ui/image-with-fallback";
 import ContactForm from "./ContactForm";
 import { Code, Brain, Cloud, Database } from "lucide-react";
+import { Button } from "./ui/button";
 
 interface HeroSectionProps {
     scrollToExperience: () => void;
@@ -115,6 +116,29 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                     <div className="md:col-span-8 space-y-6">
                         <AboutSection/>
                         <Testimonials/>
+                        
+                        {/* New CTA Section */}
+                        <div className="mt-12 p-8 bg-card-lighter rounded-xl border border-accent/20 backdrop-blur-sm">
+                            <h3 className="text-2xl font-bold text-white mb-4">Want to Join This List?</h3>
+                            <p className="text-gray-300 mb-6 leading-relaxed">
+                                🚀 <span className="text-accent font-semibold">Transform Your Tech Vision</span> into Reality
+                                <br />
+                                Join the roster of successful companies I've collaborated with. With expertise in AI, cloud architecture, 
+                                and full-stack development, I bring enterprise-grade solutions to ambitious projects.
+                            </p>
+                            <div className="space-y-4">
+                                <div className="flex flex-col sm:flex-row gap-4 items-center justify-between p-4 bg-card rounded-lg border border-accent/10">
+                                    <div className="text-gray-300">
+                                        <span className="text-accent">✓</span> Proven track record with industry leaders
+                                        <br />
+                                        <span className="text-accent">✓</span> Specialized in AI and cloud solutions
+                                        <br />
+                                        <span className="text-accent">✓</span> Rapid deployment and scalable architecture
+                                    </div>
+                                    <ContactForm />
+                                </div>
+                            </div>
+                        </div>
 
                         <div className="text-center mt-12 space-y-8">
                             <button
@@ -136,9 +160,6 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                                     />
                                 </svg>
                             </button>
-                            <div className="flex justify-center">
-                                <ContactForm />
-                            </div>
                         </div>
                     </div>
                 </div>
