@@ -3,7 +3,7 @@ import AboutSection from "./AboutSection";
 import Testimonials from "./Testimonials";
 import ImageWithFallback from "./ui/image-with-fallback";
 import ContactForm from "./ContactForm";
-import { Code, Brain, Cloud, Database } from "lucide-react";
+import { Code, Brain, Cloud, Database, HelpCircle } from "lucide-react";
 import { Button } from "./ui/button";
 import {
     Tooltip,
@@ -15,6 +15,52 @@ import {
 interface HeroSectionProps {
     scrollToExperience: () => void;
 }
+
+// Extract TechnologyItem component to reduce file size
+const TechnologyItem = ({ tech }: { tech: { name: string; logo: string; tooltip: string } }) => (
+    <TooltipProvider delayDuration={0}>
+        <Tooltip>
+            <TooltipTrigger asChild>
+                <div className="flex flex-col items-center p-3 bg-card rounded-lg hover:bg-card-lighter transition-colors cursor-pointer relative group">
+                    <div className="relative">
+                        <ImageWithFallback
+                            src={tech.logo}
+                            alt={`${tech.name} logo`}
+                            className="w-8 h-8 mb-2"
+                            fallbackClassName="w-8 h-8 mb-2"
+                        />
+                        <div className="absolute -top-2 -right-2 bg-accent/20 rounded-full p-1">
+                            <HelpCircle className="w-3 h-3 text-accent" />
+                        </div>
+                    </div>
+                    <span className="text-sm text-gray-300 text-center">{tech.name}</span>
+                </div>
+            </TooltipTrigger>
+            <TooltipContent className="max-w-xs">
+                <p>{tech.tooltip}</p>
+            </TooltipContent>
+        </Tooltip>
+    </TooltipProvider>
+);
+
+// Extract TechnologyCategory component to reduce file size
+const TechnologyCategory = ({ category, icon, items }: { 
+    category: string; 
+    icon: React.ReactNode; 
+    items: Array<{ name: string; logo: string; tooltip: string }> 
+}) => (
+    <div className="space-y-4">
+        <div className="flex items-center gap-2">
+            {icon}
+            <h4 className="text-lg font-semibold text-accent">{category}</h4>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            {items.map((tech) => (
+                <TechnologyItem key={tech.name} tech={tech} />
+            ))}
+        </div>
+    </div>
+);
 
 const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
     const technologies = [
@@ -167,34 +213,12 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                             <h3 className="text-xl font-bold text-white mb-6">Technologies & Expertise</h3>
                             <div className="space-y-8">
                                 {technologies.map((category, index) => (
-                                    <div key={index} className="space-y-4">
-                                        <div className="flex items-center gap-2">
-                                            {category.icon}
-                                            <h4 className="text-lg font-semibold text-accent">{category.category}</h4>
-                                        </div>
-                                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                                            {category.items.map((tech) => (
-                                                <TooltipProvider key={tech.name}>
-                                                    <Tooltip>
-                                                        <TooltipTrigger asChild>
-                                                            <div className="flex flex-col items-center p-3 bg-card rounded-lg hover:bg-card-lighter transition-colors cursor-pointer">
-                                                                <ImageWithFallback
-                                                                    src={tech.logo}
-                                                                    alt={`${tech.name} logo`}
-                                                                    className="w-8 h-8 mb-2"
-                                                                    fallbackClassName="w-8 h-8 mb-2"
-                                                                />
-                                                                <span className="text-sm text-gray-300 text-center">{tech.name}</span>
-                                                            </div>
-                                                        </TooltipTrigger>
-                                                        <TooltipContent className="max-w-xs">
-                                                            <p>{tech.tooltip}</p>
-                                                        </TooltipContent>
-                                                    </Tooltip>
-                                                </TooltipProvider>
-                                            ))}
-                                        </div>
-                                    </div>
+                                    <TechnologyCategory 
+                                        key={index} 
+                                        category={category.category} 
+                                        icon={category.icon} 
+                                        items={category.items} 
+                                    />
                                 ))}
                             </div>
                         </div>
