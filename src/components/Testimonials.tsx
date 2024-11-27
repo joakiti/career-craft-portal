@@ -67,7 +67,6 @@ const companies: CompanyLogoProps[] = [
     { src: "/img/mim_logo.png", alt: "Make It Matter", name: "Make It Matter" },
     { src: "/img/godream_logo.jpeg", alt: "GoDream", name: "GoDream" },
     { src: "/img/itu_logo.png", alt: "ITU", name: "IT-University of Copenhagen" },
-    { src: "/img/placeholder_company.svg", alt: "You", name: "Your company here?" },
 ];
 
 const CompanyLogos = () => (
