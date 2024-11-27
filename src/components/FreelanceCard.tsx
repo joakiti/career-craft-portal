@@ -21,24 +21,11 @@ const FreelanceCard = () => {
                     </svg>
                 </div>
             </div>
-
-            <div className="space-y-6">
-                <div>
-                    <h4 className="text-xl font-bold text-accent mb-3">Mobile Applications</h4>
-                    <ul className="list-disc list-inside text-gray-100 space-y-2 font-medium">
-                        <li>Developed The Tattoo Archive for iOS and Android, featured in Danish media</li>
-                        <li>Created Gas Money App - Automatic route price calculation using Google APIs and custom
-                            Python scraper
-                        </li>
-                        <li>Built ScheduleIT for university scheduling</li>
-                        <li>Innovative Push-Ups app using touch screen nose detection for counting</li>
-                    </ul>
-                </div>
-
-                <div>
+            
+            <div>
                     <h4 className="text-xl font-bold text-accent mb-3">Enterprise Solutions</h4>
                     <ul className="list-disc list-inside text-gray-100 space-y-2 font-medium">
-                        <li>Successfully migrated mainframe systems to AWS infrastructure</li>
+                        <li>Assisted in migrating mainframe systems as part of an extremely ambitious project to AWS infrastructure</li>
                         <li>Maintain data-processing project with T-SQL database and BI products using C#</li>
                         <li>Developed custom solution for GoDream (Danish gift-card provider):
                             <ul className="list-disc list-inside ml-6 mt-2">
@@ -48,16 +35,28 @@ const FreelanceCard = () => {
                             </ul>
                         </li>
                     </ul>
-                </div>
+            </div>
 
-                <div className="flex flex-wrap gap-2 mt-4">
+            <div className="mt-6">
+                <div>
+                    <h4 className="text-xl font-bold text-accent mb-3">Mobile Applications</h4>
+                    <ul className="list-disc list-inside text-gray-100 space-y-2 font-medium">
+                        <li>Developed The Tattoo Archive for iOS and Android, <a href="https://www.dr.dk/nyheder/regionale/oestjylland/udslaet-allergier-og-bylder-ny-app-skal-goere-det-nemmere-finde" target="_blank" rel="noopener noreferrer" className="text-link hover:text-link-hover transition-colors">featured in Danish media</a></li>
+                        <li>Created Gas Money App - Automatic route price calculation using Google APIs and custom
+                            Python scraper
+                        </li>
+                        <li>Built ScheduleIT for university scheduling</li>
+                        <li>Innovative Push-Ups app using touch screen nose detection for counting</li>
+                    </ul>
+                </div>
+            </div>
+            <div className="flex flex-wrap gap-2 mt-4">
                     {[".NET", "C#", "AWS", "PostgreSQL", "EFCore", "iOS", "Android", "Python", "T-SQL", "BI"].map((tech) => (
                         <Badge key={tech} variant="secondary" className="bg-card text-gray-100 font-medium">
                             {tech}
                         </Badge>
                     ))}
                 </div>
-            </div>
         </Card>
     );
 };

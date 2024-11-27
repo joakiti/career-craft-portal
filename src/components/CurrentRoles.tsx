@@ -30,28 +30,54 @@ const CurrentRoles = () => {
                             <div>
                                 <h4 className="text-xl font-bold text-accent mb-3">Current Achievements</h4>
                                 <ul className="list-disc list-inside text-gray-100 space-y-2 font-medium">
-                                    <li>Led a 4-man team in Norway for the biggest self-service accounting SaaS firm.</li>
-                                    <li>Developed custom RAG setup with vector search and re-ranking, achieving 85%
-                                        self-service rate.
+                                    <li>
+                                        Tech Lead for workforce planning team and manager of two developers, focusing on:
+                                        <ul className="list-disc list-inside ml-6 mt-2">
+                                            <li>
+                                                Architecting an advanced Automatic Rostering system addressing the <strong>NP-Hard Nurse Scheduling Problem</strong>.
+                                            </li>
+                                            <li>
+                                                Developing a service to automatically assign employees to shifts, optimizing workforce utilization while adhering to competency requirements and labor regulations.
+                                            </li>
+                                            <li>
+                                                Enabling planners to generate high-quality rosters, significantly reducing manual planning time and improving employee satisfaction.
+                                            </li>
+                                            <li>
+                                                Utilizing advanced algorithms and AI to solve complex scheduling challenges.
+                                            </li>
+                                        </ul>
                                     </li>
-                                    <li>Tech lead for work-roster team and personnel manager for two developers.</li>
-                                    <li>Successfully led and delivered six consultancy project offers.</li>
+                                    <li>
+                                        Led a 4-person team in Norway for Tripletex, the largest self-service accounting SaaS firm in the country, achieving:
+                                        <ul className="list-disc list-inside ml-6 mt-2">
+                                            <li>
+                                                Building specialized LLM models for financial reporting and data visualization using Chain-of-Thought prompting.
+                                            </li>
+                                            <li>
+                                                Including a custom RAG setup with vector search and re-ranking, handling over 100,000 customer queries with more than 80% accuracy.
+                                            </li>
+                                            <li>
+                                                Implementing a GPT-4 based AI assistant providing 24/7 customer support, with 80% success rate in resolving tickets.
+                                            </li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </div>
 
                             <div>
                                 <h4 className="text-xl font-bold text-accent mb-3">Algorithm & Technical Excellence</h4>
                                 <ul className="list-disc list-inside text-gray-100 space-y-2 font-medium">
-                                    <li>Architected heuristic-based optimization solver for hospital work rosters,
-                                        implementing complex algorithms for scheduling optimization.
+                                    <li>
+                                        Architected heuristic-based optimization solvers for hospital work rosters, implementing complex scheduling algorithms.
                                     </li>
-                                    <li>Developed 12 different MIP solvers using Google OR tools for rapid feasibility
-                                        assessment.
+                                    <li>
+                                        Developed 12 MIP solvers using Google OR-Tools for rapid feasibility assessments.
                                     </li>
-                                    <li>Implemented sophisticated scoring rankers and candidate selection algorithms.</li>
-                                    <li>Achieved 40% accuracy improvement in single-person assignment algorithms.</li>
-                                    <li>Designed and implemented serverless infrastructure using CloudFormation, Docker, S3,
-                                        and Lambda.
+                                    <li>
+                                        Implemented sophisticated scoring rankers and candidate selection algorithms, achieving a 40% accuracy improvement.
+                                    </li>
+                                    <li>
+                                        Designed and deployed serverless infrastructure using CloudFormation, Docker, S3, and Lambda.
                                     </li>
                                 </ul>
                             </div>

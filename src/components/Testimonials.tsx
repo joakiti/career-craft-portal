@@ -9,7 +9,6 @@ interface TestimonialProps {
     role: string;
     company: string;
     image?: string;
-    companyLogo?: string;
     content: string;
 }
 
@@ -20,7 +19,6 @@ const Testimonial = ({name, role, company, image, content}: TestimonialProps) =>
             <div className="flex items-start gap-4 md:gap-6">
                 <Avatar className="w-20 h-20 border-2 border-accent/20 shadow-lg">
                     <ImageWithFallback src={image || "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"} alt={name} />
-                    <AvatarFallback className="text-lg">{name[0]}</AvatarFallback>
                 </Avatar>
 
                 <div className="flex-1 min-w-0">
@@ -88,6 +86,7 @@ const Testimonials = () => {
             name: "Martin Sommerseth",
             role: "Manager",
             company: "Resolve",
+            image: "/img/people/martin_sommerseth.jpg",
             content: `Mikkel transitioned into a Tech Lead role due to his exceptional technical deliveries and leadership abilities.
             
             Mikkel also showcased strong project management skills, particularly in leading the PostNord project to success by balancing technical implementation and aligning different parties.
@@ -100,6 +99,7 @@ const Testimonials = () => {
             name: "Stian Vale",
             role: "Manager",
             company: "Resolve",
+            image: "/img/people/stian_vale.jpg",
             content: `Mikkel's work on Automatic Rostering received positive feedback from Postnord. All stakeholders involved are extremely pleased with the deliveries, which were primarily led and implemented by Mikkel.
             
             He significantly enhanced the Automatic Rostering product, preparing it for further growth. What was once an "unsure Resolve card" a year ago has now become one of our standout products, thanks to the technological advancements made.`
@@ -108,6 +108,7 @@ const Testimonials = () => {
             name: "Jan Strandbakke",
             role: "CTO",
             company: "Tripletex",
+            image: "/img/people/jan_strandbakke.jpg",
             content: `It has been very good to collaborate with Resolve, where their expertise and innovative approach to LLM/GPT technology have been crucial for Tripletex
 and our AI team in an early phase. With Mikkel's central role, not just as a skilled technical leader but also as an inspiring person, we have succeeded in
 establishing a robust AI team that continuously drives us forward. Through our collaboration with Resolve, we have not only strengthened our internal
@@ -118,7 +119,8 @@ application of groundbreaking AI technology.`
         {
             name: "Marie Preisler",
             role: "CEO",
-            company: "GoDream/Make It Matter",
+            company: "Make It Matter",
+            image: "/img/people/marie_preisler.jpg",
             content: `Det har været en sand fornøjelse at have Mikkel som ekstern IT-konsulent på vores projekt. Han har leveret et solidt og brugervenligt system, som
 effektivt håndterer omkring 300 ordrer dagligt. Mikkel har været utrolig nem at kommunikere med, og han har hurtigt fanget alle aspekter af vores behov.
 Gennem hele processen har han guidet os sikkert fra start til slut, hvilket har gjort samarbejdet både nemt og effektivt.
@@ -127,7 +129,7 @@ tryghed at vide, at vi kan regne med hans ekspertise, og vi ser frem til fortsat
         }
     ];
 
-    const plugin = Autoplay({delay: 5000, stopOnInteraction: false});
+    const plugin = Autoplay({delay: 15000, stopOnInteraction: true});
 
     return (
         <section className="py-8 md:py-12 px-4 md:px-6">
@@ -156,8 +158,8 @@ tryghed at vide, at vi kan regne med hans ekspertise, og vi ser frem til fortsat
                         ))}
                     </CarouselContent>
                     <div className="flex justify-center gap-4 mt-6">
-                        <CarouselPrevious/>
-                        <CarouselNext/>
+                        <CarouselPrevious className="bg-gray-800 text-white" />
+                        <CarouselNext className="bg-gray-800 text-white" />
                     </div>
                 </Carousel>
                 <CompanyLogos/>
