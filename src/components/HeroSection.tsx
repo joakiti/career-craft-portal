@@ -5,6 +5,12 @@ import ImageWithFallback from "./ui/image-with-fallback";
 import ContactForm from "./ContactForm";
 import { Code, Brain, Cloud, Database } from "lucide-react";
 import { Button } from "./ui/button";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "./ui/tooltip";
 
 interface HeroSectionProps {
     scrollToExperience: () => void;
@@ -16,42 +22,114 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
             category: "Backend & Frontend Development",
             icon: <Code className="w-5 h-5 text-accent mb-2" />,
             items: [
-                { name: "Java", logo: "/img/tech/java.svg" },
-                { name: "C#", logo: "/img/tech/csharp.svg" },
-                { name: "Python", logo: "/img/tech/python.svg" },
-                { name: "Flutter", logo: "/img/tech/flutter.svg" },
-                { name: "TypeScript", logo: "/img/tech/typescript.svg" },
-                { name: "React", logo: "/img/tech/react.svg" }
+                { 
+                    name: "Java", 
+                    logo: "/img/tech/java.svg",
+                    tooltip: "Expert in building enterprise applications with Spring Boot and microservices architecture."
+                },
+                { 
+                    name: "C#", 
+                    logo: "/img/tech/csharp.svg",
+                    tooltip: "Experienced in developing .NET applications and Azure cloud services."
+                },
+                { 
+                    name: "Python", 
+                    logo: "/img/tech/python.svg",
+                    tooltip: "Skilled in developing web server applications and APIs with Django and Flask, and proficient in database management with PostgreSQL, DynamoDB, and Redis."
+                },
+                { 
+                    name: "Flutter", 
+                    logo: "/img/tech/flutter.svg",
+                    tooltip: "Building cross-platform mobile applications with modern UI/UX principles."
+                },
+                { 
+                    name: "TypeScript", 
+                    logo: "/img/tech/typescript.svg",
+                    tooltip: "Strong expertise in type-safe JavaScript development and modern frontend frameworks."
+                },
+                { 
+                    name: "React", 
+                    logo: "/img/tech/react.svg",
+                    tooltip: "Proficient in building responsive and performant web applications with React and its ecosystem."
+                }
             ]
         },
         {
             category: "Cloud & DevOps",
             icon: <Cloud className="w-5 h-5 text-accent mb-2" />,
             items: [
-                { name: "AWS (certified)", logo: "/img/tech/aws.svg" },
-                { name: "Docker", logo: "/img/tech/docker.svg" },
-                { name: "CI/CD", logo: "/img/tech/cicd.svg" },
-                { name: "Azure (occasional)", logo: "/img/tech/azure.svg" },
-                { name: "Monitoring", logo: "/img/tech/monitoring.svg" }
+                { 
+                    name: "AWS (certified)", 
+                    logo: "/img/tech/aws.svg",
+                    tooltip: "Certified AWS Solutions Architect with experience in designing and implementing cloud infrastructure."
+                },
+                { 
+                    name: "Docker", 
+                    logo: "/img/tech/docker.svg",
+                    tooltip: "Containerization and orchestration of applications using Docker and Kubernetes."
+                },
+                { 
+                    name: "CI/CD", 
+                    logo: "/img/tech/cicd.svg",
+                    tooltip: "Implementation of automated deployment pipelines using Jenkins, GitHub Actions, and AWS CodePipeline."
+                },
+                { 
+                    name: "Azure (occasional)", 
+                    logo: "/img/tech/azure.svg",
+                    tooltip: "Experience with Azure cloud services and integration with Microsoft ecosystem."
+                },
+                { 
+                    name: "Monitoring", 
+                    logo: "/img/tech/monitoring.svg",
+                    tooltip: "Setting up monitoring and alerting with tools like Prometheus, Grafana, and CloudWatch."
+                }
             ]
         },
         {
             category: "ML & AI / Models",
             icon: <Brain className="w-5 h-5 text-accent mb-2" />,
             items: [
-                { name: "PyTorch", logo: "/img/tech/pytorch.svg" },
-                { name: "TensorFlow", logo: "/img/tech/tensorflow.svg" },
-                { name: "scikit-learn", logo: "/img/tech/sklearn.svg" },
-                { name: "LLMs & RAG", logo: "/img/tech/llm.svg" },
+                { 
+                    name: "PyTorch", 
+                    logo: "/img/tech/pytorch.svg",
+                    tooltip: "Deep learning model development and training for computer vision and NLP tasks."
+                },
+                { 
+                    name: "TensorFlow", 
+                    logo: "/img/tech/tensorflow.svg",
+                    tooltip: "Building and deploying machine learning models at scale."
+                },
+                { 
+                    name: "scikit-learn", 
+                    logo: "/img/tech/sklearn.svg",
+                    tooltip: "Implementation of classical machine learning algorithms and data preprocessing pipelines."
+                },
+                { 
+                    name: "LLMs & RAG", 
+                    logo: "/img/tech/llm.svg",
+                    tooltip: "Working with large language models and implementing retrieval-augmented generation systems."
+                },
             ]
         },
         {
             category: "Data Engineering",
             icon: <Database className="w-5 h-5 text-accent mb-2" />,
             items: [
-                { name: "PostgreSQL", logo: "/img/tech/postgresql.svg" },
-                { name: "Entity Framework", logo: "/img/tech/ef.svg" },
-                { name: "Spring Boot", logo: "/img/tech/redis.svg" },
+                { 
+                    name: "PostgreSQL", 
+                    logo: "/img/tech/postgresql.svg",
+                    tooltip: "Database design, optimization, and management for large-scale applications."
+                },
+                { 
+                    name: "Entity Framework", 
+                    logo: "/img/tech/ef.svg",
+                    tooltip: "ORM development and database migrations in .NET applications."
+                },
+                { 
+                    name: "Spring Boot", 
+                    logo: "/img/tech/redis.svg",
+                    tooltip: "Building robust and scalable Java applications with Spring ecosystem."
+                },
             ]
         }
     ];
@@ -96,16 +174,24 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                                         </div>
                                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                                             {category.items.map((tech) => (
-                                                <div key={tech.name}
-                                                     className="flex flex-col items-center p-3 bg-card rounded-lg hover:bg-card-lighter transition-colors">
-                                                    <ImageWithFallback
-                                                        src={tech.logo}
-                                                        alt={`${tech.name} logo`}
-                                                        className="w-8 h-8 mb-2"
-                                                        fallbackClassName="w-8 h-8 mb-2"
-                                                    />
-                                                    <span className="text-sm text-gray-300 text-center">{tech.name}</span>
-                                                </div>
+                                                <TooltipProvider key={tech.name}>
+                                                    <Tooltip>
+                                                        <TooltipTrigger asChild>
+                                                            <div className="flex flex-col items-center p-3 bg-card rounded-lg hover:bg-card-lighter transition-colors cursor-pointer">
+                                                                <ImageWithFallback
+                                                                    src={tech.logo}
+                                                                    alt={`${tech.name} logo`}
+                                                                    className="w-8 h-8 mb-2"
+                                                                    fallbackClassName="w-8 h-8 mb-2"
+                                                                />
+                                                                <span className="text-sm text-gray-300 text-center">{tech.name}</span>
+                                                            </div>
+                                                        </TooltipTrigger>
+                                                        <TooltipContent className="max-w-xs">
+                                                            <p>{tech.tooltip}</p>
+                                                        </TooltipContent>
+                                                    </Tooltip>
+                                                </TooltipProvider>
                                             ))}
                                         </div>
                                     </div>
