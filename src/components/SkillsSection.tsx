@@ -10,7 +10,7 @@ const SkillsSection = () => {
                 <h2 className="text-3xl font-bold text-white mb-8 text-center">Skills</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                        <h3 className="text-xl font-bold text-white mb-4">Backend & Frontend Development</h3>
+                        <h3 className="text-xl font-bold text-white mb-4">Languages & Frameworks</h3>
                         <div className="flex flex-wrap gap-2">
                             {["Java", "C#", ".NET", "Python", "JavaScript", "SQL", "Flutter", "Dart", "iOS", "Android", "HTML", "React", "CSS", "Scala", "C++", "F#", "TypeScript", "Maven", "Git"].map((skill) => (
                                 <Badge key={skill} variant="secondary"

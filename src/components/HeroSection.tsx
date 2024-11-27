@@ -13,7 +13,7 @@ interface HeroSectionProps {
 const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
     const technologies = [
         {
-            category: "Languages / Frameworks",
+            category: "Backend & Frontend Development",
             icon: <Code className="w-5 h-5 text-accent mb-2" />,
             items: [
                 { name: "Java", logo: "/img/tech/java.svg" },
@@ -31,11 +31,12 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                 { name: "AWS (certified)", logo: "/img/tech/aws.svg" },
                 { name: "Docker", logo: "/img/tech/docker.svg" },
                 { name: "CI/CD", logo: "/img/tech/cicd.svg" },
-                { name: "Azure (occasional)", logo: "/img/tech/azure.svg" }
+                { name: "Azure (occasional)", logo: "/img/tech/azure.svg" },
+                { name: "Monitoring", logo: "/img/tech/monitoring.svg" }
             ]
         },
         {
-            category: "ML & AI",
+            category: "ML & AI / Models",
             icon: <Brain className="w-5 h-5 text-accent mb-2" />,
             items: [
                 { name: "PyTorch", logo: "/img/tech/pytorch.svg" },
@@ -120,8 +121,9 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                         {/* New CTA Section */}
                         <div className="mt-12 p-8 bg-card-lighter rounded-xl border border-accent/20 backdrop-blur-sm">
                             <h3 className="text-2xl font-bold text-white mb-4">Want to Join This List?</h3>
+
                             <p className="text-gray-300 mb-6 leading-relaxed">
-                                🚀 <span className="text-accent font-semibold">Transform Your Tech Vision</span> into Reality
+                                🚀 <span className="text-accent font-semibold">Elevate Your Tech Vision</span> with Expert Solutions
                                 <br />
                                 Join the roster of successful companies I've collaborated with. With expertise in AI, cloud architecture, 
                                 and full-stack development, I bring enterprise-grade solutions to ambitious projects.
@@ -138,6 +140,9 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                                     <ContactForm />
                                 </div>
                             </div>
+                            <p className="text-gray-300 mt-6 leading-relaxed">
+                                Although I'm currently engaged in a full-time position, I'm available for freelance projects up to <span className="font-semibold text-accent">30 hours a week</span>.
+                            </p>
                         </div>
 
                         <div className="text-center mt-12 space-y-8">
