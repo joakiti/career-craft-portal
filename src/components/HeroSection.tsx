@@ -145,7 +145,7 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                                 onClick={scrollToExperience}
                                 className="text-link hover:text-link-hover transition-colors cursor-pointer inline-flex items-center gap-2"
                             >
-                                Discover my journey and achievements
+                                Explore more
                                 <svg
                                     className="w-4 h-4"
                                     fill="none"
