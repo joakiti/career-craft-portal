@@ -138,7 +138,7 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                 { 
                     name: "Predictive Modeling", 
                     logo: "/img/tech/predictive_modeling.svg",
-                    tooltip: "Highly proficient in building both supervised and unsupervised machine learning models, including logistic regression, KNN, GBM, decision trees, random forests, neural networks, SVM, K-means, PCA, etc."
+                    tooltip: "Skilled in creating various machine learning models, such as logistic regression, decision trees, and neural networks."
                 },
                 { 
                     name: "LLM and Deep Learning", 
