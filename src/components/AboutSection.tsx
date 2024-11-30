@@ -12,13 +12,13 @@ const AboutSection = () => {
                 <div ref={ref} className="bg-card-lighter rounded-2xl p-8 opacity-0">
                     <h2 className="text-3xl font-extrabold mb-4 text-white">Let's build together ✨</h2>
                     <p className="text-gray-100 leading-relaxed font-medium">
-                        I'm a performance-driven Tech Lead with nearly a decade of experience crafting software across various domains. My expertise spans competitive programming, advanced algorithms, and machine learning, making me a versatile generalist who thrives on complex challenges.
+                        Hi, I'm a tech enthusiast who's been in the field for almost ten years. I've dabbled in a bit of everything, from competitive programming to machine learning. I love tackling tough problems - my expertise spans competitive programming, advanced algorithms, and machine learning.
                     </p>
                     <p className="text-gray-100 leading-relaxed font-medium mt-4">
-                        From leading international AI teams to developing healthcare optimization solutions, I've consistently delivered impactful projects. I enjoy working across the entire tech stack, from crafting intuitive user experiences to implementing sophisticated algorithms.
+                        I've had the chance to work on some very interesting projects, with both leading AI teams and developing healthcare optimization solutions. I enjoy diving into both the front-end and back-end, making sure everything works smoothly and looks great.
                     </p>
                     <p className="text-gray-100 leading-relaxed font-medium mt-4">
-                        With an entrepreneurial mindset, I balance my passion for technology with an active lifestyle. When I'm not coding or spending time with my son, you'll find me hiking, bouldering, or enjoying strategy games.
+                        Outside of work, I try to keep a good balance. I love spending time with my son, and when I can, I hit the trails for a hike, climb some rocks, or get lost in a good strategy game.
                     </p>
                 </div>
                 </div>
