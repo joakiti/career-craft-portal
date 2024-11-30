@@ -29,14 +29,14 @@ const TechnologyItem = ({ tech }: { tech: { name: string; logo: string; tooltip:
                             className="w-8 h-8 mb-2"
                             fallbackClassName="w-8 h-8 mb-2"
                         />
-                        <div className="absolute -top-2 -right-2 bg-accent/20 rounded-full p-1">
+                        <div className="absolute -top-2 -right-2 bg-accent/2 rounded-full p-1">
                             <HelpCircle className="w-3 h-3 text-accent" />
                         </div>
                     </div>
                     <span className="text-sm text-gray-300 text-center">{tech.name}</span>
                 </div>
             </TooltipTrigger>
-            <TooltipContent className="max-w-xs">
+            <TooltipContent className="max-w-xs bg-card-lighter">
                 <p>{tech.tooltip}</p>
             </TooltipContent>
         </Tooltip>
@@ -71,22 +71,22 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                 { 
                     name: "Java", 
                     logo: "/img/tech/java.svg",
-                    tooltip: "Expert in building enterprise applications with Spring Boot and microservices architecture."
+                    tooltip: "Built enterprise applications with Spring Boot at Netcompany and Keylane, along with experience from many other projects. Was my primary language in competitive programming."
                 },
                 { 
                     name: "C#", 
                     logo: "/img/tech/csharp.svg",
-                    tooltip: "Experienced in developing .NET applications and Azure cloud services."
+                    tooltip: "6 years of experience in C# development. Developed .NET applications as a fullstack developer at Visma Enterprise with microservices architecture, specializing in API development with EFCore and other tools. Completed various freelance projects with C#."
                 },
                 { 
                     name: "Python", 
                     logo: "/img/tech/python.svg",
-                    tooltip: "Skilled in developing web server applications and APIs with Django and Flask, and proficient in database management with PostgreSQL, DynamoDB, and Redis."
+                    tooltip: "Auxillary developer in Python building web server applications and APIs with Django and Flask"
                 },
                 { 
                     name: "Flutter", 
                     logo: "/img/tech/flutter.svg",
-                    tooltip: "Building cross-platform mobile applications with modern UI/UX principles."
+                    tooltip: "All of my freelance projects have been built with Flutter except 'The Tattoo Archive'."
                 },
                 { 
                     name: "TypeScript", 
@@ -107,12 +107,12 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                 { 
                     name: "AWS (certified)", 
                     logo: "/img/tech/aws.svg",
-                    tooltip: "Certified AWS Solutions Architect with experience in designing and implementing cloud infrastructure."
+                    tooltip: "Certified AWS Solutions Architect with experience in designing and implementing cloud infrastructure at Visma Resolve and various freelance projects."
                 },
                 { 
                     name: "Docker", 
                     logo: "/img/tech/docker.svg",
-                    tooltip: "Containerization and orchestration of applications using Docker and Kubernetes."
+                    tooltip: "Containerization and orchestration of applications using Docker at Visma."
                 },
                 { 
                     name: "CI/CD", 
@@ -127,33 +127,28 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                 { 
                     name: "Monitoring", 
                     logo: "/img/tech/monitoring.svg",
-                    tooltip: "Setting up monitoring and alerting with tools like Prometheus, Grafana, and CloudWatch."
+                    tooltip: "Proficient in building dashboards to monitor product lifecycles from end to end, analyzing logs and errors to ensure product reliability and performance in tools like Prometheus, Grafana, and CloudWatch."
                 }
             ]
         },
         {
-            category: "ML & AI / Models",
+            category: "Predictive Modeling & AI",
             icon: <Brain className="w-5 h-5 text-accent mb-2" />,
             items: [
                 { 
-                    name: "PyTorch", 
-                    logo: "/img/tech/pytorch.svg",
-                    tooltip: "Deep learning model development and training for computer vision and NLP tasks."
+                    name: "Predictive Modeling", 
+                    logo: "/img/tech/predictive_modeling.svg",
+                    tooltip: "Highly proficient in building both supervised and unsupervised machine learning models, including logistic regression, KNN, GBM, decision trees, random forests, neural networks, SVM, K-means, PCA, etc."
                 },
                 { 
-                    name: "TensorFlow", 
-                    logo: "/img/tech/tensorflow.svg",
-                    tooltip: "Building and deploying machine learning models at scale."
+                    name: "LLM and Deep Learning", 
+                    logo: "/img/tech/deep_learning.svg",
+                    tooltip: "Extensive experience with LLMs, transformer models, and deep learning techniques such as CNNs. Proficient in using tools/models like TensorFlow, PyTorch, BERT, GPT, and Llama 3, to develop and implement custom GenAI solutions."
                 },
                 { 
-                    name: "scikit-learn", 
-                    logo: "/img/tech/sklearn.svg",
-                    tooltip: "Implementation of classical machine learning algorithms and data preprocessing pipelines."
-                },
-                { 
-                    name: "LLMs & RAG", 
-                    logo: "/img/tech/llm.svg",
-                    tooltip: "Working with large language models and implementing retrieval-augmented generation systems."
+                    name: "Statistical Analysis", 
+                    logo: "/img/tech/statistical_analysis.svg",
+                    tooltip: "Advanced skills in probabilistic programming and statistical methods, including but not limited to: Bayesian modeling, probability theory, hypothesis testing, time series analysis, etc."
                 },
             ]
         },
@@ -164,17 +159,17 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                 { 
                     name: "PostgreSQL", 
                     logo: "/img/tech/postgresql.svg",
-                    tooltip: "Database design, optimization, and management for large-scale applications."
+                    tooltip: "Database design, optimization, and management in PostgreSQL/MySql/T-SQL, DynamoDB, and Redis"
                 },
                 { 
                     name: "Entity Framework", 
                     logo: "/img/tech/ef.svg",
-                    tooltip: "ORM development and database migrations in .NET applications."
+                    tooltip: "Used during ORM development and database migration setup"
                 },
                 { 
                     name: "Spring Boot", 
-                    logo: "/img/tech/redis.svg",
-                    tooltip: "Building robust and scalable Java applications with Spring ecosystem."
+                    logo: "/img/tech/spring.svg",
+                    tooltip: "Worked on enterprise applications with Spring Boot at Netcompany and Keylane."
                 },
             ]
         }
@@ -228,31 +223,26 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                         <AboutSection/>
                         <Testimonials/>
                         
-                        {/* New CTA Section */}
+                        {/* Personal CTA Section */}
                         <div className="mt-12 p-8 bg-card-lighter rounded-xl border border-accent/20 backdrop-blur-sm">
-                            <h3 className="text-2xl font-bold text-white mb-4">Want to Join This List?</h3>
+                            <h3 className="text-2xl font-bold text-white mb-4 text-accent">A Personal Note</h3>
 
                             <p className="text-gray-300 mb-6 leading-relaxed">
-                                🚀 <span className="text-accent font-semibold">Elevate Your Tech Vision</span> with Expert Solutions
-                                <br />
-                                Join the roster of successful companies I've collaborated with. With expertise in AI, cloud architecture, 
-                                and full-stack development, I bring enterprise-grade solutions to ambitious projects.
+                                I'll be honest - balancing freelancing alongside a full-time position might seem unusual. But it's truly my passion. 
+                                Running my own company while delivering value to both my full-time employer and freelance clients brings me immense satisfaction. 
+                                It allows me to live out my entrepreneurial dreams while maintaining the stability and growth opportunities of a permanent role.
                             </p>
+
                             <div className="space-y-4">
                                 <div className="flex flex-col sm:flex-row gap-4 items-center justify-between p-4 bg-card rounded-lg border border-accent/10">
-                                    <div className="text-gray-300">
-                                        <span className="text-accent">✓</span> Proven track record with industry leaders
-                                        <br />
-                                        <span className="text-accent">✓</span> Specialized in AI and cloud solutions
-                                        <br />
-                                        <span className="text-accent">✓</span> Rapid deployment and scalable architecture
+                                    <div className="text-gray-300 italic">
+                                        "I hope you'll consider partnering with me on your next tech project. I bring not just technical expertise, 
+                                        but genuine enthusiasm and dedication to every collaboration."
+                                        <div className="mt-2 text-accent">- Mikkel</div>
                                     </div>
                                     <ContactForm />
                                 </div>
                             </div>
-                            <p className="text-gray-300 mt-6 leading-relaxed">
-                                Although I'm currently engaged in a full-time position, I'm available for freelance projects up to <span className="font-semibold text-accent">30 hours a week</span>.
-                            </p>
                         </div>
 
                         <div className="text-center mt-12 space-y-8">

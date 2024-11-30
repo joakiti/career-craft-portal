@@ -51,7 +51,7 @@ const SimpleWorkExperienceItem = ({
                         <div className="space-y-4">
                             {description && (
                                 <div className="mb-6 p-4 bg-card-lighter rounded-lg">
-                                    <h4 className="text-lg font-semibold text-white mb-2">Our Technology</h4>
+                                    <h4 className="text-lg font-semibold text-white mb-2">The role</h4>
                                     <p className="text-gray-300 leading-relaxed">{description}</p>
                                 </div>
                             )}

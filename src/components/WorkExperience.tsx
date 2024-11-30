@@ -8,34 +8,34 @@ const WorkExperience = () => {
                 <div className="space-y-8">
                     <SimpleWorkExperienceItem
                         company="VISMA"
-                        role="AI Tech Lead / Team Lead"
+                        role="AI Tech Lead"
                         period="Aug 2023 - Present"
                         defaultOpen={true}
-                        description="Leading AI initiatives and team management for Norway's largest self-service accounting SaaS firm. Implementing cutting-edge AI solutions including RAG setups and custom ML models for automated support and work roster optimization."
+                        description="As AI Tech Lead, I drive the end-to-end development of AI solutions, from architecture to deployment. Working closely with Product Management to align technical implementation with business objectives, I lead the team in delivering sophisticated AI services while ensuring best practices in cloud infrastructure, CI/CD, and system design. In addition to everything mentioned under AI Developer, I also handle the following:"
                         responsibilities={[
-                            "Led a 4-man team in Norway for the biggest self-service accounting SaaS firm for 4 months.",
-                            "As lead developer, planned and drove the AI infrastructure and application, and mentored junior engineers.",
-                            "Developed support agent with 85% self-service rate using custom RAG setup with vector search",
-                            "Work featured in national television and publications",
-                            "Tech lead for work-roster team and personnel manager for two developers",
-                            "Successfully led and delivered six consultancy project offers"
+                            "Lead the technical strategy and implementation of AI services, including architecture design and CI/CD pipelines",
+                            "Drive knowledge sharing and mentorship within the team while maintaining high code quality standards",
+                            "Developed an AI-powered support agent achieving 85% self-service rate using RAG and vector search",
+                            "Manage sprint ceremonies and backlog prioritization as agile lead for the AI team",
+                            "Collaborate with clients to translate business requirements into technical solutions",
+                            "Oversee cloud infrastructure on AWS and Azure, implementing best practices in security and scalability"
                         ]}
-                        technologies={["Java", "Python", "ML", "Azure", "AWS", "LLMs", "RAG"]}
+                        technologies={["Python", "Java", "AWS", "Azure", "ML/AI", "LLMs", "RAG", "CI/CD", "Terraform"]}
                     />
 
                     <SimpleWorkExperienceItem
                         company="VISMA"
                         role="AI Developer"
                         period="May 2022 - Aug 2023"
-                        description="Focused on developing sophisticated optimization algorithms for hospital work rosters, implementing various solver approaches and improving system performance through innovative solutions."
+                        description="Focused on developing sophisticated optimization algorithms for hospital work rosters, implementing various solver approaches and improving system performance through mathematical modeling and optimization techniques."
                         responsibilities={[
-                            "Developed heuristic-based optimization solver for hospital work rosters",
-                            "Implemented 12 different MIP solvers using Google OR tools",
-                            "Led PostNord project resulting in 6 million NOK yearly contract",
-                            "Architected serverless infrastructure using CloudFormation, Docker, S3, and Lambda",
-                            "Improved single-person assignment accuracy by 40%",
-                            "Enhanced re-scheduling capabilities",
-                            "Optimized performance through improved caching and build processes"
+                            "Worked on a heuristic-based optimization solver to generate optimal work rosters for hospitals and elderly care, requiring deep understanding of object-oriented design, memory management, and performance optimization in Java/Python",
+                            "Implemented scoring rankers, candidate selection algorithms, constraints and oversaw the architectural design of the algorithm itself",
+                            "Implemented 12 different MIP solvers with Google OR tools, that can be used to quickly identify feasibility of the problem",
+                            "Cloud architect on the team, and implemented our migration from TeamCity to Github Actions",
+                            "Role as Service Owner and Security Engineer, meaning product stability/success is my responsibility",
+                            "Our first big customer was PostNord, I was development lead and responsible for driving this customer to success. Some things I handled were: Single-person assignment (increased accuracy by 40%), Performance improvements (improved caching, and build processes), and project management/debugging ambitious payloads.",
+                            "I create and maintain our infrastructure setup which is serverless, and managed through CloudFormation, with Docker, S3 and Lambda setup for test execution and deployment"
                         ]}
                         technologies={["Java", "Python", "AWS", "CloudFormation", "Docker", "OR-Tools", "Lambda"]}
                     />
