@@ -12,16 +12,13 @@ const AboutSection = () => {
                 <div ref={ref} className="bg-card-lighter rounded-2xl p-8 opacity-0">
                     <h2 className="text-3xl font-extrabold mb-4 text-white">Let's build together ✨</h2>
                     <p className="text-gray-100 leading-relaxed font-medium">
-                        I'm a coder who loves building stuff. I've been writing code for almost 10 years in different areas. I'm good at competitive programming, algorithms, optimization, and machine learning.
+                        I'm a performance-driven Tech Lead with nearly a decade of experience crafting software across various domains. My expertise spans competitive programming, advanced algorithms, and machine learning, making me a versatile generalist who thrives on complex challenges.
                     </p>
                     <p className="text-gray-100 leading-relaxed font-medium mt-4">
-                        I enjoy solving tough problems and working across all parts of tech, from UI to algorithm design. I've built AI projects and led teams that shipped real products.
+                        From leading international AI teams to developing healthcare optimization solutions, I've consistently delivered impactful projects. I enjoy working across the entire tech stack, from crafting intuitive user experiences to implementing sophisticated algorithms.
                     </p>
                     <p className="text-gray-100 leading-relaxed font-medium mt-4">
-                        I've led AI teams, built optimization solvers for healthcare, freelanced, and constantly try to get better at software craftsmanship.
-                    </p>
-                    <p className="text-gray-100 leading-relaxed font-medium mt-4">
-                        I love tackling hard projects. If I'm not coding, and not playing with my son, I might go hiking, bouldering, or play some strategy games.
+                        With an entrepreneurial mindset, I balance my passion for technology with an active lifestyle. When I'm not coding or spending time with my son, you'll find me hiking, bouldering, or enjoying strategy games.
                     </p>
                 </div>
                 </div>
