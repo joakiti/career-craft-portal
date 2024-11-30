@@ -81,7 +81,7 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                 { 
                     name: "Python", 
                     logo: "/img/tech/python.svg",
-                    tooltip: "Auxillary developer in Python building web server applications and APIs with Django and Flask"
+                    tooltip: "Auxillary developer in Python building web server applications and APIs with Django and Flask."
                 },
                 { 
                     name: "Flutter", 
@@ -148,7 +148,7 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                 { 
                     name: "Statistical Analysis", 
                     logo: "/img/tech/statistical_analysis.svg",
-                    tooltip: "Experience with probabilistic programming and statistical methods"
+                    tooltip: "Experience with probabilistic programming and statistical methods."
                 },
             ]
         },
@@ -159,12 +159,12 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                 { 
                     name: "PostgreSQL", 
                     logo: "/img/tech/postgresql.svg",
-                    tooltip: "Database design, optimization, and management in PostgreSQL/MySql/T-SQL, DynamoDB, and Redis"
+                    tooltip: "Database design, optimization, and management in PostgreSQL/MySql/T-SQL, DynamoDB, and Redis."
                 },
                 { 
                     name: "Entity Framework", 
                     logo: "/img/tech/ef.svg",
-                    tooltip: "Used during ORM development and database migration setup"
+                    tooltip: "Used during ORM development and database migration setup."
                 },
                 { 
                     name: "Spring Boot", 
