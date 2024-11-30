@@ -143,12 +143,12 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                 { 
                     name: "LLM and Deep Learning", 
                     logo: "/img/tech/deep_learning.svg",
-                    tooltip: "Extensive experience with LLMs, transformer models, and deep learning techniques such as CNNs. Proficient in using tools/models like TensorFlow, PyTorch, BERT, GPT, and Llama 3, to develop and implement custom GenAI solutions."
+                    tooltip: "Proficient in using tools/models like TensorFlow, PyTorch, BERT, GPT, and Llama 3, to develop and implement custom GenAI solutions."
                 },
                 { 
                     name: "Statistical Analysis", 
                     logo: "/img/tech/statistical_analysis.svg",
-                    tooltip: "Advanced skills in probabilistic programming and statistical methods, including but not limited to: Bayesian modeling, probability theory, hypothesis testing, time series analysis, etc."
+                    tooltip: "Experience with probabilistic programming and statistical methods"
                 },
             ]
         },
