@@ -9,7 +9,7 @@ const ProfileCard = () => {
         <div className="bg-card-lighter rounded-2xl p-8">
             <div className="relative" onClick={() => setIsAlternatePhoto(!isAlternatePhoto)}>
                 <ImageWithFallback
-                    src={isAlternatePhoto ? "/img/profile_pic_pro.png" : "/img/profile_pic.png"}
+                    src={isAlternatePhoto ? "/img/profile_pic.jpg" : "/img/profile_pic.png"}
                     alt="Profile picture"
                     className={`rounded-2xl shadow-xl w-full h-auto object-cover mb-6 cursor-pointer transition-opacity duration-300 ${
                         isAlternatePhoto ? 'animate-scale-in' : ''
