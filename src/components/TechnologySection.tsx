@@ -127,6 +127,11 @@ const TechnologySection = () => {
             icon: <Brain className="w-5 h-5 text-accent mb-2" />,
             items: [
                 { 
+                    name: "Algorithm Design", 
+                    logo: "/img/tech/predictive_modeling.svg",
+                    tooltip: "Expert in designing and implementing complex algorithms for optimization problems, including roster optimization, constraint satisfaction, and mathematical programming."
+                },
+                { 
                     name: "Predictive Modeling", 
                     logo: "/img/tech/predictive_modeling.svg",
                     tooltip: "Skilled in creating various machine learning models, such as logistic regression, decision trees, and neural networks."
@@ -135,6 +140,11 @@ const TechnologySection = () => {
                     name: "LLM and Deep Learning", 
                     logo: "/img/tech/deep_learning.svg",
                     tooltip: "Proficient in using tools/models like TensorFlow, PyTorch, BERT, GPT, and Llama 3, to develop and implement custom GenAI solutions."
+                },
+                { 
+                    name: "Mathematical Optimization", 
+                    logo: "/img/tech/statistical_analysis.svg",
+                    tooltip: "Experience in implementing complex mathematical optimization models for workforce planning, including linear programming, integer programming, and constraint programming for automatic roster generation."
                 },
                 { 
                     name: "Statistical Analysis", 
