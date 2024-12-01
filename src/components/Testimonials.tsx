@@ -82,12 +82,13 @@ const CompanyLogos = () => (
 
 const Testimonials = () => {
     const testimonials = [
+        /** 
         {
             name: "Martin Sommerseth",
             role: "Manager",
             company: "Resolve",
             image: "/img/people/martin_sommerseth.jpg",
-            content: `Mikkel transitioned into a Tech Lead role due to his exceptional technical deliveries and leadership abilities.
+            content: `Mikkel trans½itioned into a Tech Lead role due to his exceptional technical deliveries and leadership abilities.
             
             Mikkel also showcased strong project management skills, particularly in leading the PostNord project to success by balancing technical implementation and aligning different parties.
             
@@ -104,6 +105,7 @@ const Testimonials = () => {
             
             He significantly enhanced the Automatic Rostering product, preparing it for further growth. What was once an "unsure Resolve card" a year ago has now become one of our standout products, thanks to the technological advancements made.`
         },
+        */
         {
             name: "Jan Strandbakke",
             role: "CTO",
