@@ -37,6 +37,9 @@ const CurrentRoles = () => {
                                                 Architecting an advanced Automatic Rostering system addressing the <strong>NP-Hard Nurse Scheduling Problem</strong>.
                                             </li>
                                             <li>
+                                                Role as Service Owner / Security Engineer / Agile Lead, meaning product stability/success is my responsibility.
+                                            </li>
+                                            <li>
                                                 Developing a service to automatically assign employees to shifts, optimizing workforce utilization while adhering to competency requirements and labor regulations.
                                             </li>
                                             <li>
@@ -56,9 +59,6 @@ const CurrentRoles = () => {
                                             <li>
                                                 Including a custom RAG setup with vector search and re-ranking, handling over 100,000 customer queries with more than 80% accuracy.
                                             </li>
-                                            <li>
-                                                Implementing a GPT-4 based AI assistant providing 24/7 customer support, with 80% success rate in resolving tickets.
-                                            </li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -68,10 +68,17 @@ const CurrentRoles = () => {
                                 <h4 className="text-xl font-bold text-accent mb-3">Algorithm & Technical Excellence</h4>
                                 <ul className="list-disc list-inside text-gray-100 space-y-2 font-medium">
                                     <li>
-                                        Architected heuristic-based optimization solvers for hospital work rosters, implementing complex scheduling algorithms.
+                                    Worked on a heuristic based optimization solver to generate optimal work rosters for hospitals and
+                                        elderly care, requiring deep understanding of object oriented design, memory management, and
+                                        performance optimization in Java/Python.                                    
                                     </li>
                                     <li>
-                                        Developed 12 MIP solvers using Google OR-Tools for rapid feasibility assessments.
+                                        Implemented scoring rankers, candidate selection algorithms, constraints and oversee the architectural
+                                        design of the algorithm itself.
+                                    </li>
+                                    <li>
+                                        Implemented 12 different MIP solvers with Google OR tools, that can be used to quickly identify
+                                        feasibility of the problem.
                                     </li>
                                     <li>
                                         Implemented sophisticated scoring rankers and candidate selection algorithms, achieving a 40% accuracy improvement.
