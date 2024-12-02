@@ -96,9 +96,9 @@ const TechnologySection = () => {
             icon: <Cloud className="w-5 h-5 text-accent mb-2" />,
             items: [
                 { 
-                    name: "AWS (certified)", 
+                    name: "AWS", 
                     logo: "/img/tech/aws.svg",
-                    tooltip: "Certified AWS Solutions Architect with experience in designing and implementing cloud infrastructure at Visma Resolve and various freelance projects."
+                    tooltip: "AWS Developer Assosciate with experience in designing and implementing cloud infrastructure at Visma Resolve and various freelance projects."
                 },
                 { 
                     name: "Docker", 
