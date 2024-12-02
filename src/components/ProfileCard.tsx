@@ -19,7 +19,7 @@ const ProfileCard = () => {
                 />
             </div>
             <h1 className="text-3xl font-bold mb-2 text-white">Mikkel Kaj Andersen</h1>
-            <p className="text-gray-400 mb-6">Father | Tech Lead | Freelancer</p>
+            <p className="text-gray-400 mb-6">Father | Tech Lead </p>
             <div className="flex flex-wrap gap-4 mb-6">
                 <a href="mailto:mikkel_ander@hotmail.com"
                    className="text-link hover:text-link-hover transition-colors">
