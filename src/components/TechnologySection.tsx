@@ -72,7 +72,7 @@ const TechnologySection = () => {
                 { 
                     name: "Python", 
                     logo: "/img/tech/python.svg",
-                    tooltip: "Auxillary developer in Python building web server applications and APIs with Django and Flask."
+                    tooltip: "Auxillary developer in Python building web server applications, algorithm development, infrastructure and APIs with Django and Flask."
                 },
                 { 
                     name: "Flutter", 
