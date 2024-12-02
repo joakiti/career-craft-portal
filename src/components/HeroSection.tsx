@@ -21,9 +21,9 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                     <div className="md:col-span-8 space-y-6">
                         <AboutSection/>
                         <Testimonials/>
-                        
-                        {/* Personal CTA Section */}
-                        <div className="mt-12 p-8 bg-card-lighter rounded-xl border border-accent/20 backdrop-blur-sm">
+
+                        {/* Personal CTA Section 
+                                                <div className="mt-12 p-8 bg-card-lighter rounded-xl border border-accent/20 backdrop-blur-sm">
                             <h3 className="text-2xl font-bold text-white mb-4 text-accent">A Personal Note</h3>
 
                             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -43,6 +43,7 @@ const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
                                 </div>
                             </div>
                         </div>
+                        */}
 
                         <div className="text-center mt-12 space-y-8">
                             <button

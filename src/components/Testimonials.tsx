@@ -82,7 +82,6 @@ const CompanyLogos = () => (
 
 const Testimonials = () => {
     const testimonials = [
-        /** 
         {
             name: "Martin Sommerseth",
             role: "Manager",
@@ -105,7 +104,6 @@ const Testimonials = () => {
             
             He significantly enhanced the Automatic Rostering product, preparing it for further growth. What was once an "unsure Resolve card" a year ago has now become one of our standout products, thanks to the technological advancements made.`
         },
-        */
         {
             name: "Jan Strandbakke",
             role: "CTO",
