@@ -87,7 +87,7 @@ const Testimonials = () => {
             role: "Manager",
             company: "Resolve",
             image: "/img/people/martin_sommerseth.jpg",
-            content: `Mikkel trans½itioned into a Tech Lead role due to his exceptional technical deliveries and leadership abilities.
+            content: `Mikkel transitioned into a Tech Lead role due to his exceptional technical deliveries and leadership abilities.
             
             Mikkel also showcased strong project management skills, particularly in leading the PostNord project to success by balancing technical implementation and aligning different parties.
             
