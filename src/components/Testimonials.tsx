@@ -83,6 +83,18 @@ const CompanyLogos = () => (
 const Testimonials = () => {
     const testimonials = [
         {
+            name: "Morten Nørgaard Larsen",
+            role: "CTO & Senior Vice President",
+            company: "Visma Enterprise A/S",
+            image: "/img/people/morten_norgaard_larsen.png",
+            content: `We have engaged his services multiple times on our HRM Analytics platform, and he has consistently impressed us with his exceptional skills and efficiency. Mikkel excels at understanding and aligning with customer requirements, ensuring that their needs are met to the highest standards.
+
+Beyond his technical expertise, Mikkel is known for his friendly demeanor and remarkable adaptability, seamlessly integrating into our organization. His ability to collaborate effectively across teams is unmatched, and he has become a valued asset during our projects.
+
+I am confident that Mikkel will bring the same dedication and skill to any organization fortunate enough to work with him.
+            `
+        },
+        {
             name: "Martin Sommerseth",
             role: "Manager",
             company: "Resolve",
