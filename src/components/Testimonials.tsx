@@ -96,7 +96,7 @@ I am confident that Mikkel will bring the same dedication and skill to any organ
         },
         {
             name: "Martin Sommerseth",
-            role: "Manager",
+            role: "Managing Director",
             company: "Resolve",
             image: "/img/people/martin_sommerseth.jpg",
             content: `Mikkel transitioned into a Tech Lead role due to his exceptional technical deliveries and leadership abilities.
