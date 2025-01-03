@@ -81,9 +81,6 @@ const CurrentRoles = () => {
                                         feasibility of the problem.
                                     </li>
                                     <li>
-                                        Implemented sophisticated scoring rankers and candidate selection algorithms, achieving a 40% accuracy improvement.
-                                    </li>
-                                    <li>
                                         Designed and deployed serverless infrastructure using CloudFormation, Docker, S3, and Lambda.
                                     </li>
                                 </ul>
