@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import ContactForm from "@/components/ContactForm";
+import ConsultationForm from "@/components/ConsultationForm";
 import ImageWithFallback from "@/components/ui/image-with-fallback";
 import { Brain, Code, Database, Timer, ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Footer from "@/components/Footer";
 import {
   Card,
   CardContent,
@@ -13,8 +14,12 @@ import {
 import { cn } from "@/lib/utils";
 
 const Index = () => {
+  const scrollToContact = () => {
+    document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className="min-h-screen bg-card">
+    <div className="min-h-screen bg-card flex flex-col">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="container mx-auto max-w-7xl">
@@ -30,13 +35,7 @@ const Index = () => {
                 Specialized in three core areas: Enterprise full-stack development, AI/ML implementation, and system architecture. Focused on delivering measurable results that drive business growth.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button 
-                  size="lg"
-                  className="bg-accent hover:bg-accent/90 text-primary px-8"
-                  onClick={() => document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Schedule Consultation
-                </Button>
+                <ConsultationForm/>
                 <Link 
                   to="/services" 
                   className="inline-flex items-center px-6 py-3 rounded-lg border border-accent/20 text-accent hover:bg-accent/10 transition-colors"
@@ -71,7 +70,7 @@ const Index = () => {
       </section>
 
       {/* Core Services */}
-      <section className="py-16 px-4 bg-card-lighter">
+      <section className="py-16 px-4 bg-card">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Specialized Technical Solutions</h2>
@@ -180,7 +179,7 @@ const Index = () => {
       </section>
 
       {/* Recent Success Section */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4 bg-card-lighter">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Measurable Results</h2>
@@ -205,20 +204,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Consultation Section */}
-      <section id="consultation-section" className="py-20 px-4 bg-card-lighter">
-        <div className="container mx-auto max-w-4xl text-center space-y-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Let's Solve Your Technical Challenges
-          </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Looking for expert help with full-stack development, AI implementation, or system architecture? Let's discuss your specific needs and how I can help.
-          </p>
-          <div className="bg-card p-8 rounded-xl border border-accent/10 max-w-2xl mx-auto">
-            <ContactForm />
-          </div>
-        </div>
-      </section>
+      <Footer />
     </div>
   );
 };

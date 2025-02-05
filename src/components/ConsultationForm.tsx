@@ -11,87 +11,120 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowRight, Mail } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-const ConsultationForm = () => {
-  const [email, setEmail] = useState("");
-  const [selectedService, setSelectedService] = useState("");
+interface ConsultationFormProps {
+  size?: "default" | "large";
+}
+
+const ConsultationForm = ({ size = "large" }: ConsultationFormProps) => {
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+  const [selectedModel, setSelectedModel] = useState("");
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    const mailtoUrl = `mailto:hello@mikkelkajandersen.dk?subject=Consultation Request: ${encodeURIComponent(selectedService)}&body=${encodeURIComponent(`Service: ${selectedService}\nContact Email: ${email}`)}`;
+    const mailtoUrl = `mailto:hello@mikkelkajandersen.dk?subject=Consultation Request: ${encodeURIComponent(name)} - ${encodeURIComponent(selectedModel)}&body=${encodeURIComponent(`From: ${name}\nEngagement Model: ${selectedModel}\n\n${message}`)}`;
     window.location.href = mailtoUrl;
     
     toast({
-      title: "Request Sent",
+      title: "Message Prepared",
       description: "Your consultation request has been prepared in your default email client.",
     });
+  };
+
+  const buttonClasses = {
+    default: "bg-accent hover:bg-accent/90 text-primary px-6 py-3 text-base",
+    large: "bg-accent hover:bg-accent/90 text-primary px-8 py-6 text-lg font-medium"
   };
 
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Card className="max-w-md mx-auto bg-card border-accent/10 hover:border-accent/20 transition-all duration-200">
-          <CardHeader className="pb-2">
-            <CardTitle className="text-2xl font-bold text-white">Ready to Get Started?</CardTitle>
-            <p className="text-gray-400 mt-2">Book a free consultation and let's discuss your project needs.</p>
-          </CardHeader>
-          <CardContent>
-            <Button 
-              variant="outline" 
-              className="bg-accent hover:bg-accent/90 text-white border-accent/20 px-8 py-6 text-lg font-semibold tracking-wide shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 w-full"
-            >
-              🚀 Schedule Your Free Consultation
-            </Button>
-          </CardContent>
-        </Card>
+        <Button 
+          className={cn(
+            buttonClasses[size],
+            "group relative overflow-hidden transition-all duration-300"
+          )}
+        >
+          <span className="relative z-10 flex items-center gap-2">
+            Schedule Free Consultation
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </span>
+          <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/30 to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity" />
+        </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] bg-card border-accent/10">
+      <DialogContent className="sm:max-w-[500px] bg-card border-accent/20">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-white">Request Consultation</DialogTitle>
-          <DialogDescription className="text-gray-400">
-            Please select a service and provide your email for consultation.
+          <DialogTitle className="text-2xl font-bold text-white flex items-center gap-2">
+            <Mail className="w-6 h-6 text-accent" />
+            Schedule Your Consultation
+          </DialogTitle>
+          <DialogDescription className="text-gray-400 text-base">
+            Take the first step towards transforming your technical challenges into opportunities.
           </DialogDescription>
         </DialogHeader>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-6 mt-4">
           <div className="space-y-2">
-            <Label htmlFor="service" className="text-white">Select Service</Label>
-            <Select required onValueChange={setSelectedService}>
-              <SelectTrigger className="bg-card-lighter border-accent/10 text-white">
-                <SelectValue placeholder="Choose a service" />
+            <Label htmlFor="name" className="text-white text-sm font-medium">Full Name</Label>
+            <Input
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Your name"
+              required
+              className="bg-card-lighter border-accent/20 text-white placeholder:text-gray-500 focus:border-accent/50 transition-colors"
+            />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="engagement-model" className="text-white text-sm font-medium">Engagement Model</Label>
+            <Select required value={selectedModel} onValueChange={setSelectedModel}>
+              <SelectTrigger id="engagement-model" className="bg-card-lighter border-accent/20 text-white">
+                <SelectValue placeholder="Choose an engagement model" />
               </SelectTrigger>
-              <SelectContent className="bg-card border-accent/10">
-                <SelectItem value="full-time" className="text-white">Full-Time Project</SelectItem>
-                <SelectItem value="part-time" className="text-white">Part-Time Engagement</SelectItem>
-                <SelectItem value="consultancy" className="text-white">Consultancy Package</SelectItem>
+              <SelectContent className="bg-card border-accent/20">
+                <SelectItem value="full-time" className="text-white">
+                  Full-Time Project
+                </SelectItem>
+                <SelectItem value="part-time" className="text-white">
+                  Part-Time Engagement
+                </SelectItem>
+                <SelectItem value="package" className="text-white">
+                  Consultancy Package
+                </SelectItem>
               </SelectContent>
             </Select>
           </div>
           <div className="space-y-2">
-            <Label htmlFor="email" className="text-white">Email</Label>
-            <Input
-              id="email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="your@email.com"
+            <Label htmlFor="message" className="text-white text-sm font-medium">Project Details</Label>
+            <Textarea
+              id="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="Please describe your project requirements or technical challenges"
               required
-              className="bg-card-lighter border-accent/10 text-white placeholder:text-gray-500"
+              className="bg-card-lighter border-accent/20 text-white placeholder:text-gray-500 focus:border-accent/50 transition-colors min-h-[150px] resize-none"
             />
           </div>
           <Button 
-            type="submit" 
-            className="w-full bg-accent hover:bg-accent/90 text-white font-semibold tracking-wide shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200"
+            type="submit"
+            className="w-full bg-accent hover:bg-accent/90 text-primary font-medium py-6 text-lg relative group overflow-hidden"
           >
-            Submit Request
+            <span className="relative z-10 flex items-center justify-center gap-2">
+              Send Request
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/30 to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity" />
           </Button>
         </form>
       </DialogContent>
     </Dialog>
   );
-};
+}
 
 export default ConsultationForm;
