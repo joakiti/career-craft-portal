@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -11,6 +12,9 @@ const Navbar = () => {
           <div className="flex gap-6">
             <Link to="/" className="text-gray-300 hover:text-accent transition-colors">
               Home
+            </Link>
+            <Link to="/services" className="text-gray-300 hover:text-accent transition-colors">
+              Services
             </Link>
             <Link to="/profile" className="text-gray-300 hover:text-accent transition-colors">
               Profile
