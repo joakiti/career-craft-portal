@@ -3,7 +3,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Code, Database, Timer, Clock, Calendar, Check, X } from "lucide-react";
 import ConsultationForm from "@/components/ConsultationForm";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 
 const Services = () => {
   return (
@@ -306,12 +305,7 @@ const Services = () => {
 
       {/* Single Contact Button for all services */}
       <div className="mt-12 flex justify-center">
-        <Button 
-          variant="outline" 
-          className="bg-accent hover:bg-accent/90 text-primary border-primary px-8 py-6 text-lg font-medium"
-        >
-          Schedule Consultation
-        </Button>
+        <ConsultationForm />
       </div>
     </div>
   );

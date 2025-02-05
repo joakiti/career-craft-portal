@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -35,10 +34,10 @@ const ConsultationForm = () => {
     <Dialog>
       <DialogTrigger asChild>
         <Button 
-          variant="default" 
-          className="bg-accent hover:bg-accent/90 text-primary w-full"
+          variant="outline" 
+          className="bg-accent hover:bg-accent/90 text-primary border-primary px-8 py-6 text-lg font-medium"
         >
-          Get in Contact
+          Schedule Consultation
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] bg-card border-accent/10">
