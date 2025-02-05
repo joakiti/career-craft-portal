@@ -35,7 +35,7 @@ const ConsultationForm = () => {
       <DialogTrigger asChild>
         <Button 
           variant="outline" 
-          className="bg-accent hover:bg-accent/90 text-primary border-primary px-8 py-6 text-lg font-medium"
+          className="bg-accent hover:bg-accent/90 text-white border-primary px-8 py-6 text-lg font-medium"
         >
           Schedule Consultation
         </Button>
@@ -55,9 +55,9 @@ const ConsultationForm = () => {
                 <SelectValue placeholder="Choose a service" />
               </SelectTrigger>
               <SelectContent className="bg-card border-accent/10">
-                <SelectItem value="full-time">Full-Time Project</SelectItem>
-                <SelectItem value="part-time">Part-Time Engagement</SelectItem>
-                <SelectItem value="consultancy">Consultancy Package</SelectItem>
+                <SelectItem value="full-time" className="text-white">Full-Time Project</SelectItem>
+                <SelectItem value="part-time" className="text-white">Part-Time Engagement</SelectItem>
+                <SelectItem value="consultancy" className="text-white">Consultancy Package</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -75,7 +75,7 @@ const ConsultationForm = () => {
           </div>
           <Button 
             type="submit" 
-            className="w-full bg-accent hover:bg-accent/90 text-primary"
+            className="w-full bg-accent hover:bg-accent/90 text-white"
           >
             Submit Request
           </Button>
