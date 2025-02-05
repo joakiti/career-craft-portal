@@ -204,6 +204,24 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Final Call to Action */}
+      <section className="py-16 px-4 bg-card">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center max-w-3xl mx-auto space-y-6">
+            <h2 className="text-3xl font-bold text-white">Still on the Fence?</h2>
+            <p className="text-gray-300 text-lg leading-relaxed">
+              Hey, no pressure! But while you're here, why not take a quick peek at my profile? I've packed it with real projects and cool tech wins that show what I'm all about.<br/><br/> Check it out, if you want.
+            </p>
+            <Link 
+              to="/profile"
+              className="inline-flex items-center px-8 py-3 rounded-lg bg-accent hover:bg-accent/90 text-primary transition-colors"
+            >
+              Profile <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
