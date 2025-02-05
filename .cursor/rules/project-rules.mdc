@@ -1,0 +1,24 @@
+---
+description: Any code-writing task 
+globs: 
+---
+
+This project is built with .
+
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
+
+Use TypeScript for all components (.tsx extension)
+Follow shadcn/ui component patterns and styling conventions
+Maintain consistent file naming: ComponentName.tsx for components
+
+Styling
+Use Tailwind CSS classes for styling
+Follow the existing color scheme using CSS variables (--background, --foreground, etc.)
+Use the cn() utility from @/lib/utils for conditional class names
+Reference the shadcn theme variables defined in tailwind.config.js
+
+Always research existing styling before creating new components.
