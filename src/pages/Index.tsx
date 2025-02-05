@@ -191,15 +191,15 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-card-lighter p-6 rounded-lg border border-accent/10 hover:border-accent/30 transition-all">
               <h3 className="text-accent font-medium mb-2">Tripletex (Norway)</h3>
-              <p className="text-gray-300 text-sm">Built and deployed an AI support system handling 10,000+ monthly queries with 80%+ accuracy, reducing support costs by 40%</p>
+              <p className="text-gray-300 text-sm">Built and deployed an AI support system handling 10,000+ monthly queries with 80%+ accuracy, ensuring company growth not blocked by support</p>
             </div>
             <div className="bg-card-lighter p-6 rounded-lg border border-accent/10 hover:border-accent/30 transition-all">
               <h3 className="text-accent font-medium mb-2">Visma Enterprise</h3>
-              <p className="text-gray-300 text-sm">Optimized core system reducing loading times from 30s to 500ms, improving user satisfaction by 60%</p>
+              <p className="text-gray-300 text-sm">Optimized core system reducing loading times from 30s to 500ms, improving user satisfaction significantly</p>
             </div>
             <div className="bg-card-lighter p-6 rounded-lg border border-accent/10 hover:border-accent/30 transition-all">
               <h3 className="text-accent font-medium mb-2">GoDream</h3>
-              <p className="text-gray-300 text-sm">Delivered a scalable gift-card platform processing 100K+ transactions monthly with 99.9% uptime</p>
+              <p className="text-gray-300 text-sm">Delivered a scalable gift-card platform processing 10,000+ transactions monthly with 99.9% uptime</p>
             </div>
           </div>
         </div>
@@ -216,19 +216,6 @@ const Index = () => {
           </p>
           <div className="bg-card p-8 rounded-xl border border-accent/10 max-w-2xl mx-auto">
             <ContactForm />
-          </div>
-        </div>
-      </section>
-
-      {/* Client Portfolio */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-7xl">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Trusted By Industry Leaders</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <img src="/img/companies/resolve.svg" alt="Resolve" className="h-12 mx-auto opacity-70 hover:opacity-100 transition-opacity" />
-            <img src="/img/companies/visma.svg" alt="Visma" className="h-12 mx-auto opacity-70 hover:opacity-100 transition-opacity" />
-            <img src="/img/companies/tripletex.svg" alt="Tripletex" className="h-12 mx-auto opacity-70 hover:opacity-100 transition-opacity" />
-            <img src="/img/companies/netcompany.svg" alt="Netcompany" className="h-12 mx-auto opacity-70 hover:opacity-100 transition-opacity" />
           </div>
         </div>
       </section>
