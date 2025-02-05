@@ -32,7 +32,7 @@ const Index = () => {
               <div className="flex gap-4">
                 <Button 
                   size="lg"
-                  className="bg-accent hover:bg-accent/90 text-primary px-8 animate-pulse"
+                  className="bg-accent hover:bg-accent/90 text-primary px-8"
                   onClick={() => document.getElementById('cta-section')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Let's Chat! →
