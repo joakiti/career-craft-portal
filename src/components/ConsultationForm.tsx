@@ -35,9 +35,9 @@ const ConsultationForm = () => {
       <DialogTrigger asChild>
         <Button 
           variant="outline" 
-          className="bg-accent hover:bg-accent/90 text-white border-primary px-8 py-6 text-lg font-medium"
+          className="bg-accent hover:bg-accent/90 text-white border-accent/20 px-8 py-6 text-lg font-semibold tracking-wide shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 animate-pulse hover:animate-none"
         >
-          Schedule Consultation
+          🚀 Schedule Your Free Consultation
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] bg-card border-accent/10">
@@ -75,7 +75,7 @@ const ConsultationForm = () => {
           </div>
           <Button 
             type="submit" 
-            className="w-full bg-accent hover:bg-accent/90 text-white"
+            className="w-full bg-accent hover:bg-accent/90 text-white font-semibold tracking-wide shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200"
           >
             Submit Request
           </Button>
