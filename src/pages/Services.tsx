@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Code, Database, Timer, Clock, Calendar, Check, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import ConsultationForm from "@/components/ConsultationForm";
 import { cn } from "@/lib/utils";
 
 const Services = () => {
@@ -225,12 +225,9 @@ const Services = () => {
                     </li>
                   </ul>
                 </div>
-                <Button 
-                  className="w-full mt-6 bg-accent hover:bg-accent/90 text-primary"
-                  onClick={() => document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Schedule Consultation
-                </Button>
+                <div className="mt-6">
+                  <ConsultationForm />
+                </div>
               </CardContent>
             </Card>
 
@@ -267,12 +264,9 @@ const Services = () => {
                     </li>
                   </ul>
                 </div>
-                <Button 
-                  className="w-full mt-6 bg-accent hover:bg-accent/90 text-primary"
-                  onClick={() => document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Discuss Requirements
-                </Button>
+                <div className="mt-6">
+                  <ConsultationForm />
+                </div>
               </CardContent>
             </Card>
 
@@ -309,12 +303,9 @@ const Services = () => {
                     </li>
                   </ul>
                 </div>
-                <Button 
-                  className="w-full mt-6 bg-accent hover:bg-accent/90 text-primary"
-                  onClick={() => document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Purchase Package
-                </Button>
+                <div className="mt-6">
+                  <ConsultationForm />
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -325,4 +316,3 @@ const Services = () => {
 };
 
 export default Services;
-
