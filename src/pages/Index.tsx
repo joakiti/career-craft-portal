@@ -25,8 +25,7 @@ const Index = () => {
                 Enterprise Solutions Through Technical Excellence
               </h1>
               <p className="text-lg text-gray-300 leading-relaxed">
-                Specializing in AI implementation, healthcare optimization, and enterprise-grade technical solutions. 
-                Proven track record of delivering complex projects for industry leaders.
+                Full-stack development with modern technologies. Specializing in scalable, maintainable solutions.
               </p>
               <div className="flex gap-4">
                 <Button 
@@ -59,34 +58,34 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Core Competencies */}
+      {/* Core Services */}
       <section className="py-16 px-4 bg-card-lighter">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="bg-card border-accent/10 transition-all duration-300">
               <CardHeader>
-                <Brain className="w-12 h-12 text-accent mb-4" />
-                <CardTitle className="text-xl text-white">AI & ML Solutions</CardTitle>
-                <p className="text-gray-400">
-                  Implementing advanced AI systems with 85%+ accuracy in production environments
-                </p>
-              </CardHeader>
-            </Card>
-            <Card className="bg-card border-accent/10 transition-all duration-300">
-              <CardHeader>
                 <Code className="w-12 h-12 text-accent mb-4" />
-                <CardTitle className="text-xl text-white">Technical Architecture</CardTitle>
+                <CardTitle className="text-xl text-white">Full-Stack Development</CardTitle>
                 <p className="text-gray-400">
-                  Designing scalable solutions for enterprise-level applications
+                  Full-stack development with modern technologies. Specializing in scalable, maintainable solutions.
                 </p>
               </CardHeader>
             </Card>
             <Card className="bg-card border-accent/10 transition-all duration-300">
               <CardHeader>
-                <Timer className="w-12 h-12 text-accent mb-4" />
-                <CardTitle className="text-xl text-white">Optimization Expertise</CardTitle>
+                <Brain className="w-12 h-12 text-accent mb-4" />
+                <CardTitle className="text-xl text-white">Machine Learning Solutions</CardTitle>
                 <p className="text-gray-400">
-                  Delivering efficient solutions for complex business challenges
+                  Machine learning solutions, from predictive modeling to optimization algorithms.
+                </p>
+              </CardHeader>
+            </Card>
+            <Card className="bg-card border-accent/10 transition-all duration-300">
+              <CardHeader>
+                <Database className="w-12 h-12 text-accent mb-4" />
+                <CardTitle className="text-xl text-white">System Architecture</CardTitle>
+                <p className="text-gray-400">
+                  Designing and implementing robust, scalable system architectures.
                 </p>
               </CardHeader>
             </Card>
