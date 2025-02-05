@@ -18,4 +18,24 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    // Production optimizations
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+      },
+    },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'ui-vendor': ['@radix-ui/react-icons', '@radix-ui/react-slot', '@radix-ui/react-tooltip'],
+        },
+      },
+    },
+    sourcemap: false,
+    // Improve chunk loading
+    chunkSizeWarningLimit: 1000,
+  },
 }));
