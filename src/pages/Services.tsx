@@ -197,7 +197,7 @@ const Services = () => {
                 <Calendar className="w-12 h-12 text-accent mb-4" />
                 <CardTitle className="text-xl text-white">Full-Time Project</CardTitle>
                 <div className="text-2xl font-bold text-accent mt-2">
-                  From 100.000 DKK/month
+                  From 75.000 DKK/month
                 </div>
               </CardHeader>
               <CardContent>
