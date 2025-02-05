@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/components/ui/use-toast";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const ConsultationForm = () => {
   const [email, setEmail] = useState("");
@@ -33,12 +34,20 @@ const ConsultationForm = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button 
-          variant="outline" 
-          className="bg-accent hover:bg-accent/90 text-white border-accent/20 px-8 py-6 text-lg font-semibold tracking-wide shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 animate-pulse hover:animate-none"
-        >
-          🚀 Schedule Your Free Consultation
-        </Button>
+        <Card className="max-w-md mx-auto bg-card border-accent/10 hover:border-accent/20 transition-all duration-200">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-2xl font-bold text-white">Ready to Get Started?</CardTitle>
+            <p className="text-gray-400 mt-2">Book a free consultation and let's discuss your project needs.</p>
+          </CardHeader>
+          <CardContent>
+            <Button 
+              variant="outline" 
+              className="bg-accent hover:bg-accent/90 text-white border-accent/20 px-8 py-6 text-lg font-semibold tracking-wide shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 w-full"
+            >
+              🚀 Schedule Your Free Consultation
+            </Button>
+          </CardContent>
+        </Card>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] bg-card border-accent/10">
         <DialogHeader>
