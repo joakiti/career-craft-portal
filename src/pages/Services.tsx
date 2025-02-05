@@ -125,7 +125,7 @@ const Services = () => {
           {/* Why Choose Us Section */}
           <div className="mb-20">
             <h2 className="text-3xl font-bold text-white text-center mb-8">
-              Why Choose Us?
+              Why Choose Me?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-6">
@@ -149,9 +149,12 @@ const Services = () => {
                 <div className="space-y-2">
                   <h3 className="text-xl font-semibold text-white flex items-center gap-2">
                     <Check className="w-5 h-5 text-green-500" />
-                    With Our Expertise...
+                    With My Expertise...
                   </h3>
                   <ul className="space-y-2 text-gray-300">
+                  <li className="flex items-start gap-2">
+                      • Responsibility from end-to-end. The partnership is between you and me, and I take that very seriously.
+                    </li>
                     <li className="flex items-start gap-2">
                       • Direct access to senior expertise with proven enterprise success
                     </li>
