@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -39,8 +40,8 @@ const ConsultationForm = ({ size = "large" }: ConsultationFormProps) => {
   };
 
   const buttonClasses = {
-    default: "bg-accent hover:bg-accent/90 text-primary px-6 py-3 text-base",
-    large: "bg-accent hover:bg-accent/90 text-primary px-8 py-6 text-lg font-medium"
+    default: "bg-accent hover:bg-accent/90 text-primary px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base",
+    large: "bg-accent hover:bg-accent/90 text-primary px-6 py-4 sm:px-8 sm:py-6 text-base sm:text-lg font-medium"
   };
 
   return (
@@ -54,7 +55,7 @@ const ConsultationForm = ({ size = "large" }: ConsultationFormProps) => {
         >
           <span className="relative z-10 flex items-center gap-2">
             Schedule Free Consultation
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
           </span>
           <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/30 to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity" />
         </Button>
