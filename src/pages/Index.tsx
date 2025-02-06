@@ -4,12 +4,19 @@ import ImageWithFallback from "@/components/ui/image-with-fallback";
 import { Brain, Code, Database, ArrowRight, Check } from "lucide-react";
 import Footer from "@/components/Footer";
 import TechnologyCarousel from "@/components/TechnologyCarousel";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Index = () => {
+  const heroRef = useScrollAnimation();
+  const techRef = useScrollAnimation();
+  const servicesRef = useScrollAnimation();
+  const successRef = useScrollAnimation();
+  const ctaRef = useScrollAnimation();
+
   return (
     <div className="min-h-screen bg-card flex flex-col">
       {/* Hero Section */}
-      <section className="pt-28 md:pt-32 pb-12 md:pb-16 px-4">
+      <section ref={heroRef} className="pt-28 md:pt-32 pb-12 md:pb-16 px-4 opacity-0">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-4 md:space-y-6">
@@ -61,7 +68,7 @@ const Index = () => {
       </section>
 
       {/* Technologies Section */}
-      <section className="pb-12 md:pb-16 bg-card">
+      <section ref={techRef} className="pb-12 md:pb-16 bg-card opacity-0">
         <div className="container mx-auto max-w-7xl px-0 md:px-4">
           <div className="text-center mb-6 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Technologies & Expertise</h2>
@@ -74,7 +81,7 @@ const Index = () => {
       </section>
 
       {/* Core Services Section */}
-      <section className="pb-12 md:pb-16 px-4 bg-card">
+      <section ref={servicesRef} className="pb-12 md:pb-16 px-4 bg-card opacity-0">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-6 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Ways I Can Help Your Business</h2>
@@ -169,7 +176,7 @@ const Index = () => {
       </section>
 
       {/* Recent Success Section */}
-      <section className="py-8 md:py-16 px-4 bg-card-lighter">
+      <section ref={successRef} className="py-8 md:py-16 px-4 bg-card-lighter opacity-0">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-6 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Real Results for Real Businesses</h2>
@@ -195,7 +202,7 @@ const Index = () => {
       </section>
 
       {/* Final Call to Action */}
-      <section className="py-8 md:py-16 px-4 bg-card">
+      <section ref={ctaRef} className="py-8 md:py-16 px-4 bg-card opacity-0">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center max-w-3xl mx-auto space-y-6">
             <h2 className="text-2xl md:text-3xl font-bold text-white">Still considering?</h2>

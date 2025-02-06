@@ -5,13 +5,19 @@ import { Button } from "@/components/ui/button";
 import ConsultationForm from "@/components/ConsultationForm";
 import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Services = () => {
+  const heroRef = useScrollAnimation();
+  const servicesRef = useScrollAnimation();
+  const whyUsRef = useScrollAnimation();
+  const consultationRef = useScrollAnimation();
+  const engagementRef = useScrollAnimation();
 
   return (
     <div className="min-h-screen bg-card pt-16 flex flex-col">
       {/* Hero Section */}
-      <section className="py-12 md:py-16 px-4">
+      <section ref={heroRef} className="py-12 md:py-16 px-4 opacity-0">
         <div className="container mx-auto max-w-7xl">
           <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
             Enterprise Solutions & Technical Excellence
@@ -35,7 +41,7 @@ const Services = () => {
       </section>
 
       {/* Service Overview */}
-      <section className="py-12 bg-card-lighter">
+      <section ref={servicesRef} className="py-12 bg-card-lighter opacity-0">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8 md:mb-12">Core Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -131,7 +137,7 @@ const Services = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-12 md:py-16 px-4 bg-card">
+      <section ref={whyUsRef} className="py-12 md:py-16 px-4 bg-card opacity-0">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8 md:mb-12">
             Why Choose Me?
@@ -201,7 +207,7 @@ const Services = () => {
       </section>
 
       {/* Consultation Section */}
-      <section id="consultation-section" className="py-16 px-4 bg-card-lighter">
+      <section ref={consultationRef} id="consultation-section" className="py-16 px-4 bg-card-lighter opacity-0">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="mb-12 space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-white">
@@ -218,7 +224,7 @@ const Services = () => {
       </section>
 
       {/* Engagement Models */}
-      <section className="py-16 px-4 bg-card">
+      <section ref={engagementRef} className="py-16 px-4 bg-card opacity-0">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Engagement Models</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
