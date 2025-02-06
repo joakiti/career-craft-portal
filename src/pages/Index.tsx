@@ -61,8 +61,8 @@ const Index = () => {
       </section>
 
       {/* Technologies Section */}
-      <section className="pb-12 md:pb-16 px-4 bg-card">
-        <div className="container mx-auto max-w-7xl">
+      <section className="pb-12 md:pb-16 bg-card">
+        <div className="container mx-auto max-w-7xl px-0 md:px-4">
           <div className="text-center mb-6 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Technologies & Expertise</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">

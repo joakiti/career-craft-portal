@@ -171,10 +171,23 @@ const categoryButtons: CategoryButton[] = [
 
 const TechnologyItem = ({ tech, index }: { tech: Technology; index: number }) => {
     const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
     useEffect(() => {
-        // Only run animation on desktop screens
-        if (window.innerWidth < 768) return;
+        // Handle window resize
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    useEffect(() => {
+        if (isMobile) {
+            setPosition({ x: 0, y: 0 });
+            return;
+        }
 
         const updatePosition = () => {
             const time = Date.now() / 2000;
@@ -189,7 +202,7 @@ const TechnologyItem = ({ tech, index }: { tech: Technology; index: number }) =>
 
         const intervalId = setInterval(updatePosition, 50);
         return () => clearInterval(intervalId);
-    }, [index]);
+    }, [index, isMobile]);
 
     // Check if the name is long
     const isLongName = tech.name.length > 12;
@@ -200,33 +213,35 @@ const TechnologyItem = ({ tech, index }: { tech: Technology; index: number }) =>
                 <TooltipTrigger asChild>
                     <div 
                         className={cn(
-                            "flex flex-col items-center justify-start",
-                            "p-1 md:p-4 rounded-lg",
+                            "flex flex-col items-center",
+                            "w-[60px] h-[70px] md:w-[80px] md:h-[90px]",
                             "transition-all cursor-pointer relative",
                             "hover:scale-110 hover:z-10",
-                            "text-white/90",
-                            "h-[70px] md:h-auto", // Fixed height on mobile
-                            isLongName ? "min-w-[60px]" : "min-w-[50px]" // Wider container for long names
+                            "text-white/90"
                         )}
                         style={{
                             transform: `translate(${position.x}px, ${position.y}px)`,
                             transition: 'transform 0.1s ease-out'
                         }}
                     >
-                        <div className="relative">
+                        {/* Icon container with fixed height */}
+                        <div className="h-[40px] md:h-[50px] flex items-center justify-center">
                             <ImageWithFallback
                                 src={tech.logo}
                                 alt={`${tech.name} logo`}
-                                className="w-8 h-8 md:w-12 md:h-12 mb-1 md:mb-2"
-                                fallbackClassName="w-8 h-8 md:w-12 md:h-12 mb-1 md:mb-2"
+                                className="w-8 h-8 md:w-12 md:h-12"
+                                fallbackClassName="w-8 h-8 md:w-12 md:h-12"
                             />
                         </div>
-                        <span className={cn(
-                            "leading-tight md:text-sm font-medium text-center break-words w-full",
-                            isLongName ? "text-[8px]" : "text-[10px]" // Smaller text for long names
-                        )}>
-                            {tech.name}
-                        </span>
+                        {/* Text container with fixed height */}
+                        <div className="h-[30px] md:h-[40px] flex items-start justify-center w-full">
+                            <span className={cn(
+                                "leading-tight md:text-sm font-medium text-center",
+                                isLongName ? "text-[8px]" : "text-[10px]"
+                            )}>
+                                {tech.name}
+                            </span>
+                        </div>
                     </div>
                 </TooltipTrigger>
                 <TooltipContent 
@@ -242,7 +257,7 @@ const TechnologyItem = ({ tech, index }: { tech: Technology; index: number }) =>
 
 const TechnologyCarousel = () => {
     return (
-        <div className="w-full py-4 md:py-8">
+        <div className="w-full py-4">
             <div className="grid grid-cols-6 gap-0.5 md:gap-8 max-w-6xl mx-auto px-1 md:px-0">
                 {technologies.map((tech, index) => (
                     <div key={tech.name} className="flex justify-center">
