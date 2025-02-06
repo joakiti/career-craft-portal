@@ -25,7 +25,7 @@ const Index = () => {
       <div className="min-h-screen bg-card text-white">
         <div className="p-4 space-y-6">
           {/* Profile Section */}
-          <div className="rounded-3xl bg-card-lighter p-6">
+          <section className="rounded-3xl bg-card-lighter p-6">
             <div className="flex items-center justify-between mb-4">
               <ImageWithFallback
                 src="/img/profile_pic.jpg"
@@ -77,58 +77,58 @@ const Index = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* Core Services Section */}
-          <div className="rounded-3xl bg-card-lighter p-6">
-            <h2 className="text-xl font-bold mb-4">How Can We Help You?</h2>
+          <section className="rounded-3xl bg-card-lighter p-6">
+            <h2 className="text-xl font-bold mb-4">Ways We Can Help Your Business</h2>
             <div className="space-y-4">
               <div className="p-6 bg-card rounded-lg border border-accent/10">
                 <Code className="w-8 h-8 text-accent mb-2" />
-                <h3 className="text-lg font-bold text-white mb-2">Development That Delivers</h3>
+                <h3 className="text-lg font-bold text-white mb-2">Development That Works</h3>
                 <p className="text-sm text-gray-300">
-                  From concept to code, we build modern applications that make your business thrive in the digital world.
+                  Building modern, scalable solutions that make your business thrive in the digital world.
                 </p>
               </div>
 
               <div className="p-6 bg-card rounded-lg border border-accent/10">
                 <Brain className="w-8 h-8 text-accent mb-2" />
-                <h3 className="text-lg font-bold text-white mb-2">AI That Works</h3>
+                <h3 className="text-lg font-bold text-white mb-2">AI Solutions</h3>
                 <p className="text-sm text-gray-300">
-                  Transform your business with practical AI solutions that solve real challenges and drive measurable results.
+                  Transforming businesses with practical AI that solves real challenges and delivers measurable results.
                 </p>
               </div>
 
               <div className="p-6 bg-card rounded-lg border border-accent/10">
                 <Database className="w-8 h-8 text-accent mb-2" />
-                <h3 className="text-lg font-bold text-white mb-2">Future-Proof Architecture</h3>
+                <h3 className="text-lg font-bold text-white mb-2">Future-Ready Architecture</h3>
                 <p className="text-sm text-gray-300">
-                  Build your digital foundation right - modern cloud solutions that grow with your business.
+                  Building your digital foundation right - modern cloud solutions that scale with your business.
                 </p>
               </div>
             </div>
-          </div>
+          </section>
 
-          {/* Recent Success Section */}
-          <div className="rounded-3xl bg-card-lighter p-6">
-            <h2 className="text-xl font-bold mb-4">Real Results</h2>
+          {/* Success Stories Section */}
+          <section className="rounded-3xl bg-card-lighter p-6">
+            <h2 className="text-xl font-bold mb-4">Client Success Stories</h2>
             <div className="space-y-4">
               <div className="p-4 bg-card rounded-lg border border-accent/10">
                 <h3 className="text-accent font-medium mb-2">Tripletex Success Story</h3>
-                <p className="text-sm text-gray-300">Created an AI support system that handles thousands of queries with remarkable accuracy</p>
+                <p className="text-sm text-gray-300">Created an AI support system handling thousands of queries with remarkable accuracy</p>
               </div>
               <div className="p-4 bg-card rounded-lg border border-accent/10">
                 <h3 className="text-accent font-medium mb-2">Visma Transformation</h3>
                 <p className="text-sm text-gray-300">Revolutionized system performance, making the impossible possible</p>
               </div>
             </div>
-          </div>
+          </section>
 
-          {/* CTA Section */}
-          <div className="rounded-3xl bg-card-lighter p-6">
-            <h2 className="text-xl font-bold mb-4">Ready to Talk?</h2>
+          {/* Contact Section */}
+          <section className="rounded-3xl bg-card-lighter p-6">
+            <h2 className="text-xl font-bold mb-4">Let's Talk About Your Project</h2>
             <ConsultationForm />
-          </div>
+          </section>
         </div>
       </div>
     );
@@ -189,103 +189,93 @@ const Index = () => {
       <section className="py-12 md:py-16 px-4 bg-card">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">How Can We Help You?</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Ways We Can Help Your Business</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Let's work together to create solutions that make a real difference in your business.
+              Let's work together to create solutions that make a real difference for your business.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            <Card className="bg-card border-accent/10 hover:border-accent/30 transition-all group">
-              <CardHeader>
+            <section className="bg-card border border-accent/10 hover:border-accent/30 transition-all group p-6 rounded-lg">
+              <div className="mb-6">
                 <Code className="w-12 h-12 text-accent mb-4" />
-                <CardTitle className="text-xl text-white">Full-Stack Development</CardTitle>
+                <h3 className="text-xl text-white mb-2">Full-Stack Development</h3>
                 <p className="text-gray-400">
                   Modern, scalable applications built with enterprise-grade technologies. Focus on maintainability and performance.
                 </p>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">Industry expert in C# and Java Enterprise Development</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">TypeScript & React expertise</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">Cloud-native solutions</span>
-                  </li>
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Link 
-                  to="/services" 
-                  className="text-sm text-accent hover:text-accent/80 inline-flex items-center group-hover:gap-2 transition-all"
-                >
-                  View Full-Stack Services <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </CardFooter>
-            </Card>
-            <Card className="bg-card border-accent/10 hover:border-accent/30 transition-all group">
-              <CardHeader>
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-green-500 mt-1" />
+                  <span className="text-sm text-gray-300">Industry expert in C# and Java Enterprise Development</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-green-500 mt-1" />
+                  <span className="text-sm text-gray-300">TypeScript & React expertise</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-green-500 mt-1" />
+                  <span className="text-sm text-gray-300">Cloud-native solutions</span>
+                </div>
+              </div>
+              <Link 
+                to="/services" 
+                className="mt-4 text-sm text-accent hover:text-accent/80 inline-flex items-center group-hover:gap-2 transition-all"
+              >
+                View Full-Stack Services <ArrowRight className="ml-1 h-4 w-4" />
+              </Link>
+            </section>
+
+            <section className="bg-card border border-accent/10 hover:border-accent/30 transition-all group p-6 rounded-lg">
+              <div className="mb-6">
                 <Brain className="w-12 h-12 text-accent mb-4" />
-                <CardTitle className="text-xl text-white">AI & ML Solutions</CardTitle>
+                <h3 className="text-xl text-white mb-2">AI & ML Solutions</h3>
                 <p className="text-gray-400">
                   Custom AI implementations that solve specific business challenges. Specializing in LLMs and optimization algorithms.
                 </p>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">LLM-powered support systems with 80%+ accuracy</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">Custom ML models</span>
-                  </li>
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Link 
-                  to="/services" 
-                  className="text-sm text-accent hover:text-accent/80 inline-flex items-center group-hover:gap-2 transition-all"
-                >
-                  View AI Solutions <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </CardFooter>
-            </Card>
-            <Card className="bg-card border-accent/10 hover:border-accent/30 transition-all group">
-              <CardHeader>
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-green-500 mt-1" />
+                  <span className="text-sm text-gray-300">LLM-powered support systems with 80%+ accuracy</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-green-500 mt-1" />
+                  <span className="text-sm text-gray-300">Custom ML models</span>
+                </div>
+              </div>
+              <Link 
+                to="/services" 
+                className="mt-4 text-sm text-accent hover:text-accent/80 inline-flex items-center group-hover:gap-2 transition-all"
+              >
+                View AI Solutions <ArrowRight className="ml-1 h-4 w-4" />
+              </Link>
+            </section>
+
+            <section className="bg-card border border-accent/10 hover:border-accent/30 transition-all group p-6 rounded-lg">
+              <div className="mb-6">
                 <Database className="w-12 h-12 text-accent mb-4" />
-                <CardTitle className="text-xl text-white">System Architecture</CardTitle>
+                <h3 className="text-xl text-white mb-2">System Architecture</h3>
                 <p className="text-gray-400">
                   Cloud-native architectures and legacy system modernization. Professional within AWS infrastructure.
                 </p>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">Part of driving mainframe to cloud migrations</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">Experienced service owner and security engineer on AWS</span>
-                  </li>
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Link 
-                  to="/services" 
-                  className="text-sm text-accent hover:text-accent/80 inline-flex items-center group-hover:gap-2 transition-all"
-                >
-                  View Architecture Services <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </CardFooter>
-            </Card>
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-green-500 mt-1" />
+                  <span className="text-sm text-gray-300">Part of driving mainframe to cloud migrations</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-green-500 mt-1" />
+                  <span className="text-sm text-gray-300">Experienced service owner and security engineer on AWS</span>
+                </div>
+              </div>
+              <Link 
+                to="/services" 
+                className="mt-4 text-sm text-accent hover:text-accent/80 inline-flex items-center group-hover:gap-2 transition-all"
+              >
+                View Architecture Services <ArrowRight className="ml-1 h-4 w-4" />
+              </Link>
+            </section>
           </div>
         </div>
       </section>
