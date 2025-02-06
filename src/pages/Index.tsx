@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import ConsultationForm from "@/components/ConsultationForm";
 import ImageWithFallback from "@/components/ui/image-with-fallback";
-import { Brain, Code, Database, ArrowRight, Check } from "lucide-react";
+import { Brain, Code, Database, ArrowRight, Check, Youtube, Linkedin, Instagram, Twitter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import {
@@ -11,11 +11,104 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
+import { useEffect, useState } from "react";
 
 const Index = () => {
-  const scrollToContact = () => {
-    document.getElementById('consultation-section')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+    
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
+
+  if (isMobile) {
+    return (
+      <div className="min-h-screen bg-card text-white">
+        <div className="p-4 space-y-6">
+          {/* Profile Section */}
+          <div className="rounded-3xl bg-card-lighter p-6">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-2">
+                <ImageWithFallback
+                  src="/img/profile_pic.jpg"
+                  alt="Profile"
+                  className="w-10 h-10 rounded-full"
+                  fallbackSrc="/img/profile_pic.png"
+                />
+                <span className="font-semibold">@MikkelKaj</span>
+              </div>
+              <button className="p-2">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+              </button>
+            </div>
+            
+            <ImageWithFallback
+              src="/img/profile_pic.jpg"
+              alt="Profile"
+              className="w-full aspect-square object-cover rounded-2xl mb-4"
+              fallbackSrc="/img/profile_pic.png"
+            />
+            
+            <h1 className="text-2xl font-bold mb-2">I'm Mikkel 👋</h1>
+            <p className="text-gray-300 mb-4">
+              Senior Software Engineer & AI Architect. Building scalable solutions and optimizing enterprise systems.
+            </p>
+            
+            <div className="flex gap-4 mb-6">
+              <a href="https://youtube.com" className="text-gray-400 hover:text-white">
+                <Youtube size={24} />
+              </a>
+              <a href="https://linkedin.com/in/mikkel-kaj-andersen-b0a097a5/" className="text-gray-400 hover:text-white">
+                <Linkedin size={24} />
+              </a>
+              <a href="https://instagram.com" className="text-gray-400 hover:text-white">
+                <Instagram size={24} />
+              </a>
+              <a href="https://twitter.com" className="text-gray-400 hover:text-white">
+                <Twitter size={24} />
+              </a>
+            </div>
+          </div>
+
+          {/* Timeline Section */}
+          <div className="rounded-3xl bg-card-lighter p-6">
+            <h2 className="text-xl font-bold mb-4">Timeline</h2>
+            <div className="space-y-6">
+              <div className="flex gap-4">
+                <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                  <Brain className="w-6 h-6 text-blue-500" />
+                </div>
+                <div>
+                  <h3 className="font-semibold">Tripletex AI</h3>
+                  <p className="text-sm text-gray-400">Launched AI Support System</p>
+                  <p className="text-sm text-gray-500">December 2023</p>
+                </div>
+              </div>
+              
+              <div className="flex gap-4">
+                <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center">
+                  <Code className="w-6 h-6 text-purple-500" />
+                </div>
+                <div>
+                  <h3 className="font-semibold">Visma Enterprise</h3>
+                  <p className="text-sm text-gray-400">Core System Optimization</p>
+                  <p className="text-sm text-gray-500">October 2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-card flex flex-col">
