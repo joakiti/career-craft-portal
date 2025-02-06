@@ -81,41 +81,29 @@ const Index = () => {
           <div className="rounded-3xl bg-card-lighter p-6">
             <h2 className="text-xl font-bold mb-4">Services</h2>
             <div className="space-y-4">
-              <Card className="bg-card border-accent/10">
-                <CardHeader>
-                  <Code className="w-8 h-8 text-accent mb-2" />
-                  <CardTitle className="text-lg text-white">Full-Stack Development</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-300">
-                    Modern, scalable applications built with enterprise-grade technologies.
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="p-6 bg-card rounded-lg border border-accent/10">
+                <Code className="w-8 h-8 text-accent mb-2" />
+                <h3 className="text-lg font-bold text-white mb-2">Full-Stack Development</h3>
+                <p className="text-sm text-gray-300">
+                  Modern, scalable applications built with enterprise-grade technologies.
+                </p>
+              </div>
 
-              <Card className="bg-card border-accent/10">
-                <CardHeader>
-                  <Brain className="w-8 h-8 text-accent mb-2" />
-                  <CardTitle className="text-lg text-white">AI & ML Solutions</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-300">
-                    Custom AI implementations that solve specific business challenges.
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="p-6 bg-card rounded-lg border border-accent/10">
+                <Brain className="w-8 h-8 text-accent mb-2" />
+                <h3 className="text-lg font-bold text-white mb-2">AI & ML Solutions</h3>
+                <p className="text-sm text-gray-300">
+                  Custom AI implementations that solve specific business challenges.
+                </p>
+              </div>
 
-              <Card className="bg-card border-accent/10">
-                <CardHeader>
-                  <Database className="w-8 h-8 text-accent mb-2" />
-                  <CardTitle className="text-lg text-white">System Architecture</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-gray-300">
-                    Cloud-native architectures and legacy system modernization.
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="p-6 bg-card rounded-lg border border-accent/10">
+                <Database className="w-8 h-8 text-accent mb-2" />
+                <h3 className="text-lg font-bold text-white mb-2">System Architecture</h3>
+                <p className="text-sm text-gray-300">
+                  Cloud-native architectures and legacy system modernization.
+                </p>
+              </div>
             </div>
           </div>
 
