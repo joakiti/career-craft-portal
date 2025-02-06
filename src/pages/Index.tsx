@@ -60,6 +60,19 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Technologies Section */}
+      <section className="pb-12 md:pb-16 px-4 bg-card">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-6 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Technologies & Expertise</h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Leveraging modern technologies to build robust, scalable solutions for your business needs.
+            </p>
+          </div>
+          <TechnologyCarousel />
+        </div>
+      </section>
+
       {/* Core Services Section */}
       <section className="pb-12 md:pb-16 px-4 bg-card">
         <div className="container mx-auto max-w-7xl">
@@ -151,27 +164,6 @@ const Index = () => {
                 View Architecture Services <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             </section>
-          </div>
-        </div>
-      </section>
-
-      {/* Technology Showcase Section */}
-      <section className="py-16 px-4 bg-card">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Technologies & Expertise</h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Leveraging modern technologies to build robust, scalable solutions for your business needs.
-            </p>
-          </div>
-          <TechnologyCarousel />
-          <div className="text-center mt-8">
-            <Link 
-              to="/profile" 
-              className="inline-flex items-center text-accent hover:text-accent/80 transition-colors"
-            >
-              View Full Tech Stack <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
           </div>
         </div>
       </section>
