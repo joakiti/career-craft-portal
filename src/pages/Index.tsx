@@ -49,12 +49,11 @@ const Index = () => {
             
             <div className="space-y-4">
               <div className="text-accent font-medium">
-                Senior Software Engineer & AI Solutions Architect
+                Let's Create Digital Solutions Together
               </div>
-              <h1 className="text-2xl font-bold">Delivering High-Impact Technical Solutions</h1>
+              <h1 className="text-2xl font-bold">Making Technology Work for Your Business</h1>
               <p className="text-gray-300">
-                Specialized in three core areas: Enterprise full-stack development, AI/ML implementation, and system architecture. 
-                Focused on delivering measurable results that drive business growth.
+                Want to be part of projects that make a real difference? As your tech partner, I combine deep expertise in full-stack development, AI implementation, and system architecture to deliver solutions that drive your business forward.
               </p>
               
               <div className="flex flex-col gap-4">
@@ -63,18 +62,18 @@ const Index = () => {
                   to="/services" 
                   className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-accent/20 text-accent hover:bg-accent/10 transition-colors"
                 >
-                  View Services <ArrowRight className="ml-2 h-4 w-4" />
+                  Explore Services <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </div>
 
               <div className="flex gap-8 pt-4">
                 <div>
                   <div className="text-xl font-bold text-accent">10+</div>
-                  <div className="text-sm text-gray-400">Years Experience</div>
+                  <div className="text-sm text-gray-400">Years of Innovation</div>
                 </div>
                 <div>
                   <div className="text-xl font-bold text-accent">5</div>
-                  <div className="text-sm text-gray-400">Enterprise Projects</div>
+                  <div className="text-sm text-gray-400">Major Projects</div>
                 </div>
               </div>
             </div>
@@ -82,29 +81,29 @@ const Index = () => {
 
           {/* Core Services Section */}
           <div className="rounded-3xl bg-card-lighter p-6">
-            <h2 className="text-xl font-bold mb-4">Services</h2>
+            <h2 className="text-xl font-bold mb-4">How Can We Help You?</h2>
             <div className="space-y-4">
               <div className="p-6 bg-card rounded-lg border border-accent/10">
                 <Code className="w-8 h-8 text-accent mb-2" />
-                <h3 className="text-lg font-bold text-white mb-2">Full-Stack Development</h3>
+                <h3 className="text-lg font-bold text-white mb-2">Development That Delivers</h3>
                 <p className="text-sm text-gray-300">
-                  Modern, scalable applications built with enterprise-grade technologies.
+                  From concept to code, we build modern applications that make your business thrive in the digital world.
                 </p>
               </div>
 
               <div className="p-6 bg-card rounded-lg border border-accent/10">
                 <Brain className="w-8 h-8 text-accent mb-2" />
-                <h3 className="text-lg font-bold text-white mb-2">AI & ML Solutions</h3>
+                <h3 className="text-lg font-bold text-white mb-2">AI That Works</h3>
                 <p className="text-sm text-gray-300">
-                  Custom AI implementations that solve specific business challenges.
+                  Transform your business with practical AI solutions that solve real challenges and drive measurable results.
                 </p>
               </div>
 
               <div className="p-6 bg-card rounded-lg border border-accent/10">
                 <Database className="w-8 h-8 text-accent mb-2" />
-                <h3 className="text-lg font-bold text-white mb-2">System Architecture</h3>
+                <h3 className="text-lg font-bold text-white mb-2">Future-Proof Architecture</h3>
                 <p className="text-sm text-gray-300">
-                  Cloud-native architectures and legacy system modernization.
+                  Build your digital foundation right - modern cloud solutions that grow with your business.
                 </p>
               </div>
             </div>
@@ -112,22 +111,22 @@ const Index = () => {
 
           {/* Recent Success Section */}
           <div className="rounded-3xl bg-card-lighter p-6">
-            <h2 className="text-xl font-bold mb-4">Recent Success</h2>
+            <h2 className="text-xl font-bold mb-4">Real Results</h2>
             <div className="space-y-4">
               <div className="p-4 bg-card rounded-lg border border-accent/10">
-                <h3 className="text-accent font-medium mb-2">Tripletex (Norway)</h3>
-                <p className="text-sm text-gray-300">Built AI support system with 80%+ accuracy</p>
+                <h3 className="text-accent font-medium mb-2">Tripletex Success Story</h3>
+                <p className="text-sm text-gray-300">Created an AI support system that handles thousands of queries with remarkable accuracy</p>
               </div>
               <div className="p-4 bg-card rounded-lg border border-accent/10">
-                <h3 className="text-accent font-medium mb-2">Visma Enterprise</h3>
-                <p className="text-sm text-gray-300">Optimized core system reducing loading times by 98%</p>
+                <h3 className="text-accent font-medium mb-2">Visma Transformation</h3>
+                <p className="text-sm text-gray-300">Revolutionized system performance, making the impossible possible</p>
               </div>
             </div>
           </div>
 
           {/* CTA Section */}
           <div className="rounded-3xl bg-card-lighter p-6">
-            <h2 className="text-xl font-bold mb-4">Let's Connect</h2>
+            <h2 className="text-xl font-bold mb-4">Ready to Talk?</h2>
             <ConsultationForm />
           </div>
         </div>
@@ -143,13 +142,13 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-4 md:space-y-6">
               <div className="text-accent font-medium">
-                Senior Software Engineer & AI Solutions Architect
+                Let's Create Digital Solutions Together
               </div>
               <h1 className="text-3xl md:text-5xl font-bold text-white">
-                Delivering High-Impact Technical Solutions
+                Making Technology Work for Your Business
               </h1>
               <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                Specialized in three core areas: Enterprise full-stack development, AI/ML implementation, and system architecture. Focused on delivering measurable results that drive business growth.
+                Want to be part of projects that make a real difference? As your tech partner, I combine deep expertise in full-stack development, AI implementation, and system architecture to deliver solutions that drive your business forward.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <ConsultationForm/>
@@ -157,29 +156,29 @@ const Index = () => {
                   to="/services" 
                   className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-accent/20 text-accent hover:bg-accent/10 transition-colors"
                 >
-                  View Services <ArrowRight className="ml-2 h-4 w-4" />
+                  Explore Services <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </div>
               <div className="flex gap-8 pt-4">
                 <div>
                   <div className="text-xl md:text-2xl font-bold text-accent">10+</div>
-                  <div className="text-sm text-gray-400">Years Experience</div>
+                  <div className="text-sm text-gray-400">Years of Innovation</div>
                 </div>
                 <div>
                   <div className="text-xl md:text-2xl font-bold text-accent">5</div>
-                  <div className="text-sm text-gray-400">Enterprise Projects</div>
+                  <div className="text-sm text-gray-400">Major Projects</div>
                 </div>
               </div>
             </div>
             <div className="relative order-first md:order-last">
               <ImageWithFallback
                 src="/img/profile_pic.jpg"
-                alt="Mikkel Kaj Andersen - Senior Software Engineer"
+                alt="Your Tech Partner"
                 className="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
                 fallbackClassName="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
               />
               <div className="absolute -bottom-4 -right-4 bg-card/80 backdrop-blur-sm rounded-2xl p-4 border border-accent/10 hidden md:block">
-                <p className="text-white font-medium">10+ Years Industry Experience</p>
+                <p className="text-white font-medium">Ready to Transform Your Ideas into Reality?</p>
               </div>
             </div>
           </div>
@@ -190,9 +189,9 @@ const Index = () => {
       <section className="py-12 md:py-16 px-4 bg-card">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Specialized Technical Solutions</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">How Can We Help You?</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Expert delivery in three core areas, each with proven enterprise success and measurable outcomes.
+              Let's work together to create solutions that make a real difference in your business.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -295,9 +294,9 @@ const Index = () => {
       <section className="py-12 md:py-16 px-4 bg-card-lighter">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Measurable Results</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Real Results for Real Businesses</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Recent projects that demonstrate concrete business impact through technical innovation.
+              See how we've helped organizations like yours achieve their digital goals.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -321,15 +320,15 @@ const Index = () => {
       <section className="py-12 md:py-16 px-4 bg-card">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center max-w-3xl mx-auto space-y-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-white">Still on the Fence?</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Ready to Start Your Journey?</h2>
             <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-              Hey, no pressure! But while you're here, why not take a quick peek at my profile? I've packed it with real projects and cool tech wins that show what I'm all about.<br/><br/> Check it out, if you want.
+              Let's have a chat about your project. No pressure, just an honest conversation about how we can help you succeed in the digital world.
             </p>
             <Link 
               to="/profile"
               className="inline-flex items-center px-6 py-3 rounded-lg bg-accent hover:bg-accent/90 text-primary transition-colors"
             >
-              Profile <ArrowRight className="ml-2 h-4 w-4" />
+              Learn More About Us <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </div>
         </div>
