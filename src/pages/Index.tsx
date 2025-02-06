@@ -45,7 +45,7 @@ const Index = () => {
                 <div className="absolute -bottom-4 -right-4 md:-right-4 bg-card/80 backdrop-blur-sm rounded-2xl p-3 md:p-4 border border-accent/10 w-[calc(100%-2rem)] md:w-auto">
                   <div className="flex items-center gap-4 md:gap-6">
                     <div>
-                      <div className="text-base md:text-xl font-bold text-accent">Mikkel Andersen</div>
+                      <div className="text-base md:text-xl font-bold text-accent truncate">Mikkel Andersen</div>
                       <div className="text-xs md:text-sm text-gray-400 md:mt-1">Senior Software Engineer & AI Tech Lead</div>
                     </div>
                     <div className="border-l border-accent/10 pl-4 md:pl-6">

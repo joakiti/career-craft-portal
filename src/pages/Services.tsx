@@ -35,7 +35,7 @@ const Services = () => {
       </section>
 
       {/* Service Overview */}
-      <section className="py-12 md:py-16 px-4 bg-card-lighter">
+      <section className="py-12 bg-card-lighter">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8 md:mb-12">Core Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
