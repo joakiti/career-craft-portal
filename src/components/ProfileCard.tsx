@@ -23,7 +23,7 @@ const ProfileCard = () => {
             <div className="flex flex-wrap gap-4 mb-6">
                 <a href="mailto:mikkel_ander@hotmail.com"
                    className="text-link hover:text-link-hover transition-colors">
-                    mikkel_ander@hotmail.com
+                    hello@mikkelkajandersen.dk
                 </a>
                 <a href="tel:+4521537395" className="text-link hover:text-link-hover transition-colors">
                     +45 21 53 73 95
