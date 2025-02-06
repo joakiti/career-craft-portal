@@ -20,48 +20,48 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-card flex flex-col">
       {/* Hero Section - Updated padding to account for Navbar */}
-      <section className="pt-28 md:pt-32 pb-12 md:pb-16 px-4">
+      <section className="pt-28 md:pt-32 pb-12 md:pb-16 px-4 relative">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="space-y-4 md:space-y-6">
-              <div className="text-accent font-medium">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
+            <div className="md:col-span-7 space-y-4 md:space-y-5 relative z-10">
+              <div className="text-accent text-sm md:text-base font-medium">
                 Senior Software Engineer & AI Solutions Architect
               </div>
-              <h1 className="text-3xl md:text-5xl font-bold text-white">
+              <h1 className="text-2xl md:text-4xl font-bold text-white">
                 Delivering High-Impact Technical Solutions
               </h1>
-              <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-300 leading-relaxed max-w-xl">
                 Specialized in three core areas: Enterprise full-stack development, AI/ML implementation, and system architecture. Focused on delivering measurable results that drive business growth.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <ConsultationForm/>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <ConsultationForm size="default"/>
                 <Link 
                   to="/services" 
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-accent/20 text-accent hover:bg-accent/10 transition-colors"
+                  className="inline-flex items-center justify-center px-4 py-2 rounded-lg border border-accent/20 text-accent hover:bg-accent/10 transition-colors text-sm"
                 >
                   View Services <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </div>
-              <div className="flex gap-8 pt-4">
+              <div className="flex gap-6 pt-4">
                 <div>
-                  <div className="text-xl md:text-2xl font-bold text-accent">10+</div>
-                  <div className="text-sm text-gray-400">Years Experience</div>
+                  <div className="text-lg md:text-xl font-bold text-accent">10+</div>
+                  <div className="text-xs md:text-sm text-gray-400">Years Experience</div>
                 </div>
                 <div>
-                  <div className="text-xl md:text-2xl font-bold text-accent">5</div>
-                  <div className="text-sm text-gray-400">Enterprise Projects</div>
+                  <div className="text-lg md:text-xl font-bold text-accent">5</div>
+                  <div className="text-xs md:text-sm text-gray-400">Enterprise Projects</div>
                 </div>
               </div>
             </div>
-            <div className="relative order-first md:order-last">
+            <div className="md:col-span-5 relative md:-mt-12">
               <ImageWithFallback
                 src="/img/profile_pic.jpg"
                 alt="Mikkel Kaj Andersen - Senior Software Engineer"
                 className="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
                 fallbackClassName="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
               />
-              <div className="absolute -bottom-4 -right-4 bg-card/80 backdrop-blur-sm rounded-2xl p-4 border border-accent/10 hidden md:block">
-                <p className="text-white font-medium">10+ Years Industry Experience</p>
+              <div className="absolute -bottom-4 -right-4 bg-card/80 backdrop-blur-sm rounded-2xl p-3 border border-accent/10 hidden md:block">
+                <p className="text-white text-sm font-medium">10+ Years Industry Experience</p>
               </div>
             </div>
           </div>
