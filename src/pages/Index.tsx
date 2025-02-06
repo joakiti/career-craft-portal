@@ -198,15 +198,16 @@ const Index = () => {
       <section className="py-8 md:py-16 px-4 bg-card">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center max-w-3xl mx-auto space-y-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-white">Ready to Start Your Journey?</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Still considering?</h2>
             <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-              Let's have a chat about your project. No pressure, just an honest conversation about how we can help you succeed in the digital world.
+              There is some more details to be found on my website - <br/><br/> Check it out, if you want.
+
             </p>
             <Link 
               to="/profile"
               className="inline-flex items-center px-6 py-3 rounded-lg bg-accent hover:bg-accent/90 text-primary transition-colors"
             >
-              Learn More About Us <ArrowRight className="ml-2 h-4 w-4" />
+              Learn More About Me <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </div>
         </div>
