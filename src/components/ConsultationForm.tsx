@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -21,7 +20,7 @@ interface ConsultationFormProps {
   size?: "default" | "large";
 }
 
-const ConsultationForm = ({ size = "large" }: ConsultationFormProps) => {
+const ConsultationForm = ({ size = "default" }: ConsultationFormProps) => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [selectedModel, setSelectedModel] = useState("");
@@ -48,14 +47,11 @@ const ConsultationForm = ({ size = "large" }: ConsultationFormProps) => {
     <Dialog>
       <DialogTrigger asChild>
         <Button 
-          className={cn(
-            buttonClasses[size],
-            "group relative overflow-hidden transition-all duration-300"
-          )}
+          className="w-full md:w-auto bg-accent hover:bg-accent/90 text-primary h-[44px] px-6 text-base font-medium group relative overflow-hidden transition-all duration-300"
         >
           <span className="relative z-10 flex items-center gap-2">
             Schedule Free Consultation
-            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </span>
           <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/30 to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity" />
         </Button>

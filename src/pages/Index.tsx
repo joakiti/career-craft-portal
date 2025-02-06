@@ -21,11 +21,13 @@ const Index = () => {
               <p className="text-base md:text-lg text-gray-300 leading-relaxed">
                 As your tech partner, I combine deep expertise in full-stack development, AI implementation, and system architecture.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <ConsultationForm />
+              <div className="flex flex-col lg:flex-row gap-4">
+                <div className="w-full md:w-auto">
+                  <ConsultationForm />
+                </div>
                 <Link 
                   to="/services" 
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-accent/20 text-accent hover:bg-accent/10 transition-colors"
+                  className="w-full md:w-auto inline-flex items-center justify-center h-[44px] px-6 rounded-lg border border-accent/20 text-accent hover:bg-accent/10 transition-colors whitespace-nowrap"
                 >
                   Explore Services <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

@@ -11,60 +11,58 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-card pt-16 flex flex-col">
       {/* Hero Section */}
-      <section className="py-16 px-4">
+      <section className="py-12 md:py-16 px-4">
         <div className="container mx-auto max-w-7xl">
-          <h1 className="text-4xl font-bold text-white text-center mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
             Enterprise Solutions & Technical Excellence
           </h1>
-          <p className="text-xl text-gray-300 text-center max-w-3xl mx-auto mb-12">
+          <p className="text-base md:text-xl text-gray-300 text-center max-w-3xl mx-auto mb-8 md:mb-12">
             Specialized technical consultancy focused on scalable architectures, machine learning solutions, and enterprise-grade development.
           </p>
-          <div className="flex justify-center gap-12 mb-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-accent">10+</div>
-              <div className="text-gray-400">Years Experience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-accent">5</div>
-              <div className="text-gray-400">Enterprise Projects</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-accent">Many</div>
-              <div className="text-gray-400">Industry Partners</div>
+          <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-4 border border-accent/10 max-w-lg mx-auto">
+            <div className="flex justify-between items-center gap-4">
+              <div className="text-center">
+                <div className="text-lg md:text-3xl font-bold text-accent">10+</div>
+                <div className="text-xs md:text-base text-gray-400">Years Experience</div>
+              </div>
+              <div className="border-l border-accent/10 pl-4 text-center">
+                <div className="text-lg md:text-3xl font-bold text-accent">AI & ML</div>
+                <div className="text-xs md:text-base text-gray-400">Real experience, not just wrappers</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Service Overview */}
-      <section className="py-16 px-4 bg-card-lighter">
+      <section className="py-12 md:py-16 px-4 bg-card-lighter">
         <div className="container mx-auto max-w-7xl">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Core Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8 md:mb-12">Core Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <Card className="bg-card border-accent/10">
-              <CardHeader>
-                <Code className="w-12 h-12 text-accent mb-4" />
-                <CardTitle className="text-xl text-white">Full-Stack Development</CardTitle>
-                <p className="text-gray-400 mb-4">
+              <CardHeader className="space-y-4">
+                <Code className="w-8 h-8 md:w-12 md:h-12 text-accent" />
+                <CardTitle className="text-lg md:text-xl text-white">Full-Stack Development</CardTitle>
+                <p className="text-sm md:text-base text-gray-400">
                   Enterprise-grade development with modern technologies, focusing on scalable and maintainable solutions.
                 </p>
-                <div className="space-y-3">
-                  <h4 className="font-semibold text-white">Recent Success:</h4>
-                  <p className="text-sm text-gray-400">
+                <div className="space-y-3 pt-2">
+                  <h4 className="font-semibold text-white text-sm md:text-base">Recent Success:</h4>
+                  <p className="text-xs md:text-sm text-gray-400">
                     Led development of an AI-powered support agent achieving 85% self-service rate for Tripletex, Norway's largest self-service accounting SaaS.
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-300">Full-stack TypeScript/React development</span>
+                      <Check className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-xs md:text-sm text-gray-300">Full-stack TypeScript/React development</span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-300">Cloud-native architecture (AWS/Azure)</span>
+                      <Check className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-xs md:text-sm text-gray-300">Cloud-native architecture (AWS/Azure)</span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-300">CI/CD pipeline optimization</span>
+                      <Check className="w-4 h-4 md:w-5 md:h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                      <span className="text-xs md:text-sm text-gray-300">CI/CD pipeline optimization</span>
                     </div>
                   </div>
                 </div>
@@ -133,19 +131,19 @@ const Services = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 px-4 bg-card">
+      <section className="py-12 md:py-16 px-4 bg-card">
         <div className="container mx-auto max-w-7xl">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8 md:mb-12">
             Why Choose Me?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             <div className="space-y-6">
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-white flex items-center gap-2">
-                  <X className="w-5 h-5 text-red-500" />
+              <div className="space-y-3 md:space-y-4">
+                <h3 className="text-lg md:text-xl font-semibold text-white flex items-center gap-2">
+                  <X className="w-4 h-4 md:w-5 md:h-5 text-red-500" />
                   With Traditional Consultancies...
                 </h3>
-                <ul className="space-y-3 text-gray-300">
+                <ul className="space-y-2 md:space-y-3 text-sm md:text-base text-gray-300">
                   <li className="flex items-start gap-2">
                     <span className="text-gray-400">•</span>
                     Generic solutions that don't consider your unique technical challenges
@@ -160,19 +158,15 @@ const Services = () => {
                   </li>
                 </ul>
               </div>
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-white flex items-center gap-2">
-                  <Check className="w-5 h-5 text-green-500" />
+              <div className="space-y-3 md:space-y-4">
+                <h3 className="text-lg md:text-xl font-semibold text-white flex items-center gap-2">
+                  <Check className="w-4 h-4 md:w-5 md:h-5 text-green-500" />
                   With My Expertise...
                 </h3>
-                <ul className="space-y-3 text-gray-300">
+                <ul className="space-y-2 md:space-y-3 text-sm md:text-base text-gray-300">
                   <li className="flex items-start gap-2">
                     <span className="text-gray-400">•</span>
-                    Responsibility from end-to-end. The partnership is between you and me, and I take that very seriously.
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-gray-400">•</span>
-                    Direct access to senior expertise with proven enterprise success
+                    Direct partnership with senior expertise and proven enterprise success
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-gray-400">•</span>
@@ -185,20 +179,20 @@ const Services = () => {
                 </ul>
               </div>
             </div>
-            <div className="bg-card-lighter rounded-lg p-8">
-              <h3 className="text-xl font-semibold text-white mb-6">Recent Client Success</h3>
-              <div className="space-y-6">
+            <div className="bg-card-lighter rounded-lg p-4 md:p-8">
+              <h3 className="text-lg md:text-xl font-semibold text-white mb-4 md:mb-6">Recent Client Success</h3>
+              <div className="space-y-4 md:space-y-6">
                 <div>
-                  <h4 className="text-accent font-medium mb-2">Tripletex (Norway)</h4>
-                  <p className="text-gray-300">Led AI team in developing custom LLM solutions, achieving 80%+ accuracy in customer query handling</p>
+                  <h4 className="text-accent font-medium mb-1 md:mb-2">Tripletex (Norway)</h4>
+                  <p className="text-sm md:text-base text-gray-300">Led AI team in developing custom LLM solutions, achieving 80%+ accuracy in customer query handling</p>
                 </div>
                 <div>
-                  <h4 className="text-accent font-medium mb-2">Visma Enterprise</h4>
-                  <p className="text-gray-300">Optimized core system performance, reducing loading times from 30s to 500ms</p>
+                  <h4 className="text-accent font-medium mb-1 md:mb-2">Visma Enterprise</h4>
+                  <p className="text-sm md:text-base text-gray-300">Optimized core system performance, reducing loading times from 30s to 500ms</p>
                 </div>
                 <div>
-                  <h4 className="text-accent font-medium mb-2">GoDream</h4>
-                  <p className="text-gray-300">Developed custom gift-card solution with modern .NET stack and AWS infrastructure</p>
+                  <h4 className="text-accent font-medium mb-1 md:mb-2">GoDream</h4>
+                  <p className="text-sm md:text-base text-gray-300">Developed custom gift-card solution with modern .NET stack and AWS infrastructure</p>
                 </div>
               </div>
             </div>
