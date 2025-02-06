@@ -1,10 +1,10 @@
-
 import { Link } from "react-router-dom";
 import ConsultationForm from "@/components/ConsultationForm";
 import ImageWithFallback from "@/components/ui/image-with-fallback";
-import { Brain, Code, Database, ArrowRight } from "lucide-react";
+import { Brain, Code, Database, ArrowRight, Check } from "lucide-react";
 import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 
 const Index = () => {
   const [isMobile, setIsMobile] = useState(false);
