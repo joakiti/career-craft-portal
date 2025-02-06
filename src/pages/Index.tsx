@@ -3,137 +3,8 @@ import ConsultationForm from "@/components/ConsultationForm";
 import ImageWithFallback from "@/components/ui/image-with-fallback";
 import { Brain, Code, Database, ArrowRight, Check } from "lucide-react";
 import Footer from "@/components/Footer";
-import { useEffect, useState } from "react";
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 
 const Index = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkIfMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    
-    checkIfMobile();
-    window.addEventListener('resize', checkIfMobile);
-    
-    return () => window.removeEventListener('resize', checkIfMobile);
-  }, []);
-
-  if (isMobile) {
-    return (
-      <div className="min-h-screen bg-card text-white">
-        <div className="p-4 space-y-6">
-          {/* Profile Section */}
-          <section className="rounded-3xl bg-card-lighter p-6">
-            <div className="flex items-center justify-between mb-4">
-              <ImageWithFallback
-                src="/img/profile_pic.jpg"
-                alt="Profile"
-                className="w-10 h-10 rounded-full"
-                fallbackSrc="/img/profile_pic.png"
-              />
-              <button className="p-2">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-              </button>
-            </div>
-            
-            <ImageWithFallback
-              src="/img/profile_pic.jpg"
-              alt="Profile"
-              className="w-full aspect-square object-cover rounded-2xl mb-4"
-              fallbackSrc="/img/profile_pic.png"
-            />
-            
-            <div className="space-y-4">
-              <div className="text-accent font-medium">
-                Let's Create Digital Solutions Together
-              </div>
-              <h1 className="text-2xl font-bold">Making Technology Work for Your Business</h1>
-              <p className="text-gray-300">
-                Want to be part of projects that make a real difference? As your tech partner, I combine deep expertise in full-stack development, AI implementation, and system architecture to deliver solutions that drive your business forward.
-              </p>
-              
-              <div className="flex flex-col gap-4">
-                <ConsultationForm />
-                <Link 
-                  to="/services" 
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-accent/20 text-accent hover:bg-accent/10 transition-colors"
-                >
-                  Explore Services <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-
-              <div className="flex gap-8 pt-4">
-                <div>
-                  <div className="text-xl font-bold text-accent">10+</div>
-                  <div className="text-sm text-gray-400">Years of Innovation</div>
-                </div>
-                <div>
-                  <div className="text-xl font-bold text-accent">5</div>
-                  <div className="text-sm text-gray-400">Major Projects</div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Core Services Section */}
-          <section className="rounded-3xl bg-card-lighter p-6">
-            <h2 className="text-xl font-bold mb-4">Ways We Can Help Your Business</h2>
-            <div className="space-y-4">
-              <div className="p-6 bg-card rounded-lg border border-accent/10">
-                <Code className="w-8 h-8 text-accent mb-2" />
-                <h3 className="text-lg font-bold text-white mb-2">Development That Works</h3>
-                <p className="text-sm text-gray-300">
-                  Building modern, scalable solutions that make your business thrive in the digital world.
-                </p>
-              </div>
-
-              <div className="p-6 bg-card rounded-lg border border-accent/10">
-                <Brain className="w-8 h-8 text-accent mb-2" />
-                <h3 className="text-lg font-bold text-white mb-2">AI Solutions</h3>
-                <p className="text-sm text-gray-300">
-                  Transforming businesses with practical AI that solves real challenges and delivers measurable results.
-                </p>
-              </div>
-
-              <div className="p-6 bg-card rounded-lg border border-accent/10">
-                <Database className="w-8 h-8 text-accent mb-2" />
-                <h3 className="text-lg font-bold text-white mb-2">Future-Ready Architecture</h3>
-                <p className="text-sm text-gray-300">
-                  Building your digital foundation right - modern cloud solutions that scale with your business.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Success Stories Section */}
-          <section className="rounded-3xl bg-card-lighter p-6">
-            <h2 className="text-xl font-bold mb-4">Client Success Stories</h2>
-            <div className="space-y-4">
-              <div className="p-4 bg-card rounded-lg border border-accent/10">
-                <h3 className="text-accent font-medium mb-2">Tripletex Success Story</h3>
-                <p className="text-sm text-gray-300">Created an AI support system handling thousands of queries with remarkable accuracy</p>
-              </div>
-              <div className="p-4 bg-card rounded-lg border border-accent/10">
-                <h3 className="text-accent font-medium mb-2">Visma Transformation</h3>
-                <p className="text-sm text-gray-300">Revolutionized system performance, making the impossible possible</p>
-              </div>
-            </div>
-          </section>
-
-          {/* Contact Section */}
-          <section className="rounded-3xl bg-card-lighter p-6">
-            <h2 className="text-xl font-bold mb-4">Let's Talk About Your Project</h2>
-            <ConsultationForm />
-          </section>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen bg-card flex flex-col">
       {/* Hero Section */}
@@ -151,7 +22,7 @@ const Index = () => {
                 Want to be part of projects that make a real difference? As your tech partner, I combine deep expertise in full-stack development, AI implementation, and system architecture to deliver solutions that drive your business forward.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <ConsultationForm/>
+                <ConsultationForm />
                 <Link 
                   to="/services" 
                   className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-accent/20 text-accent hover:bg-accent/10 transition-colors"
@@ -171,24 +42,26 @@ const Index = () => {
               </div>
             </div>
             <div className="relative order-first md:order-last">
-              <ImageWithFallback
-                src="/img/profile_pic.jpg"
-                alt="Your Tech Partner"
-                className="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
-                fallbackClassName="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
-              />
-              <div className="absolute -bottom-4 -right-4 bg-card/80 backdrop-blur-sm rounded-2xl p-4 border border-accent/10 hidden md:block">
-                <p className="text-white font-medium">Ready to Transform Your Ideas into Reality?</p>
+              <div className="w-full max-w-md mx-auto">
+                <ImageWithFallback
+                  src="/img/profile_pic.jpg"
+                  alt="Your Tech Partner"
+                  className="rounded-2xl shadow-2xl w-full"
+                  fallbackClassName="rounded-2xl shadow-2xl w-full"
+                />
+                <div className="absolute -bottom-4 -right-4 bg-card/80 backdrop-blur-sm rounded-2xl p-4 border border-accent/10 hidden md:block">
+                  <p className="text-white font-medium">Ready to Transform Your Ideas into Reality?</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Core Services */}
-      <section className="py-12 md:py-16 px-4 bg-card">
+      {/* Core Services Section */}
+      <section className="py-8 md:py-16 px-4 bg-card">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-8 md:mb-12">
+          <div className="text-center mb-6 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Ways We Can Help Your Business</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
               Let's work together to create solutions that make a real difference for your business.
@@ -197,9 +70,9 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <section className="bg-card border border-accent/10 hover:border-accent/30 transition-all group p-6 rounded-lg">
               <div className="mb-6">
-                <Code className="w-12 h-12 text-accent mb-4" />
-                <h3 className="text-xl text-white mb-2">Full-Stack Development</h3>
-                <p className="text-gray-400">
+                <Code className="w-8 md:w-12 h-8 md:h-12 text-accent mb-4" />
+                <h3 className="text-lg md:text-xl text-white mb-2">Full-Stack Development</h3>
+                <p className="text-sm md:text-base text-gray-400">
                   Modern, scalable applications built with enterprise-grade technologies. Focus on maintainability and performance.
                 </p>
               </div>
@@ -227,9 +100,9 @@ const Index = () => {
 
             <section className="bg-card border border-accent/10 hover:border-accent/30 transition-all group p-6 rounded-lg">
               <div className="mb-6">
-                <Brain className="w-12 h-12 text-accent mb-4" />
-                <h3 className="text-xl text-white mb-2">AI & ML Solutions</h3>
-                <p className="text-gray-400">
+                <Brain className="w-8 md:w-12 h-8 md:h-12 text-accent mb-4" />
+                <h3 className="text-lg md:text-xl text-white mb-2">AI & ML Solutions</h3>
+                <p className="text-sm md:text-base text-gray-400">
                   Custom AI implementations that solve specific business challenges. Specializing in LLMs and optimization algorithms.
                 </p>
               </div>
@@ -253,9 +126,9 @@ const Index = () => {
 
             <section className="bg-card border border-accent/10 hover:border-accent/30 transition-all group p-6 rounded-lg">
               <div className="mb-6">
-                <Database className="w-12 h-12 text-accent mb-4" />
-                <h3 className="text-xl text-white mb-2">System Architecture</h3>
-                <p className="text-gray-400">
+                <Database className="w-8 md:w-12 h-8 md:h-12 text-accent mb-4" />
+                <h3 className="text-lg md:text-xl text-white mb-2">System Architecture</h3>
+                <p className="text-sm md:text-base text-gray-400">
                   Cloud-native architectures and legacy system modernization. Professional within AWS infrastructure.
                 </p>
               </div>
@@ -281,15 +154,15 @@ const Index = () => {
       </section>
 
       {/* Recent Success Section */}
-      <section className="py-12 md:py-16 px-4 bg-card-lighter">
+      <section className="py-8 md:py-16 px-4 bg-card-lighter">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-8 md:mb-12">
+          <div className="text-center mb-6 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Real Results for Real Businesses</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
               See how we've helped organizations like yours achieve their digital goals.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             <div className="bg-card-lighter p-6 rounded-lg border border-accent/10 hover:border-accent/30 transition-all">
               <h3 className="text-accent font-medium mb-2">Tripletex (Norway)</h3>
               <p className="text-gray-300 text-sm">Built and deployed an AI support system handling 10,000+ monthly queries with 80%+ accuracy, ensuring company growth not blocked by support</p>
@@ -307,7 +180,7 @@ const Index = () => {
       </section>
 
       {/* Final Call to Action */}
-      <section className="py-12 md:py-16 px-4 bg-card">
+      <section className="py-8 md:py-16 px-4 bg-card">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center max-w-3xl mx-auto space-y-6">
             <h2 className="text-2xl md:text-3xl font-bold text-white">Ready to Start Your Journey?</h2>
