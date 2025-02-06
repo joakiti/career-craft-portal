@@ -89,6 +89,10 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
+                <li className="flex items-start gap-2">
+                    <Check className="w-4 h-4 text-green-500 mt-1" />
+                    <span className="text-sm text-gray-300">Industry expert in C# and Java Enterprise Development</span>
+                  </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-green-500 mt-1" />
                     <span className="text-sm text-gray-300">TypeScript & React expertise</span>
