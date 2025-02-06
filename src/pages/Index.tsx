@@ -19,52 +19,49 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-card flex flex-col">
-      {/* Hero Section */}
-      <section className="pt-28 px-4">
+      {/* Hero Section - Updated padding to account for Navbar */}
+      <section className="pt-28 md:pt-32 pb-12 md:pb-16 px-4">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-2 gap-8 items-start">
-            {/* Left Column - Text Content */}
-            <div className="space-y-4">
-              <div className="text-accent text-sm font-medium">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="space-y-4 md:space-y-6">
+              <div className="text-accent font-medium">
                 Senior Software Engineer & AI Solutions Architect
               </div>
-              <h1 className="text-2xl font-bold text-white">
+              <h1 className="text-3xl md:text-5xl font-bold text-white">
                 Delivering High-Impact Technical Solutions
               </h1>
-              <p className="text-sm text-gray-300 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-300 leading-relaxed">
                 Specialized in three core areas: Enterprise full-stack development, AI/ML implementation, and system architecture. Focused on delivering measurable results that drive business growth.
               </p>
-              <div className="flex flex-col gap-3">
-                <ConsultationForm size="sm"/>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <ConsultationForm/>
                 <Link 
                   to="/services" 
-                  className="inline-flex items-center justify-center px-4 py-2 rounded-lg border border-accent/20 text-accent hover:bg-accent/10 transition-colors text-sm w-fit"
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-accent/20 text-accent hover:bg-accent/10 transition-colors"
                 >
                   View Services <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </div>
-              <div className="flex gap-8">
+              <div className="flex gap-8 pt-4">
                 <div>
-                  <div className="text-xl font-bold text-accent">10+</div>
+                  <div className="text-xl md:text-2xl font-bold text-accent">10+</div>
                   <div className="text-sm text-gray-400">Years Experience</div>
                 </div>
                 <div>
-                  <div className="text-xl font-bold text-accent">5</div>
+                  <div className="text-xl md:text-2xl font-bold text-accent">5</div>
                   <div className="text-sm text-gray-400">Enterprise Projects</div>
                 </div>
               </div>
             </div>
-
-            {/* Right Column - Image */}
-            <div className="relative">
+            <div className="relative order-first md:order-last">
               <ImageWithFallback
                 src="/img/profile_pic.jpg"
                 alt="Mikkel Kaj Andersen - Senior Software Engineer"
-                className="rounded-2xl shadow-2xl w-full"
-                fallbackClassName="rounded-2xl shadow-2xl w-full"
+                className="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
+                fallbackClassName="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
               />
-              <div className="absolute -bottom-4 -right-4 bg-card/80 backdrop-blur-sm rounded-2xl p-3 border border-accent/10">
-                <p className="text-white text-sm">10+ Years Industry Experience</p>
+              <div className="absolute -bottom-4 -right-4 bg-card/80 backdrop-blur-sm rounded-2xl p-4 border border-accent/10 hidden md:block">
+                <p className="text-white font-medium">10+ Years Industry Experience</p>
               </div>
             </div>
           </div>
