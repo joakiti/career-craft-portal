@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import ConsultationForm from "@/components/ConsultationForm";
 import ImageWithFallback from "@/components/ui/image-with-fallback";
-import { Brain, Code, Database, Timer, ArrowRight, Check } from "lucide-react";
+import { Brain, Code, Database, ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import {
@@ -11,7 +11,6 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
 
 const Index = () => {
   const scrollToContact = () => {
@@ -21,47 +20,47 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-card flex flex-col">
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
+      <section className="pt-20 md:pt-24 pb-12 md:pb-16 px-4">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="text-accent font-medium mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="space-y-4 md:space-y-6">
+              <div className="text-accent font-medium">
                 Senior Software Engineer & AI Solutions Architect
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white">
+              <h1 className="text-3xl md:text-5xl font-bold text-white">
                 Delivering High-Impact Technical Solutions
               </h1>
-              <p className="text-lg text-gray-300 leading-relaxed">
+              <p className="text-base md:text-lg text-gray-300 leading-relaxed">
                 Specialized in three core areas: Enterprise full-stack development, AI/ML implementation, and system architecture. Focused on delivering measurable results that drive business growth.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <ConsultationForm/>
                 <Link 
                   to="/services" 
-                  className="inline-flex items-center px-6 py-3 rounded-lg border border-accent/20 text-accent hover:bg-accent/10 transition-colors"
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-accent/20 text-accent hover:bg-accent/10 transition-colors"
                 >
                   View Services <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </div>
               <div className="flex gap-8 pt-4">
                 <div>
-                  <div className="text-2xl font-bold text-accent">10+</div>
+                  <div className="text-xl md:text-2xl font-bold text-accent">10+</div>
                   <div className="text-sm text-gray-400">Years Experience</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-accent">5</div>
+                  <div className="text-xl md:text-2xl font-bold text-accent">5</div>
                   <div className="text-sm text-gray-400">Enterprise Projects</div>
                 </div>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative order-first md:order-last">
               <ImageWithFallback
                 src="/img/profile_pic.jpg"
                 alt="Mikkel Kaj Andersen - Senior Software Engineer"
-                className="rounded-2xl shadow-2xl"
-                fallbackClassName="rounded-2xl shadow-2xl"
+                className="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
+                fallbackClassName="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
               />
-              <div className="absolute -bottom-4 -right-4 bg-card/80 backdrop-blur-sm rounded-2xl p-4 border border-accent/10">
+              <div className="absolute -bottom-4 -right-4 bg-card/80 backdrop-blur-sm rounded-2xl p-4 border border-accent/10 hidden md:block">
                 <p className="text-white font-medium">10+ Years Industry Experience</p>
               </div>
             </div>
@@ -70,15 +69,15 @@ const Index = () => {
       </section>
 
       {/* Core Services */}
-      <section className="py-16 px-4 bg-card">
+      <section className="py-12 md:py-16 px-4 bg-card">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Specialized Technical Solutions</h2>
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Specialized Technical Solutions</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
               Expert delivery in three core areas, each with proven enterprise success and measurable outcomes.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <Card className="bg-card border-accent/10 hover:border-accent/30 transition-all group">
               <CardHeader>
                 <Code className="w-12 h-12 text-accent mb-4" />
@@ -171,27 +170,19 @@ const Index = () => {
               </CardFooter>
             </Card>
           </div>
-          <div className="text-center mt-12">
-            <Link 
-              to="/services"
-              className="inline-flex items-center px-8 py-3 rounded-lg bg-accent hover:bg-accent/90 text-primary transition-colors"
-            >
-              View Detailed Services <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </div>
         </div>
       </section>
 
       {/* Recent Success Section */}
-      <section className="py-16 px-4 bg-card-lighter">
+      <section className="py-12 md:py-16 px-4 bg-card-lighter">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Measurable Results</h2>
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Measurable Results</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
               Recent projects that demonstrate concrete business impact through technical innovation.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <div className="bg-card-lighter p-6 rounded-lg border border-accent/10 hover:border-accent/30 transition-all">
               <h3 className="text-accent font-medium mb-2">Tripletex (Norway)</h3>
               <p className="text-gray-300 text-sm">Built and deployed an AI support system handling 10,000+ monthly queries with 80%+ accuracy, ensuring company growth not blocked by support</p>
@@ -209,16 +200,16 @@ const Index = () => {
       </section>
 
       {/* Final Call to Action */}
-      <section className="py-16 px-4 bg-card">
+      <section className="py-12 md:py-16 px-4 bg-card">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center max-w-3xl mx-auto space-y-6">
-            <h2 className="text-3xl font-bold text-white">Still on the Fence?</h2>
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Still on the Fence?</h2>
+            <p className="text-gray-300 text-base md:text-lg leading-relaxed">
               Hey, no pressure! But while you're here, why not take a quick peek at my profile? I've packed it with real projects and cool tech wins that show what I'm all about.<br/><br/> Check it out, if you want.
             </p>
             <Link 
               to="/profile"
-              className="inline-flex items-center px-8 py-3 rounded-lg bg-accent hover:bg-accent/90 text-primary transition-colors"
+              className="inline-flex items-center px-6 py-3 rounded-lg bg-accent hover:bg-accent/90 text-primary transition-colors"
             >
               Profile <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
