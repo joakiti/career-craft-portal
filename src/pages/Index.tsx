@@ -19,8 +19,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-card flex flex-col">
-      {/* Hero Section */}
-      <section className="pt-20 md:pt-24 pb-12 md:pb-16 px-4">
+      {/* Hero Section - Updated padding to account for Navbar */}
+      <section className="pt-28 md:pt-32 pb-12 md:pb-16 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-4 md:space-y-6">
@@ -88,7 +88,7 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
-                <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-green-500 mt-1" />
                     <span className="text-sm text-gray-300">Industry expert in C# and Java Enterprise Development</span>
                   </li>
