@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import ConsultationForm from "@/components/ConsultationForm";
 import ImageWithFallback from "@/components/ui/image-with-fallback";
 import { Brain, Code, Database, ArrowRight, Check, Youtube, Linkedin, Instagram, Twitter } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import {
   Card,
@@ -78,32 +77,67 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Timeline Section */}
+          {/* Core Services Section */}
           <div className="rounded-3xl bg-card-lighter p-6">
-            <h2 className="text-xl font-bold mb-4">Timeline</h2>
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
-                  <Brain className="w-6 h-6 text-blue-500" />
-                </div>
-                <div>
-                  <h3 className="font-semibold">Tripletex AI</h3>
-                  <p className="text-sm text-gray-400">Launched AI Support System</p>
-                  <p className="text-sm text-gray-500">December 2023</p>
-                </div>
+            <h2 className="text-xl font-bold mb-4">Services</h2>
+            <div className="space-y-4">
+              <Card className="bg-card border-accent/10">
+                <CardHeader>
+                  <Code className="w-8 h-8 text-accent mb-2" />
+                  <CardTitle className="text-lg text-white">Full-Stack Development</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-gray-300">
+                    Modern, scalable applications built with enterprise-grade technologies.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card border-accent/10">
+                <CardHeader>
+                  <Brain className="w-8 h-8 text-accent mb-2" />
+                  <CardTitle className="text-lg text-white">AI & ML Solutions</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-gray-300">
+                    Custom AI implementations that solve specific business challenges.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card border-accent/10">
+                <CardHeader>
+                  <Database className="w-8 h-8 text-accent mb-2" />
+                  <CardTitle className="text-lg text-white">System Architecture</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-gray-300">
+                    Cloud-native architectures and legacy system modernization.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Recent Success Section */}
+          <div className="rounded-3xl bg-card-lighter p-6">
+            <h2 className="text-xl font-bold mb-4">Recent Success</h2>
+            <div className="space-y-4">
+              <div className="p-4 bg-card rounded-lg border border-accent/10">
+                <h3 className="text-accent font-medium mb-2">Tripletex (Norway)</h3>
+                <p className="text-sm text-gray-300">Built AI support system with 80%+ accuracy</p>
               </div>
-              
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center">
-                  <Code className="w-6 h-6 text-purple-500" />
-                </div>
-                <div>
-                  <h3 className="font-semibold">Visma Enterprise</h3>
-                  <p className="text-sm text-gray-400">Core System Optimization</p>
-                  <p className="text-sm text-gray-500">October 2023</p>
-                </div>
+              <div className="p-4 bg-card rounded-lg border border-accent/10">
+                <h3 className="text-accent font-medium mb-2">Visma Enterprise</h3>
+                <p className="text-sm text-gray-300">Optimized core system reducing loading times by 98%</p>
               </div>
             </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="rounded-3xl bg-card-lighter p-6">
+            <h2 className="text-xl font-bold mb-4">Let's Connect</h2>
+            <ConsultationForm />
           </div>
         </div>
       </div>
@@ -112,7 +146,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-card flex flex-col">
-      {/* Hero Section - Updated padding to account for Navbar */}
+      {/* Hero Section */}
       <section className="pt-28 md:pt-32 pb-12 md:pb-16 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
