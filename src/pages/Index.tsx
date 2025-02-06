@@ -77,34 +77,6 @@ const Index = () => {
               </a>
             </div>
           </div>
-
-          {/* Timeline Section */}
-          <div className="rounded-3xl bg-card-lighter p-6">
-            <h2 className="text-xl font-bold mb-4">Timeline</h2>
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center">
-                  <Brain className="w-6 h-6 text-blue-500" />
-                </div>
-                <div>
-                  <h3 className="font-semibold">Tripletex AI</h3>
-                  <p className="text-sm text-gray-400">Launched AI Support System</p>
-                  <p className="text-sm text-gray-500">December 2023</p>
-                </div>
-              </div>
-              
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center">
-                  <Code className="w-6 h-6 text-purple-500" />
-                </div>
-                <div>
-                  <h3 className="font-semibold">Visma Enterprise</h3>
-                  <p className="text-sm text-gray-400">Core System Optimization</p>
-                  <p className="text-sm text-gray-500">October 2023</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     );
@@ -112,156 +84,153 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-card flex flex-col">
-      {/* Hero Section - Updated padding to account for Navbar */}
       <section className="pt-28 md:pt-32 pb-12 md:pb-16 px-4">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="space-y-4 md:space-y-6">
-              <div className="text-accent font-medium">
-                Senior Software Engineer & AI Solutions Architect
-              </div>
-              <h1 className="text-3xl md:text-5xl font-bold text-white">
-                Delivering High-Impact Technical Solutions
-              </h1>
-              <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                Specialized in three core areas: Enterprise full-stack development, AI/ML implementation, and system architecture. Focused on delivering measurable results that drive business growth.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <ConsultationForm/>
-                <Link 
-                  to="/services" 
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-accent/20 text-accent hover:bg-accent/10 transition-colors"
-                >
-                  View Services <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </div>
-              <div className="flex gap-8 pt-4">
-                <div>
-                  <div className="text-xl md:text-2xl font-bold text-accent">10+</div>
-                  <div className="text-sm text-gray-400">Years Experience</div>
-                </div>
-                <div>
-                  <div className="text-xl md:text-2xl font-bold text-accent">5</div>
-                  <div className="text-sm text-gray-400">Enterprise Projects</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+            {/* Left Column - Profile Info */}
+            <div className="rounded-3xl bg-card-lighter p-8">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <ImageWithFallback
+                    src="/img/profile_pic.jpg"
+                    alt="Profile"
+                    className="w-12 h-12 rounded-full"
+                    fallbackSrc="/img/profile_pic.png"
+                  />
+                  <span className="font-semibold text-lg text-white">@MikkelKaj</span>
                 </div>
               </div>
-            </div>
-            <div className="relative order-first md:order-last">
+              
               <ImageWithFallback
                 src="/img/profile_pic.jpg"
-                alt="Mikkel Kaj Andersen - Senior Software Engineer"
-                className="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
-                fallbackClassName="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
+                alt="Profile"
+                className="w-full aspect-square object-cover rounded-2xl mb-6"
+                fallbackSrc="/img/profile_pic.png"
               />
-              <div className="absolute -bottom-4 -right-4 bg-card/80 backdrop-blur-sm rounded-2xl p-4 border border-accent/10 hidden md:block">
-                <p className="text-white font-medium">10+ Years Industry Experience</p>
+              
+              <h1 className="text-3xl font-bold mb-3 text-white">I'm Mikkel 👋</h1>
+              <p className="text-gray-300 mb-6 text-lg">
+                Senior Software Engineer & AI Architect. Building scalable solutions and optimizing enterprise systems.
+              </p>
+              
+              <div className="flex gap-4 mb-6">
+                <a href="https://youtube.com" className="text-gray-400 hover:text-white transition-colors">
+                  <Youtube size={28} />
+                </a>
+                <a href="https://linkedin.com/in/mikkel-kaj-andersen-b0a097a5/" className="text-gray-400 hover:text-white transition-colors">
+                  <Linkedin size={28} />
+                </a>
+                <a href="https://instagram.com" className="text-gray-400 hover:text-white transition-colors">
+                  <Instagram size={28} />
+                </a>
+                <a href="https://twitter.com" className="text-gray-400 hover:text-white transition-colors">
+                  <Twitter size={28} />
+                </a>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Core Services */}
-      <section className="py-12 md:py-16 px-4 bg-card">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Specialized Technical Solutions</h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Expert delivery in three core areas, each with proven enterprise success and measurable outcomes.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            <Card className="bg-card border-accent/10 hover:border-accent/30 transition-all group">
-              <CardHeader>
-                <Code className="w-12 h-12 text-accent mb-4" />
-                <CardTitle className="text-xl text-white">Full-Stack Development</CardTitle>
-                <p className="text-gray-400">
-                  Modern, scalable applications built with enterprise-grade technologies. Focus on maintainability and performance.
+            {/* Right Column - Services */}
+            <div className="md:col-span-1 space-y-8">
+              <div className="text-center">
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Specialized Technical Solutions</h2>
+                <p className="text-gray-300 max-w-2xl mx-auto">
+                  Expert delivery in three core areas, each with proven enterprise success and measurable outcomes.
                 </p>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">Industry expert in C# and Java Enterprise Development</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">TypeScript & React expertise</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">Cloud-native solutions</span>
-                  </li>
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Link 
-                  to="/services" 
-                  className="text-sm text-accent hover:text-accent/80 inline-flex items-center group-hover:gap-2 transition-all"
-                >
-                  View Full-Stack Services <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </CardFooter>
-            </Card>
-            <Card className="bg-card border-accent/10 hover:border-accent/30 transition-all group">
-              <CardHeader>
-                <Brain className="w-12 h-12 text-accent mb-4" />
-                <CardTitle className="text-xl text-white">AI & ML Solutions</CardTitle>
-                <p className="text-gray-400">
-                  Custom AI implementations that solve specific business challenges. Specializing in LLMs and optimization algorithms.
-                </p>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">LLM-powered support systems with 80%+ accuracy</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">Custom ML models</span>
-                  </li>
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Link 
-                  to="/services" 
-                  className="text-sm text-accent hover:text-accent/80 inline-flex items-center group-hover:gap-2 transition-all"
-                >
-                  View AI Solutions <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </CardFooter>
-            </Card>
-            <Card className="bg-card border-accent/10 hover:border-accent/30 transition-all group">
-              <CardHeader>
-                <Database className="w-12 h-12 text-accent mb-4" />
-                <CardTitle className="text-xl text-white">System Architecture</CardTitle>
-                <p className="text-gray-400">
-                  Cloud-native architectures and legacy system modernization. Professional within AWS infrastructure.
-                </p>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">Part of driving mainframe to cloud migrations</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">Experienced service owner and security engineer on AWS</span>
-                  </li>
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Link 
-                  to="/services" 
-                  className="text-sm text-accent hover:text-accent/80 inline-flex items-center group-hover:gap-2 transition-all"
-                >
-                  View Architecture Services <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </CardFooter>
-            </Card>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <Card className="bg-card border-accent/10 hover:border-accent/30 transition-all group">
+                  <CardHeader>
+                    <Code className="w-12 h-12 text-accent mb-4" />
+                    <CardTitle className="text-xl text-white">Full-Stack Development</CardTitle>
+                    <p className="text-gray-400">
+                      Modern, scalable applications built with enterprise-grade technologies. Focus on maintainability and performance.
+                    </p>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-green-500 mt-1" />
+                        <span className="text-sm text-gray-300">Industry expert in C# and Java Enterprise Development</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-green-500 mt-1" />
+                        <span className="text-sm text-gray-300">TypeScript & React expertise</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-green-500 mt-1" />
+                        <span className="text-sm text-gray-300">Cloud-native solutions</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                  <CardFooter>
+                    <Link 
+                      to="/services" 
+                      className="text-sm text-accent hover:text-accent/80 inline-flex items-center group-hover:gap-2 transition-all"
+                    >
+                      View Full-Stack Services <ArrowRight className="ml-1 h-4 w-4" />
+                    </Link>
+                  </CardFooter>
+                </Card>
+                <Card className="bg-card border-accent/10 hover:border-accent/30 transition-all group">
+                  <CardHeader>
+                    <Brain className="w-12 h-12 text-accent mb-4" />
+                    <CardTitle className="text-xl text-white">AI & ML Solutions</CardTitle>
+                    <p className="text-gray-400">
+                      Custom AI implementations that solve specific business challenges. Specializing in LLMs and optimization algorithms.
+                    </p>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-green-500 mt-1" />
+                        <span className="text-sm text-gray-300">LLM-powered support systems with 80%+ accuracy</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-green-500 mt-1" />
+                        <span className="text-sm text-gray-300">Custom ML models</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                  <CardFooter>
+                    <Link 
+                      to="/services" 
+                      className="text-sm text-accent hover:text-accent/80 inline-flex items-center group-hover:gap-2 transition-all"
+                    >
+                      View AI Solutions <ArrowRight className="ml-1 h-4 w-4" />
+                    </Link>
+                  </CardFooter>
+                </Card>
+                <Card className="bg-card border-accent/10 hover:border-accent/30 transition-all group">
+                  <CardHeader>
+                    <Database className="w-12 h-12 text-accent mb-4" />
+                    <CardTitle className="text-xl text-white">System Architecture</CardTitle>
+                    <p className="text-gray-400">
+                      Cloud-native architectures and legacy system modernization. Professional within AWS infrastructure.
+                    </p>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2">
+                      <li className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-green-500 mt-1" />
+                        <span className="text-sm text-gray-300">Part of driving mainframe to cloud migrations</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Check className="w-4 h-4 text-green-500 mt-1" />
+                        <span className="text-sm text-gray-300">Experienced service owner and security engineer on AWS</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                  <CardFooter>
+                    <Link 
+                      to="/services" 
+                      className="text-sm text-accent hover:text-accent/80 inline-flex items-center group-hover:gap-2 transition-all"
+                    >
+                      View Architecture Services <ArrowRight className="ml-1 h-4 w-4" />
+                    </Link>
+                  </CardFooter>
+                </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
