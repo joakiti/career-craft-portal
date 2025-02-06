@@ -12,14 +12,14 @@ const Index = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-4 md:space-y-6">
-              <div className="text-accent font-medium">
-                Let's Create Digital Solutions Together
+              <div className="text-accent font-medium hidden md:block">
+              Senior Software Engineer & AI Tech Lead
               </div>
               <h1 className="text-3xl md:text-5xl font-bold text-white">
                 Making Technology Work for Your Business
               </h1>
               <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                Want to be part of projects that make a real difference? As your tech partner, I combine deep expertise in full-stack development, AI implementation, and system architecture to deliver solutions that drive your business forward.
+                As your tech partner, I combine deep expertise in full-stack development, AI implementation, and system architecture.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <ConsultationForm />
@@ -30,16 +30,6 @@ const Index = () => {
                   Explore Services <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </div>
-              <div className="flex gap-8 pt-4">
-                <div>
-                  <div className="text-xl md:text-2xl font-bold text-accent">10+</div>
-                  <div className="text-sm text-gray-400">Years of Innovation</div>
-                </div>
-                <div>
-                  <div className="text-xl md:text-2xl font-bold text-accent">5</div>
-                  <div className="text-sm text-gray-400">Major Projects</div>
-                </div>
-              </div>
             </div>
             <div className="relative order-first md:order-last">
               <div className="w-full max-w-md mx-auto">
@@ -49,8 +39,17 @@ const Index = () => {
                   className="rounded-2xl shadow-2xl w-full"
                   fallbackClassName="rounded-2xl shadow-2xl w-full"
                 />
-                <div className="absolute -bottom-4 -right-4 bg-card/80 backdrop-blur-sm rounded-2xl p-4 border border-accent/10 hidden md:block">
-                  <p className="text-white font-medium">Ready to Transform Your Ideas into Reality?</p>
+                <div className="absolute -bottom-4 -right-4 md:-right-4 bg-card/80 backdrop-blur-sm rounded-2xl p-3 md:p-4 border border-accent/10 w-[calc(100%-2rem)] md:w-auto">
+                  <div className="flex items-center gap-4 md:gap-6">
+                    <div>
+                      <div className="text-base md:text-xl font-bold text-accent">Mikkel Andersen</div>
+                      <div className="text-xs md:text-sm text-gray-400 md:mt-1">Senior Software Engineer & AI Tech Lead</div>
+                    </div>
+                    <div className="border-l border-accent/10 pl-4 md:pl-6">
+                      <div className="text-lg md:text-2xl font-bold text-accent">10+</div>
+                      <div className="text-xs md:text-sm text-gray-400">Years of Experience</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -59,12 +58,12 @@ const Index = () => {
       </section>
 
       {/* Core Services Section */}
-      <section className="py-8 md:py-16 px-4 bg-card">
+      <section className="pb-12 md:pb-16 px-4 bg-card">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-6 md:mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Ways We Can Help Your Business</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Ways I Can Help Your Business</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Let's work together to create solutions that make a real difference for your business.
+              Let's work together to create solutions - I can help you with the following:
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
