@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import ConsultationForm from "@/components/ConsultationForm";
 import ImageWithFallback from "@/components/ui/image-with-fallback";
@@ -43,19 +42,19 @@ const Index = () => {
             
             <ImageWithFallback
               src="/img/profile_pic.jpg"
-              alt="Hey there! This is me"
+              alt="Profile"
               className="w-full aspect-square object-cover rounded-2xl mb-4"
               fallbackSrc="/img/profile_pic.png"
             />
             
             <div className="space-y-4">
               <div className="text-accent font-medium">
-                Tech Expert & Problem Solver
+                Senior Software Engineer & AI Solutions Architect
               </div>
-              <h1 className="text-2xl font-bold">Let's Build Something Amazing Together! 🚀</h1>
+              <h1 className="text-2xl font-bold">Delivering High-Impact Technical Solutions</h1>
               <p className="text-gray-300">
-                Hey! I'm all about turning complex tech challenges into simple, elegant solutions. Whether it's full-stack development, 
-                AI magic, or system architecture - I've got you covered!
+                Specialized in three core areas: Enterprise full-stack development, AI/ML implementation, and system architecture. 
+                Focused on delivering measurable results that drive business growth.
               </p>
               
               <div className="flex flex-col gap-4">
@@ -64,71 +63,71 @@ const Index = () => {
                   to="/services" 
                   className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-accent/20 text-accent hover:bg-accent/10 transition-colors"
                 >
-                  Check Out What I Do <ArrowRight className="ml-2 h-4 w-4" />
+                  View Services <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </div>
 
               <div className="flex gap-8 pt-4">
                 <div>
                   <div className="text-xl font-bold text-accent">10+</div>
-                  <div className="text-sm text-gray-400">Years of Fun</div>
+                  <div className="text-sm text-gray-400">Years Experience</div>
                 </div>
                 <div>
                   <div className="text-xl font-bold text-accent">5</div>
-                  <div className="text-sm text-gray-400">Major Projects</div>
+                  <div className="text-sm text-gray-400">Enterprise Projects</div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Services Section */}
+          {/* Core Services Section */}
           <div className="rounded-3xl bg-card-lighter p-6">
-            <h2 className="text-xl font-bold mb-4">What I Do Best</h2>
+            <h2 className="text-xl font-bold mb-4">Services</h2>
             <div className="space-y-4">
               <div className="p-6 bg-card rounded-lg border border-accent/10">
                 <Code className="w-8 h-8 text-accent mb-2" />
-                <h3 className="text-lg font-bold text-white mb-2">Full-Stack Magic</h3>
+                <h3 className="text-lg font-bold text-white mb-2">Full-Stack Development</h3>
                 <p className="text-sm text-gray-300">
-                  Building cool, fast apps that just work. No fuss, just results.
+                  Modern, scalable applications built with enterprise-grade technologies.
                 </p>
               </div>
 
               <div className="p-6 bg-card rounded-lg border border-accent/10">
                 <Brain className="w-8 h-8 text-accent mb-2" />
-                <h3 className="text-lg font-bold text-white mb-2">AI Wizardry</h3>
+                <h3 className="text-lg font-bold text-white mb-2">AI & ML Solutions</h3>
                 <p className="text-sm text-gray-300">
-                  Making AI work for you, not the other way around.
+                  Custom AI implementations that solve specific business challenges.
                 </p>
               </div>
 
               <div className="p-6 bg-card rounded-lg border border-accent/10">
                 <Database className="w-8 h-8 text-accent mb-2" />
-                <h3 className="text-lg font-bold text-white mb-2">System Crafting</h3>
+                <h3 className="text-lg font-bold text-white mb-2">System Architecture</h3>
                 <p className="text-sm text-gray-300">
-                  Building rock-solid systems that grow with you.
+                  Cloud-native architectures and legacy system modernization.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Success Stories */}
+          {/* Recent Success Section */}
           <div className="rounded-3xl bg-card-lighter p-6">
-            <h2 className="text-xl font-bold mb-4">Cool Stuff I've Done</h2>
+            <h2 className="text-xl font-bold mb-4">Recent Success</h2>
             <div className="space-y-4">
               <div className="p-4 bg-card rounded-lg border border-accent/10">
                 <h3 className="text-accent font-medium mb-2">Tripletex (Norway)</h3>
-                <p className="text-sm text-gray-300">Supercharged their support with AI - 80%+ accuracy!</p>
+                <p className="text-sm text-gray-300">Built AI support system with 80%+ accuracy</p>
               </div>
               <div className="p-4 bg-card rounded-lg border border-accent/10">
                 <h3 className="text-accent font-medium mb-2">Visma Enterprise</h3>
-                <p className="text-sm text-gray-300">Made their system lightning fast - from 30s to 0.5s! ⚡</p>
+                <p className="text-sm text-gray-300">Optimized core system reducing loading times by 98%</p>
               </div>
             </div>
           </div>
 
-          {/* Let's Chat Section */}
+          {/* CTA Section */}
           <div className="rounded-3xl bg-card-lighter p-6">
-            <h2 className="text-xl font-bold mb-4">Let's Chat!</h2>
+            <h2 className="text-xl font-bold mb-4">Let's Connect</h2>
             <ConsultationForm />
           </div>
         </div>
@@ -144,14 +143,13 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-4 md:space-y-6">
               <div className="text-accent font-medium">
-                Tech Expert & Problem Solver
+                Senior Software Engineer & AI Solutions Architect
               </div>
               <h1 className="text-3xl md:text-5xl font-bold text-white">
-                Let's Build Something Amazing Together! 🚀
+                Delivering High-Impact Technical Solutions
               </h1>
               <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                Hey! I'm all about turning complex tech challenges into simple, elegant solutions. Whether it's full-stack development, 
-                AI magic, or system architecture - I've got you covered!
+                Specialized in three core areas: Enterprise full-stack development, AI/ML implementation, and system architecture. Focused on delivering measurable results that drive business growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <ConsultationForm/>
@@ -159,66 +157,66 @@ const Index = () => {
                   to="/services" 
                   className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-accent/20 text-accent hover:bg-accent/10 transition-colors"
                 >
-                  Check Out What I Do <ArrowRight className="ml-2 h-4 w-4" />
+                  View Services <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </div>
               <div className="flex gap-8 pt-4">
                 <div>
                   <div className="text-xl md:text-2xl font-bold text-accent">10+</div>
-                  <div className="text-sm text-gray-400">Years of Fun</div>
+                  <div className="text-sm text-gray-400">Years Experience</div>
                 </div>
                 <div>
                   <div className="text-xl md:text-2xl font-bold text-accent">5</div>
-                  <div className="text-sm text-gray-400">Major Projects</div>
+                  <div className="text-sm text-gray-400">Enterprise Projects</div>
                 </div>
               </div>
             </div>
             <div className="relative order-first md:order-last">
               <ImageWithFallback
                 src="/img/profile_pic.jpg"
-                alt="Hey there! This is me"
+                alt="Mikkel Kaj Andersen - Senior Software Engineer"
                 className="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
                 fallbackClassName="rounded-2xl shadow-2xl w-full max-w-md mx-auto"
               />
               <div className="absolute -bottom-4 -right-4 bg-card/80 backdrop-blur-sm rounded-2xl p-4 border border-accent/10 hidden md:block">
-                <p className="text-white font-medium">10+ Years of Tech Adventures</p>
+                <p className="text-white font-medium">10+ Years Industry Experience</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What I Do Best Section */}
+      {/* Core Services */}
       <section className="py-12 md:py-16 px-4 bg-card">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">What I Do Best</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Specialized Technical Solutions</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Let's turn your tech dreams into reality! Here's how I can help you succeed.
+              Expert delivery in three core areas, each with proven enterprise success and measurable outcomes.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <Card className="bg-card border-accent/10 hover:border-accent/30 transition-all group">
               <CardHeader>
                 <Code className="w-12 h-12 text-accent mb-4" />
-                <CardTitle className="text-xl text-white">Full-Stack Magic</CardTitle>
+                <CardTitle className="text-xl text-white">Full-Stack Development</CardTitle>
                 <p className="text-gray-400">
-                  Building cool, fast apps that just work. No fuss, just results!
+                  Modern, scalable applications built with enterprise-grade technologies. Focus on maintainability and performance.
                 </p>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">Pro at C# and Java - they're like old friends</span>
+                    <span className="text-sm text-gray-300">Industry expert in C# and Java Enterprise Development</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">React & TypeScript ninja</span>
+                    <span className="text-sm text-gray-300">TypeScript & React expertise</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">Cloud-native solutions that scale</span>
+                    <span className="text-sm text-gray-300">Cloud-native solutions</span>
                   </li>
                 </ul>
               </CardContent>
@@ -227,27 +225,27 @@ const Index = () => {
                   to="/services" 
                   className="text-sm text-accent hover:text-accent/80 inline-flex items-center group-hover:gap-2 transition-all"
                 >
-                  See How I Can Help <ArrowRight className="ml-1 h-4 w-4" />
+                  View Full-Stack Services <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </CardFooter>
             </Card>
             <Card className="bg-card border-accent/10 hover:border-accent/30 transition-all group">
               <CardHeader>
                 <Brain className="w-12 h-12 text-accent mb-4" />
-                <CardTitle className="text-xl text-white">AI Wizardry</CardTitle>
+                <CardTitle className="text-xl text-white">AI & ML Solutions</CardTitle>
                 <p className="text-gray-400">
-                  Making AI work for you! From chatbots to smart analytics.
+                  Custom AI implementations that solve specific business challenges. Specializing in LLMs and optimization algorithms.
                 </p>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">Support systems with 80%+ accuracy - boom! 🎯</span>
+                    <span className="text-sm text-gray-300">LLM-powered support systems with 80%+ accuracy</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">Custom ML models that get results</span>
+                    <span className="text-sm text-gray-300">Custom ML models</span>
                   </li>
                 </ul>
               </CardContent>
@@ -256,27 +254,27 @@ const Index = () => {
                   to="/services" 
                   className="text-sm text-accent hover:text-accent/80 inline-flex items-center group-hover:gap-2 transition-all"
                 >
-                  Discover AI Solutions <ArrowRight className="ml-1 h-4 w-4" />
+                  View AI Solutions <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </CardFooter>
             </Card>
             <Card className="bg-card border-accent/10 hover:border-accent/30 transition-all group">
               <CardHeader>
                 <Database className="w-12 h-12 text-accent mb-4" />
-                <CardTitle className="text-xl text-white">System Crafting</CardTitle>
+                <CardTitle className="text-xl text-white">System Architecture</CardTitle>
                 <p className="text-gray-400">
-                  Building future-proof systems that grow with you. AWS expert here! 🚀
+                  Cloud-native architectures and legacy system modernization. Professional within AWS infrastructure.
                 </p>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">Helped move big systems to the cloud - smooth sailing!</span>
+                    <span className="text-sm text-gray-300">Part of driving mainframe to cloud migrations</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="w-4 h-4 text-green-500 mt-1" />
-                    <span className="text-sm text-gray-300">AWS pro & security guru</span>
+                    <span className="text-sm text-gray-300">Experienced service owner and security engineer on AWS</span>
                   </li>
                 </ul>
               </CardContent>
@@ -285,7 +283,7 @@ const Index = () => {
                   to="/services" 
                   className="text-sm text-accent hover:text-accent/80 inline-flex items-center group-hover:gap-2 transition-all"
                 >
-                  See System Solutions <ArrowRight className="ml-1 h-4 w-4" />
+                  View Architecture Services <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </CardFooter>
             </Card>
@@ -293,45 +291,45 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Cool Stuff I've Done */}
+      {/* Recent Success Section */}
       <section className="py-12 md:py-16 px-4 bg-card-lighter">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Cool Stuff I've Done</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Measurable Results</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Here are some projects that show what we can achieve together!
+              Recent projects that demonstrate concrete business impact through technical innovation.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <div className="bg-card-lighter p-6 rounded-lg border border-accent/10 hover:border-accent/30 transition-all">
               <h3 className="text-accent font-medium mb-2">Tripletex (Norway)</h3>
-              <p className="text-gray-300 text-sm">Supercharged their support system with AI - now handling 10k+ questions monthly with 80%+ accuracy! 🎯</p>
+              <p className="text-gray-300 text-sm">Built and deployed an AI support system handling 10,000+ monthly queries with 80%+ accuracy, ensuring company growth not blocked by support</p>
             </div>
             <div className="bg-card-lighter p-6 rounded-lg border border-accent/10 hover:border-accent/30 transition-all">
               <h3 className="text-accent font-medium mb-2">Visma Enterprise</h3>
-              <p className="text-gray-300 text-sm">Made their system lightning fast ⚡ - from 30s to 0.5s load time!</p>
+              <p className="text-gray-300 text-sm">Optimized core system reducing loading times from 30s to 500ms, improving user satisfaction significantly</p>
             </div>
             <div className="bg-card-lighter p-6 rounded-lg border border-accent/10 hover:border-accent/30 transition-all">
               <h3 className="text-accent font-medium mb-2">GoDream</h3>
-              <p className="text-gray-300 text-sm">Built a rock-solid gift-card platform - 10k+ happy customers monthly! 🎁</p>
+              <p className="text-gray-300 text-sm">Delivered a scalable gift-card platform processing 10,000+ transactions monthly with 99.9% uptime</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Let's Chat Section */}
+      {/* Final Call to Action */}
       <section className="py-12 md:py-16 px-4 bg-card">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center max-w-3xl mx-auto space-y-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-white">Want to Know More? 🤔</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white">Still on the Fence?</h2>
             <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-              Hey, no pressure! But if you're curious, why not check out my profile? It's packed with real projects and cool tech wins that show what we could do together!
+              Hey, no pressure! But while you're here, why not take a quick peek at my profile? I've packed it with real projects and cool tech wins that show what I'm all about.<br/><br/> Check it out, if you want.
             </p>
             <Link 
               to="/profile"
               className="inline-flex items-center px-6 py-3 rounded-lg bg-accent hover:bg-accent/90 text-primary transition-colors"
             >
-              See My Story <ArrowRight className="ml-2 h-4 w-4" />
+              Profile <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </div>
         </div>
