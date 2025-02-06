@@ -1,15 +1,9 @@
+
 import { Link } from "react-router-dom";
 import ConsultationForm from "@/components/ConsultationForm";
 import ImageWithFallback from "@/components/ui/image-with-fallback";
-import { Brain, Code, Database, ArrowRight, Check, Youtube, Linkedin, Instagram, Twitter } from "lucide-react";
+import { Brain, Code, Database, ArrowRight } from "lucide-react";
 import Footer from "@/components/Footer";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardFooter,
-} from "@/components/ui/card";
 import { useEffect, useState } from "react";
 
 const Index = () => {
@@ -33,15 +27,12 @@ const Index = () => {
           {/* Profile Section */}
           <div className="rounded-3xl bg-card-lighter p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center gap-2">
-                <ImageWithFallback
-                  src="/img/profile_pic.jpg"
-                  alt="Profile"
-                  className="w-10 h-10 rounded-full"
-                  fallbackSrc="/img/profile_pic.png"
-                />
-                <span className="font-semibold">@MikkelKaj</span>
-              </div>
+              <ImageWithFallback
+                src="/img/profile_pic.jpg"
+                alt="Profile"
+                className="w-10 h-10 rounded-full"
+                fallbackSrc="/img/profile_pic.png"
+              />
               <button className="p-2">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
@@ -56,24 +47,36 @@ const Index = () => {
               fallbackSrc="/img/profile_pic.png"
             />
             
-            <h1 className="text-2xl font-bold mb-2">I'm Mikkel 👋</h1>
-            <p className="text-gray-300 mb-4">
-              Senior Software Engineer & AI Architect. Building scalable solutions and optimizing enterprise systems.
-            </p>
-            
-            <div className="flex gap-4 mb-6">
-              <a href="https://youtube.com" className="text-gray-400 hover:text-white">
-                <Youtube size={24} />
-              </a>
-              <a href="https://linkedin.com/in/mikkel-kaj-andersen-b0a097a5/" className="text-gray-400 hover:text-white">
-                <Linkedin size={24} />
-              </a>
-              <a href="https://instagram.com" className="text-gray-400 hover:text-white">
-                <Instagram size={24} />
-              </a>
-              <a href="https://twitter.com" className="text-gray-400 hover:text-white">
-                <Twitter size={24} />
-              </a>
+            <div className="space-y-4">
+              <div className="text-accent font-medium">
+                Senior Software Engineer & AI Solutions Architect
+              </div>
+              <h1 className="text-2xl font-bold">Delivering High-Impact Technical Solutions</h1>
+              <p className="text-gray-300">
+                Specialized in three core areas: Enterprise full-stack development, AI/ML implementation, and system architecture. 
+                Focused on delivering measurable results that drive business growth.
+              </p>
+              
+              <div className="flex flex-col gap-4">
+                <ConsultationForm />
+                <Link 
+                  to="/services" 
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-accent/20 text-accent hover:bg-accent/10 transition-colors"
+                >
+                  View Services <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+
+              <div className="flex gap-8 pt-4">
+                <div>
+                  <div className="text-xl font-bold text-accent">10+</div>
+                  <div className="text-sm text-gray-400">Years Experience</div>
+                </div>
+                <div>
+                  <div className="text-xl font-bold text-accent">5</div>
+                  <div className="text-sm text-gray-400">Enterprise Projects</div>
+                </div>
+              </div>
             </div>
           </div>
 
