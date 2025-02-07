@@ -144,9 +144,9 @@ tryghed at vide, at vi kan regne med hans ekspertise, og vi ser frem til fortsat
     const plugin = Autoplay({delay: 15000, stopOnInteraction: true});
 
     return (
-        <section className="py-8 md:py-12 px-4 md:px-6">
-            <div className="container max-w-4xl mx-auto">
-                <h2 className="text-xl md:text-2xl font-bold text-link mb-6 md:mb-8 text-center">
+        <section className="py-4 md:py-12">
+            <div className="max-w-4xl mx-auto">
+                <h2 className="text-xl md:text-2xl font-bold text-link mb-4 md:mb-8 text-center">
                     <span className="relative inline-block">
                         ... here's some honest feedback I've received
                     </span>
@@ -163,13 +163,11 @@ tryghed at vide, at vi kan regne med hans ekspertise, og vi ser frem til fortsat
                     <CarouselContent>
                         {testimonials.map((testimonial, index) => (
                             <CarouselItem key={index}>
-                                <div className="p-1">
-                                    <Testimonial {...testimonial} />
-                                </div>
+                                <Testimonial {...testimonial} />
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <div className="flex justify-center gap-4 mt-6">
+                    <div className="hidden md:flex justify-center gap-4 mt-6">
                         <CarouselPrevious className="bg-gray-800 text-white" />
                         <CarouselNext className="bg-gray-800 text-white" />
                     </div>

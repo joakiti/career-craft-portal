@@ -10,8 +10,8 @@ interface HeroSectionProps {
 
 const HeroSection = ({scrollToExperience}: HeroSectionProps) => {
     return (
-        <section className="py-12 px-4 animate-fade-in">
-            <div className="container max-w-7xl mx-auto">
+        <section className="px-4 animate-fade-in">
+            <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
                     <div className="md:col-span-4 space-y-6">
                         <ProfileCard />
