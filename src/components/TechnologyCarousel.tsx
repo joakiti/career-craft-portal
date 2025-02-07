@@ -183,27 +183,6 @@ const TechnologyItem = ({ tech, index }: { tech: Technology; index: number }) =>
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    useEffect(() => {
-        if (isMobile) {
-            setPosition({ x: 0, y: 0 });
-            return;
-        }
-
-        const updatePosition = () => {
-            const time = Date.now() / 2000;
-            const radius = 5;
-            const offset = index * (Math.PI / 6);
-            
-            setPosition({
-                x: Math.cos(time + offset) * radius,
-                y: Math.sin(time + offset) * radius
-            });
-        };
-
-        const intervalId = setInterval(updatePosition, 50);
-        return () => clearInterval(intervalId);
-    }, [index, isMobile]);
-
     // Check if the name is long
     const isLongName = tech.name.length > 12;
 
