@@ -12,23 +12,23 @@ const TechnologyItem = ({ tech }: { tech: { name: string; logo: string; tooltip:
     <TooltipProvider delayDuration={0}>
         <Tooltip>
             <TooltipTrigger asChild>
-                <div className="flex flex-col items-center p-3 bg-card rounded-lg hover:bg-card-lighter transition-colors cursor-pointer relative group">
+                <div className="flex flex-col items-center p-2 md:p-3 bg-card rounded-lg hover:bg-card-lighter transition-colors cursor-pointer relative group">
                     <div className="relative">
                         <ImageWithFallback
                             src={tech.logo}
                             alt={`${tech.name} logo`}
-                            className="w-8 h-8 mb-2"
-                            fallbackClassName="w-8 h-8 mb-2"
+                            className="w-6 h-6 md:w-8 md:h-8 mb-1 md:mb-2"
+                            fallbackClassName="w-6 h-6 md:w-8 md:h-8 mb-1 md:mb-2"
                         />
-                        <div className="absolute -top-2 -right-2 bg-accent/2 rounded-full p-1">
-                            <HelpCircle className="w-3 h-3 text-accent" />
+                        <div className="absolute -top-1 -right-1 md:-top-2 md:-right-2 bg-accent/2 rounded-full p-0.5 md:p-1">
+                            <HelpCircle className="w-2 h-2 md:w-3 md:h-3 text-accent" />
                         </div>
                     </div>
-                    <span className="text-sm text-gray-300 text-center">{tech.name}</span>
+                    <span className="text-xs md:text-sm text-gray-300 text-center line-clamp-2">{tech.name}</span>
                 </div>
             </TooltipTrigger>
             <TooltipContent className="max-w-xs bg-card-lighter">
-                <p>{tech.tooltip}</p>
+                <p className="text-sm">{tech.tooltip}</p>
             </TooltipContent>
         </Tooltip>
     </TooltipProvider>
@@ -40,12 +40,12 @@ const TechnologyCategory = ({ category, icon, items }: {
     icon: React.ReactNode; 
     items: Array<{ name: string; logo: string; tooltip: string }> 
 }) => (
-    <div className="space-y-4">
-        <div className="flex items-center gap-2">
+    <div className="space-y-3 md:space-y-4">
+        <div className="flex items-center gap-2 px-2 md:px-0">
             {icon}
-            <h4 className="text-lg font-semibold text-accent">{category}</h4>
+            <h4 className="text-base md:text-lg font-semibold text-accent">{category}</h4>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-4 md:grid-cols-3 gap-2 md:gap-4">
             {items.map((tech) => (
                 <TechnologyItem key={tech.name} tech={tech} />
             ))}
@@ -177,9 +177,9 @@ const TechnologySection = () => {
     ];
 
     return (
-        <div className="bg-card-lighter rounded-xl p-6">
-            <h3 className="text-xl font-bold text-white mb-6">Technologies & Expertise</h3>
-            <div className="space-y-8">
+        <div className="bg-card-lighter rounded-xl p-4 md:p-6">
+            <h3 className="text-lg md:text-xl font-bold text-white mb-4 md:mb-6 px-2 md:px-0">Technologies & Expertise</h3>
+            <div className="space-y-6 md:space-y-8">
                 {technologies.map((category, index) => (
                     <TechnologyCategory 
                         key={index} 
