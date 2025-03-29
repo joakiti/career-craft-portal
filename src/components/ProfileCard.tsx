@@ -25,9 +25,6 @@ const ProfileCard = () => {
                    className="text-link hover:text-link-hover transition-colors">
                     hello@mikkelkajandersen.dk
                 </a>
-                <a href="tel:+4521537395" className="text-link hover:text-link-hover transition-colors">
-                    +45 21 53 73 95
-                </a>
             </div>
             <div className="flex gap-4">
                 <SocialLinks/>
