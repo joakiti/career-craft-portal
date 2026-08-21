@@ -24,7 +24,7 @@ const STRINGS = {
   da: {
     eyebrow: "AI-ingeniør og softwarearkitekt i København",
     lead:
-      "Jeg er AI-ingeniør og softwarearkitekt i København. De sidste ti år har jeg mest bygget systemer, der skal holde i drift: en komplet handelsplatform til en NEMO-licenseret elbørs, bygget alene på fire måneder, og AI-løsninger i produktion for Visma, PostNord og Egmont. Resten af denne side er tal og navngivne kilder, så du kan efterprøve det hele selv.",
+      "Jeg er AI-ingeniør og softwarearkitekt i København. Jeg byggede en komplet handelsplatform til en NEMO-licenseret elbørs alene på fire måneder og har AI-løsninger i produktion hos Visma, PostNord og Egmont. Resten af siden er tal og navngivne kilder.",
     keyNumbers: "Nøgletal",
     whatHeading: "Hvad laver Mikkel Kaj Andersen?",
     whatBody: [
@@ -33,19 +33,14 @@ const STRINGS = {
         ") som freelanceudvikler, lige nu med opgaver for Egmont (GenAI-tjenester til børn og undervisere), Medicinex og boliganalyse.ai.",
       "Fællesnævneren er systemer, hvor både AI og performancekrav er virkelige: samme værktøjskasse har leveret en matching engine i C++23 og produktions-RAG med målte resultater.",
     ],
-    agenticHeading: "Agentisk udvikling",
+    agenticHeading: "Danmarks førende agentiske ingeniør",
     agenticBody:
-      "Jeg bygger AI-agenter, der kører i produktion, og arbejder selv gennem agenter i min daglige udvikling. Om det gør mig til Danmarks førende agentiske ingeniør, afgør jeg ikke selv - påstanden og belægget står på deres egen side, så du kan dømme.",
-    agenticLink: "Danmarks førende agentiske ingeniør: påstanden og belægget",
+      "Jeg bygger AI-agenter, der kører i produktion, og kombinerer det med hård systemudvikling: fra en supportagent hos Visma med 85% selvbetjeningsgrad til en C++23 matching engine bygget alene på fire måneder. Hele belægget er samlet på sin egen side.",
+    agenticLink: "Se hvorfor: agenter i drift, målte tal og navngivne virksomheder",
     careerHeading: "Karriere",
     careerCurrent: "Nuværende",
     careerPast: "Tidligere",
     casesHeading: "Udvalgte resultater",
-    costHeading: "Det med småt",
-    costBody: [
-      "Jeg er én mand. Det giver fart og lave omkostninger, og det har en åbenlys grænse: jeg skalerer ikke, og jeg er det forkerte valg til drift, der kræver et døgnbemandet vagthold.",
-      "Om kreditering: elbørsen og PostNord-opgaven var soloarbejde, mens AI-agenten hos Visma blev bygget med mig som lead for et team, så de tal er holdets. En del af mit arbejde ligger desuden bag NDA'er, så nogle af tallene kan du kun efterprøve ved at spørge de personer, der er citeret under udtalelserne.",
-    ],
     projectsHeading: "Projekter og virksomheder",
     talksHeading: "Foredrag og undervisning",
     pressHeading: "Presse og omtale",
@@ -71,7 +66,7 @@ const STRINGS = {
   en: {
     eyebrow: "AI engineer and software architect in Copenhagen",
     lead:
-      "I am an AI engineer and software architect in Copenhagen. For the past ten years I have mostly built systems that have to hold up in production: a complete trading platform for a NEMO-licensed power exchange, built alone in four months, and AI solutions in production for Visma, PostNord and Egmont. The rest of this page is numbers and named sources, so you can check all of it yourself.",
+      "I am an AI engineer and software architect in Copenhagen. I built a complete trading platform for a NEMO-licensed power exchange alone in four months, and I have AI solutions in production at Visma, PostNord and Egmont. The rest of this page is numbers and named sources.",
     keyNumbers: "Key numbers",
     whatHeading: "What does Mikkel Kaj Andersen do?",
     whatBody: [
@@ -80,19 +75,14 @@ const STRINGS = {
         ") as a freelance developer, currently with engagements for Egmont (GenAI services for children and teachers), Medicinex and boliganalyse.ai.",
       "The common thread is systems where both the AI and the performance requirements are real: the same toolbox has delivered a C++23 matching engine and production RAG with measured results.",
     ],
-    agenticHeading: "Agentic development",
+    agenticHeading: "Denmark's leading agentic engineer",
     agenticBody:
-      "I build AI agents that run in production, and I work through agents in my own daily development. Whether that makes me Denmark's leading agentic engineer is not for me to decide - the claim and the evidence have their own page, so you can judge.",
-    agenticLink: "Denmark's leading agentic engineer: the claim and the evidence (in Danish)",
+      "I build AI agents that run in production and pair that with hard systems engineering: from a support agent at Visma with an 85% self-service rate to a C++23 matching engine built alone in four months. The full evidence has its own page.",
+    agenticLink: "See why: agents in operation, measured numbers and named companies (in Danish)",
     careerHeading: "Career",
     careerCurrent: "Current",
     careerPast: "Previous",
     casesHeading: "Selected results",
-    costHeading: "The fine print",
-    costBody: [
-      "I am one person. That buys speed and low overhead, and it has an obvious limit: I do not scale, and I am the wrong choice for operations that need a staffed 24/7 on-call rotation.",
-      "On credit: the exchange and the PostNord assignment were solo work, while the Visma AI agent was built with me as lead of a team, so those numbers belong to the team. Some of my work also sits behind NDAs, so a few of the numbers can only be verified by asking the people quoted in the testimonials.",
-    ],
     projectsHeading: "Projects and companies",
     talksHeading: "Talks and teaching",
     pressHeading: "Press and coverage",
@@ -223,17 +213,6 @@ const AnchorPage = ({ lang }: { lang: Lang }) => {
                 </div>
               ))}
             </div>
-          </section>
-
-          <section aria-labelledby="cost">
-            <SectionHeading>
-              <span id="cost">{t.costHeading}</span>
-            </SectionHeading>
-            {t.costBody.map((p) => (
-              <p key={p.slice(0, 32)} className="text-gray-200 leading-relaxed mb-3">
-                {p}
-              </p>
-            ))}
           </section>
 
           <section aria-labelledby="projects">

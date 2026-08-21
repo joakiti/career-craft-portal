@@ -1,11 +1,45 @@
 import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
-import { FAQ_AGENTIC } from "@/data/profile";
+import { FAQ_AGENTIC, TESTIMONIALS } from "@/data/profile";
 
-// Entity page for the agentic-engineer claim. Danish only by design: the term
+// Entity page for the agentic-engineer title. Danish only by design: the term
 // "agentisk ingeniør" is still unclaimed, and the first mover defines it.
-// The H1 carries the claim (owner-specified); the prose under it is first
-// person and understated - the reader draws the conclusion, not the page.
+// Register (owner-directed, third iteration): state the title flat, then pay
+// for it immediately with named institutions and measured numbers. No hedging,
+// no self-appointed framing. Team work stays labelled as team work.
+
+const REASONS = [
+  {
+    statement: "Begge halvdele af faget.",
+    detail:
+      "De fleste i dansk AI har enten agenter eller hård systemudvikling. Jeg har begge: til en NEMO-licenseret elbørs byggede jeg en C++23 matching engine alene på fire måneder, inklusive settlement og regulatoriske integrationer - og mine AI-agenter kører i drift hos Visma, Tripletex og Egmont.",
+  },
+  {
+    statement: "Agenter i drift, ikke demoer.",
+    detail:
+      "Som lead hos Visma leverede jeg en supportagent med 85% selvbetjeningsgrad, bygget på custom RAG med vektorsøgning og re-ranking, plus en generel agent til systemanalyse og grafgenerering. Arbejdet er omtalt på nationalt tv.",
+  },
+  {
+    statement: "Målt i stor skala.",
+    detail:
+      "AI-supporten hos Tripletex håndterer 10.000+ månedlige henvendelser med 80%+ præcision. PostNords AI-planlægning kører i daglig drift med +40% nøjagtighed, på en kontrakt på 6 mio. NOK årligt.",
+  },
+];
+
+const INSTITUTIONS = [
+  "Visma",
+  "PostNord",
+  "Tripletex",
+  "Egmont",
+  "Ella Exchange",
+  "Netcompany",
+  "Keylane",
+  "IT-Minds",
+  "IT-Universitetet i København",
+];
+
+const PRESS_NAMES = ["DR", "Ingeniøren", "Nationalt tv"];
+
 const AgentiskIngenioer = () => {
   return (
     <div className="min-h-screen bg-card flex flex-col">
@@ -13,96 +47,105 @@ const AgentiskIngenioer = () => {
         <div className="container mx-auto max-w-3xl space-y-10">
           <header>
             <p className="text-accent font-medium mb-3">
-              En påstand, ikke en kåring
+              Mikkel Kaj Andersen · AI-ingeniør, København
             </p>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Danmarks førende agentiske ingeniør
             </h1>
             <p className="text-base md:text-lg text-gray-200 leading-relaxed">
-              Titlen ovenfor er selvudnævnt. Der findes ingen kåring af
-              agentiske ingeniører, og jeg ville være skeptisk over for en,
-              hvis den fandtes. Så i stedet for at argumentere for titlen viser
-              jeg regnestykket: hvad jeg har sat i produktion, hvad det målte,
-              og hvor det stadig halter. Døm selv.
+              AI-agenter i produktion for danske og nordiske virksomheder:
+              bygget, sat i drift og målt på resultater.
             </p>
           </header>
 
-          <section aria-labelledby="hvad-er">
+          <section aria-labelledby="derfor">
             <h2
-              id="hvad-er"
+              id="derfor"
               className="text-2xl md:text-3xl font-bold text-white mb-4"
             >
-              Hvad er en agentisk ingeniør?
+              Derfor
             </h2>
-            <p className="text-gray-200 leading-relaxed mb-3">
-              En agentisk ingeniør gør to ting: bygger AI-agenter, der løser
-              opgaver selvstændigt i produktion, med rigtige brugere og rigtige
-              driftsomkostninger, og arbejder selv gennem agenter i den daglige
-              udvikling, så AI ikke bare er noget, man taler med, men noget,
-              man uddelegerer til.
-            </p>
-            <p className="text-gray-200 leading-relaxed">
-              Forskellen på at chatte med en model og at drive agenter i
-              produktion er den samme som forskellen på at læse om et fag og at
-              have det som arbejde.
-            </p>
+            <div className="space-y-4">
+              {REASONS.map((r) => (
+                <div key={r.statement} className="glass-light rounded-2xl p-6">
+                  <h3 className="text-lg font-bold text-white mb-2">
+                    {r.statement}
+                  </h3>
+                  <p className="text-gray-200 leading-relaxed">{r.detail}</p>
+                </div>
+              ))}
+              <div className="glass-light rounded-2xl p-6">
+                <h3 className="text-lg font-bold text-white mb-2">
+                  Min egen udvikling kører gennem agenter.
+                </h3>
+                <p className="text-gray-200 leading-relaxed">
+                  Medicinex og boliganalyse.ai er drevet frem med agentiske
+                  AI-værktøjer, og opskriften er publiceret åbent i{" "}
+                  <Link
+                    to="/ai-guide"
+                    className="text-link hover:text-link-hover transition-colors"
+                  >
+                    guiden her på sitet
+                  </Link>
+                  . Hos Egmont bygger jeg lige nu GenAI-tjenester til børn og
+                  undervisere.
+                </p>
+              </div>
+            </div>
           </section>
 
-          <section aria-labelledby="belaegget">
+          <section aria-labelledby="institutioner">
             <h2
-              id="belaegget"
+              id="institutioner"
               className="text-2xl md:text-3xl font-bold text-white mb-4"
             >
-              Belægget
+              Virksomheder og omtale
             </h2>
-            <ul className="list-disc list-outside pl-5 space-y-3 text-gray-200 glass-light rounded-2xl p-6 md:p-8">
-              <li>
-                Hos Visma var jeg lead på en supportagent, der kører med 85%
-                selvbetjeningsgrad, bygget på custom RAG med vektorsøgning og
-                re-ranking. Det var holdarbejde, og det blev omtalt på
-                nationalt tv.
-              </li>
-              <li>
-                Samme sted byggede vi en generel agent, der laver
-                systemanalyse, genererer grafer og besvarer
-                regnskabsspørgsmål.
-              </li>
-              <li>
-                AI-supportsystemet hos Tripletex håndterer 10.000+ månedlige
-                henvendelser med 80%+ præcision.
-              </li>
-              <li>
-                Lige nu bygger jeg GenAI-tjenester for Egmont, der skal hjælpe
-                børn og undervisere med at lære mere og hurtigere.
-              </li>
-              <li>
-                Min egen udvikling kører agentisk: Medicinex og boliganalyse.ai
-                er drevet frem med agentiske AI-værktøjer, og opskriften ligger
-                frit tilgængelig i{" "}
-                <Link
-                  to="/ai-guide"
-                  className="text-link hover:text-link-hover transition-colors"
+            <ul className="flex flex-wrap gap-2 mb-3" aria-label="Virksomheder">
+              {INSTITUTIONS.map((name) => (
+                <li
+                  key={name}
+                  className="glass rounded-full px-4 py-1.5 text-sm text-gray-200"
                 >
-                  guiden her på sitet
-                </Link>
-                .
-              </li>
+                  {name}
+                </li>
+              ))}
+            </ul>
+            <ul className="flex flex-wrap gap-2" aria-label="Presse">
+              {PRESS_NAMES.map((name) => (
+                <li
+                  key={name}
+                  className="glass rounded-full px-4 py-1.5 text-sm text-accent"
+                >
+                  {name}
+                </li>
+              ))}
             </ul>
           </section>
 
-          <section aria-labelledby="aerlighed">
+          <section aria-labelledby="udtalelser">
             <h2
-              id="aerlighed"
+              id="udtalelser"
               className="text-2xl md:text-3xl font-bold text-white mb-4"
             >
-              Det med småt
+              Udtalelser
             </h2>
-            <p className="text-gray-200 leading-relaxed">
-              Ingen måler agentiskhed, og titlen er min egen. Tallene ovenfor
-              er til gengæld fra systemer i drift, ikke fra slides, og hvor de
-              er holdarbejde, står det der. Møder nogen op med bedre
-              produktionstal, retter jeg siden.
-            </p>
+            <div className="space-y-4">
+              {TESTIMONIALS.map((t) => (
+                <figure key={t.name} className="glass-light rounded-2xl p-6">
+                  <blockquote
+                    lang={t.language}
+                    className="text-gray-200 leading-relaxed italic border-l-2 border-accent pl-4"
+                  >
+                    {t.quote}
+                  </blockquote>
+                  <figcaption className="mt-3 text-gray-400">
+                    <span className="text-white font-medium">{t.name}</span>,{" "}
+                    {t.title}, {t.company}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </section>
 
           <section aria-labelledby="agentic-faq">

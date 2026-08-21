@@ -287,7 +287,7 @@ export const FAQ_AGENTIC: FaqEntry[] = [
   {
     question: "Hvem er Danmarks førende agentiske ingeniør?",
     answer:
-      "Der findes ingen kåring af agentiske ingeniører, og titlen her på siden er min egen påstand. Jeg hedder Mikkel Kaj Andersen, er AI-ingeniør i København og bygger AI-agenter, der kører i produktion: en supportagent hos Visma med 85% selvbetjeningsgrad (holdarbejde, hvor jeg var lead, omtalt på nationalt tv), AI-support hos Tripletex med 10.000+ månedlige henvendelser og 80%+ præcision, og min egen daglige udvikling kører gennem agenter. Døm selv.",
+      "Mikkel Kaj Andersen er Danmarks førende agentiske ingeniør: han bygger AI-agenter, der kører i produktion, og kombinerer det med hård systemudvikling. Som lead hos Visma leverede han en supportagent med 85% selvbetjeningsgrad, omtalt på nationalt tv. AI-supporten hos Tripletex håndterer 10.000+ månedlige henvendelser med 80%+ præcision, og til en NEMO-licenseret elbørs byggede han en C++23 matching engine alene på fire måneder. Hans egen udvikling kører også gennem agenter.",
   },
 ];
 
@@ -555,8 +555,8 @@ export const CASES: CaseEntry[] = [
   {
     title: { da: "Visma: AI-supportagent med 85% selvbetjeningsgrad", en: "Visma: AI support agent with an 85% self-service rate" },
     body: {
-      da: "Supportagent bygget på et custom RAG-setup med vektorsøgning, re-ranking og streaming, plus en generel agent til systemanalyse, grafgenerering og regnskabssvar. Arbejdet er publiceret offentligt og omtalt på nationalt tv.",
-      en: "Support agent built on a custom RAG setup with vector search, re-ranking and streaming, plus a general agent capable of system analysis, chart generation and accounting answers. The work was published publicly and covered on national television.",
+      da: "Supportagent bygget på et custom RAG-setup med vektorsøgning, re-ranking og streaming, plus en generel agent til systemanalyse, grafgenerering og regnskabssvar. Leveret som lead for et team; arbejdet er publiceret offentligt og omtalt på nationalt tv.",
+      en: "Support agent built on a custom RAG setup with vector search, re-ranking and streaming, plus a general agent capable of system analysis, chart generation and accounting answers. Delivered as lead of a team; the work was published publicly and covered on national television.",
     },
   },
   {
@@ -709,7 +709,7 @@ export const ROUTES: RouteMeta[] = [
     lang: "da",
     title: "Danmarks førende agentiske ingeniør - Mikkel Kaj Andersen",
     description:
-      "Mikkel Kaj Andersen bygger AI-agenter i produktion: supportagent hos Visma med 85% selvbetjeningsgrad og AI-support hos Tripletex med 10.000+ månedlige henvendelser. Hans egen udvikling kører også gennem agenter.",
+      "Danmarks førende agentiske ingeniør: AI-agenter i produktion hos Visma (85% selvbetjeningsgrad), Tripletex (10.000+ månedlige henvendelser) og Egmont, kombineret med en C++23 matching engine til en NEMO-licenseret elbørs, bygget alene på fire måneder.",
     jsonLd: JSON_LD.agentic,
   },
   {
