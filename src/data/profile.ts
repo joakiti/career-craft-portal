@@ -96,14 +96,11 @@ export const PRESS = [
     datePublished: "2023-09-19" as string | undefined,
     aboutPerson: true,
   },
-  {
-    headline:
-      "Udslæt, allergier og bylder: Ny app skal gøre det nemmere at finde den rette tatovør",
-    url: "https://www.dr.dk/nyheder/regionale/oestjylland/udslaet-allergier-og-bylder-ny-app-skal-goere-det-nemmere-finde",
-    publisher: "DR",
-    datePublished: undefined as string | undefined,
-    aboutPerson: true,
-  },
+  // Removed 2026-08-21 after fact-check: the DR article about The Tattoo
+  // Archive (dr.dk/.../udslaet-allergier-og-bylder-...) does not name Mikkel
+  // anywhere in the served page, so it may not appear in subjectOf or any
+  // press list. The app itself being covered by DR remains CV-evidenced and
+  // may be stated on the project card as a fact about the app.
   {
     headline: "Hvordan utnytte KI som en vekstakselerator",
     url: "https://www.dn.no/staticprojects/annonsorinnhold/studio/kunstig-intelligens/hvordan-utnytte-ki-som-en-vekstakselerator/",

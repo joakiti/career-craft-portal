@@ -44,27 +44,20 @@ const REFERENCES = [
   },
   {
     id: 4,
-    da: "DR: Udslæt, allergier og bylder: Ny app skal gøre det nemmere at finde den rette tatovør",
-    en: "DR: Udslæt, allergier og bylder: Ny app skal gøre det nemmere at finde den rette tatovør (in Danish)",
+    da: "DN Studio, Dagens Næringsliv (2024): Hvordan utnytte KI som en vekstakselerator. Annonsørindhold om Tripletex' AI-support; nævner ikke Mikkel ved navn",
+    en: "DN Studio, Dagens Næringsliv (2024): Hvordan utnytte KI som en vekstakselerator. Sponsored content about Tripletex's AI support; does not name Mikkel",
     url: PRESS[1].url,
     internal: false,
   },
   {
     id: 5,
-    da: "DN Studio, Dagens Næringsliv (2024): Hvordan utnytte KI som en vekstakselerator. Annonsørindhold om Tripletex' AI-support; nævner ikke Mikkel ved navn",
-    en: "DN Studio, Dagens Næringsliv (2024): Hvordan utnytte KI som en vekstakselerator. Sponsored content about Tripletex's AI support; does not name Mikkel",
-    url: PRESS[2].url,
-    internal: false,
-  },
-  {
-    id: 6,
     da: `CVR-registret: Synergy Software, CVR-nr. ${CONTACT.cvr}, etableret 20. december 2022`,
     en: `The Danish CVR register: Synergy Software, CVR no. ${CONTACT.cvr}, established 20 December 2022`,
     url: null as string | null,
     internal: false,
   },
   {
-    id: 7,
+    id: 6,
     da: "GitHub: mikkel-kaj",
     en: "GitHub: mikkel-kaj",
     url: SAME_AS[1],
@@ -75,7 +68,7 @@ const REFERENCES = [
 const STATS = [
   { value: "4 mdr", valueEn: "4 mo", da: "Komplet elbørs-platform bygget alene", en: "Complete power exchange platform built solo", refs: [1] },
   { value: "85%", valueEn: "85%", da: "Selvbetjeningsgrad, AI-supportagent hos Visma", en: "Self-service rate, AI support agent at Visma", refs: [1] },
-  { value: "10.000+", valueEn: "10,000+", da: "Månedlige henvendelser, AI-support hos Tripletex", en: "Monthly queries, AI support at Tripletex", refs: [1, 5] },
+  { value: "10.000+", valueEn: "10,000+", da: "Månedlige henvendelser, AI-support hos Tripletex", en: "Monthly queries, AI support at Tripletex", refs: [1, 4] },
   { value: "10+ år", valueEn: "10+ yrs", da: "Erfaring med software i produktion", en: "Experience delivering production software", refs: [2] },
 ];
 
@@ -101,7 +94,7 @@ const KEY_RESULTS = [
     valueEn: "10,000+",
     da: "Månedlige henvendelser håndteret af AI-supporten hos Tripletex med 80%+ præcision. Omtalt i DN Studio (Dagens Næringsliv, 2024).",
     en: "Monthly queries handled by the AI support at Tripletex at 80%+ accuracy. Covered in DN Studio (Dagens Næringsliv, 2024).",
-    refs: [1, 5],
+    refs: [1, 4],
   },
   {
     value: "6 mio. NOK",
@@ -361,7 +354,7 @@ const AnchorPage = ({ lang }: { lang: Lang }) => {
                 {t.intro.map((p, i) => (
                   <p key={i} className="text-base md:text-lg text-gray-200 leading-relaxed mb-3">
                     {p}
-                    <Refs ids={i === 0 ? [6] : [1, 2]} />
+                    <Refs ids={i === 0 ? [5] : [1, 2]} />
                   </p>
                 ))}
                 <p className="mt-2">

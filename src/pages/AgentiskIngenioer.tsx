@@ -39,7 +39,7 @@ const INSTITUTIONS = [
   "IT-Universitetet i København",
 ];
 
-const PRESS_NAMES = ["DR", "Ingeniøren", "DN Studio (Dagens Næringsliv)"];
+const PRESS_NAMES = ["Ingeniøren", "DN Studio (Dagens Næringsliv)"];
 
 const AgentiskIngenioer = () => {
   return (
