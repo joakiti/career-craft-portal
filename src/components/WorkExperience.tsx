@@ -12,6 +12,16 @@ const WorkExperience = () => {
                     <div className="space-y-8">
                         {[
                             {
+                                company: "COPENHAGEN ENERGY TRADING",
+                                role: "Quant / High-Performance Computing",
+                                period: "2026 - Present",
+                                description: "Full-time role building quantitative systems and high-performance computing for energy trading.",
+                                responsibilities: [
+                                    "Quantitative systems and high-performance computing within energy trading",
+                                ],
+                                technologies: [],
+                            },
+                            {
                                 company: "ELLA EXCHANGE",
                                 role: "CTO",
                                 period: "Oct 2025 - Mar 2026",

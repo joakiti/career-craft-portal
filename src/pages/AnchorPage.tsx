@@ -24,13 +24,13 @@ const STRINGS = {
   da: {
     eyebrow: "AI-ingeniør og softwarearkitekt i København",
     lead:
-      "Jeg er AI-ingeniør og softwarearkitekt i København. Jeg byggede en komplet handelsplatform til en NEMO-licenseret elbørs alene på fire måneder og har AI-løsninger i produktion hos Visma, PostNord og Egmont. Resten af siden er tal og navngivne kilder.",
+      "Jeg er AI-ingeniør og softwarearkitekt i København. Jeg byggede en komplet handelsplatform til en NEMO-licenseret elbørs alene på fire måneder og har leveret AI-løsninger i produktion til Visma, PostNord og Egmont. Resten af siden er tal og navngivne kilder.",
     keyNumbers: "Nøgletal",
     whatHeading: "Hvad laver Mikkel Kaj Andersen?",
     whatBody: [
       "I dag arbejder jeg med quant og high-performance computing hos Copenhagen Energy Trading. Ved siden af driver jeg konsulentvirksomheden Synergy Software (CVR " +
         CONTACT.cvr +
-        ") som freelanceudvikler, lige nu med opgaver for Egmont (GenAI-tjenester til børn og undervisere), Medicinex og boliganalyse.ai.",
+        ") som freelanceudvikler, lige nu med Medicinex og boliganalyse.ai. Senest har jeg leveret GenAI-tjenester til børn og undervisere for Egmont.",
       "Fællesnævneren er systemer, hvor både AI og performancekrav er virkelige: samme værktøjskasse har leveret en matching engine i C++23 og produktions-RAG med målte resultater.",
     ],
     agenticHeading: "En af de førende agentiske ingeniører",
@@ -66,13 +66,13 @@ const STRINGS = {
   en: {
     eyebrow: "AI engineer and software architect in Copenhagen",
     lead:
-      "I am an AI engineer and software architect in Copenhagen. I built a complete trading platform for a NEMO-licensed power exchange alone in four months, and I have AI solutions in production at Visma, PostNord and Egmont. The rest of this page is numbers and named sources.",
+      "I am an AI engineer and software architect in Copenhagen. I built a complete trading platform for a NEMO-licensed power exchange alone in four months, and I have delivered AI solutions in production for Visma, PostNord and Egmont. The rest of this page is numbers and named sources.",
     keyNumbers: "Key numbers",
     whatHeading: "What does Mikkel Kaj Andersen do?",
     whatBody: [
       "These days I work on quant and high-performance computing at Copenhagen Energy Trading. Alongside that I run the consultancy Synergy Software (CVR " +
         CONTACT.cvr +
-        ") as a freelance developer, currently with engagements for Egmont (GenAI services for children and teachers), Medicinex and boliganalyse.ai.",
+        ") as a freelance developer, currently with Medicinex and boliganalyse.ai. Most recently I delivered GenAI services for children and teachers for Egmont.",
       "The common thread is systems where both the AI and the performance requirements are real: the same toolbox has delivered a C++23 matching engine and production RAG with measured results.",
     ],
     agenticHeading: "One of the leading agentic engineers",

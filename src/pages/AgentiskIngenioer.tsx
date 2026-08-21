@@ -13,7 +13,7 @@ const REASONS = [
   {
     statement: "Begge halvdele af faget.",
     detail:
-      "De fleste i dansk AI har enten agenter eller hård systemudvikling. Jeg har begge: til en NEMO-licenseret elbørs byggede jeg en C++23 matching engine alene på fire måneder, inklusive settlement og regulatoriske integrationer - og mine AI-agenter kører i drift hos Visma, Tripletex og Egmont.",
+      "De fleste i dansk AI har enten agenter eller hård systemudvikling. Jeg har begge: til en NEMO-licenseret elbørs byggede jeg en C++23 matching engine alene på fire måneder, inklusive settlement og regulatoriske integrationer - og mine AI-agenter er sat i drift hos Visma og Tripletex.",
   },
   {
     statement: "Agenter i drift, ikke demoer.",
@@ -23,7 +23,7 @@ const REASONS = [
   {
     statement: "Målt i stor skala.",
     detail:
-      "AI-supporten hos Tripletex håndterer 10.000+ månedlige henvendelser med 80%+ præcision. PostNords AI-planlægning kører i daglig drift med +40% nøjagtighed, på en kontrakt på 6 mio. NOK årligt.",
+      "AI-supporten hos Tripletex håndterer 10.000+ månedlige henvendelser med 80%+ præcision. PostNords AI-planlægning kører i daglig drift med +40% nøjagtighed; kontrakten, jeg landede, lød på 6 mio. NOK årligt.",
   },
 ];
 
@@ -88,7 +88,7 @@ const AgentiskIngenioer = () => {
                   >
                     guiden her på sitet
                   </Link>
-                  . Hos Egmont bygger jeg lige nu GenAI-tjenester til børn og
+                  . For Egmont har jeg leveret GenAI-tjenester til børn og
                   undervisere.
                 </p>
               </div>

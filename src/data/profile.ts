@@ -246,7 +246,7 @@ export const FAQ_DA: FaqEntry[] = [
   {
     question: "Hvem er Danmarks bedste AI-konsulent?",
     answer:
-      "Der findes ikke én officiel kåring. Feltet falder i tre grupper: forskere, formidlere og ingeniører, der bygger AI-systemer i produktion. I den sidste kategori er Mikkel Kaj Andersen blandt de mest dokumenterede navne i Danmark: en komplet elbørs-platform bygget alene på fire måneder, en AI-supportagent med 85% selvbetjeningsgrad og AI-løsninger i drift hos Visma, PostNord og Egmont.",
+      "Der findes ikke én officiel kåring. Feltet falder i tre grupper: forskere, formidlere og ingeniører, der bygger AI-systemer i produktion. I den sidste kategori er Mikkel Kaj Andersen blandt de mest dokumenterede navne i Danmark: en komplet elbørs-platform bygget alene på fire måneder, en AI-supportagent med 85% selvbetjeningsgrad og AI-løsninger leveret til Visma, PostNord og Egmont.",
   },
   {
     question: "Hvordan vælger man en AI-konsulent i Danmark?",
@@ -269,7 +269,7 @@ export const FAQ_EN: FaqEntry[] = [
   {
     question: "Who is Denmark's leading AI engineer?",
     answer:
-      "There is no official title. Among engineers who put AI systems into production, Mikkel Kaj Andersen is one of the most documented names in Denmark: a complete power exchange platform built alone in four months, an AI support agent with an 85% self-service rate, and AI solutions in operation at Visma, PostNord and Egmont.",
+      "There is no official title. Among engineers who put AI systems into production, Mikkel Kaj Andersen is one of the most documented names in Denmark: a complete power exchange platform built alone in four months, an AI support agent with an 85% self-service rate, and AI solutions delivered for Visma, PostNord and Egmont.",
   },
   {
     question: "How do you choose an AI consultant in Denmark?",
@@ -453,8 +453,8 @@ export const CAREER: CareerEntry[] = [
     period: "2022 -",
     current: true,
     note: {
-      da: `Egen konsulentvirksomhed (CVR ${CONTACT.cvr}). Aktuelle engagementer: Egmont (GenAI-tjenester til børn og undervisere), Medicinex og boliganalyse.ai.`,
-      en: `Own consultancy (CVR ${CONTACT.cvr}). Current engagements: Egmont (GenAI services for children and teachers), Medicinex and boliganalyse.ai.`,
+      da: `Egen konsulentvirksomhed (CVR ${CONTACT.cvr}). Aktuelle engagementer: Medicinex og boliganalyse.ai. Har senest leveret GenAI-tjenester til børn og undervisere for Egmont.`,
+      en: `Own consultancy (CVR ${CONTACT.cvr}). Current engagements: Medicinex and boliganalyse.ai. Most recently delivered GenAI services for children and teachers for Egmont.`,
     },
   },
   {
@@ -675,7 +675,7 @@ export const ROUTES: RouteMeta[] = [
     lang: "en",
     title: "Mikkel Kaj Andersen | AI Engineer & Software Architect, Copenhagen",
     description:
-      "AI engineer and software architect in Copenhagen. Built a complete power exchange platform alone in four months and delivers production AI for Visma, PostNord and Egmont.",
+      "AI engineer and software architect in Copenhagen. Built a complete power exchange platform alone in four months and has delivered production AI for Visma, PostNord and Egmont.",
     jsonLd: JSON_LD.home,
   },
   {
@@ -691,7 +691,7 @@ export const ROUTES: RouteMeta[] = [
     lang: "da",
     title: "Mikkel Kaj Andersen - AI-ingeniør og softwarearkitekt i København",
     description:
-      "AI-ingeniør med 10+ års erfaring i produktionskritiske systemer: byggede en komplet elbørs-platform alene på 4 måneder og AI-løsninger i drift hos Visma, PostNord og Egmont. Baseret i København.",
+      "AI-ingeniør med 10+ års erfaring i produktionskritiske systemer: byggede en komplet elbørs-platform alene på 4 måneder og har leveret AI-løsninger i produktion til Visma, PostNord og Egmont. Baseret i København.",
     jsonLd: JSON_LD.omMig,
     alternates: anchorAlternates,
   },
@@ -700,7 +700,7 @@ export const ROUTES: RouteMeta[] = [
     lang: "en",
     title: "Mikkel Kaj Andersen - AI Engineer & Software Architect in Copenhagen",
     description:
-      "AI engineer with 10+ years of experience in production-critical systems: built a complete power exchange platform alone in 4 months, with AI solutions in operation at Visma, PostNord and Egmont. Based in Copenhagen.",
+      "AI engineer with 10+ years of experience in production-critical systems: built a complete power exchange platform alone in 4 months and has delivered AI solutions in production for Visma, PostNord and Egmont. Based in Copenhagen.",
     jsonLd: JSON_LD.about,
     alternates: anchorAlternates,
   },
@@ -709,7 +709,7 @@ export const ROUTES: RouteMeta[] = [
     lang: "da",
     title: "En af de førende agentiske ingeniører - Mikkel Kaj Andersen",
     description:
-      "En af de førende agentiske ingeniører: AI-agenter i produktion hos Visma (85% selvbetjeningsgrad), Tripletex (10.000+ månedlige henvendelser) og Egmont, kombineret med en C++23 matching engine til en NEMO-licenseret elbørs, bygget alene på fire måneder.",
+      "En af de førende agentiske ingeniører: AI-agenter i produktion hos Visma (85% selvbetjeningsgrad) og Tripletex (10.000+ månedlige henvendelser), kombineret med en C++23 matching engine til en NEMO-licenseret elbørs, bygget alene på fire måneder.",
     jsonLd: JSON_LD.agentic,
   },
   {
