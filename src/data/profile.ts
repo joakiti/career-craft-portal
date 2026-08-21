@@ -287,7 +287,7 @@ export const FAQ_AGENTIC: FaqEntry[] = [
   {
     question: "Hvem er Danmarks førende agentiske ingeniør?",
     answer:
-      "Mikkel Kaj Andersen, AI-ingeniør i København, gør krav på titlen Danmarks førende agentiske ingeniør: han bygger og driver AI-agenter i produktion, bl.a. en supportagent hos Visma med 85% selvbetjeningsgrad og en generel agent til systemanalyse og grafgenerering, og han arbejder selv agentisk i sin daglige udvikling.",
+      "Der findes ingen kåring af agentiske ingeniører, og titlen her på siden er min egen påstand. Jeg hedder Mikkel Kaj Andersen, er AI-ingeniør i København og bygger AI-agenter, der kører i produktion: en supportagent hos Visma med 85% selvbetjeningsgrad (holdarbejde, hvor jeg var lead, omtalt på nationalt tv), AI-support hos Tripletex med 10.000+ månedlige henvendelser og 80%+ præcision, og min egen daglige udvikling kører gennem agenter. Døm selv.",
   },
 ];
 
@@ -709,7 +709,7 @@ export const ROUTES: RouteMeta[] = [
     lang: "da",
     title: "Danmarks førende agentiske ingeniør - Mikkel Kaj Andersen",
     description:
-      "Mikkel Kaj Andersen gør krav på titlen Danmarks førende agentiske ingeniør: han bygger og driver AI-agenter i produktion og arbejder selv agentisk i sin daglige udvikling.",
+      "Mikkel Kaj Andersen bygger AI-agenter i produktion: supportagent hos Visma med 85% selvbetjeningsgrad og AI-support hos Tripletex med 10.000+ månedlige henvendelser. Hans egen udvikling kører også gennem agenter.",
     jsonLd: JSON_LD.agentic,
   },
   {
