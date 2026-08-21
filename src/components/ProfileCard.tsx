@@ -14,7 +14,7 @@ const ProfileCard = () => {
                 onClick={() => setIsAlternatePhoto(!isAlternatePhoto)}
                 aria-label="Toggle between profile photos"
             >
-                <AnimatePresence mode="wait">
+                <AnimatePresence mode="wait" initial={false}>
                     <motion.div
                         key={isAlternatePhoto ? "alt" : "main"}
                         initial={{ opacity: 0 }}

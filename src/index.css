@@ -98,4 +98,23 @@
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid var(--glass-border);
   }
+
+  /* Fades content out before it reaches the horizontal clip edge, so carousel
+     items never cut off mid-word. Works on any background. */
+  .edge-fade-x {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 6rem,
+      black calc(100% - 6rem),
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 6rem,
+      black calc(100% - 6rem),
+      transparent
+    );
+  }
 }

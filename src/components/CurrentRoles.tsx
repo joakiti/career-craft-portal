@@ -1,18 +1,14 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { motion } from "framer-motion";
+import { useReveal } from "@/hooks/useReveal";
 
 const CurrentRoles = () => {
-    const { ref, isInView } = useScrollAnimation();
+    const { ref, revealClass } = useReveal();
 
     return (
-        <motion.div
+        <div
             ref={ref}
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.5 }}
-            className="container max-w-7xl mx-auto px-4"
+            className={`container max-w-7xl mx-auto px-4 ${revealClass}`}
         >
             <div className="space-y-6">
                 <h2 className="text-3xl font-extrabold text-white">Recent Experience</h2>
@@ -81,7 +77,7 @@ const CurrentRoles = () => {
                     </div>
                 </Card>
             </div>
-        </motion.div>
+        </div>
     );
 };
 

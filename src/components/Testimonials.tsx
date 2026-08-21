@@ -141,7 +141,7 @@ application of groundbreaking AI technology.`
         {
             name: "Marie Preisler",
             role: "CEO",
-            company: "Make It Matter",
+            company: "YOLO Cards",
             image: "/img/people/marie_preisler.jpg",
             content: `Det har været en sand fornøjelse at have Mikkel som ekstern IT-konsulent på vores projekt. Han har leveret et solidt og brugervenligt system, som
 effektivt håndterer omkring 300 ordrer dagligt. Mikkel har været utrolig nem at kommunikere med, og han har hurtigt fanget alle aspekter af vores behov.

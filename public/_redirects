@@ -1,1 +1,10 @@
-/* /index.html 200 
+# Prerendered routes: serve the static snapshots explicitly (Netlify also
+# resolves directory indexes on its own; these rules remove any doubt).
+/om-mig                        /om-mig/index.html                        200
+/about                         /about/index.html                         200
+/danmarks-mest-agentiske-mand  /danmarks-mest-agentiske-mand/index.html  200
+/profile                       /profile/index.html                       200
+/ai-guide                      /ai-guide/index.html                      200
+
+# SPA fallback for anything else
+/*  /index.html  200

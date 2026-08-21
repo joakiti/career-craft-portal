@@ -1,8 +1,7 @@
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { motion } from "framer-motion";
+import { useReveal } from "@/hooks/useReveal";
 
 const AboutSection = () => {
-    const { ref, isInView } = useScrollAnimation();
+    const { ref, revealClass } = useReveal();
 
     return (
         <div>
@@ -11,12 +10,9 @@ const AboutSection = () => {
                     Hi there <span aria-hidden="true">👋</span> welcome to my corner of the internet <span aria-hidden="true">🗺️</span>
                 </span>
             </h2>
-            <motion.div
+            <div
                 ref={ref}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.5 }}
-                className="glass-light rounded-2xl p-6 md:p-8"
+                className={`glass-light rounded-2xl p-6 md:p-8 ${revealClass}`}
             >
                 <h2 className="text-2xl md:text-3xl font-extrabold mb-3 text-white">Let's build together <span aria-hidden="true">✨</span></h2>
                 <p className="text-gray-200 leading-relaxed font-medium">
@@ -28,7 +24,7 @@ const AboutSection = () => {
                 <p className="text-gray-200 leading-relaxed font-medium mt-3">
                     Outside of work, I try to keep a good balance. I love spending time with my son, and when I can, I hit the trails for a hike, climb some rocks, or get lost in a good strategy game.
                 </p>
-            </motion.div>
+            </div>
         </div>
     );
 };

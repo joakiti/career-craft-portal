@@ -1,18 +1,14 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { motion } from "framer-motion";
+import { useReveal } from "@/hooks/useReveal";
 
 const Education = () => {
-    const { ref, isInView } = useScrollAnimation();
+    const { ref, revealClass } = useReveal<HTMLElement>();
 
     return (
-        <motion.section
+        <section
             ref={ref}
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.5 }}
-            className="py-16 bg-card-lighter px-4 relative overflow-hidden"
+            className={`py-16 bg-card-lighter px-4 relative overflow-hidden ${revealClass}`}
         >
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 pointer-events-none"/>
 
@@ -68,7 +64,7 @@ const Education = () => {
                     </div>
                 </div>
             </div>
-        </motion.section>
+        </section>
     );
 };
 

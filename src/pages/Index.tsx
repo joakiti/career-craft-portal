@@ -4,35 +4,9 @@ import ImageWithFallback from "@/components/ui/image-with-fallback";
 import { Brain, Code, Database, ArrowRight, Check } from "lucide-react";
 import Footer from "@/components/Footer";
 import TechnologyCarousel from "@/components/TechnologyCarousel";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { useReveal } from "@/hooks/useReveal";
 import { useMousePosition } from "@/hooks/useMousePosition";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import { useEffect, useState } from "react";
-
-const CountUp = ({ target, suffix = "" }: { target: number; suffix?: string }) => {
-  const [count, setCount] = useState(0);
-  const { ref, isInView } = useScrollAnimation();
-
-  useEffect(() => {
-    if (!isInView) return;
-    const start = 0;
-    const duration = 1200;
-    const startTime = performance.now();
-
-    const tick = (now: number) => {
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setCount(Math.round(eased * target));
-      if (progress < 1) requestAnimationFrame(tick);
-    };
-
-    requestAnimationFrame(tick);
-  }, [isInView, target]);
-
-  return <span ref={ref}>{count}{suffix}</span>;
-};
 
 interface MouseFollowCardProps {
   children: React.ReactNode;
@@ -63,30 +37,11 @@ const MouseFollowCard = ({ children, className = "" }: MouseFollowCardProps) => 
   );
 };
 
-const stagger = {
-  container: {
-    visible: {
-      transition: { staggerChildren: 0.15 },
-    },
-  },
-  item: {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  },
-};
-
 const Index = () => {
-  const hero = useScrollAnimation();
-  const tech = useScrollAnimation();
-  const services = useScrollAnimation();
-  const success = useScrollAnimation();
-  const cta = useScrollAnimation();
-  const reducedMotion = useReducedMotion();
-
-  const fadeSlideUp = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
+  const tech = useReveal();
+  const services = useReveal();
+  const success = useReveal();
+  const cta = useReveal();
 
   const serviceCards = [
     {
@@ -158,27 +113,22 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-card flex flex-col">
-      {/* Hero Section */}
-      <motion.section
-        ref={hero.ref}
-        initial="hidden"
-        animate={hero.isInView ? "visible" : "hidden"}
-        variants={stagger.container}
-        className="pt-28 md:pt-32 pb-12 md:pb-16 px-4"
-      >
+      {/* Hero Section: content is present and visible immediately; the only
+          entrance effect is a short CSS fade that never blocks first paint. */}
+      <section className="pt-28 md:pt-32 pb-12 md:pb-16 px-4 animate-fade-in">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-4 md:space-y-6">
-              <motion.div variants={stagger.item} className="text-accent font-medium hidden md:block">
-                Senior Software Engineer & AI Tech Lead
-              </motion.div>
-              <motion.h1 variants={stagger.item} className="text-3xl md:text-5xl font-bold text-white">
+              <p className="text-accent font-medium hidden md:block">
+                AI Engineer & Software Architect
+              </p>
+              <h1 className="text-3xl md:text-5xl font-bold text-white">
                 Making Technology Work for Your Business
-              </motion.h1>
-              <motion.p variants={stagger.item} className="text-base md:text-lg text-gray-300 leading-relaxed">
+              </h1>
+              <p className="text-base md:text-lg text-gray-300 leading-relaxed">
                 As your tech partner, I combine deep expertise in full-stack development, AI implementation, and system architecture.
-              </motion.p>
-              <motion.div variants={stagger.item} className="flex flex-col lg:flex-row gap-4">
+              </p>
+              <div className="flex flex-col lg:flex-row gap-4">
                 <div className="w-full md:w-auto">
                   <ConsultationForm />
                 </div>
@@ -188,14 +138,14 @@ const Index = () => {
                 >
                   Explore Profile <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-              </motion.div>
+              </div>
             </div>
-            <motion.div variants={stagger.item} className="relative order-first md:order-last">
+            <div className="relative order-first md:order-last">
               <div className="w-full max-w-md mx-auto">
                 <div className="absolute inset-0 bg-gradient-radial from-accent/5 via-transparent to-transparent rounded-2xl" />
                 <ImageWithFallback
                   src="/img/profile_pic.jpg"
-                  alt="Your Tech Partner"
+                  alt="Mikkel Kaj Andersen"
                   className="rounded-2xl shadow-2xl w-full hover:shadow-[0_0_30px_rgba(251,191,36,0.15)] transition-shadow duration-500"
                   fallbackClassName="rounded-2xl shadow-2xl w-full"
                 />
@@ -203,30 +153,24 @@ const Index = () => {
                   <div className="flex items-center gap-4 md:gap-6">
                     <div>
                       <div className="text-base md:text-xl font-bold text-accent truncate">Mikkel Andersen</div>
-                      <div className="text-xs md:text-sm text-gray-400 md:mt-1">Senior Software Engineer & AI Tech Lead</div>
+                      <div className="text-xs md:text-sm text-gray-400 md:mt-1">AI Engineer & Software Architect</div>
                     </div>
                     <div className="border-l border-accent/10 pl-4 md:pl-6">
-                      <div className="text-lg md:text-2xl font-bold text-accent">
-                        <CountUp target={10} suffix="+" />
-                      </div>
+                      <div className="text-lg md:text-2xl font-bold text-accent">10+</div>
                       <div className="text-xs md:text-sm text-gray-400">Years of Experience</div>
                     </div>
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Technologies Section */}
-      <motion.section
+      <section
         ref={tech.ref}
-        variants={fadeSlideUp}
-        initial="hidden"
-        animate={tech.isInView ? "visible" : "hidden"}
-        transition={{ duration: 0.5, delay: 0.1 }}
-        className="pb-12 md:pb-16 bg-card"
+        className={`pb-12 md:pb-16 bg-card ${tech.revealClass}`}
       >
         <div className="container mx-auto max-w-7xl px-0 md:px-4">
           <div className="text-center mb-6 md:mb-12">
@@ -237,26 +181,23 @@ const Index = () => {
           </div>
           <TechnologyCarousel />
         </div>
-      </motion.section>
+      </section>
 
       {/* Core Services — Bento Grid */}
-      <motion.section
+      <section
         ref={services.ref}
-        initial="hidden"
-        animate={services.isInView ? "visible" : "hidden"}
-        variants={stagger.container}
-        className="pb-12 md:pb-16 px-4 bg-card"
+        className={`pb-12 md:pb-16 px-4 bg-card ${services.revealClass}`}
       >
         <div className="container mx-auto max-w-7xl">
-          <motion.div variants={stagger.item} className="text-center mb-6 md:mb-12">
+          <div className="text-center mb-6 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Ways I Can Help Your Business</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
               Let's work together to create solutions - I can help you with the following:
             </p>
-          </motion.div>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8">
-            {serviceCards.map((card, i) => (
-              <motion.div key={card.title} variants={stagger.item}>
+            {serviceCards.map((card) => (
+              <div key={card.title}>
                 <MouseFollowCard className={`glass rounded-lg group h-full hover:border-accent/30 transition-all ${card.span}`}>
                   <div className="p-6 h-full flex flex-col">
                     <div className="mb-6">
@@ -282,32 +223,28 @@ const Index = () => {
                     </Link>
                   </div>
                 </MouseFollowCard>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Recent Success Section */}
-      <motion.section
+      <section
         ref={success.ref}
-        initial="hidden"
-        animate={success.isInView ? "visible" : "hidden"}
-        variants={stagger.container}
-        className="py-8 md:py-16 px-4 bg-card-lighter"
+        className={`py-8 md:py-16 px-4 bg-card-lighter ${success.revealClass}`}
       >
         <div className="container mx-auto max-w-7xl">
-          <motion.div variants={stagger.item} className="text-center mb-6 md:mb-12">
+          <div className="text-center mb-6 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Real Results for Real Businesses</h2>
             <p className="text-gray-300 max-w-2xl mx-auto">
               See how we've helped organizations like yours achieve their digital goals.
             </p>
-          </motion.div>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-8">
             {successStories.map((story, i) => (
-              <motion.div
+              <div
                 key={story.company}
-                variants={stagger.item}
                 className="glass-light p-6 rounded-lg group hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300"
               >
                 <div className="relative">
@@ -317,20 +254,16 @@ const Index = () => {
                   <h3 className="text-accent font-medium mb-2 border-l-2 border-accent pl-3">{story.company}</h3>
                 </div>
                 <p className="text-gray-300 text-sm">{story.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Final Call to Action */}
-      <motion.section
+      <section
         ref={cta.ref}
-        variants={fadeSlideUp}
-        initial="hidden"
-        animate={cta.isInView ? "visible" : "hidden"}
-        transition={{ duration: 0.5, delay: 0.1 }}
-        className="py-8 md:py-16 px-4 bg-card"
+        className={`py-8 md:py-16 px-4 bg-card ${cta.revealClass}`}
       >
         <div className="container mx-auto max-w-7xl">
           <div className="text-center max-w-3xl mx-auto space-y-6">
@@ -346,7 +279,7 @@ const Index = () => {
             </Link>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       <Footer />
     </div>

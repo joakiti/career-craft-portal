@@ -107,10 +107,7 @@ const TechnologyCarousel = () => {
     }
 
     return (
-        <div className="w-full py-4 relative">
-            <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-r from-card to-transparent z-10" />
-            <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-l from-card to-transparent z-10" />
-
+        <div className="w-full py-4 relative edge-fade-x">
             <div className="space-y-2 pt-24">
                 <InfiniteSlider gap={8} speed={35} speedOnHover={80}>
                     {row1.map((tech) => (

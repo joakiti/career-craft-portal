@@ -2,7 +2,7 @@ const SocialLinks = () => {
     return (
         <>
             <a
-                href="https://github.com/joakiti"
+                href="https://github.com/mikkel-kaj"
                 className="inline-flex items-center justify-center w-11 h-11 text-gray-300 hover:text-accent hover:drop-shadow-[0_0_8px_rgba(251,191,36,0.3)] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
                 aria-label="GitHub Profile"
             >

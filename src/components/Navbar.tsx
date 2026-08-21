@@ -151,7 +151,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100vw-2rem)] max-w-2xl">
-      <div className="bg-card/60 backdrop-blur-xl rounded-full border border-accent/10 px-4 py-2.5 shadow-lg shadow-black/20">
+      <div className="bg-card/90 backdrop-blur-xl rounded-full border border-accent/10 px-4 py-2.5 shadow-lg shadow-black/20">
         <div className="flex justify-between items-center">
           <Link
             to="/"

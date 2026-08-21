@@ -4,39 +4,42 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Primary Meta Tags -->
-    <title>Mikkel Kaj Andersen | Senior Software Engineer & AI Architect</title>
-    <meta name="title" content="Mikkel Kaj Andersen | Senior Software Engineer & AI Architect" />
-    <meta name="description" content="Expert technical consultancy in full-stack development, AI/ML solutions, and system architecture. Delivering measurable results for enterprise clients." />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mikkelkaj.com/" />
-    <meta property="og:title" content="Mikkel Kaj Andersen | Senior Software Engineer & AI Architect" />
-    <meta property="og:description" content="Expert technical consultancy in full-stack development, AI/ML solutions, and system architecture. Delivering measurable results for enterprise clients." />
-    <meta property="og:image" content="/img/social-preview.jpg" />
 
-    <!-- Twitter -->
+    <!-- Per-route head tags. The block between the markers is replaced by
+         scripts/prerender.mjs for every prerendered route; the content here is
+         the dev-server default (home route). -->
+    <!-- meta:start -->
+    <title>Mikkel Kaj Andersen | AI Engineer & Software Architect, Copenhagen</title>
+    <meta name="title" content="Mikkel Kaj Andersen | AI Engineer & Software Architect, Copenhagen" />
+    <meta name="description" content="AI engineer and software architect in Copenhagen. Built a complete power exchange platform alone in four months and delivers production AI for Visma, PostNord and Egmont." />
+    <link rel="canonical" href="https://www.mikkelkajandersen.dk/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.mikkelkajandersen.dk/" />
+    <meta property="og:title" content="Mikkel Kaj Andersen | AI Engineer & Software Architect, Copenhagen" />
+    <meta property="og:description" content="AI engineer and software architect in Copenhagen. Built a complete power exchange platform alone in four months and delivers production AI for Visma, PostNord and Egmont." />
+    <meta property="og:image" content="https://www.mikkelkajandersen.dk/img/social-preview.jpg" />
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://mikkelkaj.com/" />
-    <meta property="twitter:title" content="Mikkel Kaj Andersen | Senior Software Engineer & AI Architect" />
-    <meta property="twitter:description" content="Expert technical consultancy in full-stack development, AI/ML solutions, and system architecture. Delivering measurable results for enterprise clients." />
-    <meta property="twitter:image" content="/img/social-preview.jpg" />
+    <meta property="twitter:url" content="https://www.mikkelkajandersen.dk/" />
+    <meta property="twitter:title" content="Mikkel Kaj Andersen | AI Engineer & Software Architect, Copenhagen" />
+    <meta property="twitter:description" content="AI engineer and software architect in Copenhagen. Built a complete power exchange platform alone in four months and delivers production AI for Visma, PostNord and Egmont." />
+    <meta property="twitter:image" content="https://www.mikkelkajandersen.dk/img/social-preview.jpg" />
+    <!-- meta:end -->
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
+
     <!-- Theme Color -->
-    <meta name="theme-color" content="#0f172a" />
-    
+    <meta name="theme-color" content="#1A1D24" />
+
     <!-- Manifest -->
     <link rel="manifest" href="/manifest.json" />
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" as="image" href="/img/profile_pic.jpg" />
   </head>
   <body>
     <div id="root"></div>
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RH34QE9SMK"></script>
     <script>
@@ -47,7 +50,5 @@
       gtag('config', 'G-RH34QE9SMK');
     </script>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- Preload Critical Resources -->
-    <link rel="preload" as="image" href="/img/profile_pic.jpg" />
   </body>
 </html>
