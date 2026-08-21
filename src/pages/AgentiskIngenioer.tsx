@@ -4,9 +4,10 @@ import { FAQ_AGENTIC, TESTIMONIALS } from "@/data/profile";
 
 // Entity page for the agentic-engineer title. Danish only by design: the term
 // "agentisk ingeniør" is still unclaimed, and the first mover defines it.
-// Register (owner-directed, third iteration): state the title flat, then pay
-// for it immediately with named institutions and measured numbers. No hedging,
-// no self-appointed framing. Team work stays labelled as team work.
+// Register (owner-directed): state the title, then pay for it immediately with
+// named institutions and measured numbers. No hedging, no self-appointed
+// framing. The title form is "En af de førende agentiske ingeniører" per the
+// captain's direct confirmation; team work stays labelled as team work.
 
 const REASONS = [
   {
@@ -50,7 +51,7 @@ const AgentiskIngenioer = () => {
               Mikkel Kaj Andersen · AI-ingeniør, København
             </p>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Danmarks førende agentiske ingeniør
+              En af de førende agentiske ingeniører
             </h1>
             <p className="text-base md:text-lg text-gray-200 leading-relaxed">
               AI-agenter i produktion for danske og nordiske virksomheder:

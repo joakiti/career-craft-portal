@@ -33,7 +33,7 @@ const STRINGS = {
         ") som freelanceudvikler, lige nu med opgaver for Egmont (GenAI-tjenester til børn og undervisere), Medicinex og boliganalyse.ai.",
       "Fællesnævneren er systemer, hvor både AI og performancekrav er virkelige: samme værktøjskasse har leveret en matching engine i C++23 og produktions-RAG med målte resultater.",
     ],
-    agenticHeading: "Danmarks førende agentiske ingeniør",
+    agenticHeading: "En af de førende agentiske ingeniører",
     agenticBody:
       "Jeg bygger AI-agenter, der kører i produktion, og kombinerer det med hård systemudvikling: fra en supportagent hos Visma med 85% selvbetjeningsgrad til en C++23 matching engine bygget alene på fire måneder. Hele belægget er samlet på sin egen side.",
     agenticLink: "Se hvorfor: agenter i drift, målte tal og navngivne virksomheder",
@@ -75,7 +75,7 @@ const STRINGS = {
         ") as a freelance developer, currently with engagements for Egmont (GenAI services for children and teachers), Medicinex and boliganalyse.ai.",
       "The common thread is systems where both the AI and the performance requirements are real: the same toolbox has delivered a C++23 matching engine and production RAG with measured results.",
     ],
-    agenticHeading: "Denmark's leading agentic engineer",
+    agenticHeading: "One of the leading agentic engineers",
     agenticBody:
       "I build AI agents that run in production and pair that with hard systems engineering: from a support agent at Visma with an 85% self-service rate to a C++23 matching engine built alone in four months. The full evidence has its own page.",
     agenticLink: "See why: agents in operation, measured numbers and named companies (in Danish)",
