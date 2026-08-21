@@ -73,14 +73,19 @@ const REFERENCES = [
   },
 ];
 
-const STATS = [
-  { value: "4 mdr", valueEn: "4 mo", da: "Komplet elbørs-platform bygget alene", en: "Complete power exchange platform built solo", refs: [1] },
-  { value: "85%", valueEn: "85%", da: "Selvbetjeningsgrad, AI-supportagent hos Visma", en: "Self-service rate, AI support agent at Visma", refs: [1] },
-  { value: "10.000+", valueEn: "10,000+", da: "Månedlige henvendelser, AI-support hos Tripletex", en: "Monthly queries, AI support at Tripletex", refs: [1, 4] },
-  { value: "10+ år", valueEn: "10+ yrs", da: "Erfaring med software i produktion", en: "Experience delivering production software", refs: [2] },
+// Matti-style "Previous Clients" row, placed directly under the intro. The
+// numbers live in Nøgleresultater where they have context.
+const CLIENTS = [
+  "Visma",
+  "PostNord",
+  "Egmont",
+  "Tripletex",
+  "Ella Exchange",
+  "Netcompany",
+  "Keylane",
+  "IT-Minds",
+  "IT-Universitetet i København",
 ];
-
-const CLIENTS = ["Visma", "PostNord", "Egmont", "Tripletex", "Ella Exchange"];
 
 const KEY_RESULTS = [
   {
@@ -374,23 +379,6 @@ const AnchorPage = ({ lang }: { lang: Lang }) => {
                   </Link>
                 </p>
               </header>
-
-              {/* Stat strip */}
-              <section aria-label={lang === "da" ? "Nøgletal" : "Key numbers"}>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                  {STATS.map((s) => (
-                    <div key={s.da} className="glass-light rounded-2xl p-4 text-center">
-                      <div className="text-xl md:text-2xl font-bold text-accent">
-                        {lang === "da" ? s.value : s.valueEn}
-                      </div>
-                      <div className="text-xs md:text-sm text-gray-300 mt-1">
-                        {s[lang]}
-                        <Refs ids={s.refs} />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </section>
 
               <section aria-labelledby="clients">
                 <SectionHeading id="clients">{t.clientsHeading}</SectionHeading>

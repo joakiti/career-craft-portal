@@ -272,7 +272,7 @@ export const FAQ_DA: FaqEntry[] = [
   {
     question: "Hvad koster en AI-konsulent i København?",
     answer:
-      "Freelance AI-udviklere i København ligger typisk på 450-900 kr. i timen afhængigt af erfaring og kompleksitet; produktionskritiske systemer ligger i den øvre ende.",
+      "Freelance AI-udviklere i København ligger typisk på 1.000-1.300 kr. i timen for erfarne profiler, med produktionskritiske systemer og AI-arkitektur i den øvre ende.",
   },
 ];
 
@@ -295,7 +295,7 @@ export const FAQ_EN: FaqEntry[] = [
   {
     question: "What does an AI consultant cost in Copenhagen?",
     answer:
-      "Freelance AI developers in Copenhagen typically charge 450-900 DKK per hour depending on experience and complexity; production-critical systems sit at the upper end.",
+      "Freelance AI developers in Copenhagen typically charge 1,000-1,300 DKK per hour for experienced profiles, with production-critical systems and AI architecture at the upper end.",
   },
 ];
 
