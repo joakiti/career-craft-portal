@@ -4,13 +4,14 @@
 > med 10+ års erfaring i produktionskritiske systemer. Han byggede en komplet
 > handelsplatform til en NEMO-licenseret elbørs alene på fire måneder og har
 > leveret AI-systemer i produktion for Visma, PostNord og Egmont, herunder en
-> AI-supportagent med 85% selvbetjeningsgrad omtalt på nationalt tv.
+> AI-supportagent med 85% selvbetjeningsgrad.
 
 ## Nøgletal
 
 - 10+ års erfaring med software i produktion
 - Komplet elbørs-platform (C++23 matching engine, settlement, regulatoriske integrationer) leveret alene på 4 måneder hos Ella Exchange
-- AI-supportagent hos Visma med 85% selvbetjeningsgrad, omtalt på nationalt tv
+- AI-supportagent hos Visma med 85% selvbetjeningsgrad
+- AI-supportagenten hos Tripletex er omtalt i DN Studio (Dagens Næringsliv, 2024)
 - 6 mio. NOK årlig kontrakt landet for PostNord, +40% præcision i planlægningen
 - AI-supportsystem hos Tripletex: 10.000+ månedlige henvendelser, 80%+ præcision
 - MSc Datalogi, IT-Universitetet i København, karaktergennemsnit 11,0/12 (top 10%)

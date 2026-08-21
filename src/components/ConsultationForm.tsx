@@ -33,8 +33,8 @@ const ConsultationForm = ({ size = "default" }: ConsultationFormProps) => {
     window.location.href = mailtoUrl;
     
     toast({
-      title: "Message Prepared",
-      description: "Your consultation request has been prepared in your default email client.",
+      title: "Besked klargjort",
+      description: "Din forespørgsel er klargjort i dit e-mail-program.",
     });
   };
 
@@ -50,7 +50,7 @@ const ConsultationForm = ({ size = "default" }: ConsultationFormProps) => {
           className="w-full md:w-auto bg-accent hover:bg-accent/90 text-primary h-[44px] px-6 text-base font-medium group relative overflow-hidden transition-all duration-300"
         >
           <span className="relative z-10 flex items-center gap-2">
-            Schedule Free Consultation
+            Book en gratis samtale
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </span>
           <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/30 to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -60,50 +60,50 @@ const ConsultationForm = ({ size = "default" }: ConsultationFormProps) => {
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-white flex items-center gap-2">
             <Mail className="w-6 h-6 text-accent" />
-            Schedule Your Consultation
+            Book en samtale
           </DialogTitle>
           <DialogDescription className="text-gray-400 text-base">
-            Take the first step towards transforming your technical challenges into opportunities.
+            Tag første skridt mod at få løst jeres tekniske udfordringer.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-6 mt-4">
           <div className="space-y-2">
-            <Label htmlFor="name" className="text-white text-sm font-medium">Full Name</Label>
+            <Label htmlFor="name" className="text-white text-sm font-medium">Fulde navn</Label>
             <Input
               id="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Your name"
+              placeholder="Dit navn"
               required
               className="bg-card-lighter border-accent/20 text-white placeholder:text-gray-500 focus:border-accent/50 transition-colors"
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="engagement-model" className="text-white text-sm font-medium">Engagement Model</Label>
+            <Label htmlFor="engagement-model" className="text-white text-sm font-medium">Samarbejdsform</Label>
             <Select required value={selectedModel} onValueChange={setSelectedModel}>
               <SelectTrigger id="engagement-model" className="bg-card-lighter border-accent/20 text-white">
-                <SelectValue placeholder="Choose an engagement model" />
+                <SelectValue placeholder="Vælg samarbejdsform" />
               </SelectTrigger>
               <SelectContent className="bg-card border-accent/20">
                 <SelectItem value="full-time" className="text-white">
-                  Full-Time Project
+                  Fuldtidsprojekt
                 </SelectItem>
                 <SelectItem value="part-time" className="text-white">
-                  Part-Time Engagement
+                  Deltidssamarbejde
                 </SelectItem>
                 <SelectItem value="package" className="text-white">
-                  Consultancy Package
+                  Konsulentpakke
                 </SelectItem>
               </SelectContent>
             </Select>
           </div>
           <div className="space-y-2">
-            <Label htmlFor="message" className="text-white text-sm font-medium">Project Details</Label>
+            <Label htmlFor="message" className="text-white text-sm font-medium">Projektbeskrivelse</Label>
             <Textarea
               id="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              placeholder="Please describe your project requirements or technical challenges"
+              placeholder="Beskriv jeres projekt eller tekniske udfordringer"
               required
               className="bg-card-lighter border-accent/20 text-white placeholder:text-gray-500 focus:border-accent/50 transition-colors min-h-[150px] resize-none"
             />
@@ -113,7 +113,7 @@ const ConsultationForm = ({ size = "default" }: ConsultationFormProps) => {
             className="w-full bg-accent hover:bg-accent/90 text-primary font-medium py-6 text-lg relative group overflow-hidden"
           >
             <span className="relative z-10 flex items-center justify-center gap-2">
-              Send Request
+              Send forespørgsel
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/30 to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity" />

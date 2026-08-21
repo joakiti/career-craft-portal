@@ -18,12 +18,12 @@ const REASONS = [
   {
     statement: "Agenter i drift, ikke demoer.",
     detail:
-      "Som lead hos Visma leverede jeg en supportagent med 85% selvbetjeningsgrad, bygget på custom RAG med vektorsøgning og re-ranking, plus en generel agent til systemanalyse og grafgenerering. Arbejdet er omtalt på nationalt tv.",
+      "Som lead hos Visma leverede jeg en supportagent med 85% selvbetjeningsgrad, bygget på custom RAG med vektorsøgning og re-ranking, plus en generel agent til systemanalyse og grafgenerering.",
   },
   {
     statement: "Målt i stor skala.",
     detail:
-      "AI-supporten hos Tripletex håndterer 10.000+ månedlige henvendelser med 80%+ præcision. PostNords AI-planlægning kører i daglig drift med +40% nøjagtighed; kontrakten, jeg landede, lød på 6 mio. NOK årligt.",
+      "AI-supporten hos Tripletex håndterer 10.000+ månedlige henvendelser med 80%+ præcision og er omtalt i DN Studio (Dagens Næringsliv, 2024). PostNords AI-planlægning kører i daglig drift med +40% nøjagtighed; kontrakten, jeg landede, lød på 6 mio. NOK årligt.",
   },
 ];
 
@@ -39,7 +39,7 @@ const INSTITUTIONS = [
   "IT-Universitetet i København",
 ];
 
-const PRESS_NAMES = ["DR", "Ingeniøren", "Nationalt tv"];
+const PRESS_NAMES = ["DR", "Ingeniøren", "DN Studio (Dagens Næringsliv)"];
 
 const AgentiskIngenioer = () => {
   return (

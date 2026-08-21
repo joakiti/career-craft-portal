@@ -12,7 +12,7 @@ const ProfileCard = () => {
                 type="button"
                 className="relative w-full cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-2xl"
                 onClick={() => setIsAlternatePhoto(!isAlternatePhoto)}
-                aria-label="Toggle between profile photos"
+                aria-label="Skift profilbillede"
             >
                 <AnimatePresence mode="wait" initial={false}>
                     <motion.div
@@ -39,7 +39,7 @@ const ProfileCard = () => {
                     <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
                 </span>
             </div>
-            <p className="text-gray-300 mb-6">Computer Science Specialist | Former CTO, Ella Exchange</p>
+            <p className="text-gray-300 mb-6">Datalog | Tidligere CTO, Ella Exchange</p>
             <div className="flex flex-wrap gap-4 mb-6">
                 <a href="mailto:hello@mikkelkajandersen.dk"
                    className="text-link hover:text-link-hover transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded">

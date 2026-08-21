@@ -28,7 +28,7 @@ export const PROFILE_IMAGE = `${SITE_URL}/img/profile_pic.jpg`;
 // llms.txt). Visible page prose is first person and understated; do not reuse
 // this text in anything a human reads on the site.
 export const PERSON_DESCRIPTION =
-  "Dansk AI-ingeniør og softwarearkitekt med 10+ års erfaring i produktionskritiske systemer. Byggede en komplet handelsplatform til en NEMO-licenseret elbørs alene på fire måneder og har leveret AI-systemer i produktion for Visma, PostNord og Egmont, herunder en AI-supportagent med 85% selvbetjeningsgrad omtalt på nationalt tv.";
+  "Dansk AI-ingeniør og softwarearkitekt med 10+ års erfaring i produktionskritiske systemer. Byggede en komplet handelsplatform til en NEMO-licenseret elbørs alene på fire måneder og har leveret AI-systemer i produktion for Visma, PostNord og Egmont, herunder en AI-supportagent med 85% selvbetjeningsgrad.";
 
 export interface Testimonial {
   name: string;
@@ -84,14 +84,17 @@ export const TESTIMONIALS: Testimonial[] = [
   },
 ];
 
-// Press items. Only URLs verified to resolve may appear here.
+// Press items. Only URLs verified to resolve may appear here. Items with
+// aboutPerson: false cover his work without naming him (e.g. sponsored product
+// coverage) - usable as supporting references on pages, never in subjectOf.
 export const PRESS = [
   {
     headline:
       "Nyuddannet softwareudvikler: Jeg har fundet det sted, hvor jeg kan skabe min egen hverdag",
     url: "https://ing.dk/sponseret-indhold/nyuddannet-softwareudvikler-jeg-har-fundet-det-sted-hvor-jeg-kan-skabe-min-egen-hverdag",
     publisher: "Ingeniøren",
-    datePublished: "2023-09-19",
+    datePublished: "2023-09-19" as string | undefined,
+    aboutPerson: true,
   },
   {
     headline:
@@ -99,6 +102,15 @@ export const PRESS = [
     url: "https://www.dr.dk/nyheder/regionale/oestjylland/udslaet-allergier-og-bylder-ny-app-skal-goere-det-nemmere-finde",
     publisher: "DR",
     datePublished: undefined as string | undefined,
+    aboutPerson: true,
+  },
+  {
+    headline: "Hvordan utnytte KI som en vekstakselerator",
+    url: "https://www.dn.no/staticprojects/annonsorinnhold/studio/kunstig-intelligens/hvordan-utnytte-ki-som-en-vekstakselerator/",
+    publisher: "DN Studio (Dagens Næringsliv)",
+    datePublished: "2024-03-13" as string | undefined,
+    // Annonsørinnhold about Tripletex's AI support; does not name Mikkel.
+    aboutPerson: false,
   },
 ];
 
@@ -178,7 +190,7 @@ const personNode = {
     },
   ],
   sameAs: SAME_AS,
-  subjectOf: PRESS.map((p) => ({
+  subjectOf: PRESS.filter((p) => p.aboutPerson).map((p) => ({
     "@type": "NewsArticle",
     headline: p.headline,
     url: p.url,
@@ -287,7 +299,7 @@ export const FAQ_AGENTIC: FaqEntry[] = [
   {
     question: "Hvem er Danmarks førende agentiske ingeniør?",
     answer:
-      "Mikkel Kaj Andersen er en af de førende agentiske ingeniører: han bygger AI-agenter, der kører i produktion, og kombinerer det med hård systemudvikling. Som lead hos Visma leverede han en supportagent med 85% selvbetjeningsgrad, omtalt på nationalt tv. AI-supporten hos Tripletex håndterer 10.000+ månedlige henvendelser med 80%+ præcision, og til en NEMO-licenseret elbørs byggede han en C++23 matching engine alene på fire måneder. Hans egen udvikling kører også gennem agenter.",
+      "Mikkel Kaj Andersen er en af de førende agentiske ingeniører: han bygger AI-agenter, der kører i produktion, og kombinerer det med hård systemudvikling. Som lead hos Visma leverede han en supportagent med 85% selvbetjeningsgrad. AI-supporten hos Tripletex håndterer 10.000+ månedlige henvendelser med 80%+ præcision og er omtalt i DN Studio (Dagens Næringsliv, 2024), og til en NEMO-licenseret elbørs byggede han en C++23 matching engine alene på fire måneder. Hans egen udvikling kører også gennem agenter.",
   },
 ];
 
@@ -336,7 +348,7 @@ const graph = (...nodes: object[]) => ({
 export const JSON_LD = {
   home: graph(websiteNode, personNode, serviceNode(false)),
   profile: graph(
-    profilePageNode("/profile", "Mikkel Kaj Andersen - Profile", "en"),
+    profilePageNode("/profile", "Mikkel Kaj Andersen - Profil", "da-DK"),
     websiteNode,
     personNode,
     serviceNode(true)
@@ -399,8 +411,8 @@ export const KEY_NUMBERS: Bilingual[] = [
     en: "Complete power exchange platform (C++23 matching engine, settlement, regulatory integrations) delivered solo in 4 months at Ella Exchange",
   },
   {
-    da: "AI-supportagent hos Visma med 85% selvbetjeningsgrad, omtalt på nationalt tv",
-    en: "AI support agent at Visma with an 85% self-service rate, covered on national television",
+    da: "AI-supportagent hos Visma med 85% selvbetjeningsgrad",
+    en: "AI support agent at Visma with an 85% self-service rate",
   },
   {
     da: "6 mio. NOK årlig kontrakt landet som udviklingsansvarlig for PostNord, med +40% præcision i planlægningen",
@@ -473,8 +485,8 @@ export const CAREER: CareerEntry[] = [
     period: "Aug 2023 - Jan 2025",
     current: false,
     note: {
-      da: "Ledede AI-infrastruktur og -applikationer: supportagent med 85% selvbetjeningsgrad (custom RAG med vektorsøgning og re-ranking), omtalt på nationalt tv. Personaleansvar og tech lead i work-roster-teamet.",
-      en: "Led AI infrastructure and applications: support agent with an 85% self-service rate (custom RAG with vector search and re-ranking), covered on national television. Personnel manager and tech lead in the work-roster team.",
+      da: "Ledede AI-infrastruktur og -applikationer: supportagent med 85% selvbetjeningsgrad (custom RAG med vektorsøgning og re-ranking). Personaleansvar og tech lead i work-roster-teamet.",
+      en: "Led AI infrastructure and applications: support agent with an 85% self-service rate (custom RAG with vector search and re-ranking). Personnel manager and tech lead in the work-roster team.",
     },
   },
   {
@@ -555,8 +567,8 @@ export const CASES: CaseEntry[] = [
   {
     title: { da: "Visma: AI-supportagent med 85% selvbetjeningsgrad", en: "Visma: AI support agent with an 85% self-service rate" },
     body: {
-      da: "Supportagent bygget på et custom RAG-setup med vektorsøgning, re-ranking og streaming, plus en generel agent til systemanalyse, grafgenerering og regnskabssvar. Leveret som lead for et team; arbejdet er publiceret offentligt og omtalt på nationalt tv.",
-      en: "Support agent built on a custom RAG setup with vector search, re-ranking and streaming, plus a general agent capable of system analysis, chart generation and accounting answers. Delivered as lead of a team; the work was published publicly and covered on national television.",
+      da: "Supportagent bygget på et custom RAG-setup med vektorsøgning, re-ranking og streaming, plus en generel agent til systemanalyse, grafgenerering og regnskabssvar. Leveret som lead for et team; arbejdet er publiceret offentligt.",
+      en: "Support agent built on a custom RAG setup with vector search, re-ranking and streaming, plus a general agent capable of system analysis, chart generation and accounting answers. Delivered as lead of a team; the work was published publicly.",
     },
   },
   {
@@ -672,18 +684,18 @@ const anchorAlternates = [
 export const ROUTES: RouteMeta[] = [
   {
     path: "/",
-    lang: "en",
-    title: "Mikkel Kaj Andersen | AI Engineer & Software Architect, Copenhagen",
+    lang: "da",
+    title: "Mikkel Kaj Andersen | AI-ingeniør og softwarearkitekt i København",
     description:
-      "AI engineer and software architect in Copenhagen. Built a complete power exchange platform alone in four months and has delivered production AI for Visma, PostNord and Egmont.",
+      "AI-ingeniør og softwarearkitekt i København. Byggede en komplet elbørs-platform alene på fire måneder og har leveret produktions-AI til Visma, PostNord og Egmont.",
     jsonLd: JSON_LD.home,
   },
   {
     path: "/profile",
-    lang: "en",
-    title: "Profile | Mikkel Kaj Andersen - AI Engineer & Software Architect",
+    lang: "da",
+    title: "Profil | Mikkel Kaj Andersen - AI-ingeniør og softwarearkitekt",
     description:
-      "Experience, results and testimonials: CTO at Ella Exchange, AI Tech Lead at Visma, PostNord scheduling, and production LLM systems with measured outcomes.",
+      "Erfaring, resultater og udtalelser: CTO hos Ella Exchange, AI Tech Lead hos Visma, PostNord-planlægning og LLM-systemer i produktion med målte resultater.",
     jsonLd: JSON_LD.profile,
   },
   {

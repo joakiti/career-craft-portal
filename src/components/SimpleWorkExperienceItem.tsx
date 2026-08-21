@@ -46,7 +46,7 @@ const SimpleWorkExperienceItem = ({
                             </div>
                         </div>
                         <AccordionTrigger className="hover:no-underline">
-                            <span className="text-sm text-gray-400">Click to expand details</span>
+                            <span className="text-sm text-gray-400">Klik for detaljer</span>
                         </AccordionTrigger>
                         <AccordionContent>
                             <div className="space-y-4">
