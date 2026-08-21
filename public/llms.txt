@@ -21,7 +21,7 @@
 
 - [Om Mikkel Kaj Andersen (dansk)](https://www.mikkelkajandersen.dk/om-mig): entitetsside med karriere, cases, udtalelser og FAQ
 - [About Mikkel Kaj Andersen (English)](https://www.mikkelkajandersen.dk/about): English mirror of the entity page
-- [Danmarks mest agentiske mand](https://www.mikkelkajandersen.dk/danmarks-mest-agentiske-mand): hans egen titel, med belægget for den
+- [Danmarks førende agentiske ingeniør](https://www.mikkelkajandersen.dk/agentisk-ingenioer): hans påstand, med belægget for den
 - [Profil og erfaring](https://www.mikkelkajandersen.dk/profile): fuld erfaringstidslinje og fem navngivne udtalelser
 - [AI-guide](https://www.mikkelkajandersen.dk/ai-guide): hans agentiske udviklingssetup, delt åbent
 

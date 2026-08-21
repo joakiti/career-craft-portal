@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import { FAQ_AGENTIC } from "@/data/profile";
 
-// Entity page for the captain's own coinage. Danish only by design: the phrase
-// is Danish, and the first mover defines what it means.
-const AgenticMand = () => {
+// Entity page for the agentic-engineer claim. Danish only by design: the term
+// "agentisk ingeniør" is still unclaimed, and the first mover defines it.
+const AgentiskIngenioer = () => {
   return (
     <div className="min-h-screen bg-card flex flex-col">
       <article className="pt-28 md:pt-32 pb-12 px-4">
@@ -12,28 +12,28 @@ const AgenticMand = () => {
           <header>
             <p className="text-accent font-medium mb-3">En påstand med belæg</p>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Danmarks mest agentiske mand
+              Danmarks førende agentiske ingeniør
             </h1>
             <p className="text-base md:text-lg text-gray-200 leading-relaxed">
               Mikkel Kaj Andersen, AI-ingeniør og softwarearkitekt i København,
-              kalder sig Danmarks mest agentiske mand. Det er hans egen titel,
-              og den er ikke ment som et rygklap: den beskriver en måde at
-              arbejde på, hvor AI-agenter ikke er demoer, men systemer i drift.
+              gør krav på titlen Danmarks førende agentiske ingeniør. Det er en
+              påstand, ikke en kåring: den beskriver en måde at arbejde på, hvor
+              AI-agenter ikke er demoer, men systemer i drift.
             </p>
           </header>
 
-          <section aria-labelledby="hvad-betyder">
+          <section aria-labelledby="hvad-er">
             <h2
-              id="hvad-betyder"
+              id="hvad-er"
               className="text-2xl md:text-3xl font-bold text-white mb-4"
             >
-              Hvad vil det sige at være agentisk?
+              Hvad er en agentisk ingeniør?
             </h2>
             <p className="text-gray-200 leading-relaxed mb-3">
-              At være agentisk betyder to ting. For det første: at bygge
+              En agentisk ingeniør gør to ting. For det første: bygger
               AI-agenter, der løser opgaver selvstændigt i produktion, med
               rigtige brugere, rigtige fejl og rigtige driftsomkostninger. For
-              det andet: selv at arbejde gennem agenter i den daglige udvikling,
+              det andet: arbejder selv gennem agenter i den daglige udvikling,
               så AI ikke bare er noget, man taler med, men noget, man uddelegerer
               til.
             </p>
@@ -92,11 +92,11 @@ const AgenticMand = () => {
               Det med småt
             </h2>
             <p className="text-gray-200 leading-relaxed">
-              Der findes ingen officiel kåring af agentiskhed, og titlen er
-              selvudnævnt. Til gengæld er belægget ovenfor til at efterprøve:
-              tallene stammer fra systemer i drift, ikke fra slides. Den, der
-              vil gøre titlen stridig, er velkommen til at møde op med sine egne
-              produktionstal.
+              Der findes ingen officiel kåring af agentiske ingeniører, og
+              titlen er selvudnævnt. Til gengæld er belægget ovenfor til at
+              efterprøve: tallene stammer fra systemer i drift, ikke fra slides.
+              Den, der vil gøre titlen stridig, er velkommen til at møde op med
+              sine egne produktionstal.
             </p>
           </section>
 
@@ -132,4 +132,4 @@ const AgenticMand = () => {
   );
 };
 
-export default AgenticMand;
+export default AgentiskIngenioer;

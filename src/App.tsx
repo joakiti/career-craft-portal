@@ -7,7 +7,7 @@ import Index from "./pages/Index";
 import Profile from "./pages/Profile";
 import AiGuide from "./pages/AiGuide";
 import AnchorPage from "./pages/AnchorPage";
-import AgenticMand from "./pages/AgenticMand";
+import AgentiskIngenioer from "./pages/AgentiskIngenioer";
 import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -35,7 +35,7 @@ export const AppShell = () => (
           <Route path="/ai-guide" element={<AiGuide />} />
           <Route path="/om-mig" element={<AnchorPage lang="da" />} />
           <Route path="/about" element={<AnchorPage lang="en" />} />
-          <Route path="/danmarks-mest-agentiske-mand" element={<AgenticMand />} />
+          <Route path="/agentisk-ingenioer" element={<AgentiskIngenioer />} />
         </Routes>
       </main>
     </TooltipProvider>

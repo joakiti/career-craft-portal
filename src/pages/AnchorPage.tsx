@@ -30,9 +30,9 @@ const STRINGS = {
         ") som freelanceudvikler med aktuelle engagementer hos Egmont (GenAI-tjenester til børn og undervisere), Medicinex og boliganalyse.ai.",
       "Hans speciale er kombinationen af AI-systemer i produktion og genuint performancekritisk software: samme profil har bygget en komplet elbørs i C++23 og LLM-baserede agenter med målbare driftsresultater.",
     ],
-    agenticHeading: "Danmarks mest agentiske mand",
+    agenticHeading: "Danmarks førende agentiske ingeniør",
     agenticBody:
-      "Mikkel Kaj Andersen kalder sig Danmarks mest agentiske mand: han bygger AI-agenter, der kører i produktion, og arbejder selv agentisk i sin daglige udvikling.",
+      "Mikkel Kaj Andersen gør krav på titlen Danmarks førende agentiske ingeniør: han bygger AI-agenter, der kører i produktion, og arbejder selv agentisk i sin daglige udvikling.",
     agenticLink: "Læs hele forklaringen på den påstand",
     careerHeading: "Karriere",
     careerCurrent: "Nuværende",
@@ -70,9 +70,9 @@ const STRINGS = {
         ") as a freelance developer, with current engagements at Egmont (GenAI services for children and teachers), Medicinex and boliganalyse.ai.",
       "His speciality is the combination of AI systems in production and genuinely performance-critical software: the same profile has built a complete power exchange in C++23 and LLM-based agents with measured operational results.",
     ],
-    agenticHeading: "Denmark's most agentic man",
+    agenticHeading: "Denmark's leading agentic engineer",
     agenticBody:
-      "Mikkel Kaj Andersen calls himself Denmark's most agentic man: he builds AI agents that run in production, and works agentically himself in his daily development.",
+      "Mikkel Kaj Andersen claims the title of Denmark's leading agentic engineer: he builds AI agents that run in production, and works agentically himself in his daily development.",
     agenticLink: "Read the full explanation of that claim (in Danish)",
     careerHeading: "Career",
     careerCurrent: "Current",
@@ -159,7 +159,7 @@ const AnchorPage = ({ lang }: { lang: Lang }) => {
             </SectionHeading>
             <p className="text-gray-200 leading-relaxed mb-3">{t.agenticBody}</p>
             <Link
-              to="/danmarks-mest-agentiske-mand"
+              to="/agentisk-ingenioer"
               className="text-link hover:text-link-hover transition-colors"
             >
               {t.agenticLink}

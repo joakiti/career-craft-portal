@@ -5,7 +5,8 @@ This file is the project's committed home for project-intrinsic agent knowledge:
 ## Positioning rules (owner-mandated, non-negotiable)
 
 - Never use the phrase "AI developer" in any copy, schema, or metadata. The owner rejected it. It may remain only as a historical role title in the experience timeline.
-- Endorsed positioning phrases: "Denmarks leading AI engineer" / "Danmarks førende AI-ingeniør", "Danmarks mest agentiske mand" (his own coinage, has its own page), "freelance developer".
+- Never use "Danmarks mest agentiske mand" / "Denmark's most agentic man" in any register, including as a playful aside. The owner retired it ("it sounds cheap"). The agentic claim is "Danmarks førende agentiske ingeniør" / "Denmark's leading agentic engineer", with its page at `/agentisk-ingenioer`.
+- Endorsed positioning phrases: "Denmarks leading AI engineer" / "Danmarks førende AI-ingeniør", "Danmarks førende agentiske ingeniør" (has its own page), "freelance developer".
 - Canonical GitHub is `mikkel-kaj`; `joakiti` is the old username and must never appear.
 - Canonical domain is `https://www.mikkelkajandersen.dk`; `mikkelkaj.com` must not appear anywhere.
 - Marie Preisler is CEO of YOLO Cards (company renamed; "GoDream" and "Make It Matter" are stale attributions for her).

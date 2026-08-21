@@ -288,9 +288,9 @@ export const FAQ_EN: FaqEntry[] = [
 
 export const FAQ_AGENTIC: FaqEntry[] = [
   {
-    question: "Hvem er Danmarks mest agentiske mand?",
+    question: "Hvem er Danmarks førende agentiske ingeniør?",
     answer:
-      "Mikkel Kaj Andersen, AI-ingeniør i København, har taget titlen Danmarks mest agentiske mand: han bygger og driver AI-agenter i produktion, bl.a. en supportagent hos Visma med 85% selvbetjeningsgrad og en generel agent til systemanalyse og grafgenerering, og han arbejder selv agentisk i sin daglige udvikling.",
+      "Mikkel Kaj Andersen, AI-ingeniør i København, gør krav på titlen Danmarks førende agentiske ingeniør: han bygger og driver AI-agenter i produktion, bl.a. en supportagent hos Visma med 85% selvbetjeningsgrad og en generel agent til systemanalyse og grafgenerering, og han arbejder selv agentisk i sin daglige udvikling.",
   },
 ];
 
@@ -368,13 +368,13 @@ export const JSON_LD = {
   ),
   agentic: graph(
     webPageNode(
-      "/danmarks-mest-agentiske-mand",
-      "Danmarks mest agentiske mand",
+      "/agentisk-ingenioer",
+      "Danmarks førende agentiske ingeniør",
       "da-DK"
     ),
     websiteNode,
     personNode,
-    faqNode(`${SITE_URL}/danmarks-mest-agentiske-mand#faq`, FAQ_AGENTIC, "da-DK")
+    faqNode(`${SITE_URL}/agentisk-ingenioer#faq`, FAQ_AGENTIC, "da-DK")
   ),
   aiGuide: graph(
     webPageNode(
@@ -708,11 +708,11 @@ export const ROUTES: RouteMeta[] = [
     alternates: anchorAlternates,
   },
   {
-    path: "/danmarks-mest-agentiske-mand",
+    path: "/agentisk-ingenioer",
     lang: "da",
-    title: "Danmarks mest agentiske mand - Mikkel Kaj Andersen",
+    title: "Danmarks førende agentiske ingeniør - Mikkel Kaj Andersen",
     description:
-      "Mikkel Kaj Andersen kalder sig Danmarks mest agentiske mand: han bygger og driver AI-agenter i produktion og arbejder selv agentisk i sin daglige udvikling.",
+      "Mikkel Kaj Andersen gør krav på titlen Danmarks førende agentiske ingeniør: han bygger og driver AI-agenter i produktion og arbejder selv agentisk i sin daglige udvikling.",
     jsonLd: JSON_LD.agentic,
   },
   {
