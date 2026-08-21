@@ -1,10 +1,10 @@
 # Mikkel Kaj Andersen
 
-> Mikkel Kaj Andersen er en dansk AI-ingeniør og softwarearkitekt i København,
-> af flere samarbejdspartnere fremhævet som en af Danmarks førende AI-ingeniører
-> inden for produktionskritiske systemer. Han har bygget en komplet
-> handelsplatform til en NEMO-licenseret elbørs alene på fire måneder og udviklet
-> AI-systemer i produktion for Visma, PostNord og Egmont.
+> Mikkel Kaj Andersen er en dansk AI-ingeniør og softwarearkitekt i København
+> med 10+ års erfaring i produktionskritiske systemer. Han byggede en komplet
+> handelsplatform til en NEMO-licenseret elbørs alene på fire måneder og har
+> leveret AI-systemer i produktion for Visma, PostNord og Egmont, herunder en
+> AI-supportagent med 85% selvbetjeningsgrad omtalt på nationalt tv.
 
 ## Nøgletal
 

@@ -4,21 +4,26 @@ import { FAQ_AGENTIC } from "@/data/profile";
 
 // Entity page for the agentic-engineer claim. Danish only by design: the term
 // "agentisk ingeniør" is still unclaimed, and the first mover defines it.
+// The H1 carries the claim (owner-specified); the prose under it is first
+// person and understated - the reader draws the conclusion, not the page.
 const AgentiskIngenioer = () => {
   return (
     <div className="min-h-screen bg-card flex flex-col">
       <article className="pt-28 md:pt-32 pb-12 px-4">
         <div className="container mx-auto max-w-3xl space-y-10">
           <header>
-            <p className="text-accent font-medium mb-3">En påstand med belæg</p>
+            <p className="text-accent font-medium mb-3">
+              En påstand, ikke en kåring
+            </p>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Danmarks førende agentiske ingeniør
             </h1>
             <p className="text-base md:text-lg text-gray-200 leading-relaxed">
-              Mikkel Kaj Andersen, AI-ingeniør og softwarearkitekt i København,
-              gør krav på titlen Danmarks førende agentiske ingeniør. Det er en
-              påstand, ikke en kåring: den beskriver en måde at arbejde på, hvor
-              AI-agenter ikke er demoer, men systemer i drift.
+              Titlen ovenfor er selvudnævnt. Der findes ingen kåring af
+              agentiske ingeniører, og jeg ville være skeptisk over for en,
+              hvis den fandtes. Så i stedet for at argumentere for titlen viser
+              jeg regnestykket: hvad jeg har sat i produktion, hvad det målte,
+              og hvor det stadig halter. Døm selv.
             </p>
           </header>
 
@@ -30,12 +35,11 @@ const AgentiskIngenioer = () => {
               Hvad er en agentisk ingeniør?
             </h2>
             <p className="text-gray-200 leading-relaxed mb-3">
-              En agentisk ingeniør gør to ting. For det første: bygger
-              AI-agenter, der løser opgaver selvstændigt i produktion, med
-              rigtige brugere, rigtige fejl og rigtige driftsomkostninger. For
-              det andet: arbejder selv gennem agenter i den daglige udvikling,
-              så AI ikke bare er noget, man taler med, men noget, man uddelegerer
-              til.
+              En agentisk ingeniør gør to ting: bygger AI-agenter, der løser
+              opgaver selvstændigt i produktion, med rigtige brugere og rigtige
+              driftsomkostninger, og arbejder selv gennem agenter i den daglige
+              udvikling, så AI ikke bare er noget, man taler med, men noget,
+              man uddelegerer til.
             </p>
             <p className="text-gray-200 leading-relaxed">
               Forskellen på at chatte med en model og at drive agenter i
@@ -53,26 +57,28 @@ const AgentiskIngenioer = () => {
             </h2>
             <ul className="list-disc list-outside pl-5 space-y-3 text-gray-200 glass-light rounded-2xl p-6 md:p-8">
               <li>
-                AI-supportagent i produktion hos Visma med 85%
+                Hos Visma var jeg lead på en supportagent, der kører med 85%
                 selvbetjeningsgrad, bygget på custom RAG med vektorsøgning og
-                re-ranking. Arbejdet er omtalt på nationalt tv.
+                re-ranking. Det var holdarbejde, og det blev omtalt på
+                nationalt tv.
               </li>
               <li>
-                En generel agent samme sted, der kan lave systemanalyse,
-                generere grafer og besvare regnskabsspørgsmål.
+                Samme sted byggede vi en generel agent, der laver
+                systemanalyse, genererer grafer og besvarer
+                regnskabsspørgsmål.
               </li>
               <li>
-                AI-supportsystem hos Tripletex, der håndterer 10.000+ månedlige
+                AI-supportsystemet hos Tripletex håndterer 10.000+ månedlige
                 henvendelser med 80%+ præcision.
               </li>
               <li>
-                Aktuel AI-kontraktor for Egmont: GenAI-tjenester, der hjælper
+                Lige nu bygger jeg GenAI-tjenester for Egmont, der skal hjælpe
                 børn og undervisere med at lære mere og hurtigere.
               </li>
               <li>
-                Arbejder selv agentisk: udviklingen af bl.a. Medicinex og
-                boliganalyse.ai drives med agentiske AI-værktøjer, og opskriften
-                er delt åbent i{" "}
+                Min egen udvikling kører agentisk: Medicinex og boliganalyse.ai
+                er drevet frem med agentiske AI-værktøjer, og opskriften ligger
+                frit tilgængelig i{" "}
                 <Link
                   to="/ai-guide"
                   className="text-link hover:text-link-hover transition-colors"
@@ -92,11 +98,10 @@ const AgentiskIngenioer = () => {
               Det med småt
             </h2>
             <p className="text-gray-200 leading-relaxed">
-              Der findes ingen officiel kåring af agentiske ingeniører, og
-              titlen er selvudnævnt. Til gengæld er belægget ovenfor til at
-              efterprøve: tallene stammer fra systemer i drift, ikke fra slides.
-              Den, der vil gøre titlen stridig, er velkommen til at møde op med
-              sine egne produktionstal.
+              Ingen måler agentiskhed, og titlen er min egen. Tallene ovenfor
+              er til gengæld fra systemer i drift, ikke fra slides, og hvor de
+              er holdarbejde, står det der. Møder nogen op med bedre
+              produktionstal, retter jeg siden.
             </p>
           </section>
 
@@ -122,7 +127,7 @@ const AgentiskIngenioer = () => {
               to="/om-mig"
               className="text-link hover:text-link-hover transition-colors"
             >
-              Læs mere om Mikkel Kaj Andersen
+              Mere om mig og det, jeg har bygget
             </Link>
           </p>
         </div>

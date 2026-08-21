@@ -11,6 +11,7 @@ This file is the project's committed home for project-intrinsic agent knowledge:
 - Canonical domain is `https://www.mikkelkajandersen.dk`; `mikkelkaj.com` must not appear anywhere.
 - Marie Preisler is CEO of YOLO Cards (company renamed; "GoDream" and "Make It Matter" are stale attributions for her).
 - Every fact published must be traceable to evidence; every `sameAs`/press URL must resolve before it ships. No invented numbers, ratings, or profile links.
+- Two registers, strictly split. Machine surfaces (JSON-LD, meta descriptions, llms.txt) carry flat third-person assertions. Visible page prose is the owner's own first-person, understated voice per `/home/mikke/VOICE.md`: numbers over adjectives, credit calibrated (team results named as team results), every page names a limit. Never praise him in visible copy and never attribute praise to unnamed collaborators; the five named testimonials carry that. He called an earlier third-person draft narcissistic; do not regress this.
 
 ## Architecture
 
