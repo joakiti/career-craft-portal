@@ -4,6 +4,7 @@ import {
   CAREER,
   COMPARISON,
   CONTACT,
+  DR_APP_COVERAGE,
   FAQ_DA,
   FAQ_EN,
   PRESS,
@@ -61,6 +62,13 @@ const REFERENCES = [
     da: "GitHub: mikkel-kaj",
     en: "GitHub: mikkel-kaj",
     url: SAME_AS[1],
+    internal: false,
+  },
+  {
+    id: 7,
+    da: `DR (${DR_APP_COVERAGE.year}): ${DR_APP_COVERAGE.headline}. Omtale af appen The Tattoo Archive; nævner ikke Mikkel ved navn`,
+    en: `DR (${DR_APP_COVERAGE.year}): ${DR_APP_COVERAGE.headline}. Coverage of The Tattoo Archive app; does not name Mikkel`,
+    url: DR_APP_COVERAGE.url,
     internal: false,
   },
 ];
@@ -454,6 +462,8 @@ const AnchorPage = ({ lang }: { lang: Lang }) => {
                   {PROJECTS.map((p) => (
                     <div key={p.en} className="glass-light rounded-2xl p-4 text-gray-200">
                       {p[lang]}
+                      {/* App-level DR coverage is footnoted here, never as personal press */}
+                      {p.en.includes("The Tattoo Archive") && <Refs ids={[7]} />}
                     </div>
                   ))}
                 </div>

@@ -96,11 +96,6 @@ export const PRESS = [
     datePublished: "2023-09-19" as string | undefined,
     aboutPerson: true,
   },
-  // Removed 2026-08-21 after fact-check: the DR article about The Tattoo
-  // Archive (dr.dk/.../udslaet-allergier-og-bylder-...) does not name Mikkel
-  // anywhere in the served page, so it may not appear in subjectOf or any
-  // press list. The app itself being covered by DR remains CV-evidenced and
-  // may be stated on the project card as a fact about the app.
   {
     headline: "Hvordan utnytte KI som en vekstakselerator",
     url: "https://www.dn.no/staticprojects/annonsorinnhold/studio/kunstig-intelligens/hvordan-utnytte-ki-som-en-vekstakselerator/",
@@ -110,6 +105,18 @@ export const PRESS = [
     aboutPerson: false,
   },
 ];
+
+// App-level coverage only (fact-checked 2026-08-21): the 2018 DR article is
+// about The Tattoo Archive (developed by Recover Denmark, quotes Nis Staack)
+// and never names Mikkel. Usable as a footnoted source on the project card,
+// never in Person.subjectOf or any personal press list.
+export const DR_APP_COVERAGE = {
+  headline:
+    "Udslæt, allergier og bylder: Ny app skal gøre det nemmere at finde den rette tatovør",
+  url: "https://www.dr.dk/nyheder/regionale/oestjylland/udslaet-allergier-og-bylder-ny-app-skal-goere-det-nemmere-finde",
+  publisher: "DR",
+  year: "2018",
+};
 
 const personNode = {
   "@type": "Person",
@@ -609,8 +616,8 @@ export const PROJECTS: Bilingual[] = [
     en: "kallax.io: free service for managing tabletop game collections (Blazor, gRPC, Entity Framework)",
   },
   {
-    da: "The Tattoo Archive (iOS og Android): omtalt af DR",
-    en: "The Tattoo Archive (iOS and Android): featured by DR, Denmark's national broadcaster",
+    da: "The Tattoo Archive (iOS og Android). App'en er omtalt af DR (2018).",
+    en: "The Tattoo Archive (iOS and Android). The app was covered by DR (2018).",
   },
 ];
 
