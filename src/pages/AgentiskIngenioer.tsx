@@ -50,7 +50,7 @@ const AgentiskIngenioer = () => {
               Mikkel Kaj Andersen · AI-ingeniør, København
             </p>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Danmarks førende agentiske ingeniør
+              En af de førende agentiske ingeniører
             </h1>
             <p className="text-base md:text-lg text-gray-200 leading-relaxed">
               AI-agenter i produktion for danske og nordiske virksomheder:

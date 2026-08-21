@@ -126,7 +126,7 @@ const NavLink = ({ to, children, isActive, onClick }: NavLinkProps) => (
   <Link
     to={to}
     onClick={onClick}
-    className="relative px-3 py-1.5 text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-full"
+    className="relative px-3 py-1.5 text-sm whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-full"
     aria-current={isActive ? "page" : undefined}
   >
     <span className={isActive ? "text-white" : "text-gray-300 hover:text-gray-100"}>
@@ -150,7 +150,7 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100vw-2rem)] max-w-2xl">
+    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100vw-2rem)] max-w-3xl">
       <div className="bg-card/90 backdrop-blur-xl rounded-full border border-accent/10 px-4 py-2.5 shadow-lg shadow-black/20">
         <div className="flex justify-between items-center">
           <Link
@@ -166,6 +166,9 @@ const Navbar = () => {
             </NavLink>
             <NavLink to="/profile" isActive={location.pathname === "/profile"}>
               Profile
+            </NavLink>
+            <NavLink to="/om-mig" isActive={location.pathname === "/om-mig"}>
+              Om mig
             </NavLink>
             <span className="text-gray-600 mx-1">|</span>
             <NavbarCTA />
@@ -198,6 +201,15 @@ const Navbar = () => {
             </NavLink>
             <NavLink to="/profile" isActive={location.pathname === "/profile"} onClick={() => setIsOpen(false)}>
               Profile
+            </NavLink>
+            <NavLink to="/om-mig" isActive={location.pathname === "/om-mig"} onClick={() => setIsOpen(false)}>
+              Om mig
+            </NavLink>
+            <NavLink to="/agentisk-ingenioer" isActive={location.pathname === "/agentisk-ingenioer"} onClick={() => setIsOpen(false)}>
+              Agentisk ingeniør
+            </NavLink>
+            <NavLink to="/ai-guide" isActive={location.pathname === "/ai-guide"} onClick={() => setIsOpen(false)}>
+              AI-guide
             </NavLink>
           </div>
         </motion.div>

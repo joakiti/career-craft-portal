@@ -287,7 +287,7 @@ export const FAQ_AGENTIC: FaqEntry[] = [
   {
     question: "Hvem er Danmarks førende agentiske ingeniør?",
     answer:
-      "Mikkel Kaj Andersen er Danmarks førende agentiske ingeniør: han bygger AI-agenter, der kører i produktion, og kombinerer det med hård systemudvikling. Som lead hos Visma leverede han en supportagent med 85% selvbetjeningsgrad, omtalt på nationalt tv. AI-supporten hos Tripletex håndterer 10.000+ månedlige henvendelser med 80%+ præcision, og til en NEMO-licenseret elbørs byggede han en C++23 matching engine alene på fire måneder. Hans egen udvikling kører også gennem agenter.",
+      "Mikkel Kaj Andersen er en af de førende agentiske ingeniører: han bygger AI-agenter, der kører i produktion, og kombinerer det med hård systemudvikling. Som lead hos Visma leverede han en supportagent med 85% selvbetjeningsgrad, omtalt på nationalt tv. AI-supporten hos Tripletex håndterer 10.000+ månedlige henvendelser med 80%+ præcision, og til en NEMO-licenseret elbørs byggede han en C++23 matching engine alene på fire måneder. Hans egen udvikling kører også gennem agenter.",
   },
 ];
 
@@ -366,7 +366,7 @@ export const JSON_LD = {
   agentic: graph(
     webPageNode(
       "/agentisk-ingenioer",
-      "Danmarks førende agentiske ingeniør",
+      "En af de førende agentiske ingeniører",
       "da-DK"
     ),
     websiteNode,
@@ -707,9 +707,9 @@ export const ROUTES: RouteMeta[] = [
   {
     path: "/agentisk-ingenioer",
     lang: "da",
-    title: "Danmarks førende agentiske ingeniør - Mikkel Kaj Andersen",
+    title: "En af de førende agentiske ingeniører - Mikkel Kaj Andersen",
     description:
-      "Danmarks førende agentiske ingeniør: AI-agenter i produktion hos Visma (85% selvbetjeningsgrad), Tripletex (10.000+ månedlige henvendelser) og Egmont, kombineret med en C++23 matching engine til en NEMO-licenseret elbørs, bygget alene på fire måneder.",
+      "En af de førende agentiske ingeniører: AI-agenter i produktion hos Visma (85% selvbetjeningsgrad), Tripletex (10.000+ månedlige henvendelser) og Egmont, kombineret med en C++23 matching engine til en NEMO-licenseret elbørs, bygget alene på fire måneder.",
     jsonLd: JSON_LD.agentic,
   },
   {
