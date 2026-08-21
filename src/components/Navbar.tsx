@@ -205,9 +205,6 @@ const Navbar = () => {
             <NavLink to="/om-mig" isActive={location.pathname === "/om-mig"} onClick={() => setIsOpen(false)}>
               Om mig
             </NavLink>
-            <NavLink to="/agentisk-ingenioer" isActive={location.pathname === "/agentisk-ingenioer"} onClick={() => setIsOpen(false)}>
-              Agentisk ingeniør
-            </NavLink>
             <NavLink to="/ai-guide" isActive={location.pathname === "/ai-guide"} onClick={() => setIsOpen(false)}>
               AI-guide
             </NavLink>

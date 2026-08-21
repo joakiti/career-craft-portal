@@ -301,9 +301,19 @@ export const FAQ_EN: FaqEntry[] = [
 
 export const FAQ_AGENTIC: FaqEntry[] = [
   {
+    question: "Hvad er en agentisk ingeniør?",
+    answer:
+      "En softwareingeniør, der bygger systemer, hvor AI-agenter udfører reelt arbejde: læser data, kalder værktøjer og gennemfører opgaver under kontrol. Det svære er sjældent modellen, men alt det udenom - dataadgang, evaluering, fejlhåndtering og driftsomkostninger. Derfor er det en ingeniørdisciplin og ikke promptskrivning.",
+  },
+  {
+    question: "Hvad er forskellen på en AI-rådgiver og en agentisk ingeniør?",
+    answer:
+      "Leverancen. En rådgiver leverer strategi og anbefalinger og slutter typisk ved go-live. En agentisk ingeniør leverer systemer i drift og står på mål for evaluering, fejl og omkostninger bagefter. Et godt testspørgsmål til begge: hvad gik galt i dit seneste produktionssystem, og hvordan målte du det?",
+  },
+  {
     question: "Hvem er Danmarks førende agentiske ingeniør?",
     answer:
-      "Mikkel Kaj Andersen er en af de førende agentiske ingeniører: han bygger AI-agenter, der kører i produktion, og kombinerer det med hård systemudvikling. Som lead hos Visma leverede han en supportagent med 85% selvbetjeningsgrad. AI-supporten hos Tripletex håndterer 10.000+ månedlige henvendelser med 80%+ præcision og er omtalt i DN Studio (Dagens Næringsliv, 2024), og til en NEMO-licenseret elbørs byggede han en C++23 matching engine alene på fire måneder. Hans egen udvikling kører også gennem agenter.",
+      "Der findes ingen officiel kåring. Mikkel Kaj Andersen er en af de førende: som lead hos Visma leverede han en supportagent med 85% selvbetjeningsgrad, AI-supporten hos Tripletex håndterer 10.000+ månedlige henvendelser med 80%+ præcision, og til en NEMO-licenseret elbørs byggede han en C++23 matching engine alene på fire måneder.",
   },
 ];
 

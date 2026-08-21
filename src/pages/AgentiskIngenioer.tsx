@@ -2,30 +2,13 @@ import { Link } from "react-router-dom";
 import Footer from "@/components/Footer";
 import { FAQ_AGENTIC, TESTIMONIALS } from "@/data/profile";
 
-// Entity page for the agentic-engineer title. Danish only by design: the term
-// "agentisk ingeniør" is still unclaimed, and the first mover defines it.
-// Register (owner-directed): state the title, then pay for it immediately with
-// named institutions and measured numbers. No hedging, no self-appointed
-// framing. The title form is "En af de førende agentiske ingeniører" per the
-// captain's direct confirmation; team work stays labelled as team work.
-
-const REASONS = [
-  {
-    statement: "Begge halvdele af faget.",
-    detail:
-      "De fleste i dansk AI har enten agenter eller hård systemudvikling. Jeg har begge: til en NEMO-licenseret elbørs byggede jeg en C++23 matching engine alene på fire måneder, inklusive settlement og regulatoriske integrationer - og mine AI-agenter er sat i drift hos Visma og Tripletex.",
-  },
-  {
-    statement: "Agenter i drift, ikke demoer.",
-    detail:
-      "Som lead hos Visma leverede jeg en supportagent med 85% selvbetjeningsgrad, bygget på custom RAG med vektorsøgning og re-ranking, plus en generel agent til systemanalyse og grafgenerering.",
-  },
-  {
-    statement: "Målt i stor skala.",
-    detail:
-      "AI-supporten hos Tripletex håndterer 10.000+ månedlige henvendelser med 80%+ præcision og er omtalt i DN Studio (Dagens Næringsliv, 2024). PostNords AI-planlægning kører i daglig drift med +40% nøjagtighed; kontrakten, jeg landede, lød på 6 mio. NOK årligt.",
-  },
-];
+// Entity page for "agentisk ingeniør" queries. Danish only by design: the
+// term is still unclaimed, and the first mover defines it. Visible prose is
+// first person; the flat third-person register lives only in the machine
+// layer (JSON-LD, meta, llms.txt). The claim form is "En af de førende
+// agentiske ingeniører" - never "Danmarks førende". Team work stays labelled
+// as team work. Reachable via footer sitemap and /om-mig, deliberately not
+// via the primary navbar.
 
 const INSTITUTIONS = [
   "Visma",
@@ -54,45 +37,45 @@ const AgentiskIngenioer = () => {
               En af de førende agentiske ingeniører
             </h1>
             <p className="text-base md:text-lg text-gray-200 leading-relaxed">
-              AI-agenter i produktion for danske og nordiske virksomheder:
-              bygget, sat i drift og målt på resultater.
+              Jeg bygger AI-agenter, der kører i produktion hos danske og
+              nordiske virksomheder.
             </p>
           </header>
 
-          <section aria-labelledby="derfor">
-            <h2
-              id="derfor"
-              className="text-2xl md:text-3xl font-bold text-white mb-4"
-            >
-              Derfor
-            </h2>
-            <div className="space-y-4">
-              {REASONS.map((r) => (
-                <div key={r.statement} className="glass-light rounded-2xl p-6">
-                  <h3 className="text-lg font-bold text-white mb-2">
-                    {r.statement}
-                  </h3>
-                  <p className="text-gray-200 leading-relaxed">{r.detail}</p>
-                </div>
-              ))}
-              <div className="glass-light rounded-2xl p-6">
-                <h3 className="text-lg font-bold text-white mb-2">
-                  Min egen udvikling kører gennem agenter.
-                </h3>
-                <p className="text-gray-200 leading-relaxed">
-                  Medicinex og boliganalyse.ai er drevet frem med agentiske
-                  AI-værktøjer, og opskriften er publiceret åbent i{" "}
-                  <Link
-                    to="/ai-guide"
-                    className="text-link hover:text-link-hover transition-colors"
-                  >
-                    guiden her på sitet
-                  </Link>
-                  . For Egmont har jeg leveret GenAI-tjenester til børn og
-                  undervisere.
-                </p>
-              </div>
-            </div>
+          <section
+            aria-label="Baggrund"
+            className="space-y-4 text-gray-200 leading-relaxed"
+          >
+            <p>
+              De fleste, der arbejder med AI i Danmark, har en af fagets to
+              halvdele: agenterne eller de hårde produktionssystemer. Jeg har
+              begge. Hos Ella Exchange, en NEMO-licenseret elbørs, byggede jeg
+              handelsplatformen alene på fire måneder: C++23 matching engine,
+              settlement, regulatoriske integrationer. Hos Visma var jeg lead
+              på teamet bag en supportagent med 85% selvbetjeningsgrad, bygget
+              på custom RAG med vektorsøgning og re-ranking.
+            </p>
+            <p>
+              Tallene er fra drift, ikke fra demoer. AI-supporten hos Tripletex
+              håndterer over 10.000 henvendelser om måneden med 80%+ præcision;
+              DN Studio (Dagens Næringsliv) lavede i 2024 et sponsoreret
+              indslag om systemet. PostNords AI-planlægning kører i daglig
+              drift; som udviklingsansvarlig løftede jeg præcisionen med 40% og
+              landede en kontrakt på 6 mio. NOK om året.
+            </p>
+            <p>
+              Min egen udvikling kører også gennem agenter. Medicinex og
+              boliganalyse.ai er bygget på den måde, og opskriften ligger åbent
+              i{" "}
+              <Link
+                to="/ai-guide"
+                className="text-link hover:text-link-hover transition-colors"
+              >
+                AI-guiden her på sitet
+              </Link>
+              . For Egmont har jeg leveret GenAI-tjenester til børn og
+              undervisere.
+            </p>
           </section>
 
           <section aria-labelledby="institutioner">
@@ -154,9 +137,9 @@ const AgentiskIngenioer = () => {
               id="agentic-faq"
               className="text-2xl md:text-3xl font-bold text-white mb-4"
             >
-              Ofte stillet spørgsmål
+              Ofte stillede spørgsmål
             </h2>
-            <dl>
+            <dl className="space-y-5">
               {FAQ_AGENTIC.map((f) => (
                 <div key={f.question}>
                   <dt className="font-bold text-white mb-1">{f.question}</dt>
