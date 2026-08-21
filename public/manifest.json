@@ -1,11 +1,11 @@
 {
-  "name": "Mikkel Kaj Andersen | Technical Consultant",
+  "name": "Mikkel Kaj Andersen | AI-ingeniør og softwarearkitekt",
   "short_name": "Mikkel Kaj",
-  "description": "Expert technical consultancy in full-stack development, AI/ML solutions, and system architecture.",
+  "description": "AI-ingeniør og softwarearkitekt i København. Produktions-AI leveret til Visma, PostNord og Egmont og en komplet elbørs-platform bygget på fire måneder.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#0f172a",
+  "background_color": "#1A1D24",
+  "theme_color": "#1A1D24",
   "icons": [
     {
       "src": "/icon-192.png",
@@ -18,4 +18,4 @@
       "type": "image/png"
     }
   ]
-} 
+}

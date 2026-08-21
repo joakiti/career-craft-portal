@@ -13,23 +13,23 @@ interface Technology {
 }
 
 const technologies: Technology[] = [
-    { name: "C++", logo: "/img/tech/cpp.svg", bubble: "Built a matching engine in C++23 at Ella Exchange — lock-free queues, actor concurrency, the whole deal.", category: 'core' },
-    { name: "Java", logo: "/img/tech/java.svg", bubble: "My competitive programming language of choice. Built enterprise apps with Spring at Netcompany and Keylane.", category: 'core' },
-    { name: "C#", logo: "/img/tech/csharp.svg", bubble: "6 years deep — .NET microservices at Visma, EFCore APIs, plus a bunch of freelance projects.", category: 'core' },
-    { name: "Python", logo: "/img/tech/python.svg", bubble: "My go-to for algorithms, ML prototyping, and quick backend services with Django/Flask.", category: 'core' },
-    { name: "TypeScript", logo: "/img/tech/typescript.svg", bubble: "Type safety everywhere. I use TS for React frontends and Node backends alike.", category: 'core' },
-    { name: "React", logo: "/img/tech/react.svg", bubble: "This portfolio is React! I build responsive, performant web apps with the React ecosystem.", category: 'framework' },
-    { name: "Flutter", logo: "/img/tech/flutter.svg", bubble: "All my freelance mobile apps are Flutter — Tattoo Archive, Gas Money, ScheduleIT.", category: 'framework' },
-    { name: "Spring Boot", logo: "/img/tech/spring.svg", bubble: "Enterprise Java at Netcompany and Keylane — state-critical government systems.", category: 'framework' },
-    { name: "Entity Framework", logo: "/img/tech/ef.svg", bubble: "My ORM of choice in the .NET world. Used it across multiple Visma projects.", category: 'framework' },
-    { name: "AWS", logo: "/img/tech/aws.svg", bubble: "AWS Developer Associate certified. Built serverless infra at Visma with Lambda, S3, CloudFormation.", category: 'tool' },
-    { name: "Docker", logo: "/img/tech/docker.svg", bubble: "Containerize everything. Used extensively at Visma and for all my deployment pipelines.", category: 'tool' },
-    { name: "CI/CD", logo: "/img/tech/cicd.svg", bubble: "Jenkins, GitHub Actions, AWS CodePipeline — I've set up automated deploys across all of them.", category: 'tool' },
-    { name: "Azure", logo: "/img/tech/azure.svg", bubble: "Used Azure cloud services for DSV projects and some Visma integrations.", category: 'tool' },
-    { name: "PostgreSQL", logo: "/img/tech/postgresql.svg", bubble: "My preferred database. Also worked with MySQL, T-SQL, DynamoDB, and Redis.", category: 'tool' },
-    { name: "Algorithm Design", logo: "/img/tech/predictive_modeling.svg", bubble: "Roster optimization at Visma, constraint satisfaction, mathematical programming — this is my jam.", category: 'core' },
-    { name: "LLM & Deep Learning", logo: "/img/tech/deep_learning.svg", bubble: "Built an AI support agent at Tripletex with 80%+ accuracy using GPT, BERT, and RAG pipelines.", category: 'framework' },
-    { name: "Optimization", logo: "/img/tech/statistical_analysis.svg", bubble: "12 different MIP solvers with OR-Tools for hospital roster scheduling. LP, IP, CP — you name it.", category: 'core' },
+    { name: "C++", logo: "/img/tech/cpp.svg", bubble: "Byggede en matching engine i C++23 hos Ella Exchange - lock-frie køer, aktørbaseret concurrency, hele pakken.", category: 'core' },
+    { name: "Java", logo: "/img/tech/java.svg", bubble: "Mit foretrukne sprog til konkurrenceprogrammering. Enterprise-apps med Spring hos Netcompany og Keylane.", category: 'core' },
+    { name: "C#", logo: "/img/tech/csharp.svg", bubble: "6 år med .NET-microservices hos Visma, EFCore-API'er og en stribe freelanceprojekter.", category: 'core' },
+    { name: "Python", logo: "/img/tech/python.svg", bubble: "Mit go-to til algoritmer, ML-prototyper og hurtige backend-tjenester med Django/Flask.", category: 'core' },
+    { name: "TypeScript", logo: "/img/tech/typescript.svg", bubble: "Typesikkerhed hele vejen. TS til både React-frontends og Node-backends.", category: 'core' },
+    { name: "React", logo: "/img/tech/react.svg", bubble: "Denne portfolio er React! Responsive, performante webapps med React-økosystemet.", category: 'framework' },
+    { name: "Flutter", logo: "/img/tech/flutter.svg", bubble: "Alle mine freelance-mobilapps er Flutter - Tattoo Archive, Gas Money, ScheduleIT.", category: 'framework' },
+    { name: "Spring Boot", logo: "/img/tech/spring.svg", bubble: "Enterprise-Java hos Netcompany og Keylane - statskritiske systemer.", category: 'framework' },
+    { name: "Entity Framework", logo: "/img/tech/ef.svg", bubble: "Min foretrukne ORM i .NET-verdenen. Brugt på flere Visma-projekter.", category: 'framework' },
+    { name: "AWS", logo: "/img/tech/aws.svg", bubble: "AWS Developer Associate-certificeret. Serverless infrastruktur hos Visma med Lambda, S3 og CloudFormation.", category: 'tool' },
+    { name: "Docker", logo: "/img/tech/docker.svg", bubble: "Containeriser alt. Brugt intensivt hos Visma og i alle mine deployment-pipelines.", category: 'tool' },
+    { name: "CI/CD", logo: "/img/tech/cicd.svg", bubble: "Jenkins, GitHub Actions, AWS CodePipeline - jeg har sat automatiserede deploys op i dem alle.", category: 'tool' },
+    { name: "Azure", logo: "/img/tech/azure.svg", bubble: "Azure-cloudtjenester til DSV-projekter og flere Visma-integrationer.", category: 'tool' },
+    { name: "PostgreSQL", logo: "/img/tech/postgresql.svg", bubble: "Min foretrukne database. Har også arbejdet med MySQL, T-SQL, DynamoDB og Redis.", category: 'tool' },
+    { name: "Algorithm Design", logo: "/img/tech/predictive_modeling.svg", bubble: "Vagtplansoptimering hos Visma, constraint satisfaction, matematisk programmering - det er min hjemmebane.", category: 'core' },
+    { name: "LLM & Deep Learning", logo: "/img/tech/deep_learning.svg", bubble: "Byggede en AI-supportagent til Tripletex med 80%+ præcision med GPT, BERT og RAG-pipelines.", category: 'framework' },
+    { name: "Optimization", logo: "/img/tech/statistical_analysis.svg", bubble: "12 forskellige MIP-solvere med OR-Tools til hospitalsvagtplaner. LP, IP, CP - det hele.", category: 'core' },
 ];
 
 const ChatBubble = ({ text }: { text: string }) => (
@@ -107,10 +107,7 @@ const TechnologyCarousel = () => {
     }
 
     return (
-        <div className="w-full py-4 relative">
-            <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-r from-card to-transparent z-10" />
-            <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-l from-card to-transparent z-10" />
-
+        <div className="w-full py-4 relative edge-fade-x">
             <div className="space-y-2 pt-24">
                 <InfiniteSlider gap={8} speed={35} speedOnHover={80}>
                     {row1.map((tech) => (

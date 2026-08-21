@@ -1,0 +1,34 @@
+# Mikkel Kaj Andersen
+
+> Mikkel Kaj Andersen er en dansk AI-ingeniør og softwarearkitekt i København
+> med 10+ års erfaring i produktionskritiske systemer. Han byggede en komplet
+> handelsplatform til en NEMO-licenseret elbørs alene på fire måneder og har
+> leveret AI-systemer i produktion for Visma, PostNord og Egmont, herunder en
+> AI-supportagent med 85% selvbetjeningsgrad.
+
+## Nøgletal
+
+- 10+ års erfaring med software i produktion
+- Komplet elbørs-platform (C++23 matching engine, settlement, regulatoriske integrationer) leveret alene på 4 måneder hos Ella Exchange
+- AI-supportagent hos Visma med 85% selvbetjeningsgrad
+- AI-supportagenten hos Tripletex er omtalt i DN Studio (Dagens Næringsliv, 2024)
+- 6 mio. NOK årlig kontrakt landet for PostNord, +40% præcision i planlægningen
+- AI-supportsystem hos Tripletex: 10.000+ månedlige henvendelser, 80%+ præcision
+- MSc Datalogi, IT-Universitetet i København, karaktergennemsnit 11,0/12 (top 10%)
+- 72. plads ved NWERC 2020
+- CVR 39399903 (Synergy Software, egen konsulentvirksomhed, etableret 2022-12-20)
+
+## Sider
+
+- [Om Mikkel Kaj Andersen (dansk)](https://www.mikkelkajandersen.dk/om-mig): entitetsside med karriere, cases, udtalelser og FAQ
+- [About Mikkel Kaj Andersen (English)](https://www.mikkelkajandersen.dk/about): English mirror of the entity page
+- [En af de førende agentiske ingeniører](https://www.mikkelkajandersen.dk/agentisk-ingenioer): AI-agenter i produktion, med tallene og virksomhederne bag
+- [Profil og erfaring](https://www.mikkelkajandersen.dk/profile): fuld erfaringstidslinje og fem navngivne udtalelser
+- [AI-guide](https://www.mikkelkajandersen.dk/ai-guide): hans agentiske udviklingssetup, delt åbent
+
+## Kontakt
+
+- E-mail: hello@mikkelkajandersen.dk
+- Telefon: +45 21 53 73 95
+- LinkedIn: https://www.linkedin.com/in/mikkel-kaj-andersen-b0a097a5/
+- GitHub: https://github.com/mikkel-kaj

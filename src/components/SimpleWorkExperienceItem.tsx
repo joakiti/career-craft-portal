@@ -1,8 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { motion } from "framer-motion";
+import { useReveal } from "@/hooks/useReveal";
 
 interface SimpleWorkExperienceItemProps {
     company: string;
@@ -25,15 +24,10 @@ const SimpleWorkExperienceItem = ({
     description,
     defaultOpen = false
 }: SimpleWorkExperienceItemProps) => {
-    const { ref, isInView } = useScrollAnimation();
+    const { ref, revealClass } = useReveal();
 
     return (
-        <motion.div
-            ref={ref}
-            initial={{ opacity: 0, x: -20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-            transition={{ duration: 0.5 }}
-        >
+        <div ref={ref} className={revealClass}>
             <Card className="p-8 glass border-accent/5">
                 <Accordion type="single" collapsible defaultValue={defaultOpen ? "item-1" : undefined}>
                     <AccordionItem value="item-1" className="border-none">
@@ -52,7 +46,7 @@ const SimpleWorkExperienceItem = ({
                             </div>
                         </div>
                         <AccordionTrigger className="hover:no-underline">
-                            <span className="text-sm text-gray-400">Click to expand details</span>
+                            <span className="text-sm text-gray-400">Klik for detaljer</span>
                         </AccordionTrigger>
                         <AccordionContent>
                             <div className="space-y-4">
@@ -79,7 +73,7 @@ const SimpleWorkExperienceItem = ({
                     </AccordionItem>
                 </Accordion>
             </Card>
-        </motion.div>
+        </div>
     );
 };
 

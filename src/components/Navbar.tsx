@@ -29,8 +29,8 @@ const NavbarCTA = () => {
     const mailtoUrl = `mailto:hello@mikkelkajandersen.dk?subject=Consultation Request: ${encodeURIComponent(name)} - ${encodeURIComponent(selectedModel)}&body=${encodeURIComponent(`From: ${name}\nEngagement Model: ${selectedModel}\n\n${message}`)}`;
     window.location.href = mailtoUrl;
     toast({
-      title: "Message Prepared",
-      description: "Your consultation request has been prepared in your default email client.",
+      title: "Besked klargjort",
+      description: "Din forespørgsel er klargjort i dit e-mail-program.",
     });
   };
 
@@ -42,52 +42,52 @@ const NavbarCTA = () => {
             <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-pulse-dot" />
             <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
           </span>
-          <span className="text-sm hidden sm:inline">Open to building something great</span>
-          <span className="text-sm sm:hidden">Available</span>
+          <span className="text-sm hidden sm:inline">Åben for at bygge noget stort</span>
+          <span className="text-sm sm:hidden">Ledig</span>
         </button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[500px] bg-card border-accent/20">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-white flex items-center gap-2">
             <Mail className="w-6 h-6 text-accent" />
-            Schedule Your Consultation
+            Book en samtale
           </DialogTitle>
           <DialogDescription className="text-gray-300 text-base">
-            Take the first step towards transforming your technical challenges into opportunities.
+            Tag første skridt mod at få løst jeres tekniske udfordringer.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-6 mt-4">
           <div className="space-y-2">
-            <Label htmlFor="nav-name" className="text-white text-sm font-medium">Full Name</Label>
+            <Label htmlFor="nav-name" className="text-white text-sm font-medium">Fulde navn</Label>
             <Input
               id="nav-name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Your name"
+              placeholder="Dit navn"
               required
               className="bg-card-lighter border-accent/20 text-white placeholder:text-gray-500 focus:border-accent/50 transition-colors"
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="nav-engagement" className="text-white text-sm font-medium">Engagement Model</Label>
+            <Label htmlFor="nav-engagement" className="text-white text-sm font-medium">Samarbejdsform</Label>
             <Select required value={selectedModel} onValueChange={setSelectedModel}>
               <SelectTrigger id="nav-engagement" className="bg-card-lighter border-accent/20 text-white">
-                <SelectValue placeholder="Choose an engagement model" />
+                <SelectValue placeholder="Vælg samarbejdsform" />
               </SelectTrigger>
               <SelectContent className="bg-card border-accent/20">
-                <SelectItem value="full-time" className="text-white">Full-Time Project</SelectItem>
-                <SelectItem value="part-time" className="text-white">Part-Time Engagement</SelectItem>
-                <SelectItem value="package" className="text-white">Consultancy Package</SelectItem>
+                <SelectItem value="full-time" className="text-white">Fuldtidsprojekt</SelectItem>
+                <SelectItem value="part-time" className="text-white">Deltidssamarbejde</SelectItem>
+                <SelectItem value="package" className="text-white">Konsulentpakke</SelectItem>
               </SelectContent>
             </Select>
           </div>
           <div className="space-y-2">
-            <Label htmlFor="nav-message" className="text-white text-sm font-medium">Project Details</Label>
+            <Label htmlFor="nav-message" className="text-white text-sm font-medium">Projektbeskrivelse</Label>
             <Textarea
               id="nav-message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              placeholder="Please describe your project requirements or technical challenges"
+              placeholder="Beskriv jeres projekt eller tekniske udfordringer"
               required
               className="bg-card-lighter border-accent/20 text-white placeholder:text-gray-500 focus:border-accent/50 transition-colors min-h-[150px] resize-none"
             />
@@ -97,13 +97,13 @@ const NavbarCTA = () => {
             className="w-full bg-accent hover:bg-accent/90 text-primary font-medium py-6 text-lg relative group overflow-hidden"
           >
             <span className="relative z-10 flex items-center justify-center gap-2">
-              Send Request
+              Send forespørgsel
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
             <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/30 to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity" />
           </Button>
           <p className="text-xs text-gray-400 text-center -mt-3">
-            Nothing happens? Send me an e-mail at{" "}
+            Sker der ikke noget? Skriv til mig på{" "}
             <a href="mailto:hello@mikkelkajandersen.dk" className="text-accent hover:text-accent/80 transition-colors">
               hello@mikkelkajandersen.dk
             </a>
@@ -126,7 +126,7 @@ const NavLink = ({ to, children, isActive, onClick }: NavLinkProps) => (
   <Link
     to={to}
     onClick={onClick}
-    className="relative px-3 py-1.5 text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-full"
+    className="relative px-3 py-1.5 text-sm whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-full"
     aria-current={isActive ? "page" : undefined}
   >
     <span className={isActive ? "text-white" : "text-gray-300 hover:text-gray-100"}>
@@ -150,8 +150,8 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100vw-2rem)] max-w-2xl">
-      <div className="bg-card/60 backdrop-blur-xl rounded-full border border-accent/10 px-4 py-2.5 shadow-lg shadow-black/20">
+    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100vw-2rem)] max-w-3xl">
+      <div className="bg-card/90 backdrop-blur-xl rounded-full border border-accent/10 px-4 py-2.5 shadow-lg shadow-black/20">
         <div className="flex justify-between items-center">
           <Link
             to="/"
@@ -162,10 +162,13 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center gap-1">
             <NavLink to="/" isActive={location.pathname === "/"}>
-              Home
+              Hjem
             </NavLink>
             <NavLink to="/profile" isActive={location.pathname === "/profile"}>
-              Profile
+              Profil
+            </NavLink>
+            <NavLink to="/om-mig" isActive={location.pathname === "/om-mig"}>
+              Om mig
             </NavLink>
             <span className="text-gray-600 mx-1">|</span>
             <NavbarCTA />
@@ -176,7 +179,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded p-1"
-              aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-label={isOpen ? "Luk menu" : "Åbn menu"}
             >
               {isOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -194,10 +197,19 @@ const Navbar = () => {
         >
           <div className="px-4 py-3 flex flex-col gap-2">
             <NavLink to="/" isActive={location.pathname === "/"} onClick={() => setIsOpen(false)}>
-              Home
+              Hjem
             </NavLink>
             <NavLink to="/profile" isActive={location.pathname === "/profile"} onClick={() => setIsOpen(false)}>
-              Profile
+              Profil
+            </NavLink>
+            <NavLink to="/om-mig" isActive={location.pathname === "/om-mig"} onClick={() => setIsOpen(false)}>
+              Om mig
+            </NavLink>
+            <NavLink to="/agentisk-ingenioer" isActive={location.pathname === "/agentisk-ingenioer"} onClick={() => setIsOpen(false)}>
+              Agentisk ingeniør
+            </NavLink>
+            <NavLink to="/ai-guide" isActive={location.pathname === "/ai-guide"} onClick={() => setIsOpen(false)}>
+              AI-guide
             </NavLink>
           </div>
         </motion.div>

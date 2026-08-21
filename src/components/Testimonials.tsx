@@ -32,14 +32,14 @@ const companies: CompanyLogoProps[] = [
     { src: "/img/keylane_logo.png", alt: "Keylane company logo", name: "Keylane" },
     { src: "/img/mim_logo.png", alt: "Make It Matter company logo", name: "Make It Matter" },
     { src: "/img/godream_logo.jpeg", alt: "GoDream company logo", name: "GoDream" },
-    { src: "/img/itu_logo.png", alt: "IT-University of Copenhagen logo", name: "IT-University of Copenhagen" },
+    { src: "/img/itu_logo.png", alt: "IT-University of Copenhagen logo", name: "IT-Universitetet i København" },
     { src: "/img/sjaellandske_medier_logo.svg", alt: "Sjællandske Medier company logo", name: "Sjællandske Medier" },
 ];
 
 const CompanyLogos = () => (
     <div className="mt-6 pt-6 border-t border-border/10">
         <h3 className="text-base md:text-lg font-semibold text-link mb-4 text-center">
-            Companies I've Worked With
+            Virksomheder, jeg har arbejdet med
         </h3>
         <div className="grid grid-cols-3 md:grid-cols-5 gap-1.5 md:gap-3">
             {companies.map((company) => (
@@ -141,7 +141,7 @@ application of groundbreaking AI technology.`
         {
             name: "Marie Preisler",
             role: "CEO",
-            company: "Make It Matter",
+            company: "YOLO Cards",
             image: "/img/people/marie_preisler.jpg",
             content: `Det har været en sand fornøjelse at have Mikkel som ekstern IT-konsulent på vores projekt. Han har leveret et solidt og brugervenligt system, som
 effektivt håndterer omkring 300 ordrer dagligt. Mikkel har været utrolig nem at kommunikere med, og han har hurtigt fanget alle aspekter af vores behov.
@@ -162,7 +162,7 @@ tryghed at vide, at vi kan regne med hans ekspertise, og vi ser frem til fortsat
             <div className="container max-w-4xl mx-auto">
                 <h2 className="text-xl md:text-2xl font-bold text-link mb-4 md:mb-6 text-center">
                     <span className="relative inline-block">
-                        ... here's some honest feedback I've received
+                        ... her er noget ærlig feedback, jeg har fået
                     </span>
                 </h2>
 
@@ -173,7 +173,7 @@ tryghed at vide, at vi kan regne med hans ekspertise, og vi ser frem til fortsat
                     }}
                     plugins={[plugin]}
                     className="w-full"
-                    aria-label="Testimonials carousel"
+                    aria-label="Udtalelser"
                 >
                     <CarouselContent>
                         {testimonials.map((testimonial, index) => (
@@ -183,8 +183,8 @@ tryghed at vide, at vi kan regne med hans ekspertise, og vi ser frem til fortsat
                         ))}
                     </CarouselContent>
                     <div className="hidden md:flex justify-center gap-4 mt-6">
-                        <CarouselPrevious className="bg-gray-800 text-white" aria-label="Previous testimonial" />
-                        <CarouselNext className="bg-gray-800 text-white" aria-label="Next testimonial" />
+                        <CarouselPrevious className="bg-gray-800 text-white" aria-label="Forrige udtalelse" />
+                        <CarouselNext className="bg-gray-800 text-white" aria-label="Næste udtalelse" />
                     </div>
                 </Carousel>
                 <CompanyLogos />

@@ -1,4 +1,16 @@
+import { Link } from "react-router-dom";
 import { Linkedin } from "lucide-react";
+
+// Every route must be reachable by visible link from every page, so crawlers
+// landing anywhere can discover the whole site without the sitemap.
+const footerLinks = [
+  { to: "/", label: "Hjem" },
+  { to: "/profile", label: "Profil" },
+  { to: "/om-mig", label: "Om mig" },
+  { to: "/about", label: "About (English)" },
+  { to: "/agentisk-ingenioer", label: "Agentisk ingeniør" },
+  { to: "/ai-guide", label: "AI-guide" },
+];
 
 const Footer = () => {
   return (
@@ -7,11 +19,26 @@ const Footer = () => {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
 
       <div className="container mx-auto max-w-7xl px-4">
+        <nav aria-label="Sitemap" className="mb-6">
+          <ul className="flex flex-wrap gap-x-6 gap-y-2">
+            {footerLinks.map((link) => (
+              <li key={link.to}>
+                <Link
+                  to={link.to}
+                  className="text-sm text-gray-400 hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-gray-400 text-sm">
             <p className="font-medium text-white">Mikkel Kaj Andersen</p>
             <p>CVR: 39399903</p>
-            <p>Est. December 20, 2022</p>
+            <p>Etableret 20. december 2022</p>
           </div>
           <div className="flex items-center gap-4">
             <a

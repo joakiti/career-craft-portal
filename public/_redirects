@@ -1,1 +1,13 @@
-/* /index.html 200 
+# Retired paths
+/danmarks-mest-agentiske-mand  /agentisk-ingenioer  301
+
+# Prerendered routes: serve the static snapshots explicitly (Netlify also
+# resolves directory indexes on its own; these rules remove any doubt).
+/om-mig               /om-mig/index.html               200
+/about                /about/index.html                200
+/agentisk-ingenioer   /agentisk-ingenioer/index.html   200
+/profile              /profile/index.html              200
+/ai-guide             /ai-guide/index.html             200
+
+# SPA fallback for anything else
+/*  /index.html  200
