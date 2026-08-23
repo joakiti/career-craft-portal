@@ -3,11 +3,10 @@
 
 # Prerendered routes: serve the static snapshots explicitly (Netlify also
 # resolves directory indexes on its own; these rules remove any doubt).
-/om-mig               /om-mig/index.html               200
-/about                /about/index.html                200
-/agentisk-ingenioer   /agentisk-ingenioer/index.html   200
-/profile              /profile/index.html              200
-/ai-guide             /ai-guide/index.html             200
+# The block between the markers is generated into dist/_redirects by
+# scripts/prerender.mjs from src/routes.tsx; do not hand-edit it.
+# routes:start
+# routes:end
 
 # SPA fallback for anything else
 /*  /index.html  200
