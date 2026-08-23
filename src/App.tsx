@@ -3,11 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import Profile from "./pages/Profile";
-import AiGuide from "./pages/AiGuide";
-import AnchorPage from "./pages/AnchorPage";
-import AgentiskIngenioer from "./pages/AgentiskIngenioer";
+import { APP_ROUTES } from "./routes";
 import Navbar from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -30,12 +26,9 @@ export const AppShell = () => (
       <Navbar />
       <main id="main-content">
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/ai-guide" element={<AiGuide />} />
-          <Route path="/om-mig" element={<AnchorPage lang="da" />} />
-          <Route path="/about" element={<AnchorPage lang="en" />} />
-          <Route path="/agentisk-ingenioer" element={<AgentiskIngenioer />} />
+          {APP_ROUTES.map((route) => (
+            <Route key={route.path} path={route.path} element={route.element} />
+          ))}
         </Routes>
       </main>
     </TooltipProvider>
